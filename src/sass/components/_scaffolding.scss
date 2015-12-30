@@ -1,0 +1,74 @@
+/* HTML base */
+
+html {
+	-webkit-font-smoothing: antialiased;
+	font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+}
+body {
+	color: $font-color;
+}
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: -0.02em;
+	margin: 1.5rem 0;
+	font-weight: 500;
+}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.1rem; }
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color: $link-hover-color;
+		text-decoration: underline;
+	}
+}
+mark {
+	background: $highlight;
+	padding: 0 0.2rem;
+}
+blockquote {
+	margin: 0;
+	border-left: $bq-border;
+	padding: 1rem;
+	font-size: 1.2rem;
+}
+pre {
+  border: $borders;
+	border-radius: $border-radius;
+	background: $code-background;
+	padding: 1rem;
+	tab-size: 2;
+	code {
+		color: $code-color;
+		font-family: $code-family;
+		font-size: .9rem;
+		line-height: 1.2;
+		webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+:not(pre) > code {
+	color: $code-color;
+	background: $code-background;
+	font-family: $code-family;
+	padding: 0 0.2rem;
+	border: $borders;
+	border-radius: $border-radius;
+}
+hr {
+	height: 0;
+	border: 0;
+	border-top: $borders;
+}
+
+/* Containers */
+
+.text-container {
+	max-width: $text;
+	padding: 0 1rem;
+	margin: 0 auto;
+}

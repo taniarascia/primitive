@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  max-width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: .5rem;
+}
+td {
+  border-top: 1px solid $gray;
+}
+.striped > tbody {
+  tr:nth-of-type(odd) {
+    background: $lightgray;
+  }
+}
+.table-scroll {
+  overflow-x: auto;
+}
+@include large-screen {
+  .table-scroll {
+    width: 100%;
+  }
+}

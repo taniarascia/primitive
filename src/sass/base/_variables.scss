@@ -1,0 +1,71 @@
+/* Breakpoints */
+
+$mobile: 600px;
+$text: 800px;
+
+/* Typography */
+
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: #333;
+$font-size: 1rem;
+$line-height: 1.5;
+$font-family: Helvetica Neue,
+Helvetica,
+Arial,
+sans-serif;
+
+/* Colors */
+
+$primary-color: #0072C0;
+$gray: #cdcdcd;
+$lightgray: lighten($gray, 10%);
+$darkgray: darken($gray, 20%);
+
+/* Borders */
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
+
+/* Links */
+
+$link-color: darken($primary-color, 10%);
+$link-hover-color: lighten($link-color, 10%);
+
+/* Buttons */
+
+$button-background: $primary-color;
+$button-color: #ffffff;
+$button-font-weight: 600;
+$button-border-width: 0px;
+$button-border-style: solid;
+$button-border-color: $button-background;
+$button-border-radius: $border-radius;
+$button-borders: $button-border-width $button-border-style $button-border-color;
+$muted-border: 1px solid $gray;
+$muted-border-hover: 1px solid darken($gray, 30%);
+$muted-background-hover: lighten($gray, 10%);
+$muted-color: darken($gray, 50%);
+/* Forms */
+
+$input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$input-buttons: ('[type=submit], [type=reset], [type=button]');
+$placeholder: $darkgray;
+$input-height: 2.3em;
+
+/* General */
+
+$highlight: #ffeea8;
+$bq-border: 8px solid $border-color;
+$error: #D33C40;
+
+/* Code */
+
+$code-color: $font-color;
+$code-family: Menlo,
+monospace;
+$code-background: $lightgray;

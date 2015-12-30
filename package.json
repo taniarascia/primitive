@@ -1,0 +1,14 @@
+{
+  "name": "miseenplace",
+  "version": "0.0.1",
+  "description": "Mise en Place",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taniarascia/miseenplace.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "latest"
+  }
+}

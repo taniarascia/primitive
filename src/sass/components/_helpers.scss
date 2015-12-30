@@ -1,0 +1,38 @@
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after { clear: both; }
+
+/* Text alignment */
+ 
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+/* Display State */
+
+.show { display: block !important; }
+.hidden { display: none !important; }
+.invisible { visibility: hidden; }
+
+/* Callouts */
+
+.callout {
+	border: $borders;
+	border-radius: $border-radius;
+	background: $lightgray;
+	padding: 1rem;
+	margin: 1rem 0;
+	&.info {
+		border: $border-width $border-style $primary-color;
+		background: lighten($primary-color, 50%);
+	}
+	&.alert {
+		border: $border-width $border-style $error;
+		background: lighten($error, 35%);
+	}
+}

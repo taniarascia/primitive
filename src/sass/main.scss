@@ -1,0 +1,26 @@
+/** Mise en Place
+by Tania Rascia
+=============== */
+
+// Variables and Mixins
+@import "base/variables";
+@import "base/mixins";
+
+// Reset
+@import "base/normalize";
+@import "base/reset";
+
+// Components
+@import "components/scaffolding";
+@import "components/helpers";
+@import "components/grid";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/navigation";
+@import "components/layout";
+
+/*
+sass --watch src/sass:dist/css --style expanded
+*/
+  
