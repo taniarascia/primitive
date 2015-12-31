@@ -1,16 +1,9 @@
-.no-collapse {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap; 
-	> .column ~ .column {
-  	margin-left: .5rem;
-	}
-}
+/** Grid
+=============== */
 
-.column ~ .column {
-  margin-left: 0;
-}
-.column {
+/* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
+
+.column, .column- {
   flex: 1;
   &._90 { flex: (9/10) * 10; }
   &._80 { flex: (4/5) * 10; }
@@ -26,6 +19,43 @@
   &._20 { flex: (1/5) * 10; }
   &._10 { flex: (1/10) * 10; }
 }
+
+/* Offsets */
+
+.offset-90 { margin-left: 90%; }
+.offset-80 { margin-left: 80%; }
+.offset-75 { margin-left: 75%; }
+.offset-70 { margin-left: 70%; }
+.offset-66 { margin-left: 66%; }
+.offset-60 { margin-left: 60%; }
+.offset-50 { margin-left: 50%; }
+.offset-40 { margin-left: 40%; }
+.offset-33 { margin-left: 33%; }
+.offset-30 { margin-left: 30%; }
+.offset-25 { margin-left: 25%; }
+.offset-20 { margin-left: 20%; }
+.offset-10 { margin-left: 10%; }
+
+
+/* Prevent mobile breakpoint with no-collapse class */
+
+.no-collapse {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap; 
+	> .column ~ .column {
+  	margin-left: .5rem;
+	}
+}
+
+/* Prevent margins on small screens */
+
+.column ~ .column {
+  margin-left: 0;
+}
+
+/* Enable columns on large screens */
+
 @include large-screen {
 	.row {
 	display: flex;
@@ -37,10 +67,8 @@
 	}
 }
 
+/* Vertical alignment */
+
 .align-vertical {
   align-items: center;
-}
-
-.offset-50 {
-	margin-left: 50%;
 }

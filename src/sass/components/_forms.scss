@@ -5,79 +5,79 @@
 /* Display for all input fields (except buttons) */
 
 %forms {
-	display: inline-block;
-	background: transparent;
-	border: $border-width $border-style $border-color;
-	border-radius: $border-radius;
-	padding: .6rem;
-	outline: none;
-	height: $input-height;
+  display: inline-block;
+  background: transparent;
+  border: $border-width $border-style $border-color;
+  border-radius: $border-radius;
+  padding: .6rem;
+  outline: none;
+  height: $input-height;
 }
 
 /* Input fields on hover */
 
 %forms-hover {
-	border: $border-width $border-style darken($border-color, 10%);
+  border: $border-width $border-style darken($border-color, 10%);
 }
 
 /* Input fields on focus */
 
 %forms-focus {
-	border: 1px solid lighten($link-color, 30%);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px lighten($link-color, 40%);
+  border: 1px solid lighten($link-color, 30%);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px lighten($link-color, 40%);
 }
 
 /* Variable containing all input fields */
 
 #{$input-fields} {
-	width: 100%; // Expands the full width of the container
-	max-width: 100%;
-	@extend %forms;
-	&:hover {
-		@extend %forms-hover;
-	}
-	&:focus {
-		@extend %forms-focus;
-	}
+  width: 100%; // Expands the full width of the container
+  max-width: 100%;
+  @extend %forms;
+  &:hover {
+    @extend %forms-hover;
+  }
+  &:focus {
+    @extend %forms-focus;
+  }
 }
 
 /* Horizontal forms have no set width on large screen view */
 
 @include large-screen {
-	.horizontal-form {
-		#{$input-fields} {
-			width: auto;
-		}
-	}
+  .horizontal-form {
+    #{$input-fields} {
+      width: auto;
+    }
+  }
 }
 textarea {
-	height: auto;
-	display: block; // Remove margin difference from textarea and input groups
+  height: auto;
+  display: block; // Remove margin difference from textarea and input groups
 }
 
 /* Placeholder Text */
 
 ::-webkit-input-placeholder,
 select {
-	color: $placeholder;
+  color: $placeholder;
 }
 
 /* Labels */
 
 label {
-	font-weight: 600;
-	max-width: 100%;
-	display: block;
-	margin: .5rem 0;
+  font-weight: 600;
+  max-width: 100%;
+  display: block;
+  margin: .5rem 0;
 }
 @include large-screen {
-	.horizontal-form {
-		label,
-		#{$input-buttons} {
-			display: inline-block;
-			margin: .5rem 0;
-		}
-	}
+  .horizontal-form {
+    label,
+    #{$input-buttons} {
+      display: inline-block;
+      margin: .5rem 0;
+    }
+  }
 }
 
 /* Errors */
@@ -85,14 +85,14 @@ label {
 input,
 select,
 textarea {
-	&.has-error {
-		border: 1px solid $error;
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px lighten($error, 35%);
-	}
-	&:hover,
-	&:focus {
-		&.has-error {
-			@extend .has-error;
-		}
-	}
+  &.has-error {
+    border: 1px solid $error;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px lighten($error, 35%);
+  }
+  &:hover,
+  &:focus {
+    &.has-error {
+      @extend .has-error;
+    }
+  }
 }

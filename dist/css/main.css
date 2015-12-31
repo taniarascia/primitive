@@ -588,6 +588,106 @@ hr {
   background: #f4cecf;
 }
 
+/** Grid
+=============== */
+/* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
+.column, .column- {
+  flex: 1;
+}
+.column._90, .column-._90 {
+  flex: 9;
+}
+.column._80, .column-._80 {
+  flex: 8;
+}
+.column._75, .column-._75 {
+  flex: 7.5;
+}
+.column._70, .column-._70 {
+  flex: 7;
+}
+.column._66, .column-._66 {
+  flex: 6.66667;
+}
+.column._60, .column-._60 {
+  flex: 6;
+}
+.column._50, .column-._50 {
+  flex: 5;
+}
+.column._40, .column-._40 {
+  flex: 4;
+}
+.column._33, .column-._33 {
+  flex: 3.33333;
+}
+.column._30, .column-._30 {
+  flex: 3;
+}
+.column._25, .column-._25 {
+  flex: 2.5;
+}
+.column._20, .column-._20 {
+  flex: 2;
+}
+.column._10, .column-._10 {
+  flex: 1;
+}
+
+/* Offsets */
+.offset-90 {
+  margin-left: 90%;
+}
+
+.offset-80 {
+  margin-left: 80%;
+}
+
+.offset-75 {
+  margin-left: 75%;
+}
+
+.offset-70 {
+  margin-left: 70%;
+}
+
+.offset-66 {
+  margin-left: 66%;
+}
+
+.offset-60 {
+  margin-left: 60%;
+}
+
+.offset-50 {
+  margin-left: 50%;
+}
+
+.offset-40 {
+  margin-left: 40%;
+}
+
+.offset-33 {
+  margin-left: 33%;
+}
+
+.offset-30 {
+  margin-left: 30%;
+}
+
+.offset-25 {
+  margin-left: 25%;
+}
+
+.offset-20 {
+  margin-left: 20%;
+}
+
+.offset-10 {
+  margin-left: 10%;
+}
+
+/* Prevent mobile breakpoint with no-collapse class */
 .no-collapse {
   display: flex;
   flex-direction: row;
@@ -597,53 +697,12 @@ hr {
   margin-left: .5rem;
 }
 
+/* Prevent margins on small screens */
 .column ~ .column {
   margin-left: 0;
 }
 
-.column {
-  flex: 1;
-}
-.column._90 {
-  flex: 9;
-}
-.column._80 {
-  flex: 8;
-}
-.column._75 {
-  flex: 7.5;
-}
-.column._70 {
-  flex: 7;
-}
-.column._66 {
-  flex: 6.66667;
-}
-.column._60 {
-  flex: 6;
-}
-.column._50 {
-  flex: 5;
-}
-.column._40 {
-  flex: 4;
-}
-.column._33 {
-  flex: 3.33333;
-}
-.column._30 {
-  flex: 3;
-}
-.column._25 {
-  flex: 2.5;
-}
-.column._20 {
-  flex: 2;
-}
-.column._10 {
-  flex: 1;
-}
-
+/* Enable columns on large screens */
 @media (min-width: 600px) {
   .row {
     display: flex;
@@ -655,12 +714,9 @@ hr {
     margin-left: .5rem;
   }
 }
+/* Vertical alignment */
 .align-vertical {
   align-items: center;
-}
-
-.offset-50 {
-  margin-left: 50%;
 }
 
 /* Buttons */
