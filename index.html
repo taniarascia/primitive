@@ -23,19 +23,51 @@
     .example:nth-of-type(odd) {
       background: #eaeaea;
     }
+    
+    main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      max-width: 1300px;
+    }
+    
+    aside {
+      flex: 0;
+      background: #2B303B;
+    }
+    
+    article {
+      flex: 1;
+    }
+    
+    @media screen and (min-width: 1000px) {
+      aside {
+        flex: 2.5;
+      }
+      article {
+        flex: 7.5;
+      }
+    }
 
   </style>
 </head>
 
 <body>
 
-  <div class="text-container">
+  <main>
 
-    <h2>Grid</h2>
+    <aside>
+    </aside>
 
-    <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Margin will only be added in between elements, and only on large screens.</p>
+    <article>
 
-    <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+      <div class="text-container">
+
+        <h2>Grid</h2>
+
+        <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Margin will only be added in between elements, and only on large screens.</p>
+
+        <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -43,273 +75,273 @@
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-    <div class="row">
-      <div class="column example">1</div>
-    </div>
-    <div class="row">
-      <div class="column example">2</div>
-      <div class="column example">2</div>
-    </div>
-    <div class="row">
-      <div class="column example">3</div>
-      <div class="column example">3</div>
-      <div class="column example">3</div>
-    </div>
-    <div class="row">
-      <div class="column example">4</div>
-      <div class="column example">4</div>
-      <div class="column example">4</div>
-      <div class="column example">4</div>
-    </div>
+        <div class="row">
+          <div class="column example">1</div>
+        </div>
+        <div class="row">
+          <div class="column example">2</div>
+          <div class="column example">2</div>
+        </div>
+        <div class="row">
+          <div class="column example">3</div>
+          <div class="column example">3</div>
+          <div class="column example">3</div>
+        </div>
+        <div class="row">
+          <div class="column example">4</div>
+          <div class="column example">4</div>
+          <div class="column example">4</div>
+          <div class="column example">4</div>
+        </div>
 
-    <h3>Specific Widths</h3>
+        <h3>Specific Widths</h3>
 
-    <p>Specific column widths can be added.
+        <p>Specific column widths can be added.
 
-      <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;column-50&quot;&gt;50%&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <div class="row">
-        <div class="column-25 example">25%</div>
-        <div class="column-50 example">50%</div>
-        <div class="column-25 example">25%</div>
-      </div>
-      <div class="row">
-        <div class="column-66 example">66%</div>
-        <div class="column-33 example">33%</div>
-      </div>
-      <div class="row">
-        <div class="column-75 example">75%</div>
-        <div class="column-25 example">25%</div>
-      </div>
+          <div class="row">
+            <div class="column-25 example">25%</div>
+            <div class="column-50 example">50%</div>
+            <div class="column-25 example">25%</div>
+          </div>
+          <div class="row">
+            <div class="column-66 example">66%</div>
+            <div class="column-33 example">33%</div>
+          </div>
+          <div class="row">
+            <div class="column-75 example">75%</div>
+            <div class="column-25 example">25%</div>
+          </div>
 
-      <h3>No Collapse</h3>
+          <h3>No Collapse</h3>
 
-      <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
+          <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-      <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
   &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <div class="row no-collapse">
-        <div class="column example">100%</div>
-      </div>
-      <div class="row no-collapse">
-        <div class="column-90 example">90%</div>
-        <div class="column-10 example">10%</div>
-      </div>
-      <div class="row no-collapse">
-        <div class="column-80 example">80%</div>
-        <div class="column-20 example">20%</div>
-      </div>
-      <div class="row no-collapse">
-        <div class="column-70 example">70%</div>
-        <div class="column-30 example">30%</div>
-      </div>
-      <div class="row no-collapse">
-        <div class="column-60 example">60%</div>
-        <div class="column-40 example">40%</div>
-      </div>
-      <div class="row no-collapse">
-        <div class="column-50 example">50%</div>
-        <div class="column-50 example">50%</div>
-      </div>
+          <div class="row no-collapse">
+            <div class="column example">100%</div>
+          </div>
+          <div class="row no-collapse">
+            <div class="column-90 example">90%</div>
+            <div class="column-10 example">10%</div>
+          </div>
+          <div class="row no-collapse">
+            <div class="column-80 example">80%</div>
+            <div class="column-20 example">20%</div>
+          </div>
+          <div class="row no-collapse">
+            <div class="column-70 example">70%</div>
+            <div class="column-30 example">30%</div>
+          </div>
+          <div class="row no-collapse">
+            <div class="column-60 example">60%</div>
+            <div class="column-40 example">40%</div>
+          </div>
+          <div class="row no-collapse">
+            <div class="column-50 example">50%</div>
+            <div class="column-50 example">50%</div>
+          </div>
 
-      <h3>Offsets</h3>
+          <h3>Offsets</h3>
 
-      <p>Add an <code>offset-</code> when you need empty space.</p>
+          <p>Add an <code>offset-</code> when you need empty space.</p>
 
-      <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;offset-50&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <div class="row">
-        <div class="column-25 example">25%</div>
-        <div class="offset-50"></div>
-        <div class="column-25 example">25%</div>
-      </div>
-      <div class="row">
-        <div class="offset-25 example"></div>
-        <div class="column-50 example">50%</div>
-        <div class="offset-25 example"></div>
-      </div>
+          <div class="row">
+            <div class="column-25 example">25%</div>
+            <div class="offset-50"></div>
+            <div class="column-25 example">25%</div>
+          </div>
+          <div class="row">
+            <div class="offset-25 example"></div>
+            <div class="column-50 example">50%</div>
+            <div class="offset-25 example"></div>
+          </div>
 
-      <h2>Typography</h2>
+          <h2>Typography</h2>
 
-      <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
+          <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
 
-      <p>Inline styling remains mostly unchanged: <em>emphasized</em>, <i>italicized</i>, <strong>strong</strong>, <b>bold</b>,
-        <mark>highlighted</mark>, <u>underlined</u>, <ins>inserted</ins>, <del>deleted</del>, <s>strikethrough</s>, and so on.</p>
+          <p>Inline styling remains mostly unchanged: <em>emphasized</em>, <i>italicized</i>, <strong>strong</strong>, <b>bold</b>,
+            <mark>highlighted</mark>, <u>underlined</u>, <ins>inserted</ins>, <del>deleted</del>, <s>strikethrough</s>, and so on.</p>
 
-      <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
+          <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
 
-      <h1>Heading 1<span>A Subtitle Goes Here</span></h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+          <h1>Heading 1<span>A Subtitle Goes Here</span></h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
 
 
-      <h2>Buttons</h2>
+          <h2>Buttons</h2>
 
-      <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
+          <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
 
-      <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+          <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input&quot;&gt;
 &lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;</code></pre>
 
-      <button>Button</button>
-      <input type="submit" value="Submit">
-      <input type="button" value="Input">
-      <a class="button">Link</a>
+          <button>Button</button>
+          <input type="submit" value="Submit">
+          <input type="button" value="Input">
+          <a class="button">Link</a>
 
-      <h2>Muted Buttons</h2>
+          <h2>Muted Buttons</h2>
 
-      <p>Adding a class of <code>muted</code> will create ghost buttons.</p>
+          <p>Adding a class of <code>muted</code> will create ghost buttons.</p>
 
-      <pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
+          <pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
 
-      <button class="muted">Button</button>
-      <input type="submit" value="Submit" class="muted">
-      <input type="button" value="Input" class="muted">
-      <a class="muted button">Link</a>
+          <button class="muted">Button</button>
+          <input type="submit" value="Submit" class="muted">
+          <input type="button" value="Input" class="muted">
+          <a class="muted button">Link</a>
 
-      <h2>Forms</h2>
+          <h2>Forms</h2>
 
-      <pre><code class="language-html">&lt;form&gt;
+          <pre><code class="language-html">&lt;form&gt;
   &lt;!-- --&gt;
 &lt;/form&gt;</code></pre>
 
-      <form>
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="First Name">
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Email address">
-        <label for="choose">Select</label>
-        <select name="choose">
-          <option disabled selected>Please select</option>
-          <option>Option</option>
-          <option>Option</option>
-        </select>
-        <label for="comments">Additional Comments</label>
-        <textarea name="comments"></textarea>
-        <input type="submit" value="Submit">
-      </form>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="First Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email address">
+            <label for="choose">Select</label>
+            <select name="choose">
+              <option disabled selected>Please select</option>
+              <option>Option</option>
+              <option>Option</option>
+            </select>
+            <label for="comments">Additional Comments</label>
+            <textarea name="comments"></textarea>
+            <input type="submit" value="Submit">
+          </form>
 
-      <h3>Horizontal Forms</h3>
+          <h3>Horizontal Forms</h3>
 
-      <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
+          <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
   &lt;!-- --&gt;
 &lt;/form&gt;</code></pre>
 
-      <form class="horizontal-form">
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="First Name">
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Email Address">
-        <input type="submit" value="Submit">
-      </form>
+          <form class="horizontal-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="First Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email Address">
+            <input type="submit" value="Submit">
+          </form>
 
-      <h2>Form Validation</h2>
+          <h2>Form Validation</h2>
 
-      <p>An input field with a class of <code>.has-error</code></p>
+          <p>An input field with a class of <code>.has-error</code></p>
 
-      <form>
-        <label for="name">Name</label>
-        <input type="text" name="name" placeholder="Name" class="has-error">
-      </form>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Name" class="has-error">
+          </form>
 
 
-      <h2>Tables</h2>
+          <h2>Tables</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Head 1</th>
-            <th>Head 2</th>
-            <th>Head 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-            <td>Description 3</td>
-          </tr>
-          <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-            <td>Description 3</td>
-          </tr>
-          <tr>
-            <td>Description 1</td>
-            <td>Description 2</td>
-            <td>Description 3</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Footer 1</td>
-            <td>Footer 2</td>
-            <td>Footer 3</td>
-          </tr>
-        </tfoot>
-      </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Head 1</th>
+                <th>Head 2</th>
+                <th>Head 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+              </tr>
+            </tfoot>
+          </table>
 
-      <h2>Striped Tables</h2>
+          <h2>Striped Tables</h2>
 
-      <pre><code class="language-html">&lt;table class="striped"&gt;
+          <pre><code class="language-html">&lt;table class="striped"&gt;
   &lt;!-- --&gt;
 &lt;/table&gt;</code></pre>
 
-      <div class="table-scroll">
-        <table class="striped">
-          <thead>
-            <tr>
-              <th>Head 1</th>
-              <th>Head 2</th>
-              <th>Head 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Description 1</td>
-              <td>Description 2</td>
-              <td>Description 3</td>
-            </tr>
-            <tr>
-              <td>Description 1</td>
-              <td>Description 2</td>
-              <td>Description 3</td>
-            </tr>
-            <tr>
-              <td>Description 1</td>
-              <td>Description 2</td>
-              <td>Description 3</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Footer 1</td>
-              <td>Footer 2</td>
-              <td>Footer 3</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-      <h2>Code</h2>
+          <div class="table-scroll">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Head 1</th>
+                  <th>Head 2</th>
+                  <th>Head 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Footer 1</td>
+                  <td>Footer 2</td>
+                  <td>Footer 3</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <h2>Code</h2>
 
-      <p> Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Vestibulum iaculis condimentum tempus. Etiam viverra ipsum nunc, et pellentesque purus blandit sit amet.</p>
+          <p> Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Vestibulum iaculis condimentum tempus. Etiam viverra ipsum nunc, et pellentesque purus blandit sit amet.</p>
 
-      <pre><code>&lt;form class=&quot;horizontal-form&quot;&gt;
+          <pre><code>&lt;form class=&quot;horizontal-form&quot;&gt;
   &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
   &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
   &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
@@ -317,29 +349,45 @@
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
 
-      <h2>Blockquote</h2>
+          <h2>Blockquote</h2>
 
-      <blockquote>
-        Blockquote
-      </blockquote>
+          <blockquote>
+            Blockquote
+          </blockquote>
 
-      <h2>Callout</h2>
+          <h2>Callout</h2>
 
-      <div class="callout">
-        Regular callout
+          <div class="callout">
+            Regular callout
+          </div>
+
+          <div class="callout info">
+            Info callout
+          </div>
+
+          <div class="callout alert">
+            Alert callout
+          </div>
+
       </div>
 
-      <div class="callout info">
-        Info callout
-      </div>
+    </article>
 
-      <div class="callout alert">
-        Alert callout
-      </div>
+  </main>
 
-  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="dist/js/prism.js"></script>
+  
+  <script>
+        $(function () {
+      var pgurl = window.location.href.substr(window.location.href
+        .lastIndexOf("/") + 1);
+      $("nav ul li a").each(function () {
+        if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
+          $(this).addClass("active");
+      })
+    });
+  </script>
 </body>
 
 </html>
