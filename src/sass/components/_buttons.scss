@@ -27,6 +27,12 @@
 button,
 #{$input-buttons} {
   @extend %buttons;
+	&:before { // Ensure that text inside button classes are vertically centered
+		content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+	}
   &:hover {
     @extend %buttons-hover;
   }

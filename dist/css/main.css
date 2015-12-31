@@ -438,6 +438,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.5rem 0;
   font-weight: 500;
 }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  font-size: 65%;
+  color: #666666;
+  padding-left: .5rem;
+}
 
 h1 {
   font-size: 2.2rem;
@@ -588,6 +593,9 @@ hr {
   flex-direction: row;
   flex-wrap: nowrap;
 }
+.no-collapse > .column ~ .column {
+  margin-left: .5rem;
+}
 
 .column ~ .column {
   margin-left: 0;
@@ -651,6 +659,10 @@ hr {
   align-items: center;
 }
 
+.offset-50 {
+  margin-left: 50%;
+}
+
 /* Buttons */
 .button,
 button,
@@ -681,6 +693,14 @@ button:hover,
   text-decoration: none;
 }
 
+.button:before,
+button:before,
+[type=submit]:before, [type=reset]:before, [type=button]:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
 .button.muted,
 button.muted,
 [type=submit].muted, [type=reset].muted, [type=button].muted {
