@@ -13,43 +13,37 @@
   padding: .6rem 1.2rem;
   cursor: pointer;
   margin: .8rem 0;
-	font-size: .9rem;
-	white-space: nowrap;
-	vertical-align: middle;
+  font-size: .9rem;
+  white-space: nowrap;
+  vertical-align: middle;
   text-align: center;
 }
 %buttons-hover {
   background: darken($button-background, 10%);
-	color: $button-color;
-	text-decoration: none;
+  color: $button-color;
+  text-decoration: none;
 }
 .button,
 button,
 #{$input-buttons} {
   @extend %buttons;
-	&:before { // Ensure that text inside button classes are vertically centered
-		content: '';
+  &:before {
+    // Ensure that text inside button classes are vertically centered
+    content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-	}
+  }
   &:hover {
     @extend %buttons-hover;
   }
-	&.muted {
-		background: transparent;
-		border: $muted-border;
-		color: $muted-color;
-		&:hover {
-			border: $muted-border-hover;
-			background: $muted-background-hover;
-		}
-	}
-}
-button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
-
-padding: 0 !important;
-
-border: 0 none !important;
-
+  &.muted {
+    background: transparent;
+    border: $muted-border;
+    color: $muted-color;
+    &:hover {
+      border: $muted-border-hover;
+      background: $muted-background-hover;
+    }
+  }
 }

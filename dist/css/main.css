@@ -591,46 +591,59 @@ hr {
 /** Grid
 =============== */
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
-.column, .column- {
+[class*="column"] {
   flex: 1;
 }
-.column._90, .column-._90 {
+
+.column-90 {
   flex: 9;
 }
-.column._80, .column-._80 {
+
+.column-80 {
   flex: 8;
 }
-.column._75, .column-._75 {
+
+.column-75 {
   flex: 7.5;
 }
-.column._70, .column-._70 {
+
+.column-70 {
   flex: 7;
 }
-.column._66, .column-._66 {
+
+.column-66 {
   flex: 6.66667;
 }
-.column._60, .column-._60 {
+
+.column-60 {
   flex: 6;
 }
-.column._50, .column-._50 {
+
+.column-50 {
   flex: 5;
 }
-.column._40, .column-._40 {
+
+.column-40 {
   flex: 4;
 }
-.column._33, .column-._33 {
+
+.column-33 {
   flex: 3.33333;
 }
-.column._30, .column-._30 {
+
+.column-30 {
   flex: 3;
 }
-.column._25, .column-._25 {
+
+.column-25 {
   flex: 2.5;
 }
-.column._20, .column-._20 {
+
+.column-20 {
   flex: 2;
 }
-.column._10, .column-._10 {
+
+.column-10 {
   flex: 1;
 }
 
@@ -693,12 +706,12 @@ hr {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.no-collapse > .column ~ .column {
+.no-collapse > [class*="column"] ~ [class*="column"] {
   margin-left: .5rem;
 }
 
 /* Prevent margins on small screens */
-.column ~ .column {
+[class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
 
@@ -710,7 +723,7 @@ hr {
     flex-wrap: nowrap;
   }
 
-  .column ~ .column {
+  [class*="column"] ~ [class*="column"] {
     margin-left: .5rem;
   }
 }
@@ -769,11 +782,6 @@ button.muted:hover,
 [type=submit].muted:hover, [type=reset].muted:hover, [type=button].muted:hover {
   border: 1px solid #818181;
   background: #e7e7e7;
-}
-
-button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
-  padding: 0 !important;
-  border: 0 none !important;
 }
 
 /** Forms

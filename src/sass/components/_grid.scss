@@ -3,23 +3,22 @@
 
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 
-.column, .column- {
-  flex: 1;
-  &._90 { flex: (9/10) * 10; }
-  &._80 { flex: (4/5) * 10; }
-  &._75 { flex: (3/4) * 10; }
-  &._70 { flex: (7/10) * 10; }
-  &._66 { flex: (2/3) * 10; }
-  &._60 { flex: (3/5) * 10; }
-  &._50 { flex: (1/2) * 10; }
-  &._40 { flex: (2/5) * 10; }
-  &._33 { flex: (1/3) * 10; }
-  &._30 { flex: (3/10) * 10; }
-  &._25 { flex: (1/4) * 10; }
-  &._20 { flex: (1/5) * 10; }
-  &._10 { flex: (1/10) * 10; }
-}
+[class*="column"] { flex: 1; }
 
+.column-90 { flex: (9/10) * 10; }
+.column-80 { flex: (4/5) * 10; }
+.column-75 { flex: (3/4) * 10; }
+.column-70 { flex: (7/10) * 10; }
+.column-66 { flex: (2/3) * 10; }
+.column-60 { flex: (3/5) * 10; }
+.column-50 { flex: (1/2) * 10; }
+.column-40 { flex: (2/5) * 10; }
+.column-33 { flex: (1/3) * 10; }
+.column-30 { flex: (3/10) * 10; }
+.column-25 { flex: (1/4) * 10; }
+.column-20 { flex: (1/5) * 10; }
+.column-10 { flex: (1/10) * 10; }
+ 
 /* Offsets */
 
 .offset-90 { margin-left: 90%; }
@@ -43,14 +42,14 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap; 
-	> .column ~ .column {
+	> [class*="column"] ~ [class*="column"] {
   	margin-left: .5rem;
 	}
 }
 
 /* Prevent margins on small screens */
 
-.column ~ .column {
+[class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
 
@@ -62,7 +61,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
   }
-  .column ~ .column {
+  [class*="column"] ~ [class*="column"] {
   margin-left: .5rem;
 	}
 }
