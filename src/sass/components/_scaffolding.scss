@@ -70,5 +70,13 @@ hr {
 .text-container {
 	max-width: $text;
 	padding: 0 1rem;
-	margin: 0 auto;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: $large;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }

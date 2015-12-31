@@ -487,7 +487,7 @@ blockquote {
 pre {
   border: 1px solid #cdcdcd;
   border-radius: 4px;
-  background: #e7e7e7;
+  background: #f4f4f4;
   padding: 1rem;
   tab-size: 2;
 }
@@ -501,7 +501,7 @@ pre code {
 
 :not(pre) > code {
   color: #333;
-  background: #e7e7e7;
+  background: #f4f4f4;
   font-family: Menlo, monospace;
   padding: 0 0.2rem;
   border: 1px solid #cdcdcd;
@@ -518,7 +518,15 @@ hr {
 .text-container {
   max-width: 800px;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Clearfix */
@@ -581,47 +589,51 @@ hr {
   flex-wrap: nowrap;
 }
 
+.column ~ .column {
+  margin-left: 0;
+}
+
 .column {
   flex: 1;
 }
 .column._90 {
-  flex: 0.9;
+  flex: 9;
 }
 .column._80 {
-  flex: 0.8;
+  flex: 8;
 }
 .column._75 {
-  flex: 0.75;
+  flex: 7.5;
 }
 .column._70 {
-  flex: 0.7;
+  flex: 7;
 }
 .column._66 {
-  flex: 0.66667;
+  flex: 6.66667;
 }
 .column._60 {
-  flex: 0.6;
+  flex: 6;
 }
 .column._50 {
-  flex: 0.5;
+  flex: 5;
 }
 .column._40 {
-  flex: 0.4;
+  flex: 4;
 }
 .column._33 {
-  flex: 0.33333;
+  flex: 3.33333;
 }
 .column._30 {
-  flex: 0.3;
+  flex: 3;
 }
 .column._25 {
-  flex: 0.25;
+  flex: 2.5;
 }
 .column._20 {
-  flex: 0.2;
+  flex: 2;
 }
 .column._10 {
-  flex: 0.1;
+  flex: 1;
 }
 
 @media (min-width: 600px) {
@@ -630,7 +642,15 @@ hr {
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
+  .column ~ .column {
+    margin-left: .5rem;
+  }
 }
+.align-vertical {
+  align-items: center;
+}
+
 /* Buttons */
 .button,
 button,
@@ -650,6 +670,7 @@ button,
   font-size: .9rem;
   white-space: nowrap;
   vertical-align: middle;
+  text-align: center;
 }
 
 .button:hover,

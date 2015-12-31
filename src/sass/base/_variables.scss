@@ -1,6 +1,7 @@
 /* Breakpoints */
 
-$mobile: 600px;
+$small: 600px;
+$large: 1200px;
 $text: 800px;
 
 /* Typography */
@@ -68,4 +69,4 @@ $error: #D33C40;
 $code-color: $font-color;
 $code-family: Menlo,
 monospace;
-$code-background: $lightgray;
+$code-background: #f4f4f4;

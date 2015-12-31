@@ -5,7 +5,7 @@
 /* Media query for mobile first layout */
 
 @mixin large-screen {
-	@media (min-width: #{$mobile}) {
+	@media (min-width: #{$small}) {
 		@content;
 	}
 }
