@@ -40,40 +40,55 @@
     
     article {
       flex: 1;
+      margin: 1rem;
     }
     
     @media screen and (min-width: 1000px) {
       aside {
         display: block;
         flex: 0 0 250px;
-        margin-right: 1.5rem;
         /* No grow, specific pixel width */
       }
       article {
         flex: 7.5;
       }
-      aside nav {
+      .sidebar {
         position: fixed;
         top: 0;
         left: 0;
         width: 250px;
       }
+      .sidebar h1 {
+        padding: 0 1rem;
+        color: #f0f0f0;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
+      .sidebar p {
+        margin: 0;
+        padding: 0 1rem;
+        color: #9a9ca0;
+      }
+      aside nav {}
       aside nav ul {
         padding: 0;
-        margin: 0;
+        margin: 2rem 0;
         list-style: none;
       }
       aside nav ul li {}
       aside nav ul li a {
-        padding: .8rem;
+        padding: .5rem;
+        margin: 0 .8rem;
+        border-radius: 4px;
         display: block;
-        color: #eaebec;
+        color: #d6d7d9;
         font-weight: 600;
         text-decoration: none;
       }
       aside nav ul li a:hover,
       aside nav ul li a:active,
-      aside nav ul li a:focus {
+      aside nav ul li a:focus,
+      aside nav ul li a.active {
         background: #25282e;
         color: white;
         text-decoration: none;
@@ -88,28 +103,32 @@
   <main>
 
     <aside>
-      <nav>
-        <ul>
-          <li><a href="#grid">Grid</a></li>
-          <li><a href="#typography">Typography</a></li>
-          <li><a href="#buttons">Buttons</a></li>
-          <li><a href="#forms">Forms</a></li>
-          <li><a href="#tables">Tables</a></li>
-          <li><a href="#code">Code</a></li>
-        </ul>
-      </nav>
-
+      <div class="sidebar">
+        <h1>Mise en Place</h1>
+        <p>(mi zɑ̃ ˈplas)</p>
+        <nav>
+          <ul>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#code">Code</a></li>
+          </ul>
+        </nav>
+      </div>
     </aside>
 
     <article>
 
       <div class="container-medium">
 
-        <h2 id="grid">Grid</h2>
+        <section id="grid">
+          <h2>Grid</h2>
 
-        <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. </p>
+          <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. </p>
 
-        <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -117,104 +136,114 @@
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-        <div class="row">
-          <div class="column example">1</div>
-        </div>
-        <div class="row">
-          <div class="column example">2</div>
-          <div class="column example">2</div>
-        </div>
-        <div class="row">
-          <div class="column example">3</div>
-          <div class="column example">3</div>
-          <div class="column example">3</div>
-        </div>
-        <div class="row">
-          <div class="column example">4</div>
-          <div class="column example">4</div>
-          <div class="column example">4</div>
-          <div class="column example">4</div>
-        </div>
+          <div class="row">
+            <div class="column example">1</div>
+          </div>
+          <div class="row">
+            <div class="column example">2</div>
+            <div class="column example">2</div>
+          </div>
+          <div class="row">
+            <div class="column example">3</div>
+            <div class="column example">3</div>
+            <div class="column example">3</div>
+          </div>
+          <div class="row">
+            <div class="column example">4</div>
+            <div class="column example">4</div>
+            <div class="column example">4</div>
+            <div class="column example">4</div>
+          </div>
 
-        <h3>Percentage Widths</h3>
+          <h3>Percentage Widths</h3>
 
-        <p>Specific percentage based column widths can be added.
+          <p>Specific percentage based column widths can be added.
 
-          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;column-50&quot;&gt;50%&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="row">
-            <div class="column-25 example">25%</div>
-            <div class="column-50 example">50%</div>
-            <div class="column-25 example">25%</div>
-          </div>
-          <div class="row">
-            <div class="column-66 example">66%</div>
-            <div class="column-33 example">33%</div>
-          </div>
-          <div class="row">
-            <div class="column-75 example">75%</div>
-            <div class="column-25 example">25%</div>
-          </div>
+            <div class="row">
+              <div class="column-25 example">25%</div>
+              <div class="column-50 example">50%</div>
+              <div class="column-25 example">25%</div>
+            </div>
+            <div class="row">
+              <div class="column-66 example">66%</div>
+              <div class="column-33 example">33%</div>
+            </div>
+            <div class="row">
+              <div class="column-75 example">75%</div>
+              <div class="column-25 example">25%</div>
+            </div>
 
-          <h3>No Collapse</h3>
+            <h3>Fixed Widths</h3>
 
-          <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-          <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
+            <div class="row">
+              <div class="column example" style="flex: 0 0 300px;"></div>
+              <div class="column example"></div>
+              <div class="column example" style="flex: 0 0 200px;"></div>
+            </div>
+
+            <h3>No Collapse</h3>
+
+            <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
+
+            <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
   &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="row no-collapse">
-            <div class="column example">100%</div>
-          </div>
-          <div class="row no-collapse">
-            <div class="column-90 example">90%</div>
-            <div class="column-10 example">10%</div>
-          </div>
-          <div class="row no-collapse">
-            <div class="column-80 example">80%</div>
-            <div class="column-20 example">20%</div>
-          </div>
-          <div class="row no-collapse">
-            <div class="column-70 example">70%</div>
-            <div class="column-30 example">30%</div>
-          </div>
-          <div class="row no-collapse">
-            <div class="column-60 example">60%</div>
-            <div class="column-40 example">40%</div>
-          </div>
-          <div class="row no-collapse">
-            <div class="column-50 example">50%</div>
-            <div class="column-50 example">50%</div>
-          </div>
+            <div class="row no-collapse">
+              <div class="column example">100%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-90 example">90%</div>
+              <div class="column-10 example">10%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-80 example">80%</div>
+              <div class="column-20 example">20%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-70 example">70%</div>
+              <div class="column-30 example">30%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-60 example">60%</div>
+              <div class="column-40 example">40%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-50 example">50%</div>
+              <div class="column-50 example">50%</div>
+            </div>
 
-          <h3>Offsets</h3>
+            <h3>Offsets</h3>
 
-          <p>Add an <code>offset-</code> when you need empty space.</p>
+            <p>Add an <code>offset-</code> when you need empty space.</p>
 
-          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;offset-50&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="row">
-            <div class="column-25 example">25%</div>
-            <div class="offset-50"></div>
-            <div class="column-25 example">25%</div>
-          </div>
-          <div class="row">
-            <div class="offset-25"></div>
-            <div class="column-50 example">50%</div>
-            <div class="offset-25"></div>
-          </div>
-
-          <h2 id="typography">Typography</h2>
+            <div class="row">
+              <div class="column-25 example">25%</div>
+              <div class="offset-50"></div>
+              <div class="column-25 example">25%</div>
+            </div>
+            <div class="row">
+              <div class="offset-25"></div>
+              <div class="column-50 example">50%</div>
+              <div class="offset-25"></div>
+            </div>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
 
           <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
 
@@ -230,8 +259,9 @@
           <h5>Heading 5</h5>
           <h6>Heading 6</h6>
 
-
-          <h2 id="buttons">Buttons</h2>
+        </section>
+        <section id="buttons">
+          <h2>Buttons</h2>
 
           <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
 
@@ -255,8 +285,9 @@
           <input type="submit" value="Submit" class="muted">
           <input type="button" value="Input" class="muted">
           <a class="muted button">Link</a>
-
-          <h2 id="forms">Forms</h2>
+        </section>
+        <section id="forms">
+          <h2>Forms</h2>
 
           <pre><code class="language-html">&lt;form&gt;
   &lt;!-- --&gt;
@@ -301,8 +332,9 @@
             <input type="text" name="name" placeholder="Name" class="has-error">
           </form>
 
-
-          <h2 id="tables">Tables</h2>
+        </section>
+        <section id="tables">
+          <h2>Tables</h2>
 
           <table>
             <thead>
@@ -379,8 +411,9 @@
               </tfoot>
             </table>
           </div>
-
-          <h2 id="code">Code</h2>
+        </section>
+        <section id="code">
+          <h2>Code</h2>
 
           <p> Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Vestibulum iaculis condimentum tempus. Etiam viverra ipsum nunc, et pellentesque purus blandit sit amet.</p>
 
@@ -391,12 +424,12 @@
   &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
+        </section>
+        <h2>Blockquote</h2>
 
-          <h2>Blockquote</h2>
-
-          <blockquote>
-            Blockquote
-          </blockquote>
+        <blockquote>
+          Blockquote
+        </blockquote>
 
       </div>
 
@@ -408,14 +441,43 @@
   <script src="dist/js/prism.js"></script>
 
   <script>
-    $(function() {
-      var pgurl = window.location.href.substr(window.location.href
-        .lastIndexOf("/") + 1);
-      $("nav ul li a").each(function() {
-        if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
-          $(this).addClass("active");
-      })
+    $(document).ready(function() {
+      $(document).on("scroll", onScroll);
+
+      // Smooth scroll
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        $('a').each(function() {
+          $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+          menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top + 2
+        }, 300, 'swing', function() {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
+        });
+      });
     });
+
+    function onScroll(event) {
+      var scrollPos = $(document).scrollTop();
+      $('aside a').each(function() {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+          $('aside nav ul li a').removeClass("active");
+          currLink.addClass("active");
+        } else {
+          currLink.removeClass("active");
+        }
+      });
+    }
 
   </script>
 </body>
