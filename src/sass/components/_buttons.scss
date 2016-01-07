@@ -1,3 +1,7 @@
+/* Buttons
+  =============== */
+
+
 /* Buttons */
 
 %buttons {
@@ -18,11 +22,17 @@
   vertical-align: middle;
   text-align: center;
 }
+
+/* Buttons on hover */
+
 %buttons-hover {
   background: darken($button-background, 10%);
   color: $button-color;
   text-decoration: none;
 }
+
+/* Apply styles to .button class, button element, and button-based inputs */
+
 .button,
 button,
 #{$input-buttons} {
@@ -37,6 +47,7 @@ button,
   &:hover {
     @extend %buttons-hover;
   }
+  // Muted buttons
   &.muted {
     background: transparent;
     border: $muted-border;

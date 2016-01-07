@@ -28,12 +28,11 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      max-width: 1300px;
     }
     
     aside {
       flex: 0;
-      background: #2B303B;
+      background: #30343b;
     }
     
     article {
@@ -42,7 +41,7 @@
     
     @media screen and (min-width: 1000px) {
       aside {
-        flex: 2.5;
+        flex: 0 0 300px; /* No grow, specific pixel width */
       }
       article {
         flex: 7.5;
@@ -57,11 +56,14 @@
   <main>
 
     <aside>
+    
+    <img src="example/miseenplace2.png" style="margin:0 auto; display: block; max-width: 120px;padding:10px;">
+    
     </aside>
 
     <article>
 
-      <div class="text-container">
+      <div class="container-medium">
 
         <h2>Grid</h2>
 
@@ -94,9 +96,9 @@
           <div class="column example">4</div>
         </div>
 
-        <h3>Specific Widths</h3>
+        <h3>Percentage Widths</h3>
 
-        <p>Specific column widths can be added.
+        <p>Specific percentage based column widths can be added.
 
           <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
@@ -296,7 +298,7 @@
             </tfoot>
           </table>
 
-          <h2>Striped Tables</h2>
+          <h3>Striped Tables</h3>
 
           <pre><code class="language-html">&lt;table class="striped"&gt;
   &lt;!-- --&gt;
@@ -354,20 +356,6 @@
           <blockquote>
             Blockquote
           </blockquote>
-
-          <h2>Callout</h2>
-
-          <div class="callout">
-            Regular callout
-          </div>
-
-          <div class="callout info">
-            Info callout
-          </div>
-
-          <div class="callout alert">
-            Alert callout
-          </div>
 
       </div>
 

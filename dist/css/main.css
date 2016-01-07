@@ -1,6 +1,8 @@
-/** Mise en Place
-by Tania Rascia
-=============== */
+/* Mise en Place
+  by Tania Rascia
+  =============== */
+/* Variables
+  =============== */
 /* Breakpoints */
 /* Typography */
 /* Colors */
@@ -10,8 +12,8 @@ by Tania Rascia
 /* Forms */
 /* General */
 /* Code */
-/** Mixins
-=============== */
+/* Mixins
+  =============== */
 /* Media query for mobile first layout */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -412,7 +414,9 @@ th {
   padding: 0;
 }
 
-/* Reset box padding */
+/* Reset
+  =============== */
+/* Reset box sizing to border box */
 html {
   box-sizing: border-box;
 }
@@ -423,6 +427,8 @@ html {
   box-sizing: inherit;
 }
 
+/* Scaffolding
+  =============== */
 /* HTML base */
 html {
   -webkit-font-smoothing: antialiased;
@@ -520,20 +526,23 @@ hr {
 }
 
 /* Containers */
-.text-container {
-  max-width: 800px;
-  padding: 0 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container {
+.container, .conainer-small, .container-medium {
   max-width: 1200px;
   padding: 0 1rem;
   margin-left: auto;
   margin-right: auto;
 }
 
+.conainer-small {
+  max-width: 800px;
+}
+
+.container-medium {
+  max-width: 1000px;
+}
+
+/* Helpers
+  =============== */
 /* Clearfix */
 .clearfix:before,
 .clearfix:after {
@@ -571,25 +580,8 @@ hr {
   visibility: hidden;
 }
 
-/* Callouts */
-.callout {
-  border: 1px solid #cdcdcd;
-  border-radius: 4px;
-  background: #e7e7e7;
-  padding: 1rem;
-  margin: 1rem 0;
-}
-.callout.info {
-  border: 1px solid #0072C0;
-  background: #c0e5ff;
-}
-.callout.alert {
-  border: 1px solid #D33C40;
-  background: #f4cecf;
-}
-
-/** Grid
-=============== */
+/* Grid
+  =============== */
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 [class*="column"] {
   flex: 1;
@@ -732,6 +724,8 @@ hr {
   align-items: center;
 }
 
+/* Buttons
+  =============== */
 /* Buttons */
 .button,
 button,
@@ -754,6 +748,7 @@ button,
   text-align: center;
 }
 
+/* Buttons on hover */
 .button:hover,
 button:hover,
 [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
@@ -762,6 +757,7 @@ button:hover,
   text-decoration: none;
 }
 
+/* Apply styles to .button class, button element, and button-based inputs */
 .button:before,
 button:before,
 [type=submit]:before, [type=reset]:before, [type=button]:before {
@@ -784,8 +780,8 @@ button.muted:hover,
   background: #e7e7e7;
 }
 
-/** Forms
-===============*/
+/* Forms
+  =============== */
 /* Display for all input fields (except buttons) */
 [type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
   display: inline-block;
@@ -858,6 +854,9 @@ textarea.has-error:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f4cecf;
 }
 
+/* Tables
+  =============== */
+/* Table expands to full width of containing element */
 table {
   width: 100%;
   max-width: 100%;
@@ -873,10 +872,12 @@ td {
   border-top: 1px solid #cdcdcd;
 }
 
+/* Striped tables */
 .striped > tbody tr:nth-of-type(odd) {
   background: #e7e7e7;
 }
 
+/* Container for responsive tables */
 .table-scroll {
   overflow-x: auto;
 }
@@ -886,7 +887,7 @@ td {
     width: 100%;
   }
 }
-/*
+/* Easy terminal command
 sass --watch src/sass:dist/css --style expanded
 */
 

@@ -1,11 +1,11 @@
-/** Mixins
-=============== */
+/* Mixins
+  =============== */
 
 
 /* Media query for mobile first layout */
 
 @mixin large-screen {
-	@media (min-width: #{$small}) {
-		@content;
-	}
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
 }

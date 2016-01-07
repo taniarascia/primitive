@@ -1,3 +1,8 @@
+/* Tables
+  =============== */
+
+/* Table expands to full width of containing element */
+
 table {
   width: 100%;
   max-width: 100%;
@@ -10,11 +15,17 @@ td {
 td {
   border-top: 1px solid $gray;
 }
+
+/* Striped tables */
+
 .striped > tbody {
   tr:nth-of-type(odd) {
     background: $lightgray;
   }
 }
+
+/* Container for responsive tables */
+
 .table-scroll {
   overflow-x: auto;
 }

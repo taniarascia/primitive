@@ -1,3 +1,7 @@
+/* Scaffolding
+  =============== */
+
+
 /* HTML base */
 
 html {
@@ -73,16 +77,19 @@ hr {
 
 /* Containers */
 
-.text-container {
-	max-width: $text;
-	padding: 0 1rem;
-	margin-left: auto;
-  margin-right: auto;
-}
-
 .container {
   max-width: $large;
   padding: 0 1rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.conainer-small {
+	@extend .container;
+  max-width: $small;
+}
+
+.container-medium {
+  @extend .container;
+  max-width: $medium;
 }

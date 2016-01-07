@@ -1,8 +1,13 @@
+/* Variables
+  =============== */
+
+
 /* Breakpoints */
 
-$small: 600px;
+$mobile: 600px;
+$small: 800px;
+$medium: 1000px;
 $large: 1200px;
-$text: 800px;
 
 /* Typography */
 
@@ -51,6 +56,7 @@ $muted-border: 1px solid $gray;
 $muted-border-hover: 1px solid darken($gray, 30%);
 $muted-background-hover: lighten($gray, 10%);
 $muted-color: darken($gray, 50%);
+
 /* Forms */
 
 $input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
