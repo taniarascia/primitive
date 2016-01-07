@@ -35,8 +35,7 @@
       padding: 1rem;
       flex: 0;
       display: none;
-      background: #202020;
-      /*#363A42;*/
+      background: #363A42;
     }
     
     article {
@@ -46,7 +45,8 @@
     @media screen and (min-width: 1000px) {
       aside {
         display: block;
-        flex: 0 0 300px;
+        flex: 0 0 250px;
+        margin-right: 1.5rem;
         /* No grow, specific pixel width */
       }
       article {
@@ -56,24 +56,25 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 300px;
+        width: 250px;
       }
       aside nav ul {
         padding: 0;
         margin: 0;
         list-style: none;
       }
-      aside nav ul li {
-        border-bottom: 1px solid #444;
-      }
+      aside nav ul li {}
       aside nav ul li a {
-        padding: 1rem;
+        padding: .8rem;
         display: block;
-        color: #efefef;
+        color: #eaebec;
+        font-weight: 600;
         text-decoration: none;
       }
-      aside nav ul li a:hover {
-        background: #333;
+      aside nav ul li a:hover,
+      aside nav ul li a:active,
+      aside nav ul li a:focus {
+        background: #25282e;
         color: white;
         text-decoration: none;
       }
@@ -90,7 +91,11 @@
       <nav>
         <ul>
           <li><a href="#grid">Grid</a></li>
-          <li><a href="#grid">Grid</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#buttons">Buttons</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#code">Code</a></li>
         </ul>
       </nav>
 
@@ -374,7 +379,8 @@
               </tfoot>
             </table>
           </div>
-          <h2>Code</h2>
+
+          <h2 id="code">Code</h2>
 
           <p> Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Vestibulum iaculis condimentum tempus. Etiam viverra ipsum nunc, et pellentesque purus blandit sit amet.</p>
 
