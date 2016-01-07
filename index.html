@@ -17,7 +17,8 @@
   <style>
     .example {
       background: #f4f4f4;
-      margin-bottom: .5rem;
+      margin-bottom: .8rem;
+      border: 1px solid #ddd;
     }
     
     .example:nth-of-type(odd) {
@@ -31,8 +32,11 @@
     }
     
     aside {
+      padding: 1rem;
       flex: 0;
-      background: #30343b;
+      display: none;
+      background: #202020;
+      /*#363A42;*/
     }
     
     article {
@@ -41,10 +45,37 @@
     
     @media screen and (min-width: 1000px) {
       aside {
-        flex: 0 0 300px; /* No grow, specific pixel width */
+        display: block;
+        flex: 0 0 300px;
+        /* No grow, specific pixel width */
       }
       article {
         flex: 7.5;
+      }
+      aside nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+      }
+      aside nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      aside nav ul li {
+        border-bottom: 1px solid #444;
+      }
+      aside nav ul li a {
+        padding: 1rem;
+        display: block;
+        color: #efefef;
+        text-decoration: none;
+      }
+      aside nav ul li a:hover {
+        background: #333;
+        color: white;
+        text-decoration: none;
       }
     }
 
@@ -56,18 +87,22 @@
   <main>
 
     <aside>
-    
-    <img src="example/miseenplace2.png" style="margin:0 auto; display: block; max-width: 120px;padding:10px;">
-    
+      <nav>
+        <ul>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#grid">Grid</a></li>
+        </ul>
+      </nav>
+
     </aside>
 
     <article>
 
       <div class="container-medium">
 
-        <h2>Grid</h2>
+        <h2 id="grid">Grid</h2>
 
-        <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Margin will only be added in between elements, and only on large screens.</p>
+        <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. </p>
 
         <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
@@ -169,12 +204,12 @@
             <div class="column-25 example">25%</div>
           </div>
           <div class="row">
-            <div class="offset-25 example"></div>
+            <div class="offset-25"></div>
             <div class="column-50 example">50%</div>
-            <div class="offset-25 example"></div>
+            <div class="offset-25"></div>
           </div>
 
-          <h2>Typography</h2>
+          <h2 id="typography">Typography</h2>
 
           <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
 
@@ -191,7 +226,7 @@
           <h6>Heading 6</h6>
 
 
-          <h2>Buttons</h2>
+          <h2 id="buttons">Buttons</h2>
 
           <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
 
@@ -216,7 +251,7 @@
           <input type="button" value="Input" class="muted">
           <a class="muted button">Link</a>
 
-          <h2>Forms</h2>
+          <h2 id="forms">Forms</h2>
 
           <pre><code class="language-html">&lt;form&gt;
   &lt;!-- --&gt;
@@ -262,7 +297,7 @@
           </form>
 
 
-          <h2>Tables</h2>
+          <h2 id="tables">Tables</h2>
 
           <table>
             <thead>
@@ -365,16 +400,17 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="dist/js/prism.js"></script>
-  
+
   <script>
-        $(function () {
+    $(function() {
       var pgurl = window.location.href.substr(window.location.href
         .lastIndexOf("/") + 1);
-      $("nav ul li a").each(function () {
+      $("nav ul li a").each(function() {
         if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
           $(this).addClass("active");
       })
     });
+
   </script>
 </body>
 

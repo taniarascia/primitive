@@ -585,6 +585,7 @@ hr {
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 [class*="column"] {
   flex: 1;
+  padding: 1rem;
 }
 
 .column-90 {
@@ -698,14 +699,6 @@ hr {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-.no-collapse > [class*="column"] ~ [class*="column"] {
-  margin-left: .5rem;
-}
-
-/* Prevent margins on small screens */
-[class*="column"] ~ [class*="column"] {
-  margin-left: 0;
-}
 
 /* Enable columns on large screens */
 @media (min-width: 600px) {
@@ -714,16 +707,26 @@ hr {
     flex-direction: row;
     flex-wrap: nowrap;
   }
-
-  [class*="column"] ~ [class*="column"] {
-    margin-left: .5rem;
-  }
 }
 /* Vertical alignment */
 .align-vertical {
   align-items: center;
 }
 
+/* Adding margins instead of padding based
+.no-collapse {
+	> [class*="column"] ~ [class*="column"] {
+  	margin-left: .5rem;
+	}
+}
+[class*="column"] ~ [class*="column"] {
+  margin-left: 0;
+}
+@include large-screen {
+  [class*="column"] ~ [class*="column"] {
+  margin-left: .5rem;
+	}
+}*/
 /* Buttons
   =============== */
 /* Buttons */
