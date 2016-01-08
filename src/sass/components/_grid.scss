@@ -3,38 +3,83 @@
 
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 
-[class*="column"] { flex: 1; padding: 1rem; }
+[class*="column"] { 
+	flex: 1; 
+	padding: .5rem 1rem; 
+}
+[class*="column"] > .half {
+	flex: 5;
+}
 
-.column-90 { flex: (9/10) * 10; }
-.column-80 { flex: (4/5) * 10; }
-.column-75 { flex: (3/4) * 10; }
-.column-70 { flex: (7/10) * 10; }
-.column-66 { flex: (2/3) * 10; }
-.column-60 { flex: (3/5) * 10; }
-.column-50 { flex: (1/2) * 10; }
-.column-40 { flex: (2/5) * 10; }
-.column-33 { flex: (1/3) * 10; }
-.column-30 { flex: (3/10) * 10; }
+// Run a loop 10 times to get multiples of 10
+@for $i from 1 through 10 {
+	$width: $i;
+	
+	.column-#{$i * 10} {
+		flex: $width;
+	}
+}
+// 1/4 and 1/3 fractions
 .column-25 { flex: (1/4) * 10; }
-.column-20 { flex: (1/5) * 10; }
-.column-10 { flex: (1/10) * 10; }
- 
+.column-33 { flex: (1/3) * 10; }
+.column-66 { flex: (2/3) * 10; }
+.column-75 { flex: (3/4) * 10; }
+
+/* Fixed */
+
+// Run a loop 12 times to get multiples of 100 in pixels
+@for $i from 1 through 12 {
+	$px: $i * 100px;
+	
+	.column-#{$i * 100} {
+		flex: 0 0 $px;
+	}
+}
+
 /* Offsets */
 
-.offset-90 { margin-left: 90%; }
-.offset-80 { margin-left: 80%; }
-.offset-75 { margin-left: 75%; }
-.offset-70 { margin-left: 70%; }
-.offset-66 { margin-left: 66%; }
-.offset-60 { margin-left: 60%; }
-.offset-50 { margin-left: 50%; }
-.offset-40 { margin-left: 40%; }
-.offset-33 { margin-left: 33%; }
-.offset-30 { margin-left: 30%; }
-.offset-25 { margin-left: 25%; }
-.offset-20 { margin-left: 20%; }
-.offset-10 { margin-left: 10%; }
+// Run a loop 10 times to get a percentage of every multiple of ten
+@for $i from 1 through 10 {
+	$margin: $i * 10%;
+	
+	.offset-#{$i * 10} {
+		margin-left: $margin;
+	}
+}
 
+// 1/4 and 1/3 fractions
+.offset-25 { margin-left: 25%; }
+.offset-33 { margin-left: 33%; }
+.offset-66 { margin-left: 66%; }
+.offset-75 { margin-left: 75%; }
+
+/* Repeating Grid */
+
+[class*="grid"] {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	> li {
+		width: 50%;
+		padding: .5rem 1rem;
+	}
+}
+
+@include large-screen {
+
+	// Run a loop 8 times for repeating grid possiblities
+@for $i from 1 through 8 {
+	$percent: percentage(1/$i);
+	
+	.grid-#{$i} {
+		> li {
+			width: $percent;
+		}
+	}
+}
+}
 
 /* Prevent mobile breakpoint with no-collapse class */
 
@@ -60,18 +105,19 @@
   align-items: center;
 }
 
-/* Adding margins instead of padding based
-.no-collapse {
+/* Gutters */
+
+.no-collapse.gutters {
 	> [class*="column"] ~ [class*="column"] {
-  	margin-left: .5rem;
+  	margin-left: 1rem;
 	}
 }
-[class*="column"] ~ [class*="column"] {
+.gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
 @include large-screen {
-  [class*="column"] ~ [class*="column"] {
-  margin-left: .5rem;
+  .gutters [class*="column"] ~ [class*="column"] {
+  margin-left: 1rem;
 	}
-}*/
+}
 

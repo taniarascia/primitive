@@ -585,114 +585,221 @@ hr {
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 [class*="column"] {
   flex: 1;
-  padding: 1rem;
+  padding: .5rem 1rem;
 }
 
-.column-90 {
-  flex: 9;
-}
-
-.column-80 {
-  flex: 8;
-}
-
-.column-75 {
-  flex: 7.5;
-}
-
-.column-70 {
-  flex: 7;
-}
-
-.column-66 {
-  flex: 6.66667;
-}
-
-.column-60 {
-  flex: 6;
-}
-
-.column-50 {
+[class*="column"] > .half {
   flex: 5;
-}
-
-.column-40 {
-  flex: 4;
-}
-
-.column-33 {
-  flex: 3.33333;
-}
-
-.column-30 {
-  flex: 3;
-}
-
-.column-25 {
-  flex: 2.5;
-}
-
-.column-20 {
-  flex: 2;
 }
 
 .column-10 {
   flex: 1;
 }
 
+.column-20 {
+  flex: 2;
+}
+
+.column-30 {
+  flex: 3;
+}
+
+.column-40 {
+  flex: 4;
+}
+
+.column-50 {
+  flex: 5;
+}
+
+.column-60 {
+  flex: 6;
+}
+
+.column-70 {
+  flex: 7;
+}
+
+.column-80 {
+  flex: 8;
+}
+
+.column-90 {
+  flex: 9;
+}
+
+.column-100 {
+  flex: 10;
+}
+
+.column-25 {
+  flex: 2.5;
+}
+
+.column-33 {
+  flex: 3.33333;
+}
+
+.column-66 {
+  flex: 6.66667;
+}
+
+.column-75 {
+  flex: 7.5;
+}
+
+/* Fixed */
+.column-100 {
+  flex: 0 0 100px;
+}
+
+.column-200 {
+  flex: 0 0 200px;
+}
+
+.column-300 {
+  flex: 0 0 300px;
+}
+
+.column-400 {
+  flex: 0 0 400px;
+}
+
+.column-500 {
+  flex: 0 0 500px;
+}
+
+.column-600 {
+  flex: 0 0 600px;
+}
+
+.column-700 {
+  flex: 0 0 700px;
+}
+
+.column-800 {
+  flex: 0 0 800px;
+}
+
+.column-900 {
+  flex: 0 0 900px;
+}
+
+.column-1000 {
+  flex: 0 0 1000px;
+}
+
+.column-1100 {
+  flex: 0 0 1100px;
+}
+
+.column-1200 {
+  flex: 0 0 1200px;
+}
+
 /* Offsets */
-.offset-90 {
-  margin-left: 90%;
-}
-
-.offset-80 {
-  margin-left: 80%;
-}
-
-.offset-75 {
-  margin-left: 75%;
-}
-
-.offset-70 {
-  margin-left: 70%;
-}
-
-.offset-66 {
-  margin-left: 66%;
-}
-
-.offset-60 {
-  margin-left: 60%;
-}
-
-.offset-50 {
-  margin-left: 50%;
-}
-
-.offset-40 {
-  margin-left: 40%;
-}
-
-.offset-33 {
-  margin-left: 33%;
-}
-
-.offset-30 {
-  margin-left: 30%;
-}
-
-.offset-25 {
-  margin-left: 25%;
+.offset-10 {
+  margin-left: 10%;
 }
 
 .offset-20 {
   margin-left: 20%;
 }
 
-.offset-10 {
-  margin-left: 10%;
+.offset-30 {
+  margin-left: 30%;
 }
 
+.offset-40 {
+  margin-left: 40%;
+}
+
+.offset-50 {
+  margin-left: 50%;
+}
+
+.offset-60 {
+  margin-left: 60%;
+}
+
+.offset-70 {
+  margin-left: 70%;
+}
+
+.offset-80 {
+  margin-left: 80%;
+}
+
+.offset-90 {
+  margin-left: 90%;
+}
+
+.offset-100 {
+  margin-left: 100%;
+}
+
+.offset-25 {
+  margin-left: 25%;
+}
+
+.offset-33 {
+  margin-left: 33%;
+}
+
+.offset-66 {
+  margin-left: 66%;
+}
+
+.offset-75 {
+  margin-left: 75%;
+}
+
+/* Repeating Grid */
+[class*="grid"] {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+[class*="grid"] > li {
+  width: 50%;
+  padding: .5rem 1rem;
+}
+
+@media (min-width: 600px) {
+  .grid-1 > li {
+    width: 100%;
+  }
+
+  .grid-2 > li {
+    width: 50%;
+  }
+
+  .grid-3 > li {
+    width: 33.33333%;
+  }
+
+  .grid-4 > li {
+    width: 25%;
+  }
+
+  .grid-5 > li {
+    width: 20%;
+  }
+
+  .grid-6 > li {
+    width: 16.66667%;
+  }
+
+  .grid-7 > li {
+    width: 14.28571%;
+  }
+
+  .grid-8 > li {
+    width: 12.5%;
+  }
+}
 /* Prevent mobile breakpoint with no-collapse class */
 .no-collapse {
   display: flex;
@@ -713,20 +820,20 @@ hr {
   align-items: center;
 }
 
-/* Adding margins instead of padding based
-.no-collapse {
-	> [class*="column"] ~ [class*="column"] {
-  	margin-left: .5rem;
-	}
+/* Gutters */
+.no-collapse.gutters > [class*="column"] ~ [class*="column"] {
+  margin-left: 1rem;
 }
-[class*="column"] ~ [class*="column"] {
+
+.gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
-@include large-screen {
-  [class*="column"] ~ [class*="column"] {
-  margin-left: .5rem;
-	}
-}*/
+
+@media (min-width: 600px) {
+  .gutters [class*="column"] ~ [class*="column"] {
+    margin-left: 1rem;
+  }
+}
 /* Buttons
   =============== */
 /* Buttons */
@@ -768,6 +875,16 @@ button:before,
   display: inline-block;
   vertical-align: middle;
   height: 100%;
+}
+.button.accent,
+button.accent,
+[type=submit].accent, [type=reset].accent, [type=button].accent {
+  background: #009E56;
+}
+.button.accent:hover,
+button.accent:hover,
+[type=submit].accent:hover, [type=reset].accent:hover, [type=button].accent:hover {
+  background: #006b3a;
 }
 .button.muted,
 button.muted,

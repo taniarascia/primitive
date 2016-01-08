@@ -1,9 +1,12 @@
 /* http://prismjs.com/download.html?themes=prism-twilight&languages=markup+css+clike+javascript+css-extras+scss&plugins=show-language */
+
+
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
  * @author Remy Bach
  */
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #111;
@@ -16,121 +19,126 @@ pre[class*="language-"] {
 	word-break: normal;
 	word-wrap: normal;
 	line-height: 1.5;
-
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
 	tab-size: 2;
-
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
 }
-
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-	background: #f4f4f4; /* #141414 */
+	background: #f4f4f4;
+	/* #141414 */
 }
 
 /* Code blocks */
+
 pre[class*="language-"] {
 	border: 1px solid transparent;
 	margin: 1rem 0;
 	overflow: auto;
 	padding: 1em;
 }
-
 pre[class*="language-"]::selection {
 	/* Safari */
-	background: rgba(0,0,30,.1); /* #282A2B */
+	background: rgba(0, 0, 30, .1);
+	/* #282A2B */
 }
-
 pre[class*="language-"]::selection {
 	/* Firefox */
-	background: rgba(0,0,30,.1); /* #282A2B */
+	background: rgba(0, 0, 30, .1);
+	/* #282A2B */
 }
 
 /* Text Selection colour */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-	text-shadow: none;
-	background: rgba(0,0,30,.1); /* #EDEDED */
-}
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"]::-moz-selection {
 	text-shadow: none;
-	background: rgba(0,0,30,.1); /* #EDEDED */
+	background: rgba(0, 0, 30, .1);
+	/* #EDEDED */
+}
+pre[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+code[class*="language-"]::selection,
+code[class*="language-"]::selection {
+	text-shadow: none;
+	background: rgba(0, 0, 30, .1);
+	/* #EDEDED */
 }
 
 /* Inline code */
+
 :not(pre) > code[class*="language-"] {
 	border-radius: .3em;
 	padding: .15em .2em .05em;
 	white-space: normal;
 }
-
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #67757e; /* #777777 */
+	color: #67757e;
+	/* #777777 */
 }
-
-.token.punctuation {
+.token.punctuation,
+.token.operator {
 	color: #000;
 	/*opacity: .7;*/
 }
-
 .namespace {
- /* opacity: .7; */
+	/* opacity: .7; */
 }
-
 .token.tag {
-  color: #0070C2;
+	color: #0070C2;
 }
 .token.boolean,
 .token.number,
 .token.deleted {
-	color: #A7563D; /* #CF6A4C */
+	color: #F25C24;
+	/* #CF6A4C */
 }
-
 .token.selector,
 .token.constant,
 .token.symbol,
 .token.builtin {
-	color: #99363F; /* #F9EE98 */
+	color: #0070C2;
+	/* #F9EE98 */
 }
-
 .token.property {
-	color: #f0f1f5;
+	color: #363A42;
 }
-
 .token.attr-name {
-  color: #363A42;
+	color: #363A42;
 }
 .token.attr-value,
 .token.string,
 .token.char,
-.token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string,
-.token.variable,
 .token.inserted {
-	color: #009E56; /* #8F9D6A */
+	color: #009E56;
+	/* #8F9D6A */
 }
-
-.token.atrule, .token.keyword {
-	color: #e8c884; /* #7587A6 */
+.token.variable {
+	color: #4244A1;
 }
-
+.token.atrule,
+.token.keyword {
+	color: #A83639;
+	/* #7587A6 */
+}
 .token.regex,
 .token.important {
-	color: hsl(42, 75%, 65%); /* #E9C062 */
+	color: #534782;
+	/* #E9C062 */
 }
-
 .token.important,
 .token.bold {
 	font-weight: bold;
@@ -138,30 +146,30 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 .token.italic {
 	font-style: italic;
 }
-
 .token.entity {
 	cursor: help;
 }
-
 pre[data-line] {
 	padding: 1em 0 1em 3em;
 	position: relative;
 }
 
 /* Markup */
+
 .language-markup .token.tag,
 .language-markup .token.attr-name,
 .language-markup .token.punctuation {
-	color: #bf616a; /* #AC885B */
+	color: #bf616a;
+	/* #AC885B */
 }
 
 /* Make the tokens sit above the line highlight so the colours don't look faded. */
+
 .token {
 	position: relative;
 	z-index: 1;
 }
-
-code[class*=language-scss], .language-css {
-	color: #9dbe8c;
+code[class*=language-scss],
+.language-css {
+	color: #009E56;
 }
-

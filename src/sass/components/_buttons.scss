@@ -47,6 +47,12 @@ button,
   &:hover {
     @extend %buttons-hover;
   }
+	&.accent {
+		background: $accent-color;
+		&:hover {
+			background: darken($accent-color, 10%);
+		}
+	}
   // Muted buttons
   &.muted {
     background: transparent;
