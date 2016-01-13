@@ -496,7 +496,7 @@ blockquote {
 }
 
 pre {
-  border: 1px solid #cdcdcd;
+  border: 0;
   border-radius: 4px;
   background: #f4f4f4;
   padding: 1rem;
@@ -585,7 +585,8 @@ hr {
 /* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 [class*="column"] {
   flex: 1;
-  padding: .5rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 [class*="column"] > .half {
@@ -699,43 +700,43 @@ hr {
 
 /* Offsets */
 .offset-10 {
-  margin-left: 10%;
+  margin-left: calc(10% + 1rem);
 }
 
 .offset-20 {
-  margin-left: 20%;
+  margin-left: calc(20% + 1rem);
 }
 
 .offset-30 {
-  margin-left: 30%;
+  margin-left: calc(30% + 1rem);
 }
 
 .offset-40 {
-  margin-left: 40%;
+  margin-left: calc(40% + 1rem);
 }
 
 .offset-50 {
-  margin-left: 50%;
+  margin-left: calc(50% + 1rem);
 }
 
 .offset-60 {
-  margin-left: 60%;
+  margin-left: calc(60% + 1rem);
 }
 
 .offset-70 {
-  margin-left: 70%;
+  margin-left: calc(70% + 1rem);
 }
 
 .offset-80 {
-  margin-left: 80%;
+  margin-left: calc(80% + 1rem);
 }
 
 .offset-90 {
-  margin-left: 90%;
+  margin-left: calc(90% + 1rem);
 }
 
 .offset-100 {
-  margin-left: 100%;
+  margin-left: calc(100% + 1rem);
 }
 
 .offset-25 {
@@ -764,7 +765,8 @@ hr {
 }
 [class*="grid"] > li {
   width: 50%;
-  padding: .5rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -847,12 +849,11 @@ button,
   background: #0072C0;
   color: #ffffff;
   font-weight: 600;
-  height: 2.3em;
+  height: 2.5em;
   text-transform: uppercase;
   padding: .6rem 1.2rem;
   cursor: pointer;
-  margin: .8rem 0;
-  font-size: .9rem;
+  margin: .5rem 0;
   white-space: nowrap;
   vertical-align: middle;
   text-align: center;
@@ -886,6 +887,17 @@ button.accent:hover,
 [type=submit].accent:hover, [type=reset].accent:hover, [type=button].accent:hover {
   background: #006b3a;
 }
+.button.round,
+button.round,
+[type=submit].round, [type=reset].round, [type=button].round {
+  border-radius: 40px;
+}
+.button.full,
+button.full,
+[type=submit].full, [type=reset].full, [type=button].full {
+  display: block;
+  width: 100%;
+}
 .button.muted,
 button.muted,
 [type=submit].muted, [type=reset].muted, [type=button].muted {
@@ -904,13 +916,14 @@ button.muted:hover,
   =============== */
 /* Display for all input fields (except buttons) */
 [type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea {
-  display: inline-block;
+  display: block;
   background: transparent;
   border: 1px solid #cdcdcd;
   border-radius: 4px;
   padding: .6rem;
   outline: none;
-  height: 2.3em;
+  vertical-align: middle;
+  height: 2.5em;
 }
 
 /* Input fields on hover */
@@ -933,6 +946,7 @@ button.muted:hover,
 /* Horizontal forms have no set width on large screen view */
 @media (min-width: 600px) {
   .horizontal-form [type=color], .horizontal-form [type=date], .horizontal-form [type=datetime-local], .horizontal-form [type=email], .horizontal-form [type=month], .horizontal-form [type=number], .horizontal-form [type=password], .horizontal-form [type=search], .horizontal-form [type=tel], .horizontal-form [type=text], .horizontal-form [type=url], .horizontal-form [type=week], .horizontal-form [type=time], .horizontal-form select, .horizontal-form textarea {
+    display: inline-block;
     width: auto;
   }
 }
@@ -955,11 +969,24 @@ label {
   margin: .5rem 0;
 }
 
+.split-form [class*="column"] {
+  padding: 0;
+}
+
 @media (min-width: 600px) {
   .horizontal-form label,
   .horizontal-form [type=submit], .horizontal-form [type=reset], .horizontal-form [type=button] {
     display: inline-block;
     margin: .5rem 0;
+  }
+
+  .split-form label {
+    text-align: right;
+  }
+  .split-form [class*="column"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: .5rem;
   }
 }
 /* Errors */

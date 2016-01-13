@@ -2,7 +2,7 @@ $(document).ready(function () {
 	$(document).on("scroll", onScroll);
 
 	// Smooth scroll
-	$('a[href^="#"]').on('click', function (e) {
+	$('a[href^="#"]').not('.tabs-controls').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
 		$('a').each(function () {

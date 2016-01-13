@@ -5,7 +5,8 @@
 
 [class*="column"] { 
 	flex: 1; 
-	padding: .5rem 1rem; 
+	padding-left: 1rem; 
+  padding-right: 1rem;
 }
 [class*="column"] > .half {
 	flex: 5;
@@ -39,11 +40,12 @@
 /* Offsets */
 
 // Run a loop 10 times to get a percentage of every multiple of ten
+
 @for $i from 1 through 10 {
 	$margin: $i * 10%;
 	
 	.offset-#{$i * 10} {
-		margin-left: $margin;
+		margin-left: calc(#{$margin} + 1rem);
 	}
 }
 
@@ -63,7 +65,8 @@
 	flex-wrap: wrap;
 	> li {
 		width: 50%;
-		padding: .5rem 1rem;
+		padding-left: 1rem;
+    padding-right: 1rem;
 	}
 }
 

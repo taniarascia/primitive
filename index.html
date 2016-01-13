@@ -2,207 +2,216 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<title>Mise en Place</title>
+  <title>Mise en Place</title>
 
-	<meta name="author" content="">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="dist/css/main.css">
-	<link rel="stylesheet" href="dist/css/prism.css">
-	<!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+  <meta id="author" content="">
+  <meta id="description" content="">
+  <meta id="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/prism.css">
+  <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
 
-	<style>
-		.example {
-			background: #e5f0f8;
-			margin-bottom: .8rem;
-			border: 1px solid #7fb7e0;
-		}
-		
-		.example:nth-of-type(odd) {
-			background: #cce2f2;
-		}
-		
-		.example.special {
-			background: #0070C2;
-			border: 1px solid #004e87;
-			color: #ffffff;
-		}
-		
-		main {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-		}
-		
-		aside {
-			padding: 1rem;
-			flex: 0;
-			display: none;
-			background: #282828;
-		}
-		
-		.content {
-			flex: 1;
-		}
-		
-		@media screen and (min-width: 1000px) {
-			aside {
-				display: block;
-				flex: 0 0 250px;
-				/* No grow, specific pixel width */
-			}
-			.content {
-				flex: 7.5;
-				margin: 1rem;
-			}
-			.sidebar {
-				margin-top: 1rem;
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 250px;
-			}
-			.sidebar h1 {
-				padding: 0 1rem;
-				color: #f0f0f0;
-				font-size: 1.5rem;
-				margin-bottom: 0;
-			}
-			.sidebar p {
-				margin: 0;
-				padding: 0 1rem;
-				color: #81848d;
-			}
-			aside nav {}
-			aside nav ul {
-				padding: 0;
-				margin: 2rem 0;
-				list-style: none;
-			}
-			aside nav ul li {}
-			aside nav ul li a {
-				padding: .5rem;
-				margin: 0 .8rem;
-				border-radius: 4px;
-				display: block;
-				color: #d0d0d0;
-				font-weight: 600;
-				text-decoration: none;
-			}
-			aside nav ul li a:hover,
-			aside nav ul li a:active,
-			aside nav ul li a:focus {
-				background: #202020;
-				color: #ffffff;
-				text-decoration: none;
-			}
-			aside nav ul li a.active {
-				background: #0070C2;
-				color: #ffffff;
-				text-decoration: none;
-			}
-		}
-		
-		[class*="scss"] pre {
-			display: none;
-		}
-		
-		.tabs {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-			margin-top: 1rem;
-		}
-		
-		.tabs-item {
-			display: block;
-		}
-		
-		@media only screen and (min-width: 990px) {
-			.tabs-item {
-				display: inline-block;
-			}
-		}
-		
-		.tabs-controls {
-			display: block;
-			border-width: 1px 1px 0;
-			border-style: solid;
-			border-color: transparent;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			padding: 10px 15px;
-			color: #333;
-			background: #ddd;
-			font-size: 1rem;
-			font-weight: 700;
-			text-decoration: none;
-		}
-		
-		.tabs-controls:hover {
-			background: #0070C2;
-			color: white;
-			text-decoration: none;
-		}
-		
-		.tabs-controls--active,
-		.tabs-controls--active:hover {
-			margin-bottom: -1px;
-			border-bottom-width: 1px;
-			border-bottom-color: #F4F4F4;
-			background: #F4F4F4;
-			color: #333;
-		}
-		
-		.tabs-panel {
-			display: none;
-		}
-		
-		.tabs-panel--active {
-			background: #F4F4F4;
-			display: block;
-			border: 1px solid transparent;
-			border-radius: 4px;
-			border-top-left-radius: 0;
-		}
+  <style>
+    .example {
+      background: #e5f0f8;
+      margin-bottom: .5rem;
+      border: 1px solid #7fb7e0;
+    }
+    
+    .example:nth-of-type(odd) {
+      background: #cce2f2;
+    }
+    
+    .example.special {
+      background: #0070C2;
+      border: 1px solid #004e87;
+      color: #ffffff;
+    }
+    
+    h2 {
+      border-bottom: 1px solid #dddddd;
+      font-weight: 600;
+    }
+    
+    main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    
+    aside {
+      padding: 1rem;
+      flex: 0;
+      display: none;
+      background: #282828;
+    }
+    
+    .content {
+      flex: 1;
+    }
+    
+    @media screen and (min-width: 1000px) {
+      aside {
+        display: block;
+        flex: 0 0 250px;
+        /* No grow, specific pixel width */
+      }
+      .content {
+        flex: 7.5;
+        margin: 1rem;
+      }
+      .sidebar {
+        margin-top: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+      }
+      .sidebar h1 {
+        padding: 0 1rem;
+        color: #f0f0f0;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
+      .sidebar p {
+        margin: 0;
+        padding: 0 1rem;
+        color: #81848d;
+      }
+      aside nav {}
+      aside nav ul {
+        padding: 0;
+        margin: 2rem 0;
+        list-style: none;
+      }
+      aside nav ul li {}
+      aside nav ul li a {
+        padding: .5rem;
+        margin: 0 .8rem;
+        border-radius: 4px;
+        display: block;
+        color: #d0d0d0;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      aside nav ul li a:hover,
+      aside nav ul li a:active,
+      aside nav ul li a:focus {
+        background: #202020;
+        color: #ffffff;
+        text-decoration: none;
+      }
+      aside nav ul li a.active {
+        background: #0070C2;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+    
+    [class*="scss"] pre {
+      display: none;
+    }
+    
+    .tabs {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 1rem;
+    }
+    
+    .tabs-item {
+      display: block;
+    }
+    
+    @media only screen and (min-width: 990px) {
+      .tabs-item {
+        display: inline-block;
+      }
+    }
+    
+    .tabs-controls {
+      display: block;
+      border-width: 1px 1px 0;
+      border-style: solid;
+      border-color: transparent;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 10px 15px;
+      color: #333;
+      background: #ddd;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    
+    .tabs-controls:hover,
+    .tabs-controls:active,
+    .tabs-controls:focus {
+      background: #0070C2;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .tabs-controls--active,
+    .tabs-controls--active:hover,
+    .tabs-controls--active:active,
+    .tabs-controls--active:focus {
+      margin-bottom: -1px;
+      border-bottom-width: 1px;
+      border-bottom-color: #F4F4F4;
+      background: #F4F4F4;
+      color: #333;
+    }
+    
+    .tabs-panel {
+      display: none;
+    }
+    
+    .tabs-panel--active {
+      background: #F4F4F4;
+      display: block;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+    }
 
-	</style>
+  </style>
 </head>
 
 <body>
 
-	<main>
+  <main>
 
-		<aside>
-			<div class="sidebar">
-				<h1>Mise en Place</h1>
-				<p>(mi zɑ̃ ˈplas)</p>
-				<nav>
-					<ul>
-						<li><a href="#grid">Grid</a></li>
-						<li><a href="#typography">Typography</a></li>
-						<li><a href="#buttons">Buttons</a></li>
-						<li><a href="#forms">Forms</a></li>
-						<li><a href="#tables">Tables</a></li>
-						<li><a href="#code">Code</a></li>
-					</ul>
-				</nav>
-			</div>
-		</aside>
+    <aside>
+      <div class="sidebar">
+        <h1>Mise en Place</h1>
+        <p>(mi zɑ̃ ˈplas)</p>
+        <nav>
+          <ul>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#code">Code</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
 
-		<div class="content">
+    <div class="content" id="main-content">
 
-			<div class="container-medium">
+      <div class="container-medium">
 
-				<section id="grid">
-					<h2>Grid</h2>
+        <section id="grid">
+          <h2>Grid</h2>
 
-					<p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Columns have no margins and are padding based. Columns will break to 100% width on mobile collapse.</p>
+          <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Columns have no margins and are padding based. Columns will break to 100% width on mobile collapse.</p>
 
-					<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -210,20 +219,20 @@
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-					<div class="row">
-						<div class="column example">1</div>
-					</div>
-					<div class="row">
-						<div class="column example">2</div>
-						<div class="column example">2</div>
-					</div>
+          <div class="row">
+            <div class="column example">1</div>
+          </div>
+          <div class="row">
+            <div class="column example">2</div>
+            <div class="column example">2</div>
+          </div>
 
-					<ul class="tabs">
-						<li class="tabs-item"><a class="tabs-controls tabs-controls--active" href="#scss-grid">SCSS</a></li>
-						<li class="tabs-item"><a class="tabs-controls" href="#css-grid">CSS</a></li>
-					</ul>
-					<div id="scss-grid" class="tabs-panel tabs-panel--active">
-						<pre><code class="language-scss">[class*="column"] {
+          <ul class="tabs">
+            <li class="tabs-item"><a class="tabs-controls tabs-controls--active" href="#scss-grid">SCSS</a></li>
+            <li class="tabs-item"><a class="tabs-controls" href="#css-grid">CSS</a></li>
+          </ul>
+          <div id="scss-grid" class="tabs-panel tabs-panel--active">
+            <pre><code class="language-scss">[class*="column"] {
 	flex: 1;
 	padding: .5rem 1rem;
 }
@@ -234,8 +243,8 @@
 		flex-wrap: nowrap;
 	}
 }</code></pre></div>
-					<div id="css-grid" class="tabs-panel">
-						<pre><code class="language-scss">[class*="column"] {
+          <div id="css-grid" class="tabs-panel">
+            <pre><code class="language-scss">[class*="column"] {
 	flex: 1;
 	padding: .5rem 1rem;
 }
@@ -247,371 +256,442 @@
 	}
 }</code></pre></div>
 
-					<h3>Percentage Widths</h3>
+          <h3>Percentage Widths</h3>
 
-					<p>Percentage based column widths can be added. A class of <code>column-25</code> creates a 25% wide column.
+          <p>Percentage based column widths can be added. A class of <code>column-25</code> creates a 25% wide column.
 
-						<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;column-50&quot;&gt;50%&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<div class="row">
-							<div class="column-25 example">25%</div>
-							<div class="column-50 example">50%</div>
-							<div class="column-25 example">25%</div>
-						</div>
-						<div class="row">
-							<div class="column-66 example">66%</div>
-							<div class="column-33 example">33%</div>
-						</div>
-						<div class="row">
-							<div class="column-75 example">75%</div>
-							<div class="column-25 example">25%</div>
-						</div>
+            <div class="row">
+              <div class="column-25 example">25%</div>
+              <div class="column-50 example">50%</div>
+              <div class="column-25 example">25%</div>
+            </div>
+            <div class="row">
+              <div class="column-66 example">66%</div>
+              <div class="column-33 example">33%</div>
+            </div>
+            <div class="row">
+              <div class="column-75 example">75%</div>
+              <div class="column-25 example">25%</div>
+            </div>
 
-						<h3>Fixed Widths</h3>
+            <h3>Fixed Widths</h3>
 
-						<p>Insert fixed width colums and regular colums will fill in the available space. A class of <code>column-200</code> creates a 200 pixel wide column. </p>
+            <p>Insert fixed width colums and regular colums will fill in the available space. A class of <code>column-200</code> creates a 200 pixel wide column. </p>
 
-						<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column-200&quot;&gt;200px&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<div class="row">
-							<div class="column example">&nbsp;</div>
-							<div class="column example">&nbsp;</div>
-							<div class="column-200 example special">200px</div>
-						</div>
+            <div class="row">
+              <div class="column example">&nbsp;</div>
+              <div class="column example">&nbsp;</div>
+              <div class="column-200 example special">200px</div>
+            </div>
 
-						<h3>No Collapse</h3>
+            <h3>No Collapse</h3>
 
-						<p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
+            <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-						<pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
   &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<div class="row no-collapse">
-							<div class="column example">100%</div>
-						</div>
-						<div class="row no-collapse">
-							<div class="column-90 example">90%</div>
-							<div class="column-10 example">10%</div>
-						</div>
-						<div class="row no-collapse">
-							<div class="column-80 example">80%</div>
-							<div class="column-20 example">20%</div>
-						</div>
-						<div class="row no-collapse">
-							<div class="column-70 example">70%</div>
-							<div class="column-30 example">30%</div>
-						</div>
-						<div class="row no-collapse">
-							<div class="column-60 example">60%</div>
-							<div class="column-40 example">40%</div>
-						</div>
-						<div class="row no-collapse">
-							<div class="column-50 example">50%</div>
-							<div class="column-50 example">50%</div>
-						</div>
+            <div class="row no-collapse">
+              <div class="column example">100%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-90 example">90%</div>
+              <div class="column-10 example">10%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-80 example">80%</div>
+              <div class="column-20 example">20%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-70 example">70%</div>
+              <div class="column-30 example">30%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-60 example">60%</div>
+              <div class="column-40 example">40%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="column-50 example">50%</div>
+              <div class="column-50 example">50%</div>
+            </div>
 
-						<h3>Offsets</h3>
+            <h3>Offsets</h3>
 
-						<p>Add an <code>offset-</code> when you need empty space.</p>
+            <p>Add an <code>offset-</code> when you need empty space.</p>
 
-						<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;offset-50&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<div class="row">
-							<div class="column-25 example">25%</div>
-							<div class="offset-50"></div>
-							<div class="column-25 example">25%</div>
-						</div>
-						<div class="row">
-							<div class="offset-25"></div>
-							<div class="column-50 example">50%</div>
-							<div class="offset-25"></div>
-						</div>
+            <div class="row">
+              <div class="column-25 example">25%</div>
+              <div class="offset-50"></div>
+              <div class="column-25 example">25%</div>
+            </div>
+            <div class="row">
+              <div class="offset-25"></div>
+              <div class="column-50 example">50%</div>
+              <div class="offset-25"></div>
+            </div>
 
-						<h3>Gutters</h3>
+            <h3>Gutters</h3>
 
-						<p>Add a <code>gutters</code> class to the row to add margin in between columns.</p>
+            <p>Add a <code>gutters</code> class to the row to add margin in between columns.</p>
 
-						<pre><code class="language-html">&lt;div class=&quot;row gutters&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row gutters&quot;&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-						<div class="row gutters">
-							<div class="column example">&nbsp;</div>
-							<div class="column example">&nbsp;</div>
-							<div class="column example">&nbsp;</div>
-						</div>
+            <div class="row gutters">
+              <div class="column example">&nbsp;</div>
+              <div class="column example">&nbsp;</div>
+              <div class="column example">&nbsp;</div>
+            </div>
 
-						<h3>Repeating Grid</h3>
+            <h3>Repeating Grid</h3>
 
-						<p>A grid that repeats and wraps to the next line. A class of <code>grid-4</code> will divide each cell into 1/4, or 25% of the container. Grid cells will break to 50% width on mobile collapse.</p>
+            <p>A grid that repeats and wraps to the next line. A class of <code>grid-4</code> will divide each cell into 1/4, or 25% of the container. Grid cells will break to 50% width on mobile collapse.</p>
 
-						<pre><code class="language-html">&lt;ul class="grid-4"&gt;
+            <pre><code class="language-html">&lt;ul class="grid-4"&gt;
 	&lt;li&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;/li&gt;
    &lt;!-- etc --&gt;
 &lt;/ul&gt;</code></pre>
 
-						<ul class="grid-4">
-							<li class="example">25%</li>
-							<li class="example">25%</li>
-							<li class="example">25%</li>
-							<li class="example">25%</li>
-							<li class="example">25%</li>
-							<li class="example">25%</li>
-						</ul>
+            <ul class="grid-4">
+              <li class="example">25%</li>
+              <li class="example">25%</li>
+              <li class="example">25%</li>
+              <li class="example">25%</li>
+              <li class="example">25%</li>
+              <li class="example">25%</li>
+            </ul>
 
 
-				</section>
-				<section id="typography">
-					<h2>Typography</h2>
+        </section>
+        <section id="typography">
+          <h2>Typography</h2>
 
-					<p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
+          <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
 
-					<p>Inline styling remains mostly unchanged: <em>emphasized</em>, <i>italicized</i>, <strong>strong</strong>, <b>bold</b>,
-						<mark>highlighted</mark>, <u>underlined</u>, <ins>inserted</ins>, <del>deleted</del>, <s>strikethrough</s>, and so on.</p>
+          <p>Inline styling remains mostly unchanged: <em>emphasized</em>, <i>italicized</i>, <strong>strong</strong>, <b>bold</b>,
+            <mark>highlighted</mark>, <u>underlined</u>, <ins>inserted</ins>, <del>deleted</del>, <s>strikethrough</s>, and so on.</p>
 
-					<p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
+          <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
 
-					<h1>Heading 1<span>A Subtitle Goes Here</span></h1>
-					<h2>Heading 2<span>A Subtitle Goes Here</span></h2>
-					<h3>Heading 3<span>A Subtitle Goes Here</span></h3>
-					<h4>Heading 4<span>A Subtitle Goes Here</span></h4>
-					<h5>Heading 5<span>A Subtitle Goes Here</span></h5>
-					<h6>Heading 6<span>A Subtitle Goes Here</span></h6>
+          <h1>Heading 1<span>A Subtitle Goes Here</span></h1>
+          <h2 style="border-bottom:0;font-weight:500;">Heading 2<span>A Subtitle Goes Here</span></h2>
+          <h3>Heading 3<span>A Subtitle Goes Here</span></h3>
+          <h4>Heading 4<span>A Subtitle Goes Here</span></h4>
+          <h5>Heading 5<span>A Subtitle Goes Here</span></h5>
+          <h6>Heading 6<span>A Subtitle Goes Here</span></h6>
 
-				</section>
-				<section id="buttons">
-					<h2>Buttons</h2>
+        </section>
+        <section id="buttons">
+          <h2>Buttons</h2>
 
-					<p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
+          <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
 
-					<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+          <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input&quot;&gt;
 &lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;</code></pre>
 
-					<button>Button</button>
-					<input type="submit" value="Submit">
-					<input type="button" value="Input">
-					<a class="button">Link</a>
+          <button>Button</button>
+          <input type="submit" value="Submit">
+          <input type="button" value="Input">
+          <a class="button">Link</a>
 
-					<h3>Accent Buttons</h3>
+          <h3>Accent Buttons</h3>
 
-					<p>Adding a class of <code>accent</code> will display a secondary color.</p>
+          <p>Adding a class of <code>accent</code> will display a secondary color.</p>
 
-					<button class="accent">Button</button>
-					<input type="submit" value="Submit" class="accent">
-					<input type="button" value="Input" class="accent">
-					<a class="button accent">Link</a>
+          <pre><code class="language-html">&lt;button class="accent"&gt;Button&lt;/button&gt;</code></pre>
 
-					<h3>Muted Buttons</h3>
+          <button class="accent">Button</button>
+          <input type="submit" value="Submit" class="accent">
+          <input type="button" value="Input" class="accent">
+          <a class="button accent">Link</a>
 
-					<p>Adding a class of <code>muted</code> will create ghost buttons.</p>
+          <h3>Muted Buttons</h3>
 
-					<pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
+          <p>Adding a class of <code>muted</code> will create ghost buttons.</p>
 
-					<button class="muted">Button</button>
-					<input type="submit" value="Submit" class="muted">
-					<input type="button" value="Input" class="muted">
-					<a class="muted button">Link</a>
-				</section>
-				<section id="forms">
-					<h2>Forms</h2>
+          <pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
 
-					<pre><code class="language-html">&lt;form&gt;
+          <button class="muted">Button</button>
+          <input type="submit" value="Submit" class="muted">
+          <input type="button" value="Input" class="muted">
+          <a class="muted button">Link</a>
+
+          <h3>Round Buttons</h3>
+
+          <p>Adding a class of <code>round</code> will create rounded buttons.</p>
+
+          <pre><code class="language-html">&lt;button class="round"&gt;Button&lt;/button&gt;</code></pre>
+
+          <button class="round">Button</button>
+          <input type="submit" value="Submit" class="round">
+          <input type="button" value="Input" class="round">
+          <a class="round button">Link</a>
+
+          <h3>Full Width Buttons</h3>
+
+          <p>Adding a class of <code>full</code> will create full-width, block level buttons. Full buttons can be combined with other styles.</p>
+
+          <pre><code class="language-html">&lt;button class="full"&gt;Button&lt;/button&gt;</code></pre>
+
+          <button class="full">Button</button>
+          <input type="submit" value="Submit" class="full accent">
+          <input type="button" value="Input" class="full round">
+          <a class="full muted button">Link</a>
+
+        </section>
+
+        <section id="forms">
+          <h2>Forms</h2>
+
+          <p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
+
+          <pre><code class="language-html">&lt;form&gt;
+  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
+  &lt;label for=&quot;choose&quot;&gt;Select&lt;/label&gt;
+  &lt;select id=&quot;choose&quot;&gt;
+    &lt;option disabled selected&gt;Please select&lt;/option&gt;
+    &lt;option value="option-1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option-2"&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;comments&quot;&gt;Additional Comments&lt;/label&gt;
+  &lt;textarea id=&quot;comments&quot;&gt;&lt;/textarea&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email address">
+            <label for="choose">Select</label>
+            <select id="choose">
+              <option disabled selected>Please select</option>
+              <option value="option-1">Option 1</option>
+              <option value="option-2">Option 2</option>
+            </select>
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments"></textarea>
+            <input type="submit" value="Submit">
+          </form>
+
+          <h3>Horizontal Forms</h3>
+
+          <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
   &lt;!-- --&gt;
 &lt;/form&gt;</code></pre>
 
-					<form>
-						<label for="name">Name</label>
-						<input type="text" name="name" placeholder="First Name">
-						<label for="email">Email</label>
-						<input type="email" name="email" placeholder="Email address">
-						<label for="choose">Select</label>
-						<select name="choose">
-							<option disabled selected>Please select</option>
-							<option>Option</option>
-							<option>Option</option>
-						</select>
-						<label for="comments">Additional Comments</label>
-						<textarea name="comments"></textarea>
-						<input type="submit" value="Submit">
-					</form>
+          <form class="horizontal-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="submit" value="Submit">
+          </form>
 
-					<h3>Horizontal Forms</h3>
+          <h3>Split Forms</h3>
 
-					<pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
+          <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
   &lt;!-- --&gt;
 &lt;/form&gt;</code></pre>
 
-					<form class="horizontal-form">
-						<label for="name">Name</label>
-						<input type="text" name="name" placeholder="First Name">
-						<label for="email">Email</label>
-						<input type="email" name="email" placeholder="Email Address">
-						<input type="submit" value="Submit">
-					</form>
+          <form class="split-form">
+            <div class="row">
+              <div class="column-20">
+                <label for="name">Name</label>
+              </div>
+              <div class="column-80">
+                <input type="text" id="name" placeholder="First Name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-20">
+                <label for="email">Email</label>
+              </div>
+              <div class="column-80">
+                <input type="email" id="email" placeholder="Email Address">
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-20 column-80">
+                <input type="submit" value="Submit">
+              </div>
+            </div>
+          </form>
 
-					<h3>Form Validation</h3>
+          <h3>Form Validation</h3>
 
-					<p>An input field with a class of <code>.has-error</code></p>
+          <p>An input field with a class of <code>.has-error</code></p>
 
-					<form>
-						<label for="name">Name</label>
-						<input type="text" name="name" placeholder="Name" class="has-error">
-					</form>
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name" class="has-error">
+          </form>
 
-				</section>
-				<section id="tables">
-					<h2>Tables</h2>
+        </section>
+        <section id="tables">
+          <h2>Tables</h2>
 
-					<table>
-						<thead>
-							<tr>
-								<th>Head 1</th>
-								<th>Head 2</th>
-								<th>Head 3</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Description 1</td>
-								<td>Description 2</td>
-								<td>Description 3</td>
-							</tr>
-							<tr>
-								<td>Description 1</td>
-								<td>Description 2</td>
-								<td>Description 3</td>
-							</tr>
-							<tr>
-								<td>Description 1</td>
-								<td>Description 2</td>
-								<td>Description 3</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-								<td>Footer 1</td>
-								<td>Footer 2</td>
-								<td>Footer 3</td>
-							</tr>
-						</tfoot>
-					</table>
+          <table>
+            <thead>
+              <tr>
+                <th>Head 1</th>
+                <th>Head 2</th>
+                <th>Head 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+              <tr>
+                <td>Description 1</td>
+                <td>Description 2</td>
+                <td>Description 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+              </tr>
+            </tfoot>
+          </table>
 
-					<h3>Striped Tables</h3>
+          <h3>Striped Tables</h3>
 
-					<pre><code class="language-html">&lt;table class="striped"&gt;
+          <pre><code class="language-html">&lt;table class="striped"&gt;
   &lt;!-- --&gt;
 &lt;/table&gt;</code></pre>
 
-					<div class="table-scroll">
-						<table class="striped">
-							<thead>
-								<tr>
-									<th>Head 1</th>
-									<th>Head 2</th>
-									<th>Head 3</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Description 1</td>
-									<td>Description 2</td>
-									<td>Description 3</td>
-								</tr>
-								<tr>
-									<td>Description 1</td>
-									<td>Description 2</td>
-									<td>Description 3</td>
-								</tr>
-								<tr>
-									<td>Description 1</td>
-									<td>Description 2</td>
-									<td>Description 3</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td>Footer 1</td>
-									<td>Footer 2</td>
-									<td>Footer 3</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-				<section id="code">
-					<h2>Code</h2>
+          <div class="table-scroll">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Head 1</th>
+                  <th>Head 2</th>
+                  <th>Head 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Footer 1</td>
+                  <td>Footer 2</td>
+                  <td>Footer 3</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+        <section id="code">
+          <h2>Code</h2>
 
-					<p> Lorem ipsum dolor sit amet, <code>consectetur</code> adipiscing elit. Vestibulum iaculis condimentum tempus. Etiam viverra ipsum nunc, et pellentesque purus blandit sit amet.</p>
+          <p> Style has been added for inline <code>code</code> tags, while <kbd>keyboard input</kbd>, and <samp>sample output</samp> remain unstylized. Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
 
-					<pre><code>&lt;form class=&quot;horizontal-form&quot;&gt;
-  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
-  &lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
-  &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
-  &lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
-  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
-&lt;/form&gt;</code></pre>
-				</section>
-				<h2>Blockquote</h2>
+          <pre><code>class Voila {
+public:
+  // Voila
+  static const string VOILA = "Voila";
+}</code></pre>
+        </section>
+        <h2>Blockquote</h2>
 
-				<blockquote>
-					Blockquote
-				</blockquote>
+        <blockquote>
+          Blockquote
+        </blockquote>
 
-			</div>
+        </div>
 
-		</div>
+      </div>
 
-	</main>
+  </main>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="dist/js/prism.js"></script>
-	<script src="example/scroll.js"></script>
-	<script>
-		$(document).ready(function() {
-			'use strict';
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="dist/js/prism.js"></script>
+  <script src="example/scroll.js"></script>
+  <script>
+    $(document).ready(function() {
+      'use strict';
 
-			// Set variables
-			var $controls = $('.tabs-controls');
-			var $panels = $('.tabs-panel');
+      // Set variables
+      var $controls = $('.tabs-controls');
+      var $panels = $('.tabs-panel');
 
-			// Delegate click event
-			$('.tabs').on('click', '.tabs-controls', function(e) {
-				e.preventDefault();
+      // Delegate click event
+      $('.tabs').on('click', '.tabs-controls', function(e) {
+        e.preventDefault();
 
-				var $this = $(this);
-				// Turn content of href into new jQuery object
-				var $target = $($this.attr('href'));
+        var $this = $(this);
+        // Turn content of href into new jQuery object
+        var $target = $($this.attr('href'));
 
-				// Remove active classes
-				$controls.removeClass('tabs-controls--active');
-				$panels.removeClass('tabs-panel--active');
+        // Remove active classes
+        $controls.removeClass('tabs-controls--active');
+        $panels.removeClass('tabs-panel--active');
 
-				// Add active classes to clicked element
-				$this.addClass('tabs-controls--active');
-				$target.addClass('tabs-panel--active');
-			});
-		});
+        // Add active classes to clicked element
+        $this.addClass('tabs-controls--active');
+        $target.addClass('tabs-panel--active');
+      });
+    });
 
-	</script>
+  </script>
+
+  <script>
+
+
+  </script>
 </body>
 
 </html>

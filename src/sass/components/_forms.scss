@@ -5,12 +5,13 @@
 /* Display for all input fields (except buttons) */
 
 %forms {
-  display: inline-block;
+  display: block;
   background: transparent;
   border: $border-width $border-style $border-color;
   border-radius: $border-radius;
   padding: .6rem;
   outline: none;
+  vertical-align: middle;
   height: $input-height;
 }
 
@@ -46,6 +47,7 @@
 @include large-screen {
   .horizontal-form {
     #{$input-fields} {
+      display: inline-block;
       width: auto;
     }
   }
@@ -70,12 +72,28 @@ label {
   display: block;
   margin: .5rem 0;
 }
+// Ensure no extra padding on split forms
+.split-form {
+  [class*="column"] {
+    padding: 0;
+  }
+}
 @include large-screen {
   .horizontal-form {
     label,
     #{$input-buttons} {
       display: inline-block;
       margin: .5rem 0;
+    }
+  }
+  .split-form {
+    label {
+      text-align: right;
+    }
+    [class*="column"] {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: .5rem;
     }
   }
 }

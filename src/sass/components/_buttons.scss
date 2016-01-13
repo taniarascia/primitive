@@ -16,8 +16,7 @@
   text-transform: uppercase;
   padding: .6rem 1.2rem;
   cursor: pointer;
-  margin: .8rem 0;
-  font-size: .9rem;
+  margin: .5rem 0;
   white-space: nowrap;
   vertical-align: middle;
   text-align: center;
@@ -47,12 +46,20 @@ button,
   &:hover {
     @extend %buttons-hover;
   }
-	&.accent {
+  // Secondary button color
+	&.accent { 
 		background: $accent-color;
 		&:hover {
 			background: darken($accent-color, 10%);
 		}
 	}
+  &.round {
+    border-radius: $round-buttons;
+  }
+  &.full {
+    display: block;
+    width: 100%;
+  }
   // Muted buttons
   &.muted {
     background: transparent;

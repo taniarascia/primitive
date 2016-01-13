@@ -57,13 +57,14 @@ $muted-border: 1px solid $gray;
 $muted-border-hover: 1px solid darken($gray, 30%);
 $muted-background-hover: lighten($gray, 10%);
 $muted-color: darken($gray, 50%);
+$round-buttons: 40px;
 
 /* Forms */
 
 $input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $placeholder: $darkgray;
-$input-height: 2.3em;
+$input-height: 2.5em;
 
 /* General */
 
@@ -77,5 +78,6 @@ $code-color: $font-color;
 $code-family: Menlo,
 monospace;
 $code-background: #f4f4f4;
+$code-borders: $borders;
 
 $primitive: #004F9C;
