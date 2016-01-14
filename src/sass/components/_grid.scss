@@ -26,12 +26,26 @@
 	.column-#{$i * 10} {
 		flex: $width;
 	}
+  
+  @include large-screen {
+    	.column-#{$i * 10} {
+        max-width: percentage($width) * .1;
+    }
+  }
 }
 // 1/4 and 1/3 fractions
 .column-25 { flex: (1/4) * 10; }
 .column-33 { flex: (1/3) * 10; }
 .column-66 { flex: (2/3) * 10; }
 .column-75 { flex: (3/4) * 10; }
+
+@include large-screen {
+  // 1/4 and 1/3 fractions
+  .column-25 { max-width: 25%; }
+  .column-33 { max-width: 33.3333%; }
+  .column-66 { max-width: 66.6667%; }
+  .column-75 { max-width: 75%; }
+}
 
 /* Fixed */
 
