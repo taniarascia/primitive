@@ -582,17 +582,22 @@ hr {
 
 /* Grid
   =============== */
-/* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
 [class*="column"] {
   flex: 1;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
-[class*="column"] > .half {
-  flex: 5;
-}
+@media (min-width: 600px) {
+  [class*="column"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 .column-10 {
   flex: 1;
 }
@@ -627,10 +632,6 @@ hr {
 
 .column-90 {
   flex: 9;
-}
-
-.column-100 {
-  flex: 10;
 }
 
 .column-25 {
@@ -700,43 +701,43 @@ hr {
 
 /* Offsets */
 .offset-10 {
-  margin-left: calc(10% + 1rem);
+  margin-left: 10%;
 }
 
 .offset-20 {
-  margin-left: calc(20% + 1rem);
+  margin-left: 20%;
 }
 
 .offset-30 {
-  margin-left: calc(30% + 1rem);
+  margin-left: 30%;
 }
 
 .offset-40 {
-  margin-left: calc(40% + 1rem);
+  margin-left: 40%;
 }
 
 .offset-50 {
-  margin-left: calc(50% + 1rem);
+  margin-left: 50%;
 }
 
 .offset-60 {
-  margin-left: calc(60% + 1rem);
+  margin-left: 60%;
 }
 
 .offset-70 {
-  margin-left: calc(70% + 1rem);
+  margin-left: 70%;
 }
 
 .offset-80 {
-  margin-left: calc(80% + 1rem);
+  margin-left: 80%;
 }
 
 .offset-90 {
-  margin-left: calc(90% + 1rem);
+  margin-left: 90%;
 }
 
 .offset-100 {
-  margin-left: calc(100% + 1rem);
+  margin-left: 100%;
 }
 
 .offset-25 {
@@ -765,11 +766,14 @@ hr {
 }
 [class*="grid"] > li {
   width: 50%;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 @media (min-width: 600px) {
+  [class*="grid"] > li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .grid-1 > li {
     width: 100%;
   }
@@ -809,14 +813,6 @@ hr {
   flex-wrap: nowrap;
 }
 
-/* Enable columns on large screens */
-@media (min-width: 600px) {
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
 /* Vertical alignment */
 .align-vertical {
   align-items: center;
@@ -982,10 +978,9 @@ label {
 
   .split-form label {
     text-align: right;
+    padding-right: 1rem;
   }
   .split-form [class*="column"] {
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin-bottom: .5rem;
   }
 }

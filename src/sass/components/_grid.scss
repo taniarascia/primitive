@@ -1,19 +1,26 @@
 /* Grid
   =============== */
 
-/* Widths for grid columns. Mobile first grids are 100% width unless combined with no-collapse class */
-
+// Mobile first grids are 100% width
 [class*="column"] { 
 	flex: 1; 
-	padding-left: 1rem; 
-  padding-right: 1rem;
 }
-[class*="column"] > .half {
-	flex: 5;
+@include large-screen {
+  // Add padding on desktop
+  [class*="column"] {
+  	padding-left: 1rem; 
+    padding-right: 1rem;
+  } 
+  // Add columns on desktop
+	.row {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+  }
 }
 
 // Run a loop 10 times to get multiples of 10
-@for $i from 1 through 10 {
+@for $i from 1 through 9 {
 	$width: $i;
 	
 	.column-#{$i * 10} {
@@ -45,7 +52,7 @@
 	$margin: $i * 10%;
 	
 	.offset-#{$i * 10} {
-		margin-left: calc(#{$margin} + 1rem);
+		margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
 	}
 }
 
@@ -65,23 +72,28 @@
 	flex-wrap: wrap;
 	> li {
 		width: 50%;
-		padding-left: 1rem;
-    padding-right: 1rem;
 	}
 }
 
 @include large-screen {
+  
+  [class*="grid"] {
+    > li {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 
-	// Run a loop 8 times for repeating grid possiblities
-@for $i from 1 through 8 {
-	$percent: percentage(1/$i);
-	
-	.grid-#{$i} {
-		> li {
-			width: $percent;
-		}
-	}
-}
+  // Run a loop 8 times for repeating grid possiblities
+  @for $i from 1 through 8 {
+    $percent: percentage(1/$i);
+
+    .grid-#{$i} {
+      > li {
+        width: $percent;
+      }
+    }
+  }
 }
 
 /* Prevent mobile breakpoint with no-collapse class */
@@ -90,16 +102,6 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap; 
-}
-
-/* Enable columns on large screens */
-
-@include large-screen {
-	.row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-  }
 }
 
 /* Vertical alignment */

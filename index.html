@@ -232,28 +232,34 @@
             <li class="tabs-item"><a class="tabs-controls" href="#css-grid">CSS</a></li>
           </ul>
           <div id="scss-grid" class="tabs-panel tabs-panel--active">
-            <pre><code class="language-scss">[class*="column"] {
-	flex: 1;
-	padding: .5rem 1rem;
+            <pre><code class="language-scss">[class*="column"] { 
+	flex: 1; 
 }
 @include large-screen {
-	.row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-	}
+  [class*="column"] { 
+  	padding-left: 1rem; 
+    padding-right: 1rem;
+  } 
+	.row { 
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+  }
 }</code></pre></div>
           <div id="css-grid" class="tabs-panel">
             <pre><code class="language-scss">[class*="column"] {
-	flex: 1;
-	padding: .5rem 1rem;
+  flex: 1;
 }
 @media (min-width: 600px) {
-	.row {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-	}
+  [class*="column"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }</code></pre></div>
 
           <h3>Percentage Widths</h3>
@@ -279,6 +285,37 @@
               <div class="column-75 example">75%</div>
               <div class="column-25 example">25%</div>
             </div>
+            
+          <ul class="tabs">
+            <li class="tabs-item"><a class="tabs-controls tabs-controls--active" href="#scss-percentagegrid">SCSS</a></li>
+            <li class="tabs-item"><a class="tabs-controls" href="#css-percentagegrid">CSS</a></li>
+          </ul>
+          <div id="scss-percentagegrid" class="tabs-panel tabs-panel--active">
+            <pre><code class="language-scss">@for $i from 1 through 9 {
+	$width: $i;
+	
+	.column-#{$i * 10} {
+		flex: $width;
+	}
+}
+.column-25 { flex: (1/4) * 10; }
+.column-33 { flex: (1/3) * 10; }
+.column-66 { flex: (2/3) * 10; }
+.column-75 { flex: (3/4) * 10; }</code></pre></div>
+          <div id="css-percentagegrid" class="tabs-panel">
+            <pre><code class="language-scss">.column-10{ flex: 1 }
+.column-20 { flex: 2 }
+.column-30 { flex: 3 }
+.column-40 { flex: 4 }
+.column-50 { flex: 5 }
+.column-60 { flex: 6 }
+.column-70 { flex: 7 }
+.column-80 { flex: 8 }
+.column-90 { flex: 9 }
+.column-25 { flex: 2.5 }
+.column-33 { flex: 3.33333 }
+.column-66 { flex: 6.66667 }
+.column-75 { flex: 7.5 }</code></pre></div>
 
             <h3>Fixed Widths</h3>
 
@@ -340,14 +377,10 @@
 &lt;/div&gt;</code></pre>
 
             <div class="row">
-              <div class="column-25 example">25%</div>
-              <div class="offset-50"></div>
-              <div class="column-25 example">25%</div>
+              <div class="column-25 offset-75 example">25%</div>
             </div>
             <div class="row">
-              <div class="offset-25"></div>
-              <div class="column-50 example">50%</div>
-              <div class="offset-25"></div>
+              <div class="column-25 offset-75 example">25%</div>
             </div>
 
             <h3>Gutters</h3>
@@ -651,9 +684,9 @@ public:
           Blockquote
         </blockquote>
 
-        </div>
-
       </div>
+
+    </div>
 
   </main>
 

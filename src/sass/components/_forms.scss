@@ -89,10 +89,9 @@ label {
   .split-form {
     label {
       text-align: right;
+      padding-right: 1rem;
     }
     [class*="column"] {
-      padding-left: 1rem;
-      padding-right: 1rem;
       margin-bottom: .5rem;
     }
   }
