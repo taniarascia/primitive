@@ -62,19 +62,23 @@
 
 // Run a loop 10 times to get a percentage of every multiple of ten
 
-@for $i from 1 through 10 {
-	$margin: $i * 10%;
-	
-	.offset-#{$i * 10} {
-		margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
-	}
+@include large-screen {
+  @for $i from 1 through 10 {
+    $margin: $i * 10%;
+
+    .offset-#{$i * 10} {
+      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
+    }
+  }
 }
 
-// 1/4 and 1/3 fractions
-.offset-25 { margin-left: 25%; }
-.offset-33 { margin-left: 33%; }
-.offset-66 { margin-left: 66%; }
-.offset-75 { margin-left: 75%; }
+@include large-screen {
+  // 1/4 and 1/3 fractions
+  .offset-25 { margin-left: 25%; }
+  .offset-33 { margin-left: 33%; }
+  .offset-66 { margin-left: 66%; }
+  .offset-75 { margin-left: 75%; }
+}
 
 /* Repeating Grid */
 
@@ -85,8 +89,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	> li {
-		width: 50%;
+		width: 100%;
 	}
+  &.half {
+    > li {
+    width: 50%;
+    }
+  }
 }
 
 @include large-screen {
@@ -103,7 +112,7 @@
     $percent: percentage(1/$i);
 
     .grid-#{$i} {
-      > li {
+      &.half > li, > li,  {
         width: $percent;
       }
     }

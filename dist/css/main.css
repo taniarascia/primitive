@@ -762,62 +762,64 @@ hr {
 }
 
 /* Offsets */
-.offset-10 {
-  margin-left: 10%;
-}
+@media (min-width: 600px) {
+  .offset-10 {
+    margin-left: 10%;
+  }
 
-.offset-20 {
-  margin-left: 20%;
-}
+  .offset-20 {
+    margin-left: 20%;
+  }
 
-.offset-30 {
-  margin-left: 30%;
-}
+  .offset-30 {
+    margin-left: 30%;
+  }
 
-.offset-40 {
-  margin-left: 40%;
-}
+  .offset-40 {
+    margin-left: 40%;
+  }
 
-.offset-50 {
-  margin-left: 50%;
-}
+  .offset-50 {
+    margin-left: 50%;
+  }
 
-.offset-60 {
-  margin-left: 60%;
-}
+  .offset-60 {
+    margin-left: 60%;
+  }
 
-.offset-70 {
-  margin-left: 70%;
-}
+  .offset-70 {
+    margin-left: 70%;
+  }
 
-.offset-80 {
-  margin-left: 80%;
-}
+  .offset-80 {
+    margin-left: 80%;
+  }
 
-.offset-90 {
-  margin-left: 90%;
-}
+  .offset-90 {
+    margin-left: 90%;
+  }
 
-.offset-100 {
-  margin-left: 100%;
+  .offset-100 {
+    margin-left: 100%;
+  }
 }
+@media (min-width: 600px) {
+  .offset-25 {
+    margin-left: 25%;
+  }
 
-.offset-25 {
-  margin-left: 25%;
+  .offset-33 {
+    margin-left: 33%;
+  }
+
+  .offset-66 {
+    margin-left: 66%;
+  }
+
+  .offset-75 {
+    margin-left: 75%;
+  }
 }
-
-.offset-33 {
-  margin-left: 33%;
-}
-
-.offset-66 {
-  margin-left: 66%;
-}
-
-.offset-75 {
-  margin-left: 75%;
-}
-
 /* Repeating Grid */
 [class*="grid"] {
   padding: 0;
@@ -827,6 +829,9 @@ hr {
   flex-wrap: wrap;
 }
 [class*="grid"] > li {
+  width: 100%;
+}
+[class*="grid"].half > li {
   width: 50%;
 }
 
@@ -836,35 +841,35 @@ hr {
     padding-right: 1rem;
   }
 
-  .grid-1 > li {
+  .grid-1.half > li, .grid-1 > li {
     width: 100%;
   }
 
-  .grid-2 > li {
+  .grid-2.half > li, .grid-2 > li {
     width: 50%;
   }
 
-  .grid-3 > li {
+  .grid-3.half > li, .grid-3 > li {
     width: 33.33333%;
   }
 
-  .grid-4 > li {
+  .grid-4.half > li, .grid-4 > li {
     width: 25%;
   }
 
-  .grid-5 > li {
+  .grid-5.half > li, .grid-5 > li {
     width: 20%;
   }
 
-  .grid-6 > li {
+  .grid-6.half > li, .grid-6 > li {
     width: 16.66667%;
   }
 
-  .grid-7 > li {
+  .grid-7.half > li, .grid-7 > li {
     width: 14.28571%;
   }
 
-  .grid-8 > li {
+  .grid-8.half > li, .grid-8 > li {
     width: 12.5%;
   }
 }
@@ -949,6 +954,11 @@ button.accent:hover,
 button.round,
 [type=submit].round, [type=reset].round, [type=button].round {
   border-radius: 40px;
+}
+.button.square,
+button.square,
+[type=submit].square, [type=reset].square, [type=button].square {
+  border-radius: 0;
 }
 .button.full,
 button.full,
@@ -1040,7 +1050,7 @@ label {
 
   .split-form label {
     text-align: right;
-    padding-right: 1rem;
+    padding: 0 .5rem;
   }
   .split-form [class*="column"] {
     margin-bottom: .5rem;
