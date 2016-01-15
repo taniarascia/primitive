@@ -1,9 +1,7 @@
 /* Buttons
   =============== */
 
-
-/* Buttons */
-
+// Main button styling
 %buttons {
   display: inline-block;
   line-height: 1;
@@ -22,16 +20,14 @@
   text-align: center;
 }
 
-/* Buttons on hover */
-
+// Buttons on hover
 %buttons-hover {
   background: darken($button-background, 10%);
   color: $button-color;
   text-decoration: none;
 }
 
-/* Apply styles to .button class, button element, and button-based inputs */
-
+// Apply styles to .button class, button element, and button-based inputs
 .button,
 button,
 #{$input-buttons} {

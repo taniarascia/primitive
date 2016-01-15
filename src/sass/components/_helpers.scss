@@ -1,9 +1,7 @@
 /* Helpers
   =============== */
 
-
-/* Clearfix */
-
+// Classic clearfix 
 .clearfix:before,
 .clearfix:after {
 	content: " ";
@@ -11,14 +9,39 @@
 }
 .clearfix:after { clear: both; }
 
-/* Text alignment */
- 
+// Text alignment
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 
-/* Display State */
+// Center everything
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+// Responsive Images
+.image-responsive {
+  max-width: 100%;
+}
 
+// Display State
 .show { display: block !important; }
 .hidden { display: none !important; }
 .invisible { visibility: hidden; }
+
+// Screen reader text for accessibility
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+// Vertical center
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

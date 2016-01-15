@@ -30,7 +30,9 @@
       border: 1px solid #004e87;
       color: #ffffff;
     }
-    
+    h1 a, h1 a:hover, h1 a:active {
+      color: #ffffff;
+    }
     h2 {
       border-bottom: 1px solid #dddddd;
       font-weight: 600;
@@ -187,7 +189,7 @@
 
     <aside>
       <div class="sidebar">
-        <h1>Mise en Place</h1>
+        <h1><a href="index.html">Mise en Place</a></h1>
         <p>(mi zɑ̃ ˈplas)</p>
         <nav>
           <ul>
@@ -308,14 +310,14 @@
   &lt;div class=&quot;offset-75 column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;offset-25 column-50 &quot;&gt;25%&lt;/div&gt;
+  &lt;div class=&quot;offset-25 column-50&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="row">
               <div class="offset-75 column-25 example">25%</div>
             </div>
             <div class="row">
-              <div class="offset-25 column-50 example">25%</div>
+              <div class="offset-25 column-50 example">50%</div>
             </div>
 
             <h3>Gutters</h3>
@@ -373,10 +375,10 @@
         <section id="typography">
           <h2>Typography</h2>
 
-          <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there. <a href="#!">Here's a link</a>. </p>
+          <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from there.</p>
 
-          <p>Inline styling remains mostly unchanged: <em>emphasized</em>, <i>italicized</i>, <strong>strong</strong>, <b>bold</b>,
-            <mark>highlighted</mark>, <u>underlined</u>, <ins>inserted</ins>, <del>deleted</del>, <s>strikethrough</s>, and so on.</p>
+          <p>Inline styling remains mostly unchanged: <em>emphasized</em>, <strong>strong</strong>,
+            <mark>highlighted</mark>, <ins>inserted</ins>, <del>deleted</del>.</p>
 
           <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
 
@@ -391,7 +393,7 @@
         <section id="buttons">
           <h2>Buttons</h2>
 
-          <p>Button elements, links with a class of <code>.button</code>, and input elements should all render exactly the same.</p>
+          <p>Button elements, links with a class of <code>button</code>, and input elements should all render exactly the same.</p>
 
           <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
@@ -449,7 +451,7 @@
 
           <h3>Full Width Buttons</h3>
 
-          <p>Adding a class of <code>full</code> will create full-width, block level buttons. Full buttons can be combined with other styles.</p>
+          <p>Adding a class of <code>full</code> will create full-width, block level buttons. Button styles can be combined.</p>
 
           <pre><code class="language-html">&lt;button class="full"&gt;Button&lt;/button&gt;</code></pre>
 
@@ -476,6 +478,10 @@
   &lt;/select&gt;
   &lt;label for=&quot;comments&quot;&gt;Additional Comments&lt;/label&gt;
   &lt;textarea id=&quot;comments&quot;&gt;&lt;/textarea&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    Remember me
+  &lt;/label&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
 
@@ -492,6 +498,10 @@
             </select>
             <label for="comments">Additional Comments</label>
             <textarea id="comments"></textarea>
+            <label>
+              <input type="checkbox">
+              Remember me
+            </label>
             <input type="submit" value="Submit">
           </form>
 
@@ -534,12 +544,12 @@
     &lt;div class=&quot;column-10&quot;&gt;
       &lt;label for=&quot;email&quot;&gt;URL&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;column-90&quot;&gt;
+    &lt;div class=&quot;column&quot;&gt;
       &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;offset-10 column-90&quot;&gt;
+    &lt;div class=&quot;offset-10 column&quot;&gt;
       &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -564,7 +574,7 @@
               <div class="column-10">
                 <label for="email">URL</label>
               </div>
-              <div class="column-90">
+              <div class="column">
                 <input type="url" id="url" placeholder="Website URL">
               </div>
             </div>
@@ -577,7 +587,7 @@
 
           <h3>Form Validation</h3>
 
-          <p>An input field with a class of <code>.has-error</code></p>
+          <p>An input field with a class of <code>has-error</code></p>
 
           <pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
 
@@ -647,59 +657,18 @@
             </tfoot>
           </table>
 
-          <h3>Striped Tables</h3>
-
-          <p>Add a class of <code>striped</code> for alternating row colors.</p>
-
-          <pre><code class="language-html">&lt;table class="striped"&gt;
-  &lt;!-- etc --&gt;
-&lt;/table&gt;</code></pre>
-
-          <table class="striped">
-            <thead>
-              <tr>
-                <th>Head 1</th>
-                <th>Head 2</th>
-                <th>Head 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Footer 1</td>
-                <td>Footer 2</td>
-                <td>Footer 3</td>
-              </tr>
-            </tfoot>
-          </table>
 
           <h3>Responsive Tables</h3>
 
-          <p>Wrap the table in a <code>table-scroll</code> class to prevent tables with a lot of content from stretching on small screens.</p>
+          <p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
 
-          <pre><code class="language-html">&lt;div class=&quot;table-scroll&quot;&gt;
+          <pre><code class="language-html">&lt;div class=&quot;contain-table&quot;&gt;
   &lt;table&gt;
   &lt;!-- etc --&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="table-scroll">
+          <div class="contain-table">
             <table>
               <thead>
                 <tr>
@@ -710,12 +679,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>http://taniarascia.github.io/miseenplace</td>
-                  <td>Description 2</td>
-                  <td>Description 3</td>
-                </tr>
-                <tr>
-                  <td>Description 1</td>
+                  <td><a href="http://taniarascia.github.io/miseenplace">http://taniarascia.github.io/miseenplace</a></td>
                   <td>Description 2</td>
                   <td>Description 3</td>
                 </tr>
@@ -746,11 +710,13 @@ public:
   // Voila
   static const string VOILA = "Voila";
 }</code></pre>
+
         </section>
         <h2>Blockquote</h2>
 
         <blockquote>
-          Blockquote
+          Keep it secret. Keep it safe.
+          <cite>Gandalf the Gray</cite>
         </blockquote>
 
       </div>

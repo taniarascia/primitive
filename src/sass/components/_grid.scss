@@ -47,8 +47,7 @@
   .column-75 { max-width: 75%; }
 }
 
-/* Fixed */
-
+// Fixed pixel amounts
 // Run a loop 12 times to get multiples of 100 in pixels
 @for $i from 1 through 12 {
 	$px: $i * 100px;
@@ -58,10 +57,8 @@
 	}
 }
 
-/* Offsets */
-
+// Offsets
 // Run a loop 10 times to get a percentage of every multiple of ten
-
 @include large-screen {
   @for $i from 1 through 10 {
     $margin: $i * 10%;
@@ -71,7 +68,6 @@
     }
   }
 }
-
 @include large-screen {
   // 1/4 and 1/3 fractions
   .offset-25 { margin-left: 25%; }
@@ -80,8 +76,7 @@
   .offset-75 { margin-left: 75%; }
 }
 
-/* Repeating Grid */
-
+// Repeating list grid
 [class*="grid"] {
 	padding: 0;
 	margin: 0;
@@ -91,22 +86,19 @@
 	> li {
 		width: 100%;
 	}
-  &.half {
+  &.half { // Add half class for 50% wide on mobile
     > li {
     width: 50%;
     }
   }
 }
-
 @include large-screen {
-  
   [class*="grid"] {
     > li {
       padding-left: 1rem;
       padding-right: 1rem;
     }
   }
-
   // Run a loop 8 times for repeating grid possiblities
   @for $i from 1 through 8 {
     $percent: percentage(1/$i);
@@ -118,23 +110,17 @@
     }
   }
 }
-
-/* Prevent mobile breakpoint with no-collapse class */
-
+// Prevent mobile breakpoint with no-collapse class
 .no-collapse {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap; 
 }
-
-/* Vertical alignment */
-
+// Vertical alignment
 .align-vertical {
   align-items: center;
 }
-
-/* Gutters */
-
+// Gutters
 .no-collapse.gutters {
 	> [class*="column"] ~ [class*="column"] {
   	margin-left: 1rem;

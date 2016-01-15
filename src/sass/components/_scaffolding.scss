@@ -1,9 +1,7 @@
 /* Scaffolding
   =============== */
 
-
-/* HTML base */
-
+// HTML base
 html {
 	-webkit-font-smoothing: antialiased;
 	font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
@@ -36,16 +34,23 @@ a {
 		text-decoration: underline;
 	}
 }
-
+// Highlight
 mark {
 	background: $highlight;
 	padding: 0 0.2rem;
 }
+// Blockquote
 blockquote {
 	margin: 0;
 	border-left: $bq-border;
-	padding: 1rem;
+	padding: 1rem 1.5rem;
 	font-size: 1.2rem;
+  cite {
+    display: block;
+    margin-top: 25px;
+    font-size: .9em;
+    text-align: right
+  }
 }
 pre {
   border: 0;

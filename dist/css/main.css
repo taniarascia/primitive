@@ -152,7 +152,6 @@ html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 
 /* Scaffolding =============== */
-/* HTML base */
 html { -webkit-font-smoothing: antialiased; font: normal normal normal 1rem/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 body { color: #333; }
@@ -177,7 +176,8 @@ a:hover, a:focus { color: #0072c0; text-decoration: underline; }
 
 mark { background: #ffeea8; padding: 0 0.2rem; }
 
-blockquote { margin: 0; border-left: 8px solid #cdcdcd; padding: 1rem; font-size: 1.2rem; }
+blockquote { margin: 0; border-left: 8px solid #cdcdcd; padding: 1rem 1.5rem; font-size: 1.2rem; }
+blockquote cite { display: block; margin-top: 25px; font-size: .9em; text-align: right; }
 
 pre { border: 0; border-radius: 4px; background: #f4f4f4; padding: 1rem; tab-size: 2; }
 pre code { color: #333; font-family: Menlo, monospace; font-size: .9rem; line-height: 1.2; webkit-font-smoothing: subpixel-antialiased; }
@@ -194,24 +194,29 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 .container-medium { max-width: 1000px; }
 
 /* Helpers =============== */
-/* Clearfix */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
 
 .clearfix:after { clear: both; }
 
-/* Text alignment */
 .text-left { text-align: left; }
 
 .text-right { text-align: right; }
 
 .text-center { text-align: center; }
 
-/* Display State */
+.center { margin: 0 auto; text-align: center; }
+
+.image-responsive { max-width: 100%; }
+
 .show { display: block !important; }
 
 .hidden { display: none !important; }
 
 .invisible { visibility: hidden; }
+
+.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+
+.vertical-center { display: flex; align-items: center; justify-content: center; }
 
 /* Grid =============== */
 [class*="column"] { flex: 1; }
@@ -257,7 +262,6 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
   .column-33 { max-width: 33.3333%; }
   .column-66 { max-width: 66.6667%; }
   .column-75 { max-width: 75%; } }
-/* Fixed */
 .column-100 { flex: 0 0 100px; }
 
 .column-200 { flex: 0 0 200px; }
@@ -282,7 +286,6 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 
 .column-1200 { flex: 0 0 1200px; }
 
-/* Offsets */
 @media (min-width: 600px) { .offset-10 { margin-left: 10%; }
   .offset-20 { margin-left: 20%; }
   .offset-30 { margin-left: 30%; }
@@ -297,7 +300,6 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
   .offset-33 { margin-left: 33%; }
   .offset-66 { margin-left: 66%; }
   .offset-75 { margin-left: 75%; } }
-/* Repeating Grid */
 [class*="grid"] { padding: 0; margin: 0; list-style: none; display: flex; flex-wrap: wrap; }
 [class*="grid"] > li { width: 100%; }
 [class*="grid"].half > li { width: 50%; }
@@ -311,26 +313,20 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
   .grid-6.half > li, .grid-6 > li { width: 16.66667%; }
   .grid-7.half > li, .grid-7 > li { width: 14.28571%; }
   .grid-8.half > li, .grid-8 > li { width: 12.5%; } }
-/* Prevent mobile breakpoint with no-collapse class */
 .no-collapse { display: flex; flex-direction: row; flex-wrap: nowrap; }
 
-/* Vertical alignment */
 .align-vertical { align-items: center; }
 
-/* Gutters */
 .no-collapse.gutters > [class*="column"] ~ [class*="column"] { margin-left: 1rem; }
 
 .gutters [class*="column"] ~ [class*="column"] { margin-left: 0; }
 
 @media (min-width: 600px) { .gutters [class*="column"] ~ [class*="column"] { margin-left: 1rem; } }
 /* Buttons =============== */
-/* Buttons */
 .button, button, [type=submit], [type=reset], [type=button] { display: inline-block; line-height: 1; border: 0px solid #0072C0; border-radius: 4px; background: #0072C0; color: #ffffff; font-weight: 600; height: 2.5em; text-transform: uppercase; padding: .6rem 1.2rem; cursor: pointer; margin: .5rem 0; white-space: nowrap; vertical-align: middle; text-align: center; }
 
-/* Buttons on hover */
 .button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover { background: #00548d; color: #ffffff; text-decoration: none; }
 
-/* Apply styles to .button class, button element, and button-based inputs */
 .button:before, button:before, [type=submit]:before, [type=reset]:before, [type=button]:before { content: ''; display: inline-block; vertical-align: middle; height: 100%; }
 .button.accent, button.accent, [type=submit].accent, [type=reset].accent, [type=button].accent { background: #009E56; }
 .button.accent:hover, button.accent:hover, [type=submit].accent:hover, [type=reset].accent:hover, [type=button].accent:hover { background: #006b3a; }
@@ -341,53 +337,35 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 .button.muted:hover, button.muted:hover, [type=submit].muted:hover, [type=reset].muted:hover, [type=button].muted:hover { border: 1px solid #818181; background: #e7e7e7; }
 
 /* Forms =============== */
-/* Display for all input fields (except buttons) */
 [type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea { display: block; background: transparent; border: 1px solid #cdcdcd; border-radius: 4px; padding: .6rem; outline: none; vertical-align: middle; height: 2.5em; }
 
-/* Input fields on hover */
 [type=color]:hover, [type=date]:hover, [type=datetime-local]:hover, [type=email]:hover, [type=month]:hover, [type=number]:hover, [type=password]:hover, [type=search]:hover, [type=tel]:hover, [type=text]:hover, [type=url]:hover, [type=week]:hover, [type=time]:hover, select:hover, textarea:hover { border: 1px solid #b4b4b4; }
 
-/* Input fields on focus */
 [type=color]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=url]:focus, [type=week]:focus, [type=time]:focus, select:focus, textarea:focus { border: 1px solid #27a7ff; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #5abcff; }
 
-/* Variable containing all input fields */
 [type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea { width: 100%; max-width: 100%; }
 
-/* Horizontal forms have no set width on large screen view */
 @media (min-width: 600px) { .horizontal-form [type=color], .horizontal-form [type=date], .horizontal-form [type=datetime-local], .horizontal-form [type=email], .horizontal-form [type=month], .horizontal-form [type=number], .horizontal-form [type=password], .horizontal-form [type=search], .horizontal-form [type=tel], .horizontal-form [type=text], .horizontal-form [type=url], .horizontal-form [type=week], .horizontal-form [type=time], .horizontal-form select, .horizontal-form textarea { display: inline-block; width: auto; } }
 textarea { height: auto; display: block; }
 
-/* Placeholder Text */
 ::-webkit-input-placeholder, select { color: #9a9a9a; }
 
-/* Labels */
 label { font-weight: 600; max-width: 100%; display: block; margin: .5rem 0; }
-
-.split-form [class*="column"] { padding: 0; }
 
 @media (min-width: 600px) { .horizontal-form label, .horizontal-form [type=submit], .horizontal-form [type=reset], .horizontal-form [type=button] { display: inline-block; margin: .5rem 0; }
   .split-form label { text-align: right; padding: 0 .5rem; }
   .split-form [class*="column"] { margin-bottom: .5rem; } }
-/* Errors */
 input.has-error, input.has-error:hover, input.has-error:focus, select.has-error, select.has-error:hover, select.has-error:focus, textarea.has-error, textarea.has-error:hover, textarea.has-error:focus { border: 1px solid #D33C40; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f4cecf; }
 
 /* Tables =============== */
-/* Table expands to full width of containing element */
 table { width: 100%; max-width: 100%; }
 
 th, td { text-align: left; padding: .5rem; }
 
 td { border-top: 1px solid #cdcdcd; }
 
-/* Striped tables */
-.striped > tbody tr:nth-of-type(odd) { background: #e7e7e7; }
+.contain-table { overflow-x: auto; }
 
-/* Container for responsive tables */
-.table-scroll { overflow-x: auto; }
-
-@media (min-width: 600px) { .table-scroll { width: 100%; } }
-/* Easy terminal command
-sass --watch src/sass:dist/css --style compact
-*/
+@media (min-width: 600px) { .contain-table { width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
