@@ -6,25 +6,34 @@ html {
 	-webkit-font-smoothing: antialiased;
 	font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
 }
+
+// Body base
 body {
 	color: $font-color;
 }
+
+// Headers
 h1, h2, h3, h4, h5, h6 {
 	letter-spacing: -0.02em;
 	margin: 1.5rem 0;
-	font-weight: 500;
+	font-weight: $header-font-weight;
+	color: $header-font-color;
 	span {
 		font-size: 65%;
 		color: lighten($font-color, 20%);
 		padding-left: .5rem;
 	}
 }
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.9rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1.1rem; }
+
+// Header size
+h1 { font-size: $h1; }
+h2 { font-size: $h2; }
+h3 { font-size: $h3; }
+h4 { font-size: $h4; }
+h5 { font-size: $h5; }
+h6 { font-size: $h6; }
+
+// Link styling
 a {
 	color: $link-color;
 	text-decoration: none;
@@ -34,16 +43,18 @@ a {
 		text-decoration: underline;
 	}
 }
+
 // Highlight
 mark {
 	background: $highlight;
 	padding: 0 0.2rem;
 }
+
 // Blockquote
 blockquote {
 	margin: 0;
 	border-left: $bq-border;
-	padding: 1rem 1.5rem;
+	padding: .5rem 1.5rem;
 	font-size: 1.2rem;
   cite {
     display: block;
@@ -52,6 +63,8 @@ blockquote {
     text-align: right
   }
 }
+
+// Code block styling
 pre {
   border: 0;
 	border-radius: $border-radius;
@@ -66,6 +79,8 @@ pre {
 		webkit-font-smoothing: subpixel-antialiased;
 	}
 }
+
+// Inline code styling
 :not(pre) > code {
 	color: $code-color;
 	background: $code-background;
@@ -74,14 +89,24 @@ pre {
 	border: $borders;
 	border-radius: $border-radius;
 }
+
+// Line break
 hr {
 	height: 0;
 	border: 0;
 	border-top: $borders;
 }
 
-/* Containers */
+// Definition list
 
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: .5rem;
+}
+
+// Container
 .container {
   max-width: $large;
   padding: 0 1rem;
@@ -89,12 +114,14 @@ hr {
   margin-right: auto;
 }
 
-.conainer-small {
+// Small container
+.small-container {
 	@extend .container;
   max-width: $small;
 }
 
-.container-medium {
+// Medium container
+.medium-container {
   @extend .container;
   max-width: $medium;
 }

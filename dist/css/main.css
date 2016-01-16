@@ -1,16 +1,6 @@
 /* Mise en Place by Tania Rascia =============== */
 /* Variables =============== */
-/* Breakpoints */
-/* Typography */
-/* Colors */
-/* Borders */
-/* Links */
-/* Buttons */
-/* Forms */
-/* General */
-/* Code */
 /* Mixins =============== */
-/* Media query for mobile first layout */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /** 1. Set default font family to sans-serif. 2. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom. */
 html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
@@ -146,7 +136,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
 /* Reset =============== */
-/* Reset box sizing to border box */
 html { box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
@@ -154,10 +143,10 @@ html { box-sizing: border-box; }
 /* Scaffolding =============== */
 html { -webkit-font-smoothing: antialiased; font: normal normal normal 1rem/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-body { color: #333; }
+body { color: #222; }
 
-h1, h2, h3, h4, h5, h6 { letter-spacing: -0.02em; margin: 1.5rem 0; font-weight: 500; }
-h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { font-size: 65%; color: #666666; padding-left: .5rem; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.02em; margin: 1.5rem 0; font-weight: 500; color: #333; }
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span { font-size: 65%; color: #555555; padding-left: .5rem; }
 
 h1 { font-size: 2.2rem; }
 
@@ -172,26 +161,29 @@ h5 { font-size: 1.2rem; }
 h6 { font-size: 1.1rem; }
 
 a { color: #00548d; text-decoration: none; }
-a:hover, a:focus { color: #0072c0; text-decoration: underline; }
+a:hover, a:focus { color: #0081da; text-decoration: underline; }
 
 mark { background: #ffeea8; padding: 0 0.2rem; }
 
-blockquote { margin: 0; border-left: 8px solid #cdcdcd; padding: 1rem 1.5rem; font-size: 1.2rem; }
+blockquote { margin: 0; border-left: 8px solid #cdcdcd; padding: .5rem 1.5rem; font-size: 1.2rem; }
 blockquote cite { display: block; margin-top: 25px; font-size: .9em; text-align: right; }
 
 pre { border: 0; border-radius: 4px; background: #f4f4f4; padding: 1rem; tab-size: 2; }
-pre code { color: #333; font-family: Menlo, monospace; font-size: .9rem; line-height: 1.2; webkit-font-smoothing: subpixel-antialiased; }
+pre code { color: #222; font-family: Menlo, monospace; font-size: .9rem; line-height: 1.2; webkit-font-smoothing: subpixel-antialiased; }
 
-:not(pre) > code { color: #333; background: #f4f4f4; font-family: Menlo, monospace; padding: 0 0.2rem; border: 1px solid #cdcdcd; border-radius: 4px; }
+:not(pre) > code { color: #222; background: #f4f4f4; font-family: Menlo, monospace; padding: 0 0.2rem; border: 1px solid #cdcdcd; border-radius: 4px; }
 
 hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 
-/* Containers */
-.container, .conainer-small, .container-medium { max-width: 1200px; padding: 0 1rem; margin-left: auto; margin-right: auto; }
+dt { font-weight: bold; }
 
-.conainer-small { max-width: 800px; }
+dd { margin-bottom: .5rem; }
 
-.container-medium { max-width: 1000px; }
+.container, .small-container, .medium-container { max-width: 1200px; padding: 0 1rem; margin-left: auto; margin-right: auto; }
+
+.small-container { max-width: 800px; }
+
+.medium-container { max-width: 1000px; }
 
 /* Helpers =============== */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
@@ -225,31 +217,22 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
   .row { display: flex; flex-direction: row; flex-wrap: nowrap; } }
 .column-10 { flex: 1; }
 
-@media (min-width: 600px) { .column-10 { max-width: 10%; } }
 .column-20 { flex: 2; }
 
-@media (min-width: 600px) { .column-20 { max-width: 20%; } }
 .column-30 { flex: 3; }
 
-@media (min-width: 600px) { .column-30 { max-width: 30%; } }
 .column-40 { flex: 4; }
 
-@media (min-width: 600px) { .column-40 { max-width: 40%; } }
 .column-50 { flex: 5; }
 
-@media (min-width: 600px) { .column-50 { max-width: 50%; } }
 .column-60 { flex: 6; }
 
-@media (min-width: 600px) { .column-60 { max-width: 60%; } }
 .column-70 { flex: 7; }
 
-@media (min-width: 600px) { .column-70 { max-width: 70%; } }
 .column-80 { flex: 8; }
 
-@media (min-width: 600px) { .column-80 { max-width: 80%; } }
 .column-90 { flex: 9; }
 
-@media (min-width: 600px) { .column-90 { max-width: 90%; } }
 .column-25 { flex: 2.5; }
 
 .column-33 { flex: 3.33333; }
@@ -258,7 +241,16 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 
 .column-75 { flex: 7.5; }
 
-@media (min-width: 600px) { .column-25 { max-width: 25%; }
+@media (min-width: 600px) { .column-10 { max-width: 10%; }
+  .column-20 { max-width: 20%; }
+  .column-30 { max-width: 30%; }
+  .column-40 { max-width: 40%; }
+  .column-50 { max-width: 50%; }
+  .column-60 { max-width: 60%; }
+  .column-70 { max-width: 70%; }
+  .column-80 { max-width: 80%; }
+  .column-90 { max-width: 90%; }
+  .column-25 { max-width: 25%; }
   .column-33 { max-width: 33.3333%; }
   .column-66 { max-width: 66.6667%; }
   .column-75 { max-width: 75%; } }
@@ -295,8 +287,7 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
   .offset-70 { margin-left: 70%; }
   .offset-80 { margin-left: 80%; }
   .offset-90 { margin-left: 90%; }
-  .offset-100 { margin-left: 100%; } }
-@media (min-width: 600px) { .offset-25 { margin-left: 25%; }
+  .offset-25 { margin-left: 25%; }
   .offset-33 { margin-left: 33%; }
   .offset-66 { margin-left: 66%; }
   .offset-75 { margin-left: 75%; } }
@@ -346,7 +337,7 @@ hr { height: 0; border: 0; border-top: 1px solid #cdcdcd; }
 [type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea { width: 100%; max-width: 100%; }
 
 @media (min-width: 600px) { .horizontal-form [type=color], .horizontal-form [type=date], .horizontal-form [type=datetime-local], .horizontal-form [type=email], .horizontal-form [type=month], .horizontal-form [type=number], .horizontal-form [type=password], .horizontal-form [type=search], .horizontal-form [type=tel], .horizontal-form [type=text], .horizontal-form [type=url], .horizontal-form [type=week], .horizontal-form [type=time], .horizontal-form select, .horizontal-form textarea { display: inline-block; width: auto; } }
-textarea { height: auto; display: block; }
+textarea { height: auto; }
 
 ::-webkit-input-placeholder, select { color: #9a9a9a; }
 

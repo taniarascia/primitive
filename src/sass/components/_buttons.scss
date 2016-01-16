@@ -49,12 +49,15 @@ button,
 			background: darken($accent-color, 10%);
 		}
 	}
+	// Round buttons
   &.round {
     border-radius: $round-buttons;
   }
+	// Square buttons
   &.square {
     border-radius: 0;
   }
+	// Full width buttons
   &.full {
     display: block;
     width: 100%;

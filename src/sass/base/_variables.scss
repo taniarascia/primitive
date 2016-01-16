@@ -1,50 +1,48 @@
 /* Variables
   =============== */
 
-
-/* Breakpoints */
-
+// Breakpoints
 $mobile: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
 
-/* Typography */
-
+// Typography
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
-$font-color: #333;
+$font-color: #222;
 $font-size: 1rem;
 $line-height: 1.5;
-$font-family: Helvetica Neue,
-Helvetica,
-Arial,
-sans-serif;
-
-/* Colors */
-
+$font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$header-font-color: #333;
+$header-font-weight: 500;
+$h1: 2.2rem;
+$h2: 1.9rem;
+$h3: 1.6rem;
+$h4: 1.4rem;
+$h5: 1.2rem;
+$h6: 1.1rem;
+	
+// Colors 
 $primary-color: #0072C0;
 $accent-color: #009E56;
 $gray: #cdcdcd;
 $lightgray: lighten($gray, 10%);
 $darkgray: darken($gray, 20%);
 
-/* Borders */
-
+// Borders 
 $border-width: 1px;
 $border-style: solid;
 $border-color: $gray;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
-/* Links */
-
+// Links 
 $link-color: darken($primary-color, 10%);
-$link-hover-color: lighten($link-color, 10%);
+$link-hover-color: lighten($link-color, 15%);
 
-/* Buttons */
-
+// Buttons 
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
@@ -59,25 +57,20 @@ $muted-background-hover: lighten($gray, 10%);
 $muted-color: darken($gray, 50%);
 $round-buttons: 40px;
 
-/* Forms */
-
+// Forms 
 $input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $placeholder: $darkgray;
 $input-height: 2.5em;
 
-/* General */
-
+// General 
 $highlight: #ffeea8;
 $bq-border: 8px solid $border-color;
 $error: #D33C40;
 
-/* Code */
-
+// Code 
 $code-color: $font-color;
 $code-family: Menlo,
 monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
-
-$primitive: #004F9C;
