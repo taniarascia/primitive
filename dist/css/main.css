@@ -301,8 +301,8 @@ dd { margin-bottom: .5rem; }
 .button.round, button.round, [type=submit].round, [type=reset].round, [type=button].round { border-radius: 40px; }
 .button.square, button.square, [type=submit].square, [type=reset].square, [type=button].square { border-radius: 0; }
 .button.full, button.full, [type=submit].full, [type=reset].full, [type=button].full { display: block; width: 100%; }
-.button.gradient, button.gradient, [type=submit].gradient, [type=reset].gradient, [type=button].gradient { border: 1px solid #0072C0; background-image: linear-gradient(#5abcff, #0072C0); }
-.button.gradient:hover, button.gradient:hover, [type=submit].gradient:hover, [type=reset].gradient:hover, [type=button].gradient:hover { border: 1px solid #00355a; background-image: linear-gradient(#0072C0, #00355a); }
+.button.gradient, button.gradient, [type=submit].gradient, [type=reset].gradient, [type=button].gradient { border: 1px solid #0072C0; background-image: linear-gradient(#5abcff, #0072C0); text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); box-shadow: 0 0 0 transparent, inset 0 0 2px white; }
+.button.gradient:hover, button.gradient:hover, [type=submit].gradient:hover, [type=reset].gradient:hover, [type=button].gradient:hover { border: 1px solid #00355a; background-image: linear-gradient(#0072C0, #004574); box-shadow: 0 0 0 transparent, inset 0 0 2px rgba(255, 255, 255, 0.5); }
 .button.muted, button.muted, [type=submit].muted, [type=reset].muted, [type=button].muted { background: transparent; border: 1px solid #cdcdcd; color: #4e4e4e; }
 .button.muted:hover, button.muted:hover, [type=submit].muted:hover, [type=reset].muted:hover, [type=button].muted:hover { border: 1px solid #818181; background: transparent; }
 
@@ -319,6 +319,8 @@ dd { margin-bottom: .5rem; }
 textarea { height: auto; }
 
 ::-webkit-input-placeholder, select { color: #9a9a9a; }
+
+select { -webkit-appearance: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==); background-position: right center; background-repeat: no-repeat; padding-right: 1.5em; line-height: 1; -moz-appearance: none; }
 
 label { font-weight: 600; max-width: 100%; display: block; margin: .5rem 0; }
 

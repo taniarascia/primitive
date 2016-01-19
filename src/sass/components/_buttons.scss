@@ -65,9 +65,12 @@ button,
 	&.gradient {
 		border: $gradient-border;
 		background-image: $gradient-background;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.5);
+    box-shadow: 0 0 0 rgba(0,0,0,0),inset 0 0 2px rgba(255,255,255,1);
 		&:hover {
 			border: $gradient-border-hover;
 			background-image: $gradient-background-hover;
+      box-shadow: 0 0 0 rgba(0,0,0,0),inset 0 0 2px rgba(255,255,255,.5);
 		}
 	}
   // Muted buttons
