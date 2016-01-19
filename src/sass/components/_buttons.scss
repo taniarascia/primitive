@@ -62,9 +62,17 @@ button,
     display: block;
     width: 100%;
   }
+	&.gradient {
+		border: $gradient-border;
+		background-image: $gradient-background;
+		&:hover {
+			border: $gradient-border-hover;
+			background-image: $gradient-background-hover;
+		}
+	}
   // Muted buttons
   &.muted {
-    background: transparent;
+    background: $muted-background;
     border: $muted-border;
     color: $muted-color;
     &:hover {

@@ -118,11 +118,6 @@
 	flex-wrap: nowrap; 
 }
 
-// Vertical alignment
-.align-vertical {
-  align-items: center;
-}
-
 // Gutters
 .no-collapse.gutters {
 	> [class*="column"] ~ [class*="column"] {

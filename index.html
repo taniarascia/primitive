@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link rel="stylesheet" href="example/prism.css">
-	<!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+	<link rel="icon" type="image/png" href="example/favicon.png">
 
 	<style>
 		.example {
@@ -30,40 +30,107 @@
 			border: 1px solid #004e87;
 			color: #ffffff;
 		}
-		
-		h1 a,
-		h1 a:hover,
-		h1 a:active {
-			color: #ffffff;
-		}
+
 		
 		h2 {
 			border-bottom: 1px solid #dddddd;
 			font-weight: 600;
 		}
 		
-		main {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
+		header {
+			height: 70vh;
 		}
 		
 		aside {
 			padding: 1rem;
 			flex: 0;
-			display: none;
-			background: #282828;
+			background: #ffffff;
+			border-bottom: 1px solid #ddd;
+			position: fixed;
+			width: 100%;
+			z-index: 2;
 		}
 		
-		.content {
-			flex: 1;
+		aside ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		aside nav {
+			display: none;
+			transition: all .5s ease;
+		}
+		
+		aside ul {
+			padding: 0;
+			margin: 2rem 0;
+			list-style: none;
+		}
+		
+		aside li a {
+			padding: .25rem .5rem;
+			margin: 0 .5rem;
+			border-radius: 4px;
+			display: block;
+			color: #333;
+			font-weight: 500;
+			text-decoration: none;
+		}
+		
+		aside li a:hover,
+		aside li a:active,
+		aside li a:focus {
+			background: #202020;
+			color: #ffffff;
+			text-decoration: none;
+		}
+		
+		aside li a.active {
+			background: #0070C2;
+			color: #ffffff;
+			text-decoration: none;
+		}
+		
+		.sidebar {
+			width: 100%;
+		}
+		
+		.sidebar h1 {
+			padding: 0 1rem;
+			color: #333;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+		
+		.sidebar p {
+			display: none;
+		}
+		
+		.toggle-nav {
+			float: right;
 		}
 		
 		@media screen and (min-width: 1000px) {
+			main {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+			}
 			aside {
 				display: block;
-				flex: 0 0 250px;
+				flex: 0 0 200px;
+				width: auto;
+				position: relative;
+				background: #282828;
 				/* No grow, specific pixel width */
+			}
+			aside nav {
+				display: block !important;
+			}
+			aside li a {
+				color: #d0d0d0;
 			}
 			.content {
 				flex: 7.5;
@@ -74,61 +141,28 @@
 				position: fixed;
 				top: 0;
 				left: 0;
-				width: 250px;
+				width: 200px;
 			}
 			.sidebar h1 {
-				padding: 0 1rem;
+				margin-top: 1rem;
 				color: #f0f0f0;
-				font-size: 1.5rem;
-				margin-bottom: 0;
 			}
 			.sidebar p {
+				display: block;
 				margin: 0;
 				padding: 0 1rem;
 				color: #81848d;
 			}
-			aside nav {}
-			aside nav ul {
-				padding: 0;
-				margin: 2rem 0;
-				list-style: none;
-			}
-			aside nav ul li {}
-			aside nav ul li a {
-				padding: .5rem;
-				margin: 0 .8rem;
-				border-radius: 4px;
-				display: block;
-				color: #d0d0d0;
-				font-weight: 600;
-				text-decoration: none;
-			}
-			aside nav ul li a:hover,
-			aside nav ul li a:active,
-			aside nav ul li a:focus {
-				background: #202020;
-				color: #ffffff;
-				text-decoration: none;
-			}
-			aside nav ul li a.active {
-				background: #0070C2;
-				color: #ffffff;
-				text-decoration: none;
-			}
 		}
 		
 		.mise-title {
-			margin-bottom: 0;
+			margin: 0;
 		}
 		
 		.mise-subtitle {
 			margin-top: 0;
 			margin-bottom: 2rem;
 			color: #787878;
-		}
-		
-		header {
-			height: 70vh;
 		}
 
 	</style>
@@ -139,6 +173,7 @@
 	<main>
 
 		<aside>
+			<div class="toggle-nav">Nav</div>
 			<div class="sidebar">
 				<h1>Mise en Place</h1>
 				<p>(mi zɑ̃ ˈplas)</p>
@@ -150,6 +185,7 @@
 						<li><a href="#buttons">Buttons</a></li>
 						<li><a href="#forms">Forms</a></li>
 						<li><a href="#tables">Tables</a></li>
+						<li><a href="#lists">Lists</a></li>
 						<li><a href="#code">Code</a></li>
 						<li><a href="#helpers">Helpers</a></li>
 					</ul>
@@ -166,7 +202,7 @@
 					<div>
 						<h1 class="mise-title">Mise en Place</h1>
 						<p class="mise-subtitle">(mi zɑ̃ ˈplas)</p>
-						<p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple boilerplate built with <a href="http://sass-lang.com/">Sass</a> that provides helpful styling for buttons, forms, tables, lists, and typography, as well as a grid system for templating.</p>
+						<p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple starter pack built with <a href="http://sass-lang.com/">Sass</a> that provides helpful styling for buttons, forms, tables, lists, and typography, as well as a grid system for templating.</p>
 
 						<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=miseenplace&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
 						<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -189,17 +225,18 @@
 			</div>
 
 			<div class="small-container example">
-				Small container
+				Small container - 800px
 			</div>
 			<div class="medium-container example">
-				Medium container
+				Medium container - 1000px
 			</div>
 			<div class="container example">
-				Container
+				Container - 1200px
 			</div>
 			<div class="example">
 				No container
 			</div>
+
 
 			<div class="small-container">
 
@@ -226,7 +263,7 @@
 
 					<h3>Percentage Widths</h3>
 
-					<p>Percentage based column widths can be added. A class of <code>column-25</code> creates a 25% wide column.
+					<p>Percentage based column widths can be added. A <code>column-25</code> class creates a 25% wide column.
 
 						<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
@@ -250,7 +287,7 @@
 
 						<h3>Fixed Widths</h3>
 
-						<p>Insert fixed width colums and regular colums will fill in the available space. A class of <code>column-200</code> creates a 200 pixel wide column. </p>
+						<p>Insert fixed width colums and regular colums will fill in the available space. A <code>column-200</code> class creates a 200 pixel wide column. </p>
 
 						<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
@@ -333,7 +370,7 @@
 
 						<h3>Repeating Grid</h3>
 
-						<p>A grid that repeats and wraps to the next line. A class of <code>grid-3</code> will divide each cell into 1/3, or 33% of the container. Grid cells will break to 100% on mobile collapse.</p>
+						<p>A grid that repeats and wraps to the next line. A <code>grid-3</code> class will divide each cell into 1/3, or 33% of the container. Grid cells will break to 100% on mobile collapse.</p>
 
 						<pre><code class="language-html">&lt;ul class="grid-3"&gt;
 	&lt;li&gt;33%&lt;/li&gt;
@@ -348,7 +385,7 @@
 							<li class="example">33%</li>
 						</ul>
 
-						<p>Add a class of <code>half</code> to have them break to two 50% wide columns on mobile collapse.</p>
+						<p>Add a <code>half</code> class to have them break to two 50% wide columns on mobile collapse.</p>
 
 						<pre><code class="language-html">&lt;ul class="grid-4 half"&gt;
 	&lt;li&gt;25%&lt;/li&gt;
@@ -364,7 +401,6 @@
 							<li class="example">25%</li>
 							<li class="example">25%</li>
 						</ul>
-
 
 				</section>
 				<section id="typography">
@@ -402,7 +438,7 @@
 				<section id="buttons">
 					<h2>Buttons</h2>
 
-					<p>Button elements, links with a class of <code>button</code>, and input elements should all render exactly the same.</p>
+					<p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
 
 					<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
@@ -416,7 +452,7 @@
 
 					<h3>Accent Buttons</h3>
 
-					<p>Adding a class of <code>accent</code> will display a secondary color.</p>
+					<p>Adding an <code>accent</code> class will display a secondary color.</p>
 
 					<pre><code class="language-html">&lt;button class="accent"&gt;Button&lt;/button&gt;</code></pre>
 
@@ -427,7 +463,7 @@
 
 					<h3>Muted Buttons</h3>
 
-					<p>Adding a class of <code>muted</code> will create ghost buttons.</p>
+					<p>Adding a <code>muted</code> class will create ghost buttons.</p>
 
 					<pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
 
@@ -438,7 +474,7 @@
 
 					<h3>Round Buttons</h3>
 
-					<p>Adding a class of <code>round</code> will create rounded buttons.</p>
+					<p>Adding a <code>round</code> class will create rounded buttons.</p>
 
 					<pre><code class="language-html">&lt;button class="round"&gt;Button&lt;/button&gt;</code></pre>
 
@@ -449,7 +485,7 @@
 
 					<h3>Square Buttons</h3>
 
-					<p>Adding a class of <code>square</code> will create square buttons.</p>
+					<p>Adding a <code>square</code> class will create square buttons.</p>
 
 					<pre><code class="language-html">&lt;button class="square"&gt;Button&lt;/button&gt;</code></pre>
 
@@ -458,15 +494,26 @@
 					<input type="button" value="Input" class="square">
 					<a class="square button">Link</a>
 
+					<h3>Gradient Buttons</h3>
+
+					<p>Adding a <code>gradient</code> class will create square buttons.</p>
+
+					<pre><code class="language-html">&lt;button class="gradient"&gt;Button&lt;/button&gt;</code></pre>
+
+					<button class="gradient">Button</button>
+					<input type="submit" value="Submit" class="gradient">
+					<input type="button" value="Input" class="gradient">
+					<a class="gradient button">Link</a>
+
 					<h3>Full Width Buttons</h3>
 
-					<p>Adding a class of <code>full</code> will create full-width, block level buttons. Button styles can be combined.</p>
+					<p>Adding a <code>full</code> class will create full-width, block level buttons. Button styles can be combined.</p>
 
 					<pre><code class="language-html">&lt;button class="full"&gt;Button&lt;/button&gt;</code></pre>
 
 					<button class="full">Button</button>
 					<input type="submit" value="Submit" class="full accent square">
-					<input type="button" value="Input" class="full round">
+					<input type="button" value="Input" class="full round gradient">
 					<a class="full muted button">Link</a>
 
 				</section>
@@ -510,7 +557,7 @@
 						<label>
 							<input type="checkbox"> Remember me
 						</label>
-						<input type="submit" value="Submit">
+						<input type="button" value="Submit">
 					</form>
 
 					<h3>Horizontal Forms</h3>
@@ -522,11 +569,11 @@
 &lt;/form&gt;</code></pre>
 
 					<form class="horizontal-form">
-						<label for="name">Name</label>
-						<input type="text" id="name" placeholder="First Name">
-						<label for="email">Email</label>
-						<input type="email" id="email" placeholder="Email Address">
-						<input type="submit" value="Submit">
+						<label for="name-horizontal">Name</label>
+						<input type="text" id="name-horizontal" placeholder="First Name">
+						<label for="email-horizontal">Email</label>
+						<input type="email" id="email-horizontal" placeholder="Email Address">
+						<input type="button" value="Submit">
 					</form>
 
 					<h3>Split Forms</h3>
@@ -550,7 +597,7 @@
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;column-10&quot;&gt;
-      &lt;label for=&quot;email&quot;&gt;URL&lt;/label&gt;
+      &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column&quot;&gt;
       &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
@@ -566,21 +613,21 @@
 					<form class="split-form">
 						<div class="row">
 							<div class="column-10">
-								<label for="name">Name</label>
+								<label for="name-split">Name</label>
 							</div>
 							<div class="column">
-								<input type="text" id="name" placeholder="First Name">
+								<input type="text" id="name-split" placeholder="First Name">
 							</div>
 							<div class="column-10">
-								<label for="email">Email</label>
+								<label for="email-split">Email</label>
 							</div>
 							<div class="column">
-								<input type="email" id="email" placeholder="Email Address">
+								<input type="email" id="email-split" placeholder="Email Address">
 							</div>
 						</div>
 						<div class="row">
 							<div class="column-10">
-								<label for="email">URL</label>
+								<label for="url">URL</label>
 							</div>
 							<div class="column">
 								<input type="url" id="url" placeholder="Website URL">
@@ -588,20 +635,20 @@
 						</div>
 						<div class="row">
 							<div class="offset-10 column-90">
-								<input type="submit" value="Submit">
+								<input type="button" value="Submit">
 							</div>
 						</div>
 					</form>
 
 					<h3>Form Validation</h3>
 
-					<p>An input field with a class of <code>has-error</code></p>
+					<p>An input field with a <code>has-error</code> class.</p>
 
 					<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
 
 					<form>
-						<label for="name">Name</label>
-						<input type="text" id="name" placeholder="Name" class="has-error">
+						<label for="name-error">Name</label>
+						<input type="text" id="name-error" placeholder="Name" class="has-error">
 					</form>
 
 				</section>
@@ -711,43 +758,68 @@
 
 				<section id="lists">
 					<h2>Lists</h2>
+
+					<p>Regular ordered and unordered lists have no special styling applied to them.</p>
+
+					<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;List item one
+		&lt;ul&gt;
+			&lt;li&gt;Nested list item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;List item two&lt;/li&gt;
+	&lt;li&gt;List item three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
 					<div class="row">
 						<div class="column">
 							<ul>
-								<li>Lorem ipsum dolor
+								<li>List item one
 									<ul>
-										<li>Nested ipsum</li>
+										<li>Nested list item </li>
 									</ul>
 								</li>
-								<li>Aliquam tincidunt</li>
-								<li>Vestibulum auctor</li>
+								<li>List item two</li>
+								<li>List item three</li>
 							</ul>
 						</div>
 						<div class="column">
 							<ol>
-								<li>Lorem ipsum dolor
+								<li>List item one
 									<ol>
-										<li>Nested ipsum</li>
+										<li>Nested list item</li>
 									</ol>
 								</li>
-								<li>Aliquam tincidunt</li>
-								<li>Vestibulum auctor</li>
+								<li>List item two</li>
+								<li>List item three</li>
 							</ol>
 						</div>
-						<div class="column">
-							<dl>
-								<dt>Lorem ipsum</dt>
-								<dd>Aliquam tincidunt</dd>
-								<dt>Lorem ipsum</dt>
-								<dd>Aliquam tincidunt</dd>
-							</dl>
-						</div>
 					</div>
+
+					<h3>Definition Lists</h3>
+
+					<pre><code class="language-html">&lt;dl&gt;
+	&lt;dt&gt;Definition Title One&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+	&lt;dt&gt;Definition Title Two&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+					<p>Definition titles are bolded, and margins have been placed after each description.</p>
+
+					<dl>
+						<dt>Definition Title One</dt>
+						<dd>First definition description</dd>
+						<dt>Definition Title Two</dt>
+						<dd>First definition description</dd>
+					</dl>
+
 				</section>
+
 				<section id="code">
 					<h2>Code</h2>
 
-					<p> Style has been added for inline <code>code</code> tags, while <kbd>keyboard input</kbd>, and <samp>sample output</samp> remain unstylized. Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
+					<p> Style has been added for inline <code>code</code> tags, and <code>kbd</code> is an obvious <kbd>keyboard input</kbd>. Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
 
 					<pre><code>class Voila {
 public:
@@ -778,20 +850,36 @@ public:
 
 					<p>Bringing back the <code>&lt;center&gt;</code> tag with the <code>center</code> class.</p>
 
-					<pre><code class="language-html">&lt;div class="center"&gt;Centered&lt;/div&gt;</code></pre>
+					<pre><code class="language-html">&lt;div class="center"&gt;
+	&lt;div&gt;Centered&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 					<div class="center">
 						<div class="example" style="display: inline-block;">Centered</div>
 					</div>
+
+					<h3>Screen Reader Text</h3>
+
+					<p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, use the <code>screen-reader-text</code> class to hide content visually.
+
+						<pre><code class="language-html">&lt;span class=&quot;screen-reader-text&quot;&gt;Hidden&lt;/span&gt;</code></pre>
+
+						<h3>Responsive Images</h3>
+
+						<p>Add a <code>responsive-image</code> class for responsive images.</p>
+
+						<pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
+
+						<img src="http://placehold.it/900x100" class="responsive-image" alt="Responsive Image">
 
 				</section>
 
 			</div>
 
 			<footer class="center">
-				<div class="small-container" style="padding: 20px 0;">
-					<hr style="width: 150px;">
-					<p><a href="http://www.taniarascia.com">♥ Tania</a></p>
+				<div class="small-container" style="padding: 30px 0 20px;">
+					<hr style="width: 300px;">
+					<p style="padding-top: 20px;">Made with ♥ by <a href="http://www.taniarascia.com">Tania Rascia</a></p>
 				</div>
 			</footer>
 		</div>
@@ -801,7 +889,15 @@ public:
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="example/prism.js"></script>
 	<script src="example/scroll.js"></script>
-
+	
+	<script>
+$(document).ready(function() {
+	$('.toggle-nav').click(function() {
+	$('aside nav').toggle();
+	console.log()
+	});
+});
+	</script>
 </body>
 
 </html>

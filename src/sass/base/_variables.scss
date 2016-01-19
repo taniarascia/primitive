@@ -39,22 +39,31 @@ $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
 // Links 
-$link-color: darken($primary-color, 10%);
+$link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 
 // Buttons 
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
+
 $button-border-width: 0px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
 $button-borders: $button-border-width $button-border-style $button-border-color;
+
 $muted-border: 1px solid $gray;
 $muted-border-hover: 1px solid darken($gray, 30%);
-$muted-background-hover: lighten($gray, 10%);
+$muted-background: transparent;
+$muted-background-hover: transparent;
 $muted-color: darken($gray, 50%);
+
+$gradient-border: 1px solid $primary-color;
+$gradient-border-hover: 1px solid darken($primary-color, 20%);
+$gradient-background: linear-gradient(lighten($primary-color, 30%), $primary-color);
+$gradient-background-hover: linear-gradient($primary-color, darken($primary-color, 20%));
+	
 $round-buttons: 40px;
 
 // Forms 

@@ -12,13 +12,13 @@
 
 // Components
 @import "components/scaffolding";
-@import "components/helpers";
 @import "components/grid";
 @import "components/buttons";
 @import "components/forms";
 @import "components/tables";
 @import "components/navigation";
 @import "components/layout";
+@import "components/helpers";
 
 // Easy terminal command 
-// sass --watch src/sass:dist/css --style compact
+// sass --watch src/sass:dist/css --style compact 
