@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="example/example.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="icon" type="image/png" href="example/favicon.png">
+  <link rel="icon" href="example/favicon.png">
 </head>
 
 <body>
@@ -32,6 +32,7 @@
 
           <ul>
             <li class="title">HTML</li>
+            <li><a href="#getting-started"><i class="fa fa-cog"></i>Getting Started</a></li>
             <li><a href="#containers"><i class="fa fa-cube"></i>Containers</a></li>
             <li><a href="#grid"><i class="fa fa-th"></i>Grid</a></li>
             <li><a href="#typography"><i class="fa fa-font"></i>Typography</a></li>
@@ -44,9 +45,10 @@
           </ul>
           <ul>
             <li class="title">Sass</li>
-            <li><a href="#sass-main"><i class="fa fa-terminal"></i>Main</a></li>
+            <li><a href="#sass-main"><i class="fa fa-terminal"></i>Project</a></li>
             <li><a href="#sass-var"><i class="fa fa-usd"></i>Variables</a></li>
           </ul>
+
         </nav>
       </div>
     </aside>
@@ -82,6 +84,34 @@
 Follow</a>
           </div>
         </header>
+
+        <section id="getting-started">
+          <h2>Getting Started</h2>
+          
+          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+	&lt;meta charset=&quot;utf-8&quot;&gt;
+	&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+	
+	&lt;title&gt;&lt;/title&gt;
+
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+	&lt;link rel=&quot;icon&quot; href=&quot;images/favicon.png&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+          
+        </section>
 
         <section id="containers">
           <h2>Containers</h2>
@@ -751,6 +781,25 @@ public:
 
         </section>
         <section id="sass-main">
+          <h2>Sass</h2>
+          <p>The project is built on Sass, specifically <strong>SCSS</strong>. If you've never used Sass, <a href="http://www.taniarascia.com/learn-sass-now/" target="_blank">this article will explain everything you need to know to get started.</a></p>
+          <pre><code class="language-scss">// Variables and Mixins
+@import "base/variables";
+@import "base/mixins";
+
+// Reset
+@import "base/normalize";
+@import "base/reset";
+
+// Components
+@import "components/scaffolding";
+@import "components/grid";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/navigation";
+@import "components/layout";
+@import "components/helpers";</code></pre>
         </section>
         <section id="sass-var">
         </section>
