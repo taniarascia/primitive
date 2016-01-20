@@ -79,7 +79,7 @@ aside li a.active {
   font-family: 'FontAwesome';
 }
 @media screen and (min-width: 1000px) {
-  main {
+  .outer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
