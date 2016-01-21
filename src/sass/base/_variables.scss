@@ -69,7 +69,7 @@ $gradient-background-hover: linear-gradient($primary-color, darken($primary-colo
 $round-buttons: 40px;
 
 // Forms 
-$input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $placeholder: $darkgray;
 $input-height: 2.4rem;
