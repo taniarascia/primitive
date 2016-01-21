@@ -17,6 +17,7 @@ $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $header-font-color: #333;
 $header-font-weight: 500;
+$header-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $h1: 2.2rem;
 $h2: 1.9rem;
 $h3: 1.6rem;
@@ -46,6 +47,7 @@ $link-hover-color: lighten($link-color, 15%);
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
+$button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
 $button-border-width: 0px;
 $button-border-style: solid;
@@ -70,7 +72,7 @@ $round-buttons: 40px;
 $input-fields: ('[type=color], [type=date], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $placeholder: $darkgray;
-$input-height: 2.5em;
+$input-height: 2.4rem;
 
 // General 
 $highlight: #ffeea8;
