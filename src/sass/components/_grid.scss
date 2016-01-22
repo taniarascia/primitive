@@ -4,12 +4,37 @@
 // Mobile first grids are 100% width
 [class*="column"] { 
 	flex: 1; 
+  margin-bottom: 1.5rem;
 }
-@include large-screen {
+
+// Column on mobile
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+@include breakpoint {
   // Add padding on desktop
   [class*="column"] {
   	padding-left: 1rem; 
     padding-right: 1rem;
+    margin-bottom: 0;
+  } 
+  // Add columns on desktop
+	.row {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+  }
+}
+
+@include large-breakpoint {
+  // Add padding on desktop
+  [class*="column"] {
+  	padding-left: 1rem; 
+    padding-right: 1rem;
+    margin-bottom: 0;
   } 
   // Add columns on desktop
 	.row {
@@ -34,7 +59,7 @@
 .column-75 { flex: (3/4) * 10; }
 
 // Run a loop 10 times to get multiples of 10
-@include large-screen {
+@include breakpoint {
 	@for $i from 1 through 9 {
 		$width: $i;
 		.column-#{$i * 10} {
@@ -50,17 +75,19 @@
 
 // Fixed pixel amounts
 // Run a loop 12 times to get multiples of 100 in pixels
-@for $i from 1 through 12 {
-	$px: $i * 100px;
-	
-	.column-#{$i * 100} {
-		flex: 0 0 $px;
-	}
+@include breakpoint {
+  @for $i from 1 through 12 {
+    $px: $i * 100px;
+
+    .column-#{$i * 100} {
+      flex: 0 0 $px;
+    }
+  }
 }
 
 // Offsets
 // Run a loop 10 times to get a percentage of every multiple of ten
-@include large-screen {
+@include breakpoint {
   @for $i from 1 through 9 {
     $margin: $i * 10%;
 
@@ -77,24 +104,22 @@
 
 // Repeating list grid
 [class*="grid"] {
-	padding: 0;
-	margin: 0;
-	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
-	> li {
-		width: 100%;
+	> .cell {
+		flex: 1;
+    min-width: 100%;
 	}
   &.half { // Add half class for 50% wide on mobile
-    > li {
-    width: 50%;
+    > .cell {
+    min-width: 50%;
     }
   }
 }
 
-@include large-screen {
+@include breakpoint {
   [class*="grid"] {
-    > li {
+    > .cell {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -104,8 +129,8 @@
     $percent: percentage(1/$i);
 
     .grid-#{$i} {
-      &.half > li, > li,  {
-        width: $percent;
+      &.half > .cell, > .cell,  {
+        min-width: $percent;
       }
     }
   }
@@ -127,7 +152,7 @@
 .gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
-@include large-screen {
+@include breakpoint {
   .gutters [class*="column"] ~ [class*="column"] {
   margin-left: 1rem;
 	}

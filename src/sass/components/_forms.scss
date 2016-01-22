@@ -12,15 +12,18 @@
   vertical-align: middle;
   height: $input-height;
 }
+
 // Input fields on hover
 %forms-hover {
   border: $border-width $border-style darken($border-color, 10%);
 }
+
 // Input fields on focus 
 %forms-focus {
   border: 1px solid lighten($link-color, 30%);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 40%);
 }
+
 // Variable containing all input fields 
 #{$input-fields} {
   width: 100%; // Expands the full width of the container
@@ -33,8 +36,9 @@
     @extend %forms-focus;
   }
 }
+
 // Horizontal forms have no set width on large screen view 
-@include large-screen {
+@include breakpoint {
   .horizontal-form {
     #{$input-fields} {
       display: inline-block;
@@ -42,14 +46,17 @@
     }
   }
 }
+
 textarea {
   height: auto;
 }
+
 // Placeholder Text 
 ::-webkit-input-placeholder,
 select {
   color: $placeholder;
 }
+
 // Fix issues with select
 select {
   -webkit-appearance: none;
@@ -60,6 +67,7 @@ select {
   line-height: 1;
   -moz-appearance: none;
 }
+
 // Labels
 label {
   font-weight: 600;
@@ -67,7 +75,8 @@ label {
   display: block;
   margin: .5rem 0;
 }
-@include large-screen {
+
+@include breakpoint {
   .horizontal-form {
     // Horizontal forms are inline-block
     label,
@@ -87,6 +96,7 @@ label {
     }
   }
 }
+
 // Errors
 input,
 select,
@@ -102,10 +112,12 @@ textarea {
     }
   }
 }
+
 fieldset {
   border-radius: $border-radius;
   padding: .5rem 1rem;
 }
+
 legend {
   padding: 0 .5rem;
 }

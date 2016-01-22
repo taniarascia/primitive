@@ -19,7 +19,7 @@ td {
 .contain-table {
   overflow-x: auto;
 }
-@include large-screen {
+@include breakpoint {
   .contain-table {
     width: 100%;
   }
