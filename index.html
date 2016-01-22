@@ -87,30 +87,7 @@ Follow</a>
 
         <section id="getting-started">
           <h2>Getting Started</h2>
-          
-          <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
 
-&lt;head&gt;
-	&lt;meta charset=&quot;utf-8&quot;&gt;
-	&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
-	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-	
-	&lt;title&gt;&lt;/title&gt;
-
-	&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
-	&lt;link rel=&quot;icon&quot; href=&quot;images/favicon.png&quot;&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-	&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
-	&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
-</code></pre>
-          
         </section>
 
         <section id="containers">
@@ -165,6 +142,18 @@ Follow</a>
             <div class="column example">2</div>
           </div>
 
+          <h3>Breakpoint</h3>
+
+          <p>A larger breakpoint size is also provided with the <code>row-large</code> class.</p>
+
+          <div class="row-large">
+            <div class="column example">1</div>
+          </div>
+          <div class="row-large">
+            <div class="column example">2</div>
+            <div class="column example">2</div>
+          </div>
+
           <h3>Percentage Widths</h3>
 
           <p>Percentage based column widths can be added. A <code>column-25</code> class creates a 25% wide column.
@@ -187,22 +176,6 @@ Follow</a>
             <div class="row">
               <div class="column-75 example">75%</div>
               <div class="column-25 example">25%</div>
-            </div>
-
-            <h3>Fixed Widths</h3>
-
-            <p>Insert fixed width colums and regular colums will fill in the available space. A <code>column-200</code> class creates a 200 pixel wide column. </p>
-
-            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;column-200&quot;&gt;200px&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <div class="row">
-              <div class="column example">&nbsp;</div>
-              <div class="column example">&nbsp;</div>
-              <div class="column-200 example special">200px</div>
             </div>
 
             <h3>No Collapse</h3>
@@ -809,9 +782,9 @@ public:
           <p style="padding-top: 20px;">Made with ♥ by <a href="http://www.taniarascia.com">Tania Rascia</a></p>
         </div>
       </footer>
-      </main>
-      
-    </div>
+    </main>
+
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="example/prism.js"></script>
