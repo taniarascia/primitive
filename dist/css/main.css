@@ -501,7 +501,7 @@ dd {
 
 /* Grid
   =============== */
-[class*="column"] {
+[class^="column"] {
   flex: 1;
   margin-bottom: 1.5rem; }
 
@@ -511,7 +511,7 @@ dd {
   flex-wrap: nowrap; }
 
 @media (min-width: 600px) {
-  [class*="column"] {
+  [class^="column"] {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0; }
@@ -521,7 +521,7 @@ dd {
     flex-direction: row;
     flex-wrap: nowrap; } }
 @media (min-width: 1000px) {
-  [class*="column"] {
+  [class^="column"] {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0; }
@@ -677,56 +677,56 @@ dd {
     margin-left: 66%; }
   .row-large .offset-75 {
     margin-left: 75%; } }
-[class*="grid"] {
+[class^="grid"] {
   display: flex;
-  flex-wrap: wrap; }
-  [class*="grid"] > .cell {
-    flex: 1;
-    min-width: 100%; }
-  [class*="grid"].half > .cell {
-    min-width: 50%; }
+  flex-wrap: wrap;
+  flex-direction: column; }
+  [class^="grid"] > .cell {
+    flex: 1; }
 
 @media (min-width: 600px) {
-  [class*="grid"] > .cell {
-    padding-left: 1rem;
-    padding-right: 1rem; }
+  [class^="grid"] {
+    flex-direction: row; }
+    [class^="grid"] > .cell {
+      padding-left: 1rem;
+      padding-right: 1rem; }
 
-  .grid-1.half > .cell, .grid-1 > .cell {
+  .grid-1 > .cell {
     min-width: 100%; }
 
-  .grid-2.half > .cell, .grid-2 > .cell {
+  .grid-2 > .cell {
     min-width: 50%; }
 
-  .grid-3.half > .cell, .grid-3 > .cell {
+  .grid-3 > .cell {
     min-width: 33.33333%; }
 
-  .grid-4.half > .cell, .grid-4 > .cell {
+  .grid-4 > .cell {
     min-width: 25%; }
 
-  .grid-5.half > .cell, .grid-5 > .cell {
+  .grid-5 > .cell {
     min-width: 20%; }
 
-  .grid-6.half > .cell, .grid-6 > .cell {
+  .grid-6 > .cell {
     min-width: 16.66667%; }
 
-  .grid-7.half > .cell, .grid-7 > .cell {
+  .grid-7 > .cell {
     min-width: 14.28571%; }
 
-  .grid-8.half > .cell, .grid-8 > .cell {
+  .grid-8 > .cell {
     min-width: 12.5%; } }
 .no-collapse {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
 
-.no-collapse.gutters > [class*="column"] ~ [class*="column"] {
+.no-collapse.gutters > [class^="column"] ~ [class^="column"] {
   margin-left: 1rem; }
 
-.gutters [class*="column"] ~ [class*="column"] {
+.gutters [class^="column"] ~ [class^="column"] {
   margin-left: 0; }
 
 @media (min-width: 600px) {
-  .gutters [class*="column"] ~ [class*="column"] {
+  .gutters [class^="column"] ~ [class^="column"] {
     margin-left: 1rem; } }
 /* Buttons
   =============== */
