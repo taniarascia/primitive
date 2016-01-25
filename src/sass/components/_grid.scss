@@ -2,7 +2,7 @@
   =============== */
 
 // Mobile first grids are 100% width
-[class^="column"] { 
+[class*="column"] {  
 	flex: 1; 
   margin-bottom: 1.5rem;
 }
@@ -16,7 +16,7 @@
 
 @include breakpoint {
   // Add padding on desktop
-  [class^="column"] {
+  [class*="column"] {
   	padding-left: 1rem; 
     padding-right: 1rem;
     margin-bottom: 0;
@@ -31,7 +31,7 @@
 
 @include large-breakpoint {
   // Add padding on desktop
-  [class^="column"] {
+  [class*="column"] {
   	padding-left: 1rem; 
     padding-right: 1rem;
     margin-bottom: 0;
@@ -130,7 +130,7 @@
 }
 
 // Repeating list grid
-[class^="grid"] {
+[class|="grid"] {
 	display: flex;
 	flex-wrap: wrap;
   flex-direction: column;
@@ -140,7 +140,7 @@
 }
 
 @include breakpoint {
-  [class^="grid"] {
+  [class|="grid"] {
     flex-direction: row;
     > .cell {
       padding-left: 1rem;
@@ -168,15 +168,15 @@
 
 // Gutters
 .no-collapse.gutters {
-	> [class^="column"] ~ [class^="column"] {
+	> [class*="column"] ~ [class*="column"] {
   	margin-left: 1rem;
 	}
 }
-.gutters [class^="column"] ~ [class^="column"] {
+.gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
 @include breakpoint {
-  .gutters [class^="column"] ~ [class^="column"] {
+  .gutters [class*="column"] ~ [class*="column"] {
   margin-left: 1rem;
 	}
 }

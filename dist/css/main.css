@@ -501,7 +501,7 @@ dd {
 
 /* Grid
   =============== */
-[class^="column"] {
+[class*="column"] {
   flex: 1;
   margin-bottom: 1.5rem; }
 
@@ -511,7 +511,7 @@ dd {
   flex-wrap: nowrap; }
 
 @media (min-width: 600px) {
-  [class^="column"] {
+  [class*="column"] {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0; }
@@ -521,7 +521,7 @@ dd {
     flex-direction: row;
     flex-wrap: nowrap; } }
 @media (min-width: 1000px) {
-  [class^="column"] {
+  [class*="column"] {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0; }
@@ -677,17 +677,17 @@ dd {
     margin-left: 66%; }
   .row-large .offset-75 {
     margin-left: 75%; } }
-[class^="grid"] {
+[class|="grid"] {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
-  [class^="grid"] > .cell {
+  [class|="grid"] > .cell {
     flex: 1; }
 
 @media (min-width: 600px) {
-  [class^="grid"] {
+  [class|="grid"] {
     flex-direction: row; }
-    [class^="grid"] > .cell {
+    [class|="grid"] > .cell {
       padding-left: 1rem;
       padding-right: 1rem; }
 
@@ -719,14 +719,14 @@ dd {
   flex-direction: row;
   flex-wrap: nowrap; }
 
-.no-collapse.gutters > [class^="column"] ~ [class^="column"] {
+.no-collapse.gutters > [class*="column"] ~ [class*="column"] {
   margin-left: 1rem; }
 
-.gutters [class^="column"] ~ [class^="column"] {
+.gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0; }
 
 @media (min-width: 600px) {
-  .gutters [class^="column"] ~ [class^="column"] {
+  .gutters [class*="column"] ~ [class*="column"] {
     margin-left: 1rem; } }
 /* Buttons
   =============== */
@@ -861,7 +861,7 @@ label {
   display: block;
   margin: .5rem 0; }
 
-.split-form [class^="column"] {
+.split-form [class*="column"] {
   margin-bottom: 0; }
 
 @media (min-width: 600px) {
@@ -873,7 +873,7 @@ label {
   .split-form label {
     text-align: right;
     padding: 0 .5rem; }
-  .split-form [class^="column"] {
+  .split-form [class*="column"] {
     margin-bottom: .5rem;
     padding: 0; } }
 input.has-error, input.has-error:hover, input.has-error:focus,
