@@ -58,37 +58,75 @@
 .column-66 { flex: (2/3) * 10; }
 .column-75 { flex: (3/4) * 10; }
 
+// Run a loop 10 times to get multiples of 10
+@include breakpoint {
+	.row {
+		@for $i from 1 through 9 {
+			$width: $i;
+			.column-#{$i * 10} {
+				max-width: percentage($width) * .1;
+			}	
+		} 
+	// 1/4 and 1/3 fractions
+	.column-25 { max-width: 25%; }
+	.column-33 { max-width: 33.3333%; }
+	.column-66 { max-width: 66.6667%; }
+	.column-75 { max-width: 75%; }
+	}
+}
 
 // Run a loop 10 times to get multiples of 10
 @include large-breakpoint {
-	@for $i from 1 through 9 {
-		$width: $i;
-		.column-#{$i * 10} {
-			max-width: percentage($width) * .1;
-		}
-	} 
-/*   // 1/4 and 1/3 fractions
-  .column-25 { max-width: 25%; }
-  .column-33 { max-width: 33.3333%; }
-  .column-66 { max-width: 66.6667%; }
-  .column-75 { max-width: 75%; } */
+	.row-large {
+		@for $i from 1 through 9 {
+			$width: $i;
+			.column-#{$i * 10} {
+				max-width: percentage($width) * .1;
+			}	
+		} 
+	// 1/4 and 1/3 fractions
+	.column-25 { max-width: 25%; }
+	.column-33 { max-width: 33.3333%; }
+	.column-66 { max-width: 66.6667%; }
+	.column-75 { max-width: 75%; }
+	}
 }
 
 // Offsets
 // Run a loop 10 times to get a percentage of every multiple of ten
 @include breakpoint {
-  @for $i from 1 through 9 {
-    $margin: $i * 10%;
+	.row {
+		@for $i from 1 through 9 {
+			$margin: $i * 10%;
 
-    .offset-#{$i * 10} {
-      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
-    }
-  }
-	 // 1/4 and 1/3 fractions
-  .offset-25 { margin-left: 25%; }
-  .offset-33 { margin-left: 33%; }
-  .offset-66 { margin-left: 66%; }
-  .offset-75 { margin-left: 75%; } 
+			.offset-#{$i * 10} {
+				margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
+			}
+		}
+		 // 1/4 and 1/3 fractions
+		.offset-25 { margin-left: 25%; }
+		.offset-33 { margin-left: 33%; }
+		.offset-66 { margin-left: 66%; }
+		.offset-75 { margin-left: 75%; } 
+	}
+}
+
+// Run a loop 10 times to get a percentage of every multiple of ten
+@include large-breakpoint {
+	.row-large {
+		@for $i from 1 through 9 {
+			$margin: $i * 10%;
+
+			.offset-#{$i * 10} {
+				margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
+			}
+		}
+		 // 1/4 and 1/3 fractions
+		.offset-25 { margin-left: 25%; }
+		.offset-33 { margin-left: 33%; }
+		.offset-66 { margin-left: 66%; }
+		.offset-75 { margin-left: 75%; } 
+	}
 }
 
 // Repeating list grid
