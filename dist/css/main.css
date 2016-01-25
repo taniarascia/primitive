@@ -861,6 +861,9 @@ label {
   display: block;
   margin: .5rem 0; }
 
+.split-form [class^="column"] {
+  margin-bottom: 0; }
+
 @media (min-width: 600px) {
   .horizontal-form label,
   .horizontal-form [type=submit], .horizontal-form [type=reset], .horizontal-form [type=button] {
@@ -870,8 +873,9 @@ label {
   .split-form label {
     text-align: right;
     padding: 0 .5rem; }
-  .split-form [class*="column"] {
-    margin-bottom: .5rem; } }
+  .split-form [class^="column"] {
+    margin-bottom: .5rem;
+    padding: 0; } }
 input.has-error, input.has-error:hover, input.has-error:focus,
 select.has-error,
 select.has-error:hover,

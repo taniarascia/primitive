@@ -80,6 +80,12 @@ label {
   margin: .5rem 0;
 }
 
+.split-form {
+  [class^="column"] {
+    margin-bottom: 0;
+  }
+}
+
 @include breakpoint {
   .horizontal-form {
     // Horizontal forms are inline-block
@@ -95,8 +101,9 @@ label {
       text-align: right;
       padding: 0 .5rem;
     }
-    [class*="column"] {
+    [class^="column"] {
       margin-bottom: .5rem;
+      padding: 0;
     }
   }
 }
