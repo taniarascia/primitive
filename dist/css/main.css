@@ -430,8 +430,8 @@ mark {
 blockquote {
   margin: 0;
   border-left: 8px solid #cdcdcd;
-  padding: .5rem 1.5rem;
-  font-size: 1.2rem; }
+  padding: 0 1.5rem;
+  font-size: 1.1rem; }
   blockquote cite {
     display: block;
     margin-top: 25px;
@@ -851,6 +851,9 @@ select {
   padding-right: 1.5em;
   line-height: 1;
   -moz-appearance: none; }
+
+[type=range] {
+  width: 100%; }
 
 label {
   font-weight: 600;

@@ -68,6 +68,10 @@ select {
   -moz-appearance: none;
 }
 
+[type=range] {
+  width: 100%;
+}
+
 // Labels
 label {
   font-weight: 600;
