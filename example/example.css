@@ -1,3 +1,14 @@
+body {
+  //background-image: linear-gradient(to right, #f0f0f0 50%, transparent 50%);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+}
 header {
   height: 70vh;
 }
@@ -47,21 +58,18 @@ aside li a:focus {
   text-decoration: none;
 }
 aside li a.active {
-  background: #0070C2;
-  color: #ffffff;
+  color: #0070C2;
   text-decoration: none;
 }
-.sidebar {
-  width: 100%;
-}
-.sidebar h1 {
+
+aside h1 {
   padding: 0 1rem;
   color: #333;
   font-size: 1.8rem;
   margin-bottom: 0;
   margin-top: 0;
 }
-.sidebar p {
+aside p {
   display: none;
 }
 .toggle-nav {
@@ -79,57 +87,42 @@ aside li a.active {
   font-family: 'FontAwesome';
 }
 @media screen and (min-width: 1000px) {
-  .outer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+
   aside {
     display: block;
-    flex: 0 0 220px;
-    width: auto;
-    position: relative;
-    background: #222222;
-    /* No grow, specific pixel width */
+    flex: 2.5;
+    position: fixed;
+    top: 0;
+    width: 220px;
+    border-bottom: 0;
+    border-right: 1px solid #f0f0f0;
   }
   aside nav {
     display: block !important;
   }
-  aside li a {
-    color: #c0c0c0;
-  }
-  aside li a:hover,
-  aside li a:active,
-  aside li a:focus {
-    background: #333333;
-    color: #ffffff;
-    text-decoration: none;
-  }
+
   .content {
     flex: 7.5;
-    margin: 1rem 0;
+    margin-left: 220px;
   }
-  .sidebar {
+  aside {
     margin-top: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 220px;
   }
-  .sidebar h1 {
+  aside h1 {
     margin-top: 1rem;
     font-size: 1.5rem;
-    color: #f0f0f0;
   }
-  .sidebar p {
+  aside p {
     display: block;
     margin: 0 0 1rem;
     padding: 0 1rem;
-    color: #81848d;
   }
   .toggle-nav {
     display: none;
   }
+}
+.active .fa {
+  color: #0070C2;
 }
 .fa {
   color: #99c6e5;
@@ -155,4 +148,9 @@ aside li a.active {
   background: #0070C2;
   border: 1px solid #004e87;
   color: #ffffff;
+}
+
+.xl-container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
