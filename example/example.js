@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
   });
 
-// Active scroll
+  // Active scroll
   function onScroll(event) {
     var scrollPos = $(document).scrollTop();
     $('aside a').each(function () {
@@ -49,5 +49,25 @@ $(document).ready(function () {
   $('html').click(function () {
     $('aside nav').hide();
     $('.toggle-nav').removeClass('active');
+  });
+
+
+  function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('.xl-container').offset().top;
+    console.log(div_top)
+    if (window_top > div_top) {
+      $('aside').addClass('fixed');
+      $('.content').addClass('margin');
+    } else {
+      $('aside').removeClass('fixed');
+      $('.content').removeClass('margin');
+
+    }
+  }
+
+  $(function () {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
   });
 });

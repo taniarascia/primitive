@@ -21,12 +21,44 @@
 
 <body>
 
+
+  <div class="medium-container">
+
+  <header class="center vertical-center">
+    <div>
+      <h1 class="mise-title">Mise en Place</h1>
+      <p class="mise-subtitle">(mi zɑ̃ ˈplas)</p>
+      <p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple starter pack built with <a href="http://sass-lang.com/">Sass</a> that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, as well as a grid system for templating.</p>
+
+      <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=miseenplace&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Mise en Place, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
+      <script>
+        ! function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        }(document, 'script', 'twitter-wjs');
+
+      </script>
+      <a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
+Follow</a>
+    </div>
+  </header>
+  
+  </div>
+
   <div class="xl-container">
-    
+
     <div class="flex-container">
 
-    <aside>
-      <div class="toggle-nav"></div>
+      <aside>
+        <div class="toggle-nav"></div>
         <h1>Mise en Place</h1>
         <p>(mi zɑ̃ ˈplas)</p>
         <nav>
@@ -51,88 +83,61 @@
           </ul>
 
         </nav>
-    </aside>
+      </aside>
 
 
-    <main class="content" id="main-content">
+      <main class="content" id="main-content">
 
-      <div class="small-container">
+        <div class="medium-container">
 
-        <header class="center vertical-center">
-          <div>
-            <h1 class="mise-title">Mise en Place</h1>
-            <p class="mise-subtitle">(mi zɑ̃ ˈplas)</p>
-            <p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple starter pack built with <a href="http://sass-lang.com/">Sass</a> that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, as well as a grid system for templating.</p>
+          <section id="getting-started">
+            <h2>Getting Started</h2>
 
-            <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=miseenplace&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-            <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-            <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Mise en Place, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
-            <script>
-              ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                  p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                  js = d.createElement(s);
-                  js.id = id;
-                  js.src = p + '://platform.twitter.com/widgets.js';
-                  fjs.parentNode.insertBefore(js, fjs);
-                }
-              }(document, 'script', 'twitter-wjs');
+            <p>First, Mise en Place was created to give consistent styling to HTML elements.</p>
+            <p><a href="example/test.html">Here is a test page with Mise en Place default CSS applied to common HTML elements.</a></p>
+            <p>Additionally, Mise en Place is built with Sass to quickly and easily transform the look and feel of your site, as well as organizing your files into a structured Sass project. <a href="#sass-main">View more about that here</a>.</p>
+            <p>There is a flex-based grid system built in, as well as some useful helper classes.</p>
+            <p><a href="https://github.com/taniarascia/miseenplace/">View the source</a> on GitHub.</p>
 
-            </script>
-            <a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
-Follow</a>
-          </div>
-        </header>
+          </section>
 
-        <section id="getting-started">
-          <h2>Getting Started</h2>
+          <section id="containers">
+            <h2>Containers</h2>
 
-          <p>First, Mise en Place was created to give consistent styling to HTML elements.</p>
-          <p><a href="example/test.html">Here is a test page with Mise en Place default CSS applied to common HTML elements.</a></p>
-          <p>Additionally, Mise en Place is built with Sass to quickly and easily transform the look and feel of your site, as well as organizing your files into a structured Sass project. <a href="#sass-main">View more about that here</a>.</p>
-          <p>There is a flex-based grid system built in, as well as some useful helper classes.</p>
-          <p><a href="https://github.com/taniarascia/miseenplace/">View the source</a> on GitHub.</p>
+            <p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
 
-        </section>
-
-        <section id="containers">
-          <h2>Containers</h2>
-
-          <p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
-
-          <pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
+            <pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
 &lt;div class=&quot;medium-container&quot;&gt;Medium&lt;/div&gt;
 &lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;
 &lt;div&gt;None&lt;/div&gt;</code></pre>
 
 
 
-        </section>
-      </div>
+          </section>
+        </div>
 
-      <div class="small-container example">
-        Small container - 800px
-      </div>
-      <div class="medium-container example">
-        Medium container - 1000px
-      </div>
-      <div class="container example">
-        Container - 1200px
-      </div>
-      <div class="example">
-        No container
-      </div>
+        <div class="small-container example">
+          Small container - 800px
+        </div>
+        <div class="medium-container example">
+          Medium container - 1000px
+        </div>
+        <div class="container example">
+          Container - 1200px
+        </div>
+        <div class="example">
+          No container
+        </div>
 
 
-      <div class="small-container">
+        <div class="medium-container">
 
-        <section id="grid">
-          <h2>Grid</h2>
+          <section id="grid">
+            <h2>Grid</h2>
 
-          <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Columns have no margins and are padding based. Columns will break to 100% width on mobile collapse.</p>
+            <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Columns have no margins and are padding based. Columns will break to 100% width on mobile collapse.</p>
 
-          <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -140,256 +145,256 @@ Follow</a>
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="row">
-            <div class="column example">1</div>
-          </div>
-          <div class="row">
-            <div class="column example">2</div>
-            <div class="column example">2</div>
-          </div>
+            <div class="row">
+              <div class="column example">1</div>
+            </div>
+            <div class="row">
+              <div class="column example">2</div>
+              <div class="column example">2</div>
+            </div>
 
-          <h3>Breakpoint</h3>
+            <h3>Breakpoint</h3>
 
-          <p>A larger breakpoint size is also provided with the <code>row-large</code> class.</p>
+            <p>A larger breakpoint size is also provided with the <code>row-large</code> class.</p>
 
-          <pre><code class="language-html">&lt;div class=&quot;row-large&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row-large&quot;&gt;
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
   &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="row-large">
-            <div class="column example">2</div>
-            <div class="column example">2</div>
-          </div>
+            <div class="row-large">
+              <div class="column example">2</div>
+              <div class="column example">2</div>
+            </div>
 
-          <h3>Percentage Widths</h3>
+            <h3>Percentage Widths</h3>
 
-          <p>Percentage based column widths can be added. A <code>column-25</code> class creates a 25% wide column.
+            <p>Percentage based column widths can be added. A <code>column-25</code> class creates a 25% wide column.
 
-            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+              <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
   &lt;div class=&quot;column-50&quot;&gt;50%&lt;/div&gt;
   &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row">
-              <div class="column-25 example">25%</div>
-              <div class="column-50 example">50%</div>
-              <div class="column-25 example">25%</div>
-            </div>
-            <div class="row">
-              <div class="column-66 example">66%</div>
-              <div class="column-33 example">33%</div>
-            </div>
-            <div class="row">
-              <div class="column-75 example">75%</div>
-              <div class="column-25 example">25%</div>
-            </div>
+              <div class="row">
+                <div class="column-25 example">25%</div>
+                <div class="column-50 example">50%</div>
+                <div class="column-25 example">25%</div>
+              </div>
+              <div class="row">
+                <div class="column-66 example">66%</div>
+                <div class="column-33 example">33%</div>
+              </div>
+              <div class="row">
+                <div class="column-75 example">75%</div>
+                <div class="column-25 example">25%</div>
+              </div>
 
-            <h3>No Collapse</h3>
+              <h3>No Collapse</h3>
 
-            <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
+              <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
+              <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
   &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row no-collapse">
-              <div class="column example">100%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="column-90 example">90%</div>
-              <div class="column-10 example">10%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="column-80 example">80%</div>
-              <div class="column-20 example">20%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="column-70 example">70%</div>
-              <div class="column-30 example">30%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="column-60 example">60%</div>
-              <div class="column-40 example">40%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="column-50 example">50%</div>
-              <div class="column-50 example">50%</div>
-            </div>
+              <div class="row no-collapse">
+                <div class="column example">100%</div>
+              </div>
+              <div class="row no-collapse">
+                <div class="column-90 example">90%</div>
+                <div class="column-10 example">10%</div>
+              </div>
+              <div class="row no-collapse">
+                <div class="column-80 example">80%</div>
+                <div class="column-20 example">20%</div>
+              </div>
+              <div class="row no-collapse">
+                <div class="column-70 example">70%</div>
+                <div class="column-30 example">30%</div>
+              </div>
+              <div class="row no-collapse">
+                <div class="column-60 example">60%</div>
+                <div class="column-40 example">40%</div>
+              </div>
+              <div class="row no-collapse">
+                <div class="column-50 example">50%</div>
+                <div class="column-50 example">50%</div>
+              </div>
 
-            <h3>Offsets</h3>
+              <h3>Offsets</h3>
 
-            <p>Add an <code>offset-</code> when you need empty space.</p>
+              <p>Add an <code>offset-</code> when you need empty space.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+              <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;offset-75 column-25&quot;&gt;25%&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;offset-25 column-50&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row">
-              <div class="offset-75 column-25 example">25%</div>
-            </div>
-            <div class="row">
-              <div class="offset-25 column-50 example">50%</div>
-            </div>
+              <div class="row">
+                <div class="offset-75 column-25 example">25%</div>
+              </div>
+              <div class="row">
+                <div class="offset-25 column-50 example">50%</div>
+              </div>
 
-            <h3>Gutters</h3>
+              <h3>Gutters</h3>
 
-            <p>Add a <code>gutters</code> class to the row to add margin in between columns.</p>
+              <p>Add a <code>gutters</code> class to the row to add margin in between columns.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;row gutters&quot;&gt;
+              <pre><code class="language-html">&lt;div class=&quot;row gutters&quot;&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row gutters">
-              <div class="column example">&nbsp;</div>
-              <div class="column example">&nbsp;</div>
-              <div class="column example">&nbsp;</div>
-            </div>
+              <div class="row gutters">
+                <div class="column example">&nbsp;</div>
+                <div class="column example">&nbsp;</div>
+                <div class="column example">&nbsp;</div>
+              </div>
 
-            <h3>Repeating Grid</h3>
+              <h3>Repeating Grid</h3>
 
-            <p>A grid that repeats and wraps to the next line. A <code>grid-3</code> class will divide each cell into 1/3, or 33% of the container. Any leftover cells will fill up the rest of the space. Grid cells will break to 100% on mobile collapse.</p>
+              <p>A grid that repeats and wraps to the next line. A <code>grid-3</code> class will divide each cell into 1/3, or 33% of the container. Any leftover cells will fill up the rest of the space. Grid cells will break to 100% on mobile collapse.</p>
 
-            <pre><code class="language-html">&lt;div class="grid-3"&gt;
+              <pre><code class="language-html">&lt;div class="grid-3"&gt;
 	&lt;div class="cell"&gt;33%&lt;/div&gt;
 	&lt;div class="cell"&gt;33%&lt;/div&gt;
    &lt;!-- etc --&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="grid-3">
-              <div class="cell example">33%</div>
-              <div class="cell example">33%</div>
-              <div class="cell example">33%</div>
-              <div class="cell example">Minimum of 33%</div>
-            </div>
+              <div class="grid-3">
+                <div class="cell example">33%</div>
+                <div class="cell example">33%</div>
+                <div class="cell example">33%</div>
+                <div class="cell example">Minimum of 33%</div>
+              </div>
 
 
-        </section>
-        <section id="typography">
-          <h2>Typography</h2>
+          </section>
+          <section id="typography">
+            <h2>Typography</h2>
 
-          <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
+            <p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
 
-          <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
+            <p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
 
-          <h1>Heading 1 <span>A Subtitle Goes Here</span></h1>
-          <h2 style="border-bottom:0;font-weight:500;">Heading 2<span>A Subtitle Goes Here</span></h2>
-          <h3>Heading 3 <span>A Subtitle Goes Here</span></h3>
-          <h4>Heading 4 <span>A Subtitle Goes Here</span></h4>
-          <h5>Heading 5 <span>A Subtitle Goes Here</span></h5>
-          <h6>Heading 6 <span>A Subtitle Goes Here</span></h6>
+            <h1>Heading 1 <span>A Subtitle Goes Here</span></h1>
+            <h2 style="border-bottom:0;font-weight:500;">Heading 2<span>A Subtitle Goes Here</span></h2>
+            <h3>Heading 3 <span>A Subtitle Goes Here</span></h3>
+            <h4>Heading 4 <span>A Subtitle Goes Here</span></h4>
+            <h5>Heading 5 <span>A Subtitle Goes Here</span></h5>
+            <h6>Heading 6 <span>A Subtitle Goes Here</span></h6>
 
-          <h3>Blockquote</h3>
+            <h3>Blockquote</h3>
 
-          <p>Blockquote is set to have a left border, with the browser default padding removed. A <code>cite</code> will be right aligned and italicized.
+            <p>Blockquote is set to have a left border, with the browser default padding removed. A <code>cite</code> will be right aligned and italicized.
 
-            <pre><code class="language-html">&lt;blockquote&gt;
+              <pre><code class="language-html">&lt;blockquote&gt;
 	&lt;p&gt;Keep it secret. Keep it safe.&lt;/p&gt;
 	&lt;cite&gt;Gandalf the Gray&lt;/cite&gt;
 &lt;/blockquote&gt;</code></pre>
 
-            <blockquote>
-              Keep it secret. Keep it safe.
-              <cite>Gandalf the Gray</cite>
-            </blockquote>
+              <blockquote>
+                <p>Keep it secret. Keep it safe.</p>
+                <cite>Gandalf the Gray</cite>
+              </blockquote>
 
-        </section>
-        <section id="buttons">
-          <h2>Buttons</h2>
+          </section>
+          <section id="buttons">
+            <h2>Buttons</h2>
 
-          <p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
+            <p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
 
-          <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+            <pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input&quot;&gt;
 &lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;</code></pre>
 
-          <button>Button</button>
-          <input type="submit" value="Submit">
-          <input type="button" value="Input">
-          <a class="button">Link</a>
+            <button>Button</button>
+            <input type="submit" value="Submit">
+            <input type="button" value="Input">
+            <a class="button">Link</a>
 
-          <h3>Accent Buttons</h3>
+            <h3>Accent Buttons</h3>
 
-          <p>Adding an <code>accent</code> class will display a secondary color.</p>
+            <p>Adding an <code>accent</code> class will display a secondary color.</p>
 
-          <pre><code class="language-html">&lt;button class="accent"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="accent"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="accent">Button</button>
-          <input type="submit" value="Submit" class="accent">
-          <input type="button" value="Input" class="accent">
-          <a class="button accent">Link</a>
+            <button class="accent">Button</button>
+            <input type="submit" value="Submit" class="accent">
+            <input type="button" value="Input" class="accent">
+            <a class="button accent">Link</a>
 
-          <h3>Muted Buttons</h3>
+            <h3>Muted Buttons</h3>
 
-          <p>Adding a <code>muted</code> class will create ghost buttons.</p>
+            <p>Adding a <code>muted</code> class will create ghost buttons.</p>
 
-          <pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="muted"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="muted">Button</button>
-          <input type="submit" value="Submit" class="muted">
-          <input type="button" value="Input" class="muted">
-          <a class="muted button">Link</a>
+            <button class="muted">Button</button>
+            <input type="submit" value="Submit" class="muted">
+            <input type="button" value="Input" class="muted">
+            <a class="muted button">Link</a>
 
-          <h3>Round Buttons</h3>
+            <h3>Round Buttons</h3>
 
-          <p>Adding a <code>round</code> class will create rounded buttons.</p>
+            <p>Adding a <code>round</code> class will create rounded buttons.</p>
 
-          <pre><code class="language-html">&lt;button class="round"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="round"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="round">Button</button>
-          <input type="submit" value="Submit" class="round">
-          <input type="button" value="Input" class="round">
-          <a class="round button">Link</a>
+            <button class="round">Button</button>
+            <input type="submit" value="Submit" class="round">
+            <input type="button" value="Input" class="round">
+            <a class="round button">Link</a>
 
-          <h3>Square Buttons</h3>
+            <h3>Square Buttons</h3>
 
-          <p>Adding a <code>square</code> class will create square buttons.</p>
+            <p>Adding a <code>square</code> class will create square buttons.</p>
 
-          <pre><code class="language-html">&lt;button class="square"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="square"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="square">Button</button>
-          <input type="submit" value="Submit" class="square">
-          <input type="button" value="Input" class="square">
-          <a class="square button">Link</a>
+            <button class="square">Button</button>
+            <input type="submit" value="Submit" class="square">
+            <input type="button" value="Input" class="square">
+            <a class="square button">Link</a>
 
-          <h3>Gradient Buttons</h3>
+            <h3>Gradient Buttons</h3>
 
-          <p>Adding a <code>gradient</code> class will add a background gradient to the buttons.</p>
+            <p>Adding a <code>gradient</code> class will add a background gradient to the buttons.</p>
 
-          <pre><code class="language-html">&lt;button class="gradient"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="gradient"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="gradient">Button</button>
-          <input type="submit" value="Submit" class="gradient">
-          <input type="button" value="Input" class="gradient">
-          <a class="gradient button">Link</a>
+            <button class="gradient">Button</button>
+            <input type="submit" value="Submit" class="gradient">
+            <input type="button" value="Input" class="gradient">
+            <a class="gradient button">Link</a>
 
-          <h3>Full Width Buttons</h3>
+            <h3>Full Width Buttons</h3>
 
-          <p>Adding a <code>full</code> class will create full-width, block level buttons. Button styles can be combined.</p>
+            <p>Adding a <code>full</code> class will create full-width, block level buttons. Button styles can be combined.</p>
 
-          <pre><code class="language-html">&lt;button class="full"&gt;Button&lt;/button&gt;</code></pre>
+            <pre><code class="language-html">&lt;button class="full"&gt;Button&lt;/button&gt;</code></pre>
 
-          <button class="full">Button</button>
-          <input type="submit" value="Submit" class="full accent square">
-          <input type="button" value="Input" class="full round gradient">
-          <a class="full muted button">Link</a>
+            <button class="full">Button</button>
+            <input type="submit" value="Submit" class="full accent square">
+            <input type="button" value="Input" class="full round gradient">
+            <a class="full muted button">Link</a>
 
-        </section>
+          </section>
 
-        <section id="forms">
-          <h2>Forms</h2>
+          <section id="forms">
+            <h2>Forms</h2>
 
-          <p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
+            <p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
 
-          <pre><code class="language-html">&lt;form&gt;
+            <pre><code class="language-html">&lt;form&gt;
   &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
   &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
   &lt;label for=&quot;choose&quot;&gt;Select&lt;/label&gt;
@@ -407,46 +412,46 @@ Follow</a>
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
 
-          <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="First Name">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Email address">
-            <label for="choose">Select</label>
-            <select id="choose">
-              <option disabled selected>Please select</option>
-              <option value="option-1">Option 1</option>
-              <option value="option-2">Option 2</option>
-            </select>
-            <label for="comments">Additional Comments</label>
-            <textarea id="comments"></textarea>
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-            <input type="button" value="Submit">
-          </form>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="First Name">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email address">
+              <label for="choose">Select</label>
+              <select id="choose">
+                <option disabled selected>Please select</option>
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+              </select>
+              <label for="comments">Additional Comments</label>
+              <textarea id="comments"></textarea>
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+              <input type="button" value="Submit">
+            </form>
 
-          <h3>Horizontal Forms</h3>
+            <h3>Horizontal Forms</h3>
 
-          <p>Add a <code>horizontal-form</code> class to make an inline form.</p>
+            <p>Add a <code>horizontal-form</code> class to make an inline form.</p>
 
-          <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
+            <pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
   &lt;!-- --&gt;
 &lt;/form&gt;</code></pre>
 
-          <form class="horizontal-form">
-            <label for="email-horizontal">Email</label>
-            <input type="email" id="email-horizontal" placeholder="Email Address">
-            <label for="password-horizontal">Password</label>
-            <input type="password" id="password-horizontal" placeholder="Password">
-            <input type="button" value="Submit">
-          </form>
+            <form class="horizontal-form">
+              <label for="email-horizontal">Email</label>
+              <input type="email" id="email-horizontal" placeholder="Email Address">
+              <label for="password-horizontal">Password</label>
+              <input type="password" id="password-horizontal" placeholder="Password">
+              <input type="button" value="Submit">
+            </form>
 
-          <h3>Split Forms</h3>
+            <h3>Split Forms</h3>
 
-          <p>Add a <code>split-form</code> class to enable left-aligned labels. Combine with rows for versitile layout possibilities.</p>
+            <p>Add a <code>split-form</code> class to enable left-aligned labels. Combine with rows for versitile layout possibilities.</p>
 
-          <pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
+            <pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;column-10&quot;&gt;
       &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
@@ -476,54 +481,54 @@ Follow</a>
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 
-          <form class="split-form">
-            <div class="row">
-              <div class="column-10">
-                <label for="name-split">Name</label>
+            <form class="split-form">
+              <div class="row">
+                <div class="column-10">
+                  <label for="name-split">Name</label>
+                </div>
+                <div class="column">
+                  <input type="text" id="name-split" placeholder="First Name">
+                </div>
+                <div class="column-10">
+                  <label for="email-split">Email</label>
+                </div>
+                <div class="column">
+                  <input type="email" id="email-split" placeholder="Email Address">
+                </div>
               </div>
-              <div class="column">
-                <input type="text" id="name-split" placeholder="First Name">
+              <div class="row">
+                <div class="column-10">
+                  <label for="url">URL</label>
+                </div>
+                <div class="column">
+                  <input type="url" id="url" placeholder="Website URL">
+                </div>
               </div>
-              <div class="column-10">
-                <label for="email-split">Email</label>
+              <div class="row">
+                <div class="offset-10 column">
+                  <input type="button" value="Submit">
+                </div>
               </div>
-              <div class="column">
-                <input type="email" id="email-split" placeholder="Email Address">
-              </div>
-            </div>
-            <div class="row">
-              <div class="column-10">
-                <label for="url">URL</label>
-              </div>
-              <div class="column">
-                <input type="url" id="url" placeholder="Website URL">
-              </div>
-            </div>
-            <div class="row">
-              <div class="offset-10 column">
-                <input type="button" value="Submit">
-              </div>
-            </div>
-          </form>
+            </form>
 
-          <h3>Form Validation</h3>
+            <h3>Form Validation</h3>
 
-          <p>An input field with a <code>has-error</code> class.</p>
+            <p>An input field with a <code>has-error</code> class.</p>
 
-          <pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
+            <pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
 
-          <form>
-            <label for="name-error">Name</label>
-            <input type="text" id="name-error" placeholder="Name" class="has-error">
-          </form>
+            <form>
+              <label for="name-error">Name</label>
+              <input type="text" id="name-error" placeholder="Name" class="has-error">
+            </form>
 
-        </section>
-        <section id="tables">
-          <h2>Tables</h2>
+          </section>
+          <section id="tables">
+            <h2>Tables</h2>
 
-          <p>Tables are set to a width of 100%, with a bottom border and bold headings.</p>
+            <p>Tables are set to a width of 100%, with a bottom border and bold headings.</p>
 
-          <pre><code class="language-html">&lt;table&gt;
+            <pre><code class="language-html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Head 1&lt;/th&gt;
@@ -547,52 +552,6 @@ Follow</a>
   &lt;/tfoot&gt;
 &lt;/table&gt;</code></pre>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Head 1</th>
-                <th>Head 2</th>
-                <th>Head 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-              <tr>
-                <td>Description 1</td>
-                <td>Description 2</td>
-                <td>Description 3</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Footer 1</td>
-                <td>Footer 2</td>
-                <td>Footer 3</td>
-              </tr>
-            </tfoot>
-          </table>
-
-
-          <h3>Responsive Tables</h3>
-
-          <p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
-
-          <pre><code class="language-html">&lt;div class=&quot;contain-table&quot;&gt;
-  &lt;table&gt;
-  &lt;!-- etc --&gt;
-  &lt;/table&gt;
-&lt;/div&gt;</code></pre>
-
-          <div class="contain-table">
             <table>
               <thead>
                 <tr>
@@ -603,7 +562,12 @@ Follow</a>
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="http://taniarascia.github.io/miseenplace">http://taniarascia.github.io/miseenplace</a></td>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
                   <td>Description 2</td>
                   <td>Description 3</td>
                 </tr>
@@ -621,16 +585,57 @@ Follow</a>
                 </tr>
               </tfoot>
             </table>
-          </div>
 
-        </section>
 
-        <section id="lists">
-          <h2>Lists</h2>
+            <h3>Responsive Tables</h3>
 
-          <p>Regular ordered and unordered lists have no special styling applied to them.</p>
+            <p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
 
-          <pre><code class="language-html">&lt;ul&gt;
+            <pre><code class="language-html">&lt;div class=&quot;contain-table&quot;&gt;
+  &lt;table&gt;
+  &lt;!-- etc --&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="contain-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Head 1</th>
+                    <th>Head 2</th>
+                    <th>Head 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://taniarascia.github.io/miseenplace">http://taniarascia.github.io/miseenplace</a></td>
+                    <td>Description 2</td>
+                    <td>Description 3</td>
+                  </tr>
+                  <tr>
+                    <td>Description 1</td>
+                    <td>Description 2</td>
+                    <td>Description 3</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+          </section>
+
+          <section id="lists">
+            <h2>Lists</h2>
+
+            <p>Regular ordered and unordered lists have no special styling applied to them.</p>
+
+            <pre><code class="language-html">&lt;ul&gt;
 	&lt;li&gt;List item one
 		&lt;ul&gt;
 			&lt;li&gt;Nested list item&lt;/li&gt;
@@ -640,112 +645,112 @@ Follow</a>
 	&lt;li&gt;List item three&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
-          <div class="row">
-            <div class="column">
-              <ul>
-                <li>List item one
-                  <ul>
-                    <li>Nested list item </li>
-                  </ul>
-                </li>
-                <li>List item two</li>
-                <li>List item three</li>
-              </ul>
+            <div class="row">
+              <div class="column">
+                <ul>
+                  <li>List item one
+                    <ul>
+                      <li>Nested list item </li>
+                    </ul>
+                  </li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ol>
+                  <li>List item one
+                    <ol>
+                      <li>Nested list item</li>
+                    </ol>
+                  </li>
+                  <li>List item two</li>
+                  <li>List item three</li>
+                </ol>
+              </div>
             </div>
-            <div class="column">
-              <ol>
-                <li>List item one
-                  <ol>
-                    <li>Nested list item</li>
-                  </ol>
-                </li>
-                <li>List item two</li>
-                <li>List item three</li>
-              </ol>
-            </div>
-          </div>
 
-          <h3>Definition Lists</h3>
+            <h3>Definition Lists</h3>
 
-          <pre><code class="language-html">&lt;dl&gt;
+            <pre><code class="language-html">&lt;dl&gt;
 	&lt;dt&gt;Definition Title One&lt;/dt&gt;
 	&lt;dd&gt;First definition description&lt;/dd&gt;
 	&lt;dt&gt;Definition Title Two&lt;/dt&gt;
 	&lt;dd&gt;First definition description&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
 
-          <p>Definition titles are bolded, and margins have been placed after each description.</p>
+            <p>Definition titles are bolded, and margins have been placed after each description.</p>
 
-          <dl>
-            <dt>Definition Title One</dt>
-            <dd>First definition description</dd>
-            <dt>Definition Title Two</dt>
-            <dd>First definition description</dd>
-          </dl>
+            <dl>
+              <dt>Definition Title One</dt>
+              <dd>First definition description</dd>
+              <dt>Definition Title Two</dt>
+              <dd>First definition description</dd>
+            </dl>
 
-        </section>
+          </section>
 
-        <section id="code">
-          <h2>Code</h2>
+          <section id="code">
+            <h2>Code</h2>
 
-          <p> Style has been added for inline <code>code</code> tags, and <code>kbd</code> is an obvious <kbd>keyboard input</kbd>. Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
+            <p> Style has been added for inline <code>code</code> tags, and <code>kbd</code> is an obvious <kbd>keyboard input</kbd>. Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
 
-          <pre><code>class Voila {
+            <pre><code>class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
 }</code></pre>
 
-        </section>
+          </section>
 
-        <section id="helpers">
-          <h2>Helpers</h2>
+          <section id="helpers">
+            <h2>Helpers</h2>
 
-          <h3>Vertical Center</h3>
+            <h3>Vertical Center</h3>
 
-          <p>Vertically center an element with the <code>vertical-center</code> class.</p>
+            <p>Vertically center an element with the <code>vertical-center</code> class.</p>
 
-          <pre><code class="language-html">&lt;div class="vertical-center"&gt;
+            <pre><code class="language-html">&lt;div class="vertical-center"&gt;
 	&lt;div&gt;Vertically centered&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="vertical-center example" style="height: 100px;">
+            <div class="vertical-center example" style="height: 100px;">
 
-            <div class="example" style="background:#E5F0F9;">Vertically centered</div>
+              <div class="example" style="background:#E5F0F9;">Vertically centered</div>
 
-          </div>
+            </div>
 
-          <h3>Horizontal Center</h3>
+            <h3>Horizontal Center</h3>
 
-          <p>Bringing back the <code>&lt;center&gt;</code> tag with the <code>center</code> class.</p>
+            <p>Bringing back the <code>&lt;center&gt;</code> tag with the <code>center</code> class.</p>
 
-          <pre><code class="language-html">&lt;div class="center"&gt;
+            <pre><code class="language-html">&lt;div class="center"&gt;
 	&lt;div&gt;Centered&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-          <div class="center">
-            <div class="example" style="display: inline-block;">Centered</div>
-          </div>
+            <div class="center">
+              <div class="example" style="display: inline-block;">Centered</div>
+            </div>
 
-          <h3>Screen Reader Text</h3>
+            <h3>Screen Reader Text</h3>
 
-          <p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, use the <code>screen-reader-text</code> class to hide content visually.
+            <p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, use the <code>screen-reader-text</code> class to hide content visually.
 
-            <pre><code class="language-html">&lt;span class=&quot;screen-reader-text&quot;&gt;Hidden&lt;/span&gt;</code></pre>
+              <pre><code class="language-html">&lt;span class=&quot;screen-reader-text&quot;&gt;Hidden&lt;/span&gt;</code></pre>
 
-            <h3>Responsive Images</h3>
+              <h3>Responsive Images</h3>
 
-            <p>Add a <code>responsive-image</code> class for responsive images.</p>
+              <p>Add a <code>responsive-image</code> class for responsive images.</p>
 
-            <pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
+              <pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
 
-            <img src="http://placehold.it/900x100" class="responsive-image" alt="Example of responsive-image CSS class">
+              <img src="http://placehold.it/900x100" class="responsive-image" alt="Example of responsive-image CSS class">
 
-        </section>
-        <section id="sass-main">
-          <h2>Sass</h2>
-          <p>The project is built on Sass, specifically <strong>SCSS</strong>. If you've never used Sass, <a href="http://www.taniarascia.com/learn-sass-now/" target="_blank">this article will explain everything you need to know to get started.</a></p>
-          <pre><code class="language-scss">// Variables and Mixins
+          </section>
+          <section id="sass-main">
+            <h2>Sass</h2>
+            <p>The project is built on Sass, specifically <strong>SCSS</strong>. If you've never used Sass, <a href="http://www.taniarascia.com/learn-sass-now/" target="_blank">this article will explain everything you need to know to get started.</a></p>
+            <pre><code class="language-scss">// Variables and Mixins
 @import "base/variables";
 @import "base/mixins";
 
@@ -762,20 +767,20 @@ public:
 @import "components/navigation";
 @import "components/layout";
 @import "components/helpers";</code></pre>
-        </section>
-        <section id="sass-var">
-        </section>
+          </section>
+          <section id="sass-var">
+          </section>
 
-      </div>
-
-      <footer class="center">
-        <div class="small-container" style="padding: 30px 0 20px;">
-          <hr style="width: 300px;">
-          <p style="padding-top: 20px;">Made with ♥ by <a href="http://www.taniarascia.com">Tania Rascia</a></p>
         </div>
-      </footer>
-    </main>
-    
+
+        <footer class="center">
+          <div class="medium-container" style="padding: 30px 0 20px;">
+            <hr style="width: 300px;">
+            <p style="padding-top: 20px;">Made with ♥ by <a href="http://www.taniarascia.com">Tania Rascia</a></p>
+          </div>
+        </footer>
+      </main>
+
     </div>
 
   </div>

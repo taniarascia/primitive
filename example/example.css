@@ -1,11 +1,9 @@
 body {
   //background-image: linear-gradient(to right, #f0f0f0 50%, transparent 50%);
 }
-
 .flex-container {
   display: flex;
 }
-
 .content {
   width: 100%;
 }
@@ -22,6 +20,7 @@ aside {
   background: #ffffff;
   border-bottom: 1px solid #ddd;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2;
 }
@@ -34,7 +33,6 @@ aside nav {
   display: none;
   transition: all .5s ease;
 }
-
 aside li.title {
   color: #888;
   font-size: .85rem;
@@ -61,7 +59,6 @@ aside li a.active {
   color: #0070C2;
   text-decoration: none;
 }
-
 aside h1 {
   padding: 0 1rem;
   color: #333;
@@ -87,26 +84,21 @@ aside p {
   font-family: 'FontAwesome';
 }
 @media screen and (min-width: 1000px) {
-
   aside {
     display: block;
-    flex: 2.5;
-    position: fixed;
-    top: 0;
+    flex: 0 0 220px;
     width: 220px;
     border-bottom: 0;
-    border-right: 1px solid #f0f0f0;
   }
   aside nav {
     display: block !important;
   }
-
   .content {
     flex: 7.5;
-    margin-left: 220px;
   }
   aside {
     margin-top: 1rem;
+    position: static;
   }
   aside h1 {
     margin-top: 1rem;
@@ -149,8 +141,16 @@ aside p {
   border: 1px solid #004e87;
   color: #ffffff;
 }
-
 .xl-container {
   max-width: 1400px;
   margin: 0 auto;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+@media screen and (min-width: 1000px) {
+  .margin {
+    margin-left: 220px;
+  }
 }
