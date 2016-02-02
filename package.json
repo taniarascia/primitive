@@ -1,0 +1,27 @@
+{
+  "name": "miseenplace",
+  "version": "1.0.0",
+  "description": "A Sass starter-pack for front-end web developers",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taniarascia/miseenplace.git"
+  },
+  "keywords": [
+    "sass",
+    "setup",
+    "boilerplate",
+    "framework",
+    "ui"
+  ],
+  "author": "Tania Rascia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taniarascia/miseenplace/issues"
+  },
+  "homepage": "https://taniarascia.github.io/miseenplace"
+}
