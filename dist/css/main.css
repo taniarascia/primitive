@@ -6,12 +6,7 @@
 /* Mixins
   =============== */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
- */
-html { 
+html {
   font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -114,28 +109,6 @@ strong {
 dfn {
   font-style: italic; }
 
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- *
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- *
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
 small {
   font-size: 80%; }
 
@@ -176,15 +149,6 @@ svg:not(:root) {
  */
 figure {
   margin: 1em 40px; }
-
-/**
- * Address differences between Firefox and other browsers.
- *
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
 
 /**
  * Contain overflow in all browsers.
@@ -304,16 +268,6 @@ input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
- */
-/*
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
- /* box-sizing: content-box; /* 2 
-} 
-
-/**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
@@ -346,15 +300,6 @@ legend {
 textarea {
   overflow: auto; }
 
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- *
-
-optgroup {
-  font-weight: bold;
-}
-
 /* Tables
    ========================================================================== */
 /**
@@ -378,6 +323,9 @@ html {
 *:after {
   box-sizing: inherit; }
 
+address {
+  font-style: normal; }
+
 /* Scaffolding
   =============== */
 html {
@@ -387,13 +335,24 @@ html {
 body {
   color: #222; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: -0.02em;
   margin: 1.5rem 0;
   font-weight: 500;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
   color: #333; }
-  h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
+  h6 span {
     font-size: 65%;
     color: #555555;
     padding-left: .5rem; }
@@ -419,7 +378,7 @@ h6 {
 a {
   color: #0072C0;
   text-decoration: none; }
-  a:hover, a:focus {
+  a:hover, a:active, a:focus {
     color: #0e9dff;
     text-decoration: underline; }
 
@@ -478,7 +437,8 @@ hr {
   border: 0;
   border-top: 1px solid #cdcdcd; }
 
-ul.inline, ol.inline {
+ul.inline,
+ol.inline {
   display: inline; }
 
 dt {
@@ -730,7 +690,7 @@ dd {
     margin-left: 1rem; } }
 /* Buttons
   =============== */
-.button,
+a.button,
 button,
 [type=submit], [type=reset], [type=button] {
   display: inline-block;
@@ -741,6 +701,7 @@ button,
   color: #ffffff;
   font-weight: 600;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
   text-transform: uppercase;
   padding: .7rem 1.2rem;
   margin: .5rem 0;
@@ -749,63 +710,78 @@ button,
   text-align: center;
   cursor: pointer; }
 
-.button:hover,
+a.button:hover, a.button:focus, a.button:active,
 button:hover,
-[type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+button:focus,
+button:active,
+[type=submit]:hover,
+[type=submit]:focus,
+[type=submit]:active, [type=reset]:hover, [type=reset]:focus, [type=reset]:active, [type=button]:hover, [type=button]:focus, [type=button]:active {
   background: #00548d;
   color: #ffffff;
   text-decoration: none; }
 
-.button:before,
+a.button:before,
 button:before,
 [type=submit]:before, [type=reset]:before, [type=button]:before {
   content: '';
   display: inline-block;
-  vertical-align: middle;
-  height: 100%; }
-.button.accent,
+  vertical-align: middle; }
+a.button.accent,
 button.accent,
 [type=submit].accent, [type=reset].accent, [type=button].accent {
   background: #009E56; }
-  .button.accent:hover,
+  a.button.accent:hover, a.button.accent:focus, a.button.accent:active,
   button.accent:hover,
-  [type=submit].accent:hover, [type=reset].accent:hover, [type=button].accent:hover {
+  button.accent:focus,
+  button.accent:active,
+  [type=submit].accent:hover,
+  [type=submit].accent:focus,
+  [type=submit].accent:active, [type=reset].accent:hover, [type=reset].accent:focus, [type=reset].accent:active, [type=button].accent:hover, [type=button].accent:focus, [type=button].accent:active {
     background: #006b3a; }
-.button.round,
+a.button.round,
 button.round,
 [type=submit].round, [type=reset].round, [type=button].round {
   border-radius: 40px; }
-.button.square,
+a.button.square,
 button.square,
 [type=submit].square, [type=reset].square, [type=button].square {
   border-radius: 0; }
-.button.full,
+a.button.full,
 button.full,
 [type=submit].full, [type=reset].full, [type=button].full {
   display: block;
   width: 100%; }
-.button.gradient,
+a.button.gradient,
 button.gradient,
 [type=submit].gradient, [type=reset].gradient, [type=button].gradient {
   border: 1px solid #0072C0;
   background-image: linear-gradient(#5abcff, #0072C0);
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 transparent, inset 0 0 2px white; }
-  .button.gradient:hover,
+  a.button.gradient:hover, a.button.gradient:focus, a.button.gradient:active,
   button.gradient:hover,
-  [type=submit].gradient:hover, [type=reset].gradient:hover, [type=button].gradient:hover {
+  button.gradient:focus,
+  button.gradient:active,
+  [type=submit].gradient:hover,
+  [type=submit].gradient:focus,
+  [type=submit].gradient:active, [type=reset].gradient:hover, [type=reset].gradient:focus, [type=reset].gradient:active, [type=button].gradient:hover, [type=button].gradient:focus, [type=button].gradient:active {
     border: 1px solid #00355a;
     background-image: linear-gradient(#0072C0, #004574);
     box-shadow: 0 0 0 transparent, inset 0 0 2px rgba(255, 255, 255, 0.5); }
-.button.muted,
+a.button.muted,
 button.muted,
 [type=submit].muted, [type=reset].muted, [type=button].muted {
   background: transparent;
   border: 1px solid #cdcdcd;
   color: #4e4e4e; }
-  .button.muted:hover,
+  a.button.muted:hover, a.button.muted:focus, a.button.muted:active,
   button.muted:hover,
-  [type=submit].muted:hover, [type=reset].muted:hover, [type=button].muted:hover {
+  button.muted:focus,
+  button.muted:active,
+  [type=submit].muted:hover,
+  [type=submit].muted:focus,
+  [type=submit].muted:active, [type=reset].muted:hover, [type=reset].muted:focus, [type=reset].muted:active, [type=button].muted:hover, [type=button].muted:focus, [type=button].muted:active {
     border: 1px solid #818181;
     background: transparent; }
 
@@ -913,6 +889,10 @@ td {
 @media (min-width: 600px) {
   .contain-table {
     width: 100%; } }
+/* Navigation
+  =============== */
+/* Layout
+  =============== */
 /* Helpers
   =============== */
 .clearfix:before,

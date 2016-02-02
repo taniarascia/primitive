@@ -51,8 +51,8 @@ $(document).ready(function () {
     $('.toggle-nav').removeClass('active');
   });
 
-
-  function sticky_relocate() {
+  
+    function sticky_relocate() {
     var window_top = $(window).scrollTop();
     var div_top = $('.xl-container').offset().top;
     console.log(div_top)
@@ -70,4 +70,23 @@ $(document).ready(function () {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
   });
+
+  // Stick to top
+  var stickyOffset = $('.xl-container').offset().top;
+
+  $(document).scroll(function () {
+    var navbar = $('aside');
+    var content = $('.content');
+    var scroll = $(document).scrollTop();
+
+    if (scroll >= 651) {
+      navbar.addClass('fixed');
+      content.addClass('margin');
+    } else {
+      navbar.removeClass('fixed');
+      content.removeClass('margin');
+    }
+
+  });
+  
 });

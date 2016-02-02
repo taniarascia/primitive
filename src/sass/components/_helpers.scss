@@ -4,20 +4,29 @@
 // Classic clearfix 
 .clearfix:before,
 .clearfix:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
-.clearfix:after { clear: both; }
-
+.clearfix:after {
+  clear: both;
+}
 // Text alignment
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
 // Display
-.block { display: block; }
-.inline-block { display: inline-block; }
-
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
 // Center everything
 .center {
   margin: 0 auto;
@@ -27,12 +36,16 @@
 .responsive-image {
   max-width: 100%;
 }
-
 // Display State
-.show { display: block !important; }
-.hidden { display: none !important; }
-.invisible { visibility: hidden; }
-
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
 // Screen reader text for accessibility
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -41,7 +54,6 @@
   width: 1px;
   overflow: hidden;
 }
-
 // Vertical center
 .vertical-center {
   display: flex;

@@ -731,12 +731,25 @@ public:
             <div class="center">
               <div class="example" style="display: inline-block;">Centered</div>
             </div>
+            
+            <h3>Text Alignment</h3>
+            
+            <p>Use <code>text-left</code>, <code>text-right</code>, and <code>text-center</code> to align content.</p>
+            
+            <pre><code class="language-html">&lt;p class=&quot;text-left&quot;&gt;Left&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Center&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Right&lt;/p&gt;</code></pre>
+            
+            <p class="text-left">Left</p>
+            <p class="text-center">Center</p>
+            <p class="text-right">Right</p>
+            
 
             <h3>Screen Reader Text</h3>
 
-            <p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, use the <code>screen-reader-text</code> class to hide content visually.
+            <p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, or want to skip navigation, use the <code>screen-reader-text</code> class to hide content visually.
 
-              <pre><code class="language-html">&lt;span class=&quot;screen-reader-text&quot;&gt;Hidden&lt;/span&gt;</code></pre>
+              <pre><code class="language-html">&lt;a class=&quot;screen-reader-text&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;</code></pre>
 
               <h3>Responsive Images</h3>
 
@@ -776,7 +789,7 @@ public:
         <footer class="center">
           <div class="medium-container" style="padding: 30px 0 20px;">
             <hr style="width: 300px;">
-            <p style="padding-top: 20px;">Made with ♥ by <a href="http://www.taniarascia.com">Tania Rascia</a></p>
+            <p style="padding-top: 20px;">Built by <a href="http://www.taniarascia.com">Tania Rascia</a>.</p>
           </div>
         </footer>
       </main>
