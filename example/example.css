@@ -8,7 +8,12 @@ body {
   width: 100%;
 }
 header {
-  padding: 200px 0 100px;
+  padding: 100px 0 50px;
+}
+@media screen and (min-width: 1000px) {
+  header {
+    padding: 200px 0;
+  }
 }
 h2 {
   border-bottom: 1px solid #dddddd;

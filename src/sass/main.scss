@@ -1,6 +1,5 @@
-/* Mise en Place
-  by Tania Rascia
-  =============== */
+/*! Mise en Place
+  by Tania Rascia */
 
 // Variables and Mixins
 @import "base/variables";
@@ -19,6 +18,3 @@
 @import "components/navigation";
 @import "components/layout";
 @import "components/helpers"; 
-
-// Easy terminal command 
-// sass --watch src/sass:dist/css 

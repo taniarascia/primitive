@@ -3,15 +3,13 @@
 
 // Media query for mobile first layout 
 @mixin breakpoint {
-	@media (min-width: #{$mobile}) {
-		@content;
-	}
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
 }
-
 // Break on desktop
 @mixin large-breakpoint {
-	@media (min-width: #{$medium}) {
-		@content;
-	}
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
 }
-

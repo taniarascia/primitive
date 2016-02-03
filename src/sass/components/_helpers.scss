@@ -27,10 +27,16 @@
 .inline-block {
   display: inline-block;
 }
-// Center everything
+// Horizontal center
 .center {
   margin: 0 auto;
   text-align: center;
+}
+// Vertical center
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 // Responsive Images
 .responsive-image {
@@ -53,10 +59,4 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
-}
-// Vertical center
-.vertical-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

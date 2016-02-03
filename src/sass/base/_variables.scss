@@ -1,11 +1,16 @@
 /* Variables
-  =============== */
+ * =============== */
 
-// Breakpoints
-$mobile: 600px;
+/* All variables are defined on this page. */
+
+// Containers
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
+
+// Breakpoints
+$mobile: 600px;
+$desktop: $medium; 
 
 // Typography
 $font-style: normal;
@@ -51,23 +56,27 @@ $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
 
+// Button borders
 $button-border-width: 0px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
 $button-borders: $button-border-width $button-border-style $button-border-color;
 
+// Muted buttons
 $muted-border: 1px solid $gray;
 $muted-border-hover: 1px solid darken($gray, 30%);
 $muted-background: transparent;
 $muted-background-hover: transparent;
 $muted-color: darken($gray, 50%);
 
+// Gradient buttons
 $gradient-border: 1px solid $primary-color;
 $gradient-border-hover: 1px solid darken($primary-color, 20%);
 $gradient-background: linear-gradient(lighten($primary-color, 30%), $primary-color);
 $gradient-background-hover: linear-gradient($primary-color, darken($primary-color, 15%));
 	
+// Round buttons
 $round-buttons: 40px;
 
 // Forms 
@@ -83,7 +92,6 @@ $error: #D33C40;
 
 // Code 
 $code-color: $font-color;
-$code-family: Menlo,
-monospace;
+$code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;

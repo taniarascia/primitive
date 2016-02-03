@@ -122,13 +122,6 @@ hr {
   border: 0;
   border-top: $borders;
 }
-// Inline list 
-ul,
-ol {
-  &.inline {
-    display: inline;
-  }
-}
 // Definition list
 dt {
   font-weight: bold;
