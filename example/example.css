@@ -8,7 +8,7 @@ body {
   width: 100%;
 }
 header {
-  height: 650px;
+  padding: 200px 0 100px;
 }
 h2 {
   border-bottom: 1px solid #dddddd;
