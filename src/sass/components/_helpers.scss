@@ -5,7 +5,7 @@
 .clearfix:before,
 .clearfix:after {
   content: " ";
-  display: table;
+  display: block;
 }
 .clearfix:after {
   clear: both;
@@ -29,7 +29,8 @@
 }
 // Horizontal center
 .center {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 // Vertical center

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -25,7 +25,7 @@
     <div class="medium-container">
       <h1 class="mise-title">Mise en Place</h1>
       <p class="mise-subtitle">(mi zɑ̃ ˈplas)</p>
-      <p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple starter pack built with <a href="http://sass-lang.com/">Sass</a> that provides helpful, browser-consistent styling for <a href="example/test.html">buttons, forms, tables, lists, and typography</a>, as well as a grid system for templating.</p>
+      <p><a href="https://en.wikipedia.org/wiki/Mise_en_place" target="_blank">Mise en place</a> is a French culinary term that means "putting in place", or getting set up. It's a simple starter pack built with <a href="http://sass-lang.com/">Sass</a> that provides helpful, browser-consistent styling for <a href="example/test.html">buttons, forms, tables, lists, and typography</a>, as well as a responsive grid system for templating.</p>
 
       <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=miseenplace&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
       <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
@@ -89,7 +89,29 @@ Follow</a>
           <section id="getting-started">
             <h2>Getting Started</h2>
 
-            <p><a href="https://github.com/taniarascia/miseenplace/">View the source</a> on GitHub.</p>
+            <h3>HTML Starting Point</h3>
+            
+            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+  &lt;title&gt;&lt;/title&gt;
+
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;images/favicon.png&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
 
           </section>
 
@@ -578,8 +600,43 @@ Follow</a>
               </tfoot>
             </table>
 
+            <h3>Striped Tables</h3>
 
-            <h3>Responsive Tables</h3>
+            <p>Add a <code>striped</code> class for alternating row background colors.</p>
+
+            <pre><code class="language-html">&lt;table class=&quot;striped&quot;&gt;
+  &lt;!-- etc --&gt;
+&lt;/table&gt;</code></pre>
+
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Head 1</th>
+                  <th>Head 2</th>
+                  <th>Head 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+                <tr>
+                  <td>Description 1</td>
+                  <td>Description 2</td>
+                  <td>Description 3</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <h3>Contain Tables</h3>
 
             <p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
 
@@ -781,7 +838,7 @@ public:
         <footer class="center">
           <div class="medium-container" style="padding: 30px 0 20px;">
             <hr>
-            <p style="padding-top: 20px;">Built by <a href="http://www.taniarascia.com">Tania Rascia</a>. Open source under the <a href="https://github.com/taniarascia/miseenplace/blob/gh-pages/LICENSE.md" target="_blank">MIT License</a>. </p>
+            <p style="padding-top: 20px;">Built by <a href="http://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/miseenplace" target="_blank">View on GitHub</a>. Open source under the <a href="https://github.com/taniarascia/miseenplace/blob/gh-pages/LICENSE.md" target="_blank">MIT License</a>. </p>
           </div>
         </footer>
       </main>

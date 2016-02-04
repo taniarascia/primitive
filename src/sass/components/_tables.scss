@@ -6,6 +6,9 @@ table {
   width: 100%;
   max-width: 100%;
 }
+.striped tbody tr:nth-child(odd) {
+   background-color: $lightgray;
+}
 th,
 td {
   text-align: left;

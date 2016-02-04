@@ -10,7 +10,7 @@ body {
 header {
   padding: 100px 0 50px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
   header {
     padding: 200px 0;
   }
@@ -88,7 +88,7 @@ aside p {
   content: "\f00d";
   font-family: 'FontAwesome';
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
   aside {
     display: block;
     flex: 0 0 220px;
@@ -153,8 +153,14 @@ aside p {
   position: fixed;
   top: 0;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1080px) {
   .margin {
     margin-left: 220px;
   }
+}
+
+.example-container {
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
