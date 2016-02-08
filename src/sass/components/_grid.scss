@@ -1,183 +1,136 @@
 /* Grid
-  =============== */
+=============== */
 
-// Mobile first grids are 100% width
-[class*="column"] {  
-	flex: 1; 
-  margin-bottom: 1.5rem;
-}
-
-// Column on mobile
-.row, .row-large {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-@include breakpoint {
-  // Add padding on desktop
-  [class*="column"] {
-  	padding-left: 1rem; 
-    padding-right: 1rem;
-    margin-bottom: 0;
-  } 
-  // Add columns on desktop
-	.row {
-	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: nowrap;
+// On mobile, all columns are full width with a bottom margin
+.row {
+  &::before,
+  &::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+  [class*=small],
+  [class*=large] {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  &.no-collapse {
+    [class*=small], 
+    [class*=large] {
+      float: left;
+    }
+    .small-10,
+    .large-10 {
+      width: 10%;
+    }
+    .small-20,
+    .large-20 {
+      width: 20%;
+    }
+    .small-33,
+    .large-33 {
+      width: calc(100% / 3);
+    }
+    .small-50,
+    .large-50 {
+      width: 50%;
+    }
+    .small-66,
+    .large-66 {
+      width: calc(100% / 3 * 2);
+    }
+    .small-75,
+    .large-75 {
+      width: 75%;
+    }
+    .small-80,
+    .large-80 {
+      width: 80%;
+    }
+    .small-90,
+    .large-90 {
+      width: 90%;
+    }
   }
 }
-
-@include large-breakpoint {
-  // Add padding on desktop
-  [class*="column"] {
-  	padding-left: 1rem; 
-    padding-right: 1rem;
-    margin-bottom: 0;
-  } 
-  // Add columns on desktop
-	.row-large {
-	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: nowrap;
-  }
-}
-
-// Run a loop 10 times to get multiples of 10
-@for $i from 1 through 9 {
-	$width: $i;
-	
-	.column-#{$i * 10} {
-		flex: $width;
-	}
-}
-// 1/4 and 1/3 fractions
-.column-25 { flex: (1/4) * 10; }
-.column-33 { flex: (1/3) * 10; }
-.column-66 { flex: (2/3) * 10; }
-.column-75 { flex: (3/4) * 10; }
-
-// Run a loop 10 times to get multiples of 10
+// Begin first mobile breakpoint
 @include breakpoint {
-	.row {
-		@for $i from 1 through 9 {
-			$width: $i;
-			.column-#{$i * 10} {
-				max-width: percentage($width) * .1;
-			}	
-		} 
-	// 1/4 and 1/3 fractions
-	.column-25 { max-width: 25%; }
-	.column-33 { max-width: 33.3333%; }
-	.column-66 { max-width: 66.6667%; }
-	.column-75 { max-width: 75%; }
-	}
-}
-
-// Run a loop 10 times to get multiples of 10
-@include large-breakpoint {
-	.row-large {
-		@for $i from 1 through 9 {
-			$width: $i;
-			.column-#{$i * 10} {
-				max-width: percentage($width) * .1;
-			}	
-		} 
-	// 1/4 and 1/3 fractions
-	.column-25 { max-width: 25%; }
-	.column-33 { max-width: 33.3333%; }
-	.column-66 { max-width: 66.6667%; }
-	.column-75 { max-width: 75%; }
-	}
-}
-
-// Offsets
-// Run a loop 10 times to get a percentage of every multiple of ten
-@include breakpoint {
-	.row {
-		@for $i from 1 through 9 {
-			$margin: $i * 10%;
-
-			.offset-#{$i * 10} {
-				margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
-			}
-		}
-		 // 1/4 and 1/3 fractions
-		.offset-25 { margin-left: 25%; }
-		.offset-33 { margin-left: 33%; }
-		.offset-66 { margin-left: 66%; }
-		.offset-75 { margin-left: 75%; } 
-	}
-}
-
-// Run a loop 10 times to get a percentage of every multiple of ten
-@include large-breakpoint {
-	.row-large {
-		@for $i from 1 through 9 {
-			$margin: $i * 10%;
-
-			.offset-#{$i * 10} {
-				margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
-			}
-		}
-		 // 1/4 and 1/3 fractions
-		.offset-25 { margin-left: 25%; }
-		.offset-33 { margin-left: 33%; }
-		.offset-66 { margin-left: 66%; }
-		.offset-75 { margin-left: 75%; } 
-	}
-}
-
-// Repeating list grid
-[class|="grid"] {
-	display: flex;
-	flex-wrap: wrap;
-  flex-direction: column;
-	> .cell {
-		flex: 1;
-	}
-}
-
-@include breakpoint {
-  [class|="grid"] {
-    flex-direction: row;
-    > .cell {
+  // Float all columns to the left, add padding and remove bottom margin
+  .row {
+    [class*=small] {
+      float: left;
       padding-left: 1rem;
       padding-right: 1rem;
+      margin-bottom: 0;
+    }
+    .small {
+      width: 100%;
+    }
+    .small-10 {
+      width: 10%;
+    }
+    .small-20 {
+      width: 20%;
+    }
+    .small-25 {
+      width: calc(100% / 4);
+    }
+    .small-33 {
+      width: calc(100% / 3);
+    }
+    .small-50 {
+      width: 50%;
+    }
+    .small-66 {
+      width: calc(100% / 3 * 2);
+    }
+    .small-75 {
+      width: 75%;
+    }
+    .small-80 {
+      width: 80%;
+    }
+    .small-90 {
+      width: 90%;
     }
   }
-  // Run a loop 8 times for repeating grid possiblities
-  @for $i from 1 through 8 {
-    $percent: percentage(1/$i);
-
-    .grid-#{$i} {
-      > .cell,  {
-        min-width: $percent;
-      }
+}
+// Begin desktop breakpoint
+@include large-breakpoint {
+  // Float columns to the left at for desktop
+  .row {
+    [class*=large] {
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 0;
+    }
+    .large-10 {
+      width: 10%;
+    }
+    .large-20 {
+      width: 20%;
+    }
+    .large-25 {
+      width: calc(100% / 4);
+    }
+    .large-33 {
+      width: calc(100% / 3);
+    }
+    .large-50 {
+      width: 50%;
+    }
+    .large-66 {
+      width: calc(100% / 3 * 2);
+    }
+    .large-75 {
+      width: 75%;
+    }
+    .large-80 {
+      width: 80%;
+    }
+    .large-90 {
+      width: 90%;
     }
   }
 }
-
-// Prevent mobile breakpoint with no-collapse class
-.no-collapse {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap; 
-}
-
-// Gutters
-.no-collapse.gutters {
-	> [class*="column"] ~ [class*="column"] {
-  	margin-left: 1rem;
-	}
-}
-.gutters [class*="column"] ~ [class*="column"] {
-  margin-left: 0;
-}
-@include breakpoint {
-  .gutters [class*="column"] ~ [class*="column"] {
-  margin-left: 1rem;
-	}
-}
-
