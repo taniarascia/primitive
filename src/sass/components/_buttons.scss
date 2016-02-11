@@ -27,6 +27,7 @@
   text-decoration: none;
 }
 // Apply styles to .button class, button element, and button-based inputs
+.button,
 a.button,
 button,
 #{$input-buttons} {

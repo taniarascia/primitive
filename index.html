@@ -90,7 +90,7 @@ Follow</a>
             <h2>Getting Started</h2>
 
             <h3>HTML Starting Point</h3>
-            
+
             <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
@@ -125,8 +125,6 @@ Follow</a>
 &lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;
 &lt;div&gt;None&lt;/div&gt;</code></pre>
 
-
-
           </section>
         </div>
 
@@ -149,145 +147,99 @@ Follow</a>
           <section id="grid">
             <h2>Grid</h2>
 
-            <p>The grid is powered by flexbox and requires no container. A column will take up 100% of its containing element, and divide equally and infinitely for each column added. Columns have no margins and are padding based. Columns will break to 100% width on mobile collapse.</p>
+            <p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes.</p>
 
             <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column&quot;&gt;1&lt;/div&gt;
+  &lt;div class=&quot;small-50 column&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;small-50 column&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
-  &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
+  &lt;div class=&quot;large-50 column&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;large-50 column&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="row">
-              <div class="column example">1</div>
+              <div class="small-50 column example">50%</div>
+              <div class="small-50 column example">50%</div>
             </div>
+
             <div class="row">
-              <div class="column example">2</div>
-              <div class="column example">2</div>
+              <div class="large-50 column example">50%</div>
+              <div class="large-50 column example">50%</div>
             </div>
 
-            <h3>Breakpoint</h3>
+            <h3>No Collapse</h3>
 
-            <p>A larger breakpoint size is also provided with the <code>row-large</code> class.</p>
+            <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;row-large&quot;&gt;
-  &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
-  &lt;div class=&quot;column&quot;&gt;2&lt;/div&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
+  &lt;div class=&quot;small-90 column&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;small-10 column&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row-large">
-              <div class="column example">2</div>
-              <div class="column example">2</div>
+            <div class="row no-collapse">
+              <div class="column example">100%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="small-90 column example">90%</div>
+              <div class="small-10 column example">10%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="small-80 column example">80%</div>
+              <div class="small-20 column example">20%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="small-70 column example">70%</div>
+              <div class="small-30 column example">30%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="small-60 column example">60%</div>
+              <div class="small-40 column example">40%</div>
+            </div>
+            <div class="row no-collapse">
+              <div class="small-50 column example">50%</div>
+              <div class="small-50 column example">50%</div>
             </div>
 
-            <h3>Percentage Widths</h3>
-
-            <p>Percentage based column widths can be added. A <code>column-25</code> class creates a 25% wide column.
-
-              <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
-  &lt;div class=&quot;column-50&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;column-25&quot;&gt;25%&lt;/div&gt;
+            <h3>Offsets</h3>
+            
+            <p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
+            
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;push-small-10 small-90 column&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;push-small-20 small-80 column&quot;&gt;80%&lt;/div&gt;
+  &lt;!-- etc --&gt;
 &lt;/div&gt;</code></pre>
 
-              <div class="row">
-                <div class="column-25 example">25%</div>
-                <div class="column-50 example">50%</div>
-                <div class="column-25 example">25%</div>
-              </div>
-              <div class="row">
-                <div class="column-66 example">66%</div>
-                <div class="column-33 example">33%</div>
-              </div>
-              <div class="row">
-                <div class="column-75 example">75%</div>
-                <div class="column-25 example">25%</div>
-              </div>
+            <div class="row">
+              <div class="push-small-10 small-90 column example">90%</div>
+              <div class="push-small-20 small-80 column example">80%</div>
+              <div class="push-small-30 small-70 column example">70%</div>
+              <div class="push-small-40 small-60 column example">60%</div>
+              <div class="push-small-50 small-50 column example">50%</div>
+            </div>
 
-              <h3>No Collapse</h3>
 
-              <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
 
-              <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
-  &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
-  &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <h3>Repeating Grid</h3>
 
-              <div class="row no-collapse">
-                <div class="column example">100%</div>
-              </div>
-              <div class="row no-collapse">
-                <div class="column-90 example">90%</div>
-                <div class="column-10 example">10%</div>
-              </div>
-              <div class="row no-collapse">
-                <div class="column-80 example">80%</div>
-                <div class="column-20 example">20%</div>
-              </div>
-              <div class="row no-collapse">
-                <div class="column-70 example">70%</div>
-                <div class="column-30 example">30%</div>
-              </div>
-              <div class="row no-collapse">
-                <div class="column-60 example">60%</div>
-                <div class="column-40 example">40%</div>
-              </div>
-              <div class="row no-collapse">
-                <div class="column-50 example">50%</div>
-                <div class="column-50 example">50%</div>
-              </div>
+            <p>The grid will wrap and repeat onto the next line if you continue.</p>
 
-              <h3>Offsets</h3>
-
-              <p>Add an <code>offset-</code> when you need empty space.</p>
-
-              <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;offset-75 column-25&quot;&gt;25%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;offset-25 column-50&quot;&gt;50%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="row">
-                <div class="offset-75 column-25 example">25%</div>
-              </div>
-              <div class="row">
-                <div class="offset-25 column-50 example">50%</div>
-              </div>
-
-              <h3>Gutters</h3>
-
-              <p>Add a <code>gutters</code> class to the row to add margin in between columns.</p>
-
-              <pre><code class="language-html">&lt;div class=&quot;row gutters&quot;&gt;
-	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              <div class="row gutters">
-                <div class="column example">&nbsp;</div>
-                <div class="column example">&nbsp;</div>
-                <div class="column example">&nbsp;</div>
-              </div>
-
-              <h3>Repeating Grid</h3>
-
-              <p>A grid that repeats and wraps to the next line. A <code>grid-3</code> class will divide each cell into 1/3, or 33% of the container. Any leftover cells will fill up the rest of the space. Grid cells will break to 100% on mobile collapse.</p>
-
-              <pre><code class="language-html">&lt;div class="grid-3"&gt;
-	&lt;div class="cell"&gt;33%&lt;/div&gt;
-	&lt;div class="cell"&gt;33%&lt;/div&gt;
+            <pre><code class="language-html">&lt;div class="row"&gt;
+	&lt;div class="small-33 column"&gt;33%&lt;/div&gt;
+	&lt;div class="small-33 column"&gt;33%&lt;/div&gt;
    &lt;!-- etc --&gt;
 &lt;/div&gt;</code></pre>
 
-              <div class="grid-3">
-                <div class="cell example">33%</div>
-                <div class="cell example">33%</div>
-                <div class="cell example">33%</div>
-                <div class="cell example">Minimum of 33%</div>
-              </div>
+            <div class="row">
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+              <div class="small-33 column example">33%</div>
+            </div>
 
 
           </section>
@@ -467,13 +419,13 @@ Follow</a>
 
             <pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;column-10&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column&quot;&gt;
       &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;column-10&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column&quot;&gt;
@@ -481,7 +433,7 @@ Follow</a>
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;column-10&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
     &lt;/div&gt;
     &lt;div class=&quot;column&quot;&gt;
@@ -497,29 +449,29 @@ Follow</a>
 
             <form class="split-form">
               <div class="row">
-                <div class="column-10">
+                <div class="small-10 column">
                   <label for="name-split">Name</label>
                 </div>
-                <div class="column">
+                <div class="small-40 column">
                   <input type="text" id="name-split" placeholder="First Name">
                 </div>
-                <div class="column-10">
+                <div class="small-10 column">
                   <label for="email-split">Email</label>
                 </div>
-                <div class="column">
+                <div class="small-40 column">
                   <input type="email" id="email-split" placeholder="Email Address">
                 </div>
               </div>
               <div class="row">
-                <div class="column-10">
+                <div class="small-10 column">
                   <label for="url">URL</label>
                 </div>
-                <div class="column">
+                <div class="small-90 column">
                   <input type="url" id="url" placeholder="Website URL">
                 </div>
               </div>
               <div class="row">
-                <div class="offset-10 column">
+                <div class="push-small-10 small-10 column">
                   <input type="button" value="Submit">
                 </div>
               </div>

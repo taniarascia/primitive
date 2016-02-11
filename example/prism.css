@@ -26,6 +26,7 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+  font-size: .9rem;
 }
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {

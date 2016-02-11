@@ -5,10 +5,12 @@
 html {
   -webkit-font-smoothing: antialiased;
   font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+  font-size: $font-size;
 }
 // Body base
 body {
   color: $font-color;
+  background: $background;
 }
 // Headers
 h1,
@@ -84,7 +86,7 @@ pre {
   background: $code-background;
   padding: 1rem;
   tab-size: 2;
-  font-size: .9rem;
+  font-size: 1rem;
   code {
     color: $code-color;
     font-family: $code-family;

@@ -9,128 +9,125 @@
     content: " ";
     clear: both;
   }
-  [class*=small],
-  [class*=large] {
-    width: 100%;
-    margin-bottom: 1.5rem;
+}
+.column {
+  width: 100%;
+}
+&.no-collapse {
+  .column {
+    float: left;
   }
-  &.no-collapse {
-    [class*=small], 
-    [class*=large] {
-      float: left;
+  @for $i from 1 through 9 {
+    $width: $i;
+    .small-#{$i * 10},
+    .large-#{$i * 10} {
+      width: percentage($width) * .1;
     }
-    .small-10,
-    .large-10 {
-      width: 10%;
-    }
-    .small-20,
-    .large-20 {
-      width: 20%;
-    }
-    .small-33,
-    .large-33 {
-      width: calc(100% / 3);
-    }
-    .small-50,
-    .large-50 {
-      width: 50%;
-    }
-    .small-66,
-    .large-66 {
-      width: calc(100% / 3 * 2);
-    }
-    .small-75,
-    .large-75 {
-      width: 75%;
-    }
-    .small-80,
-    .large-80 {
-      width: 80%;
-    }
-    .small-90,
-    .large-90 {
-      width: 90%;
-    }
+  }
+  .small-33,
+  .large-33 {
+    width: calc(100% / 3);
+  }
+  .small-66,
+  .large-66 {
+    width: calc(100% / 3 * 2);
+  }
+  .small-75,
+  .large-75 {
+    width: 75%;
   }
 }
 // Begin first mobile breakpoint
 @include breakpoint {
   // Float all columns to the left, add padding and remove bottom margin
-  .row {
-    [class*=small] {
-      float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-bottom: 0;
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+  }
+  @for $i from 1 through 9 {
+    $width: $i;
+    .small-#{$i * 10} {
+      width: percentage($width) * .1;
     }
-    .small {
-      width: 100%;
-    }
-    .small-10 {
-      width: 10%;
-    }
-    .small-20 {
-      width: 20%;
-    }
-    .small-25 {
-      width: calc(100% / 4);
-    }
-    .small-33 {
-      width: calc(100% / 3);
-    }
-    .small-50 {
-      width: 50%;
-    }
-    .small-66 {
-      width: calc(100% / 3 * 2);
-    }
-    .small-75 {
-      width: 75%;
-    }
-    .small-80 {
-      width: 80%;
-    }
-    .small-90 {
-      width: 90%;
-    }
+  }
+  .small-33 {
+    width: calc(100% / 3);
+  }
+  .small-66 {
+    width: calc(100% / 3 * 2);
+  }
+  .small-75 {
+    width: 75%;
   }
 }
 // Begin desktop breakpoint
 @include large-breakpoint {
   // Float columns to the left at for desktop
-  .row {
-    [class*=large] {
-      float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-bottom: 0;
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+  }
+  @for $i from 1 through 9 {
+    $width: $i;
+    .large-#{$i * 10} {
+      width: percentage($width) * .1;
     }
-    .large-10 {
-      width: 10%;
+  }
+  .large-33 {
+    width: calc(100% / 3);
+  }
+  .large-66 {
+    width: calc(100% / 3 * 2);
+  }
+  .large-75 {
+    width: 75%;
+  }
+}
+// Small breakpoint offsets
+@include breakpoint {
+  @for $i from 1 through 9 {
+    $margin: $i * 10%;
+    .push-small-#{$i * 10} {
+      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
     }
-    .large-20 {
-      width: 20%;
+  }
+  // 1/4 and 1/3 fractions
+  .push-small-25 {
+    margin-left: 25%;
+  }
+  .push-small-33 {
+    margin-left: 33%;
+  }
+  .push-small-66 {
+    margin-left: 66%;
+  }
+  .push-small-75 {
+    margin-left: 75%;
+  }
+}
+// Large offset
+@include large-breakpoint {
+  @for $i from 1 through 9 {
+    $margin: $i * 10%;
+    .push-large-#{$i * 10} {
+      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
     }
-    .large-25 {
-      width: calc(100% / 4);
-    }
-    .large-33 {
-      width: calc(100% / 3);
-    }
-    .large-50 {
-      width: 50%;
-    }
-    .large-66 {
-      width: calc(100% / 3 * 2);
-    }
-    .large-75 {
-      width: 75%;
-    }
-    .large-80 {
-      width: 80%;
-    }
-    .large-90 {
-      width: 90%;
-    }
+  }
+  // 1/4 and 1/3 fractions
+  .push-large-25 {
+    margin-left: 25%;
+  }
+  .push-large-33 {
+    margin-left: 33%;
+  }
+  .push-large-66 {
+    margin-left: 66%;
+  }
+  .push-large-75 {
+    margin-left: 75%;
   }
 }
