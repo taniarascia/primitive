@@ -14,7 +14,7 @@
   flex-wrap: nowrap;
 }
 
-@include breakpoint {
+@include small-breakpoint {
   // Add padding on desktop
   [class*="column"] {
   	padding-left: 1rem; 
@@ -59,7 +59,7 @@
 .column-75 { flex: (3/4) * 10; }
 
 // Run a loop 10 times to get multiples of 10
-@include breakpoint {
+@include small-breakpoint {
 	.row {
 		@for $i from 1 through 9 {
 			$width: $i;
@@ -94,7 +94,7 @@
 
 // Offsets
 // Run a loop 10 times to get a percentage of every multiple of ten
-@include breakpoint {
+@include small-breakpoint {
 	.row {
 		@for $i from 1 through 9 {
 			$margin: $i * 10%;
@@ -139,7 +139,7 @@
 	}
 }
 
-@include breakpoint {
+@include small-breakpoint {
   [class|="grid"] {
     flex-direction: row;
     > .cell {
@@ -175,7 +175,7 @@
 .gutters [class*="column"] ~ [class*="column"] {
   margin-left: 0;
 }
-@include breakpoint {
+@include small-breakpoint {
   .gutters [class*="column"] ~ [class*="column"] {
   margin-left: 1rem;
 	}

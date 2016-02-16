@@ -38,7 +38,7 @@
   }
 }
 // Begin first mobile breakpoint
-@include breakpoint {
+@include small-breakpoint {
   // Float all columns to the left, add padding and remove bottom margin
   .column {
     float: left;
@@ -88,7 +88,7 @@
   }
 }
 // Small breakpoint offsets
-@include breakpoint {
+@include small-breakpoint {
   @for $i from 1 through 9 {
     $margin: $i * 10%;
     .push-small-#{$i * 10} {

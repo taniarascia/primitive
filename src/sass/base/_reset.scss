@@ -10,6 +10,13 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+// Remove italic
 address {
   font-style: normal;
+}
+
+// Remove figure margin
+figure {
+  margin: 0;
 }

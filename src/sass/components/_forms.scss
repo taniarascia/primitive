@@ -34,7 +34,7 @@
   }
 }
 // Horizontal forms have no set width on large screen view 
-@include breakpoint {
+@include small-breakpoint {
   .horizontal-form {
     #{$input-fields} {
       display: inline-block;
@@ -71,11 +71,11 @@ label {
   margin: .5rem 0;
 }
 .split-form {
-  [class*="column"] {
+  .column {
     margin-bottom: 0;
   }
 }
-@include breakpoint {
+@include small-breakpoint {
   .horizontal-form {
     // Horizontal forms are inline-block
     label,
@@ -90,7 +90,7 @@ label {
       text-align: right;
       padding: 0 .5rem;
     }
-    [class*="column"] {
+    .column {
       margin-bottom: .5rem;
       padding: 0;
     }

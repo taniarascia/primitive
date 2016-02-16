@@ -202,9 +202,9 @@ Follow</a>
             </div>
 
             <h3>Offsets</h3>
-            
+
             <p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
-            
+
             <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;push-small-10 small-90 column&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;push-small-20 small-80 column&quot;&gt;80%&lt;/div&gt;
@@ -419,29 +419,29 @@ Follow</a>
 
             <pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
+    &lt;div class=&quot;small-10 column&quot;&gt;
       &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;column&quot;&gt;
+    &lt;div class=&quot;small-40 column&quot;&gt;
       &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
+    &lt;div class=&quot;small-10 column&quot;&gt;
       &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;column&quot;&gt;
+    &lt;div class=&quot;small-40 column&quot;&gt;
       &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
+    &lt;div class=&quot;small-10 column&quot;&gt;
       &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;column&quot;&gt;
+    &lt;div class=&quot;small-90 column&quot;&gt;
       &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;offset-10 column&quot;&gt;
+    &lt;div class=&quot;push-small-10 small-10 column&quot;&gt;
       &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -647,7 +647,7 @@ Follow</a>
 &lt;/ul&gt;</code></pre>
 
             <div class="row">
-              <div class="column">
+              <div class="large-50 column">
                 <ul>
                   <li>List item one
                     <ul>
@@ -658,7 +658,7 @@ Follow</a>
                   <li>List item three</li>
                 </ul>
               </div>
-              <div class="column">
+              <div class="large-50 column">
                 <ol>
                   <li>List item one
                     <ol>
@@ -741,9 +741,9 @@ public:
 &lt;p class=&quot;text-center&quot;&gt;Center&lt;/p&gt;
 &lt;p class=&quot;text-right&quot;&gt;Right&lt;/p&gt;</code></pre>
 
-            <p class="text-left">Left</p>
-            <p class="text-center">Center</p>
-            <p class="text-right">Right</p>
+            <p class="text-left"><span class="example">Left</span></p>
+            <p class="text-center"><span class="example">Center</span></p>
+            <p class="text-right"><span class="example">Right</span></p>
 
 
             <h3>Screen Reader Text</h3>
@@ -758,7 +758,7 @@ public:
 
               <pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
 
-              <img src="http://placehold.it/900x100" class="responsive-image" alt="Example of responsive-image CSS class">
+              <img src="https://placehold.it/1000x100" class="responsive-image" alt="Example of responsive-image CSS class">
 
           </section>
           <section id="sass-main">
@@ -779,8 +779,8 @@ public:
 @import "components/forms";
 @import "components/tables";
 @import "components/navigation";
-@import "components/layout";
-@import "components/helpers";</code></pre>
+@import "components/helpers";
+@import "components/layout";</code></pre>
           </section>
           <section id="sass-var">
           </section>

@@ -7,7 +7,10 @@ table {
   max-width: 100%;
 }
 .striped tbody tr:nth-child(odd) {
-   background-color: $lightgray;
+   background-color: $stripes;
+}
+th {
+  border-bottom: 2px solid $gray;
 }
 th,
 td {
@@ -15,13 +18,13 @@ td {
   padding: .5rem;
 }
 td {
-  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
 }
 // Container for responsive tables
 .contain-table {
   overflow-x: auto;
 }
-@include breakpoint {
+@include small-breakpoint {
   .contain-table {
     width: 100%;
   }

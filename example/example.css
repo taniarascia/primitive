@@ -8,7 +8,19 @@ body {
   width: 100%;
 }
 header {
+  background: linear-gradient(to bottom right, #4b6cb7, #182848);
+  background-size: 100% 300%;
   padding: 100px 0 50px;
+  margin-bottom: 60px;
+  color: rgba(255,255,255, .8);
+}
+
+header a, header a:visited, header a:active, header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+header h1 {
+  color: white;
 }
 @media screen and (min-width: 1080px) {
   header {
@@ -131,7 +143,7 @@ aside p {
 .mise-subtitle {
   margin-top: 0;
   margin-bottom: 2rem;
-  color: #787878;
+  color: rgba(255,255,255, .8);
 }
 .example {
   background: #e5f0f8;
