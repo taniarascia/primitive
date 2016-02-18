@@ -150,55 +150,53 @@ Follow</a>
             <p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes.</p>
 
             <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;small-50 column&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;small-50 column&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;large-50 column&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;large-50 column&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="row">
-              <div class="small-50 column example">50%</div>
-              <div class="small-50 column example">50%</div>
+              <div class="small-50 example">50%</div>
+              <div class="small-50 example">50%</div>
             </div>
 
             <div class="row">
-              <div class="large-50 column example">50%</div>
-              <div class="large-50 column example">50%</div>
+              <div class="large-50 example">50%</div>
+              <div class="large-50 example">50%</div>
             </div>
 
             <h3>No Collapse</h3>
 
-            <p>If the grid shouldn't collapse to 100% width on small screens, add <code>no-collapse</code> to the row.</p>
+            <p>If the grid shouldn't collapse to 100% width on small screens, use a <code>column-</code> class.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;row no-collapse&quot;&gt;
-  &lt;div class=&quot;small-90 column&quot;&gt;90%&lt;/div&gt;
-  &lt;div class=&quot;small-10 column&quot;&gt;10%&lt;/div&gt;
+            <pre><code class="language-html">&lt;div class=&quot;rowe&quot;&gt;
+  &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="row no-collapse">
-              <div class="column example">100%</div>
+
+            <div class="row">
+              <div class="column-90 example">90%</div>
+              <div class="column-10 example">10%</div>
             </div>
             <div class="row no-collapse">
-              <div class="small-90 column example">90%</div>
-              <div class="small-10 column example">10%</div>
+              <div class="column-80 example">80%</div>
+              <div class="column-20 example">20%</div>
             </div>
             <div class="row no-collapse">
-              <div class="small-80 column example">80%</div>
-              <div class="small-20 column example">20%</div>
+              <div class="column-70 example">70%</div>
+              <div class="column-30 example">30%</div>
             </div>
             <div class="row no-collapse">
-              <div class="small-70 column example">70%</div>
-              <div class="small-30 column example">30%</div>
+              <div class="column-60 example">60%</div>
+              <div class="column-40 example">40%</div>
             </div>
             <div class="row no-collapse">
-              <div class="small-60 column example">60%</div>
-              <div class="small-40 column example">40%</div>
-            </div>
-            <div class="row no-collapse">
-              <div class="small-50 column example">50%</div>
-              <div class="small-50 column example">50%</div>
+              <div class="column-50 example">50%</div>
+              <div class="column-50 example">50%</div>
             </div>
 
             <h3>Offsets</h3>
@@ -206,17 +204,17 @@ Follow</a>
             <p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
 
             <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;push-small-10 small-90 column&quot;&gt;90%&lt;/div&gt;
-  &lt;div class=&quot;push-small-20 small-80 column&quot;&gt;80%&lt;/div&gt;
+  &lt;div class=&quot;push-small-10 small-90&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;push-small-20 small-80&quot;&gt;80%&lt;/div&gt;
   &lt;!-- etc --&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="row">
-              <div class="push-small-10 small-90 column example">90%</div>
-              <div class="push-small-20 small-80 column example">80%</div>
-              <div class="push-small-30 small-70 column example">70%</div>
-              <div class="push-small-40 small-60 column example">60%</div>
-              <div class="push-small-50 small-50 column example">50%</div>
+              <div class="push-small-10 small-90 example">90%</div>
+              <div class="push-small-20 small-80 example">80%</div>
+              <div class="push-small-30 small-70 example">70%</div>
+              <div class="push-small-40 small-60 example">60%</div>
+              <div class="push-small-50 small-50 example">50%</div>
             </div>
 
 
@@ -226,19 +224,19 @@ Follow</a>
             <p>The grid will wrap and repeat onto the next line if you continue.</p>
 
             <pre><code class="language-html">&lt;div class="row"&gt;
-	&lt;div class="small-33 column"&gt;33%&lt;/div&gt;
-	&lt;div class="small-33 column"&gt;33%&lt;/div&gt;
+	&lt;div class="small-33"&gt;33%&lt;/div&gt;
+	&lt;div class="small-33"&gt;33%&lt;/div&gt;
    &lt;!-- etc --&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="row">
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
-              <div class="small-33 column example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
+              <div class="small-33 example">33%</div>
             </div>
 
 
@@ -419,29 +417,29 @@ Follow</a>
 
             <pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10 column&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;small-40 column&quot;&gt;
+    &lt;div class=&quot;small-40&quot;&gt;
       &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;small-10 column&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;small-40 column&quot;&gt;
+    &lt;div class=&quot;small-40&quot;&gt;
       &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10 column&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
       &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;small-90 column&quot;&gt;
+    &lt;div class=&quot;small-90&quot;&gt;
       &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;push-small-10 small-10 column&quot;&gt;
+    &lt;div class=&quot;push-small-10 small-10&quot;&gt;
       &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -449,29 +447,29 @@ Follow</a>
 
             <form class="split-form">
               <div class="row">
-                <div class="small-10 column">
+                <div class="small-10">
                   <label for="name-split">Name</label>
                 </div>
-                <div class="small-40 column">
+                <div class="small-40">
                   <input type="text" id="name-split" placeholder="First Name">
                 </div>
-                <div class="small-10 column">
+                <div class="small-10">
                   <label for="email-split">Email</label>
                 </div>
-                <div class="small-40 column">
+                <div class="small-40">
                   <input type="email" id="email-split" placeholder="Email Address">
                 </div>
               </div>
               <div class="row">
-                <div class="small-10 column">
+                <div class="small-10">
                   <label for="url">URL</label>
                 </div>
-                <div class="small-90 column">
+                <div class="small-90">
                   <input type="url" id="url" placeholder="Website URL">
                 </div>
               </div>
               <div class="row">
-                <div class="push-small-10 small-10 column">
+                <div class="push-small-10 small-10">
                   <input type="button" value="Submit">
                 </div>
               </div>
@@ -502,20 +500,30 @@ Follow</a>
       &lt;th&gt;Head 3&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Footer 1&lt;/th&gt;
+      &lt;th&gt;Footer 2&lt;/th&gt;
+      &lt;th&gt;Footer 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Description 1&lt;/td&gt;
       &lt;td&gt;Description 2&lt;/td&gt;
       &lt;td&gt;Description 3&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
     &lt;tr&gt;
-      &lt;td&gt;Footer 1&lt;/td&gt;
-      &lt;td&gt;Footer 2&lt;/td&gt;
-      &lt;td&gt;Footer 3&lt;/td&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
     &lt;/tr&gt;
-  &lt;/tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
 
             <table>
@@ -526,6 +534,13 @@ Follow</a>
                   <th>Head 3</th>
                 </tr>
               </thead>
+              <tfoot>
+                <tr>
+                  <th>Footer 1</th>
+                  <th>Footer 2</th>
+                  <th>Footer 3</th>
+                </tr>
+              </tfoot>
               <tbody>
                 <tr>
                   <td>Description 1</td>
@@ -543,13 +558,6 @@ Follow</a>
                   <td>Description 3</td>
                 </tr>
               </tbody>
-              <tfoot>
-                <tr>
-                  <td>Footer 1</td>
-                  <td>Footer 2</td>
-                  <td>Footer 3</td>
-                </tr>
-              </tfoot>
             </table>
 
             <h3>Striped Tables</h3>
@@ -647,7 +655,7 @@ Follow</a>
 &lt;/ul&gt;</code></pre>
 
             <div class="row">
-              <div class="large-50 column">
+              <div class="large-50">
                 <ul>
                   <li>List item one
                     <ul>
@@ -658,7 +666,7 @@ Follow</a>
                   <li>List item three</li>
                 </ul>
               </div>
-              <div class="large-50 column">
+              <div class="large-50">
                 <ol>
                   <li>List item one
                     <ol>

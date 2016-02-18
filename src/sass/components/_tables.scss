@@ -7,10 +7,13 @@ table {
   max-width: 100%;
 }
 .striped tbody tr:nth-child(odd) {
-   background-color: $stripes;
+  background-color: $stripes;
 }
-th {
+thead th {
   border-bottom: 2px solid $gray;
+}
+tfoot th {
+  border-top: 2px solid $gray;
 }
 th,
 td {
@@ -19,6 +22,11 @@ td {
 }
 td {
   border-bottom: 1px solid $gray;
+}
+caption {
+  padding: 1rem 0;
+  caption-side: bottom;
+  color: $darkgray;
 }
 // Container for responsive tables
 .contain-table {

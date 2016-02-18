@@ -70,11 +70,7 @@ label {
   display: block;
   margin: .5rem 0;
 }
-.split-form {
-  .column {
-    margin-bottom: 0;
-  }
-}
+
 @include small-breakpoint {
   .horizontal-form {
     // Horizontal forms are inline-block
@@ -89,10 +85,7 @@ label {
     label {
       text-align: right;
       padding: 0 .5rem;
-    }
-    .column {
-      margin-bottom: .5rem;
-      padding: 0;
+      margin-bottom: 1rem;
     }
   }
 }

@@ -1,7 +1,27 @@
 /* Grid
 =============== */
 
-// On mobile, all columns are full width with a bottom margin
+// Desired percentages
+$list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
+
+// Mobile column view
+%full-width-column {
+  width: 100%;
+}
+// Non collapsing columns
+%no-collapse {
+  float: left;
+}
+// Breakpoint view
+@include small-breakpoint {
+  %percentage-width-column, %no-collapse {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+// Clearfix row
 .row {
   &::before,
   &::after {
@@ -10,124 +30,49 @@
     clear: both;
   }
 }
-.column {
-  width: 100%;
-}
-&.no-collapse {
-  .column {
-    float: left;
+
+/* Mobile view */
+
+// On mobile, all columns are full width with a bottom margin
+@each $entry in $list {
+  .small-#{floor($entry)},
+  .large-#{floor($entry)} {
+    @extend %full-width-column;
   }
-  @for $i from 1 through 9 {
-    $width: $i;
-    .small-#{$i * 10},
-    .large-#{$i * 10} {
-      width: percentage($width) * .1;
-    }
-  }
-  .small-33,
-  .large-33 {
-    width: calc(100% / 3);
-  }
-  .small-66,
-  .large-66 {
-    width: calc(100% / 3 * 2);
-  }
-  .small-75,
-  .large-75 {
-    width: 75%;
+  .column-#{floor($entry)} {
+    width: percentage($entry) * 0.01;
+    @extend %no-collapse;
   }
 }
-// Begin first mobile breakpoint
+
+/* Small screen breakpoint */
+
 @include small-breakpoint {
-  // Float all columns to the left, add padding and remove bottom margin
-  .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 0;
-  }
-  @for $i from 1 through 9 {
-    $width: $i;
-    .small-#{$i * 10} {
-      width: percentage($width) * .1;
+  // Float all columns to the left for small screens
+  @each $entry in $list {
+    .small-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      @extend %percentage-width-column;
+    }
+    // Small offsets
+    .push-small-#{floor($entry)} {
+      margin-left: percentage($entry) * 0.01;
     }
   }
-  .small-33 {
-    width: calc(100% / 3);
-  }
-  .small-66 {
-    width: calc(100% / 3 * 2);
-  }
-  .small-75 {
-    width: 75%;
-  }
 }
-// Begin desktop breakpoint
+
+/* Large screen breakpoint */
+
 @include large-breakpoint {
-  // Float columns to the left at for desktop
-  .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-bottom: 0;
-  }
-  @for $i from 1 through 9 {
-    $width: $i;
-    .large-#{$i * 10} {
-      width: percentage($width) * .1;
+  // Float columns to the left at for large screens
+  @each $entry in $list {
+    .large-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      @extend %percentage-width-column;
     }
-  }
-  .large-33 {
-    width: calc(100% / 3);
-  }
-  .large-66 {
-    width: calc(100% / 3 * 2);
-  }
-  .large-75 {
-    width: 75%;
-  }
-}
-// Small breakpoint offsets
-@include small-breakpoint {
-  @for $i from 1 through 9 {
-    $margin: $i * 10%;
-    .push-small-#{$i * 10} {
-      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
+    // Large offsets
+    .push-large-#{floor($entry)} {
+      margin-left: percentage($entry) * 0.01;
     }
-  }
-  // 1/4 and 1/3 fractions
-  .push-small-25 {
-    margin-left: 25%;
-  }
-  .push-small-33 {
-    margin-left: 33%;
-  }
-  .push-small-66 {
-    margin-left: 66%;
-  }
-  .push-small-75 {
-    margin-left: 75%;
-  }
-}
-// Large offset
-@include large-breakpoint {
-  @for $i from 1 through 9 {
-    $margin: $i * 10%;
-    .push-large-#{$i * 10} {
-      margin-left: $margin; //margin-left: calc(#{$margin} + 1rem);
-    }
-  }
-  // 1/4 and 1/3 fractions
-  .push-large-25 {
-    margin-left: 25%;
-  }
-  .push-large-33 {
-    margin-left: 33%;
-  }
-  .push-large-66 {
-    margin-left: 66%;
-  }
-  .push-large-75 {
-    margin-left: 75%;
   }
 }
