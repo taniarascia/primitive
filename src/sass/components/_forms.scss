@@ -40,14 +40,22 @@
       display: inline-block;
       width: auto;
     }
-  }
+  } 
 }
 textarea {
   height: auto;
 }
 // Placeholder Text 
-::-webkit-input-placeholder,
-select {
+::-webkit-input-placeholder {
+  color: $placeholder;
+}
+::-moz-placeholder {
+  color: darken($placeholder, 10%);
+}
+:-moz-placeholder {
+  color: darken($placeholder, 10%);
+}
+:-ms-input-placeholder {
   color: $placeholder;
 }
 // Fix issues with select
