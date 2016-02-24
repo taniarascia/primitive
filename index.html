@@ -31,7 +31,7 @@
       <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
       <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Mise en Place, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
       <script>
-        ! function(d, s, id) {
+        ! function (d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0],
             p = /^http:/.test(d.location) ? 'http' : 'https';
           if (!d.getElementById(id)) {
@@ -41,7 +41,6 @@
             fjs.parentNode.insertBefore(js, fjs);
           }
         }(document, 'script', 'twitter-wjs');
-
       </script>
       <a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
 Follow</a>
@@ -172,12 +171,14 @@ Follow</a>
 
             <p>If the grid shouldn't collapse to 100% width on small screens, use a <code>column-</code> class.</p>
 
-            <pre><code class="language-html">&lt;div class=&quot;rowe&quot;&gt;
+            <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
   &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-
+            <div class="row">
+              <div class="column-100 example">100%</div>
+            </div>
             <div class="row">
               <div class="column-90 example">90%</div>
               <div class="column-10 example">10%</div>
@@ -211,13 +212,19 @@ Follow</a>
 
             <div class="row">
               <div class="push-small-10 small-90 example">90%</div>
+            </div>
+            <div class="row">
               <div class="push-small-20 small-80 example">80%</div>
+            </div>
+            <div class="row">
               <div class="push-small-30 small-70 example">70%</div>
+            </div>
+            <div class="row">
               <div class="push-small-40 small-60 example">60%</div>
+            </div>
+            <div class="row">
               <div class="push-small-50 small-50 example">50%</div>
             </div>
-
-
 
             <h3>Repeating Grid</h3>
 
@@ -238,6 +245,43 @@ Follow</a>
               <div class="small-33 example">33%</div>
               <div class="small-33 example">33%</div>
             </div>
+
+            <h3>Padding</h3>
+
+            <p>Use <code>no-padding</code> on a row if you don't want padding on the columns.</p>
+
+            <pre><code class="language-html">&lt;div class="row no-padding"&gt;
+   &lt;!-- etc --&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="row no-padding">
+              <div class="small-50 example">No padding</div>
+              <div class="small-50 example">No padding</div>
+            </div>
+
+            <p>Use <code>buffer</code> on a row if you want top and bottom spacing on the row.</p>
+
+            <pre><code class="language-html">&lt;div class="row buffer"&gt;
+   &lt;!-- etc --&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="row buffer">
+              <div class="small-50 example">50%</div>
+              <div class="small-50 example">50%</div>
+            </div>
+
+            <p>Use <code>gutters</code> on columns if you want no left or right padding on the first and last column.</p>
+
+            <pre><code class="language-html">&lt;div class="row buffer"&gt;
+   &lt;!-- etc --&gt;
+&lt;/div&gt;</code></pre>
+
+            <div class="row">
+              <div class="small-33 example gutters">No left padding</div>
+              <div class="small-33 example gutters">Padding</div>
+              <div class="small-33 example gutters">No right padding</div>
+            </div>
+
 
 
           </section>

@@ -1,12 +1,10 @@
 /* Grid
 =============== */
 
-// Desired percentages
-$list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
-
 // Mobile column view
 %full-width-column {
   width: 100%;
+  margin-bottom: $row-margin;
 }
 // Non collapsing columns
 %no-collapse {
@@ -16,8 +14,8 @@ $list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
 @include small-breakpoint {
   %percentage-width-column, %no-collapse {
     float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: $column-padding;
+    padding-right: $column-padding;
     margin-bottom: 0;
   }
 }
@@ -34,7 +32,7 @@ $list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
 /* Mobile view */
 
 // On mobile, all columns are full width with a bottom margin
-@each $entry in $list {
+@each $entry in $grid {
   .small-#{floor($entry)},
   .large-#{floor($entry)} {
     @extend %full-width-column;
@@ -49,7 +47,7 @@ $list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
 
 @include small-breakpoint {
   // Float all columns to the left for small screens
-  @each $entry in $list {
+  @each $entry in $grid {
     .small-#{floor($entry)} {
       width: percentage($entry) * 0.01;
       @extend %percentage-width-column;
@@ -65,7 +63,7 @@ $list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
 
 @include large-breakpoint {
   // Float columns to the left at for large screens
-  @each $entry in $list {
+  @each $entry in $grid {
     .large-#{floor($entry)} {
       width: percentage($entry) * 0.01;
       @extend %percentage-width-column;
@@ -75,4 +73,22 @@ $list: 10,20,30,40,50,60,70,80,90,25,33.3333,66.6667,75;
       margin-left: percentage($entry) * 0.01;
     }
   }
+}
+
+/* Padding */
+
+.no-padding > * {
+  padding: 0;
+}
+
+.buffer {
+  padding: $row-buffer;
+}
+
+.gutters {
+  padding: 0;
+}
+
+.gutters ~ .gutters {
+  padding-left: $column-padding;
 }
