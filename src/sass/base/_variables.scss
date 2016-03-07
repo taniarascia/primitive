@@ -1,24 +1,31 @@
 /* Variables
- * =============== */
+ * ===============
+ *
+ * All variables and most of the configuration is defined on this page. */
 
-/* All variables are defined on this page. */
+/* Breakpoint Sizes */
 
 // Containers
+$x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
 
 // Breakpoints
-$mobile: 600px;
+$mobile: $x-small;
 $desktop: $medium;
 
-// Grid
+/* Grid */
+
+// Define here the percentages that you want in the grid
 $grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
 $column-padding: 1rem;
 $row-margin: 1rem;
 $row-buffer: 5em 0;
 
-// Typography
+/* Typography */
+
+// Main typography
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
@@ -26,10 +33,12 @@ $font-color: #222;
 $font-size: 1rem;
 $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-$header-font-color: #333;
-$header-font-weight: 500;
-$header-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-$header-line-height: 1.2;
+
+// Heading typography
+$heading-font-color: #333;
+$heading-font-weight: 500;
+$heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-line-height: 1.2;
 $h1: 2.2rem;
 $h2: 1.9rem;
 $h3: 1.6rem;
@@ -37,24 +46,25 @@ $h4: 1.4rem;
 $h5: 1.2rem;
 $h6: 1.1rem;
 	
-// Colors 
+/* Colors */
+
 $background: #ffffff;
 $primary-color: #0072C0;
-$accent-color: #009E56;
-$gray: #cdcdcd;
-$lightgray: lighten($gray, 10%);
-$darkgray: darken($gray, 20%);
-
-// Borders 
-$border-width: 1px;
-$border-style: solid;
-$border-color: $gray;
-$border-radius: 4px;
-$borders: $border-width $border-style $border-color;
+$secondary-color: #009E56;
+$accent-color: #cdcdcd;
+$lightgray: lighten($accent-color, 10%);
+$darkgray: darken($accent-color, 20%);
 
 // Links 
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
+
+// Borders 
+$border-width: 1px;
+$border-style: solid;
+$border-color: #cdcdcd;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
 
 // Buttons 
 $button-background: $primary-color;
@@ -71,11 +81,11 @@ $button-border-radius: $border-radius;
 $button-borders: $button-border-width $button-border-style $button-border-color;
 
 // Muted buttons
-$muted-border: 1px solid $gray;
-$muted-border-hover: 1px solid darken($gray, 30%);
+$muted-border: 1px solid $accent-color;
+$muted-border-hover: 1px solid darken($accent-color, 30%);
 $muted-background: transparent;
 $muted-background-hover: transparent;
-$muted-color: darken($gray, 50%);
+$muted-color: darken($accent-color, 50%);
 
 // Gradient buttons
 $gradient-border: 1px solid $primary-color;

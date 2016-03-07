@@ -6,28 +6,33 @@
   width: 100%;
   margin-bottom: $row-margin;
 }
+
 // Non collapsing columns
 %no-collapse {
   float: left;
 }
+
 // Breakpoint view
 @include small-breakpoint {
-  %percentage-width-column, %no-collapse {
+  %percentage-width-column,
+  %no-collapse {
     float: left;
     padding-left: $column-padding;
     padding-right: $column-padding;
     margin-bottom: 0;
   }
 }
+
 // Clearfix row
 .row {
   &::before,
   &::after {
-    display: table;
-    content: " ";
+    display: block;
+    content: ' ';
     clear: both;
   }
 }
+
 
 /* Mobile view */
 
@@ -42,6 +47,7 @@
     @extend %no-collapse;
   }
 }
+
 
 /* Small screen breakpoint */
 
@@ -59,6 +65,7 @@
   }
 }
 
+
 /* Large screen breakpoint */
 
 @include large-breakpoint {
@@ -74,6 +81,7 @@
     }
   }
 }
+
 
 /* Padding */
 

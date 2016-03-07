@@ -7,12 +7,14 @@ html {
   font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
   font-size: $font-size;
 }
+
 // Body base
 body {
   color: $font-color;
   background: $background;
 }
-// Headers
+
+// Headings
 h1,
 h2,
 h3,
@@ -20,35 +22,42 @@ h4,
 h5,
 h6 {
   margin: 1.5rem 0;
-  font-weight: $header-font-weight;
-  font-family: $header-font-family;
-  line-height: $header-line-height;
-  color: $header-font-color;
+  font-weight: $heading-font-weight;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
   span {
     font-size: 65%;
     color: lighten($font-color, 20%);
     padding-left: .5rem;
   }
 }
+
 // Individual styling
 h1 {
   font-size: $h1;
 }
+
 h2 {
   font-size: $h2;
 }
+
 h3 {
   font-size: $h3;
 }
+
 h4 {
   font-size: $h4;
 }
+
 h5 {
   font-size: $h5;
 }
+
 h6 {
   font-size: $h6;
 }
+
 // Link styling
 a {
   color: $link-color;
@@ -60,11 +69,13 @@ a {
     text-decoration: underline;
   }
 }
+
 // Highlight
 mark {
   background: $highlight;
   padding: 0 0.2rem;
 }
+
 // Blockquote
 blockquote {
   margin: 0;
@@ -78,6 +89,7 @@ blockquote {
     text-align: right
   }
 }
+
 // Code block styling
 pre {
   border: 0;
@@ -85,13 +97,15 @@ pre {
   background: $code-background;
   padding: 1rem;
   tab-size: 2;
-  font-size: 1rem;
+  color: $code-color;
+  font-family: $code-family;
+  font-size: .9rem;
   code {
-    color: $code-color;
     font-family: $code-family;
     line-height: 1.2;
   }
 }
+
 // Keyboard input
 kbd {
   background-color: #f7f7f7;
@@ -107,6 +121,7 @@ kbd {
   padding: .1em .6em;
   text-shadow: 0 1px 0 #fff;
 }
+
 // Inline code styling
 :not(pre) > code {
   color: $code-color;
@@ -116,19 +131,23 @@ kbd {
   border: $borders;
   border-radius: $border-radius;
 }
+
 // Line break
 hr {
   height: 0;
   border: 0;
   border-top: $borders;
 }
+
 // Definition list
 dt {
   font-weight: bold;
 }
+
 dd {
   margin-bottom: .5rem;
 }
+
 // Container
 .container {
   max-width: $large;
@@ -136,11 +155,13 @@ dd {
   margin-left: auto;
   margin-right: auto;
 }
+
 // Small container
 .small-container {
   @extend .container;
   max-width: $small;
 }
+
 // Medium container
 .medium-container {
   @extend .container;

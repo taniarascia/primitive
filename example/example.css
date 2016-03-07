@@ -1,36 +1,46 @@
 body {
   background: #fff;
 }
+
 .flex-container {
   display: flex;
 }
+
 .content {
   width: 100%;
 }
+
 header {
-  background: linear-gradient(to bottom right, #4b6cb7, #182848);
-  background-size: 100% 300%;
   padding: 100px 0 50px;
   margin-bottom: 60px;
-  color: rgba(255,255,255, .8);
 }
 
-header a, header a:visited, header a:active, header a:hover {
-  color: #fff;
-  text-decoration: underline;
+header a,
+header a:visited,
+header a:active,
+header a:hover {
+  /*color: #fff; 
+  text-decoration: underline; */
 }
+
 header h1 {
-  color: white;
+  color: #333;
+  font-size: 3rem;
+  letter-spacing: -.1rem;
+  font-weight: 300;
 }
+
 @media screen and (min-width: 1080px) {
   header {
     padding: 200px 0;
   }
 }
+
 h2 {
   border-bottom: 1px solid #dddddd;
   font-weight: 600;
 }
+
 aside {
   padding: .5rem;
   flex: 0;
@@ -41,21 +51,25 @@ aside {
   width: 100%;
   z-index: 2;
 }
+
 aside ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 aside nav {
   display: none;
   transition: all .5s ease;
 }
+
 aside li.title {
   color: #888;
   font-size: .85rem;
   font-weight: 600;
   padding: 1rem 1rem 0;
 }
+
 aside li a {
   padding: .25rem .5rem;
   margin: 0 .5rem;
@@ -65,6 +79,7 @@ aside li a {
   font-weight: 500;
   text-decoration: none;
 }
+
 aside li a:hover,
 aside li a:active,
 aside li a:focus {
@@ -72,34 +87,42 @@ aside li a:focus {
   color: #222;
   text-decoration: none;
 }
+
 aside li a.active {
   color: #0070C2;
   text-decoration: none;
 }
+
 aside h1 {
   padding: 0 1rem;
   color: #333;
   font-size: 1.8rem;
   margin-bottom: 0;
   margin-top: .5rem;
+  letter-spacing: -.05rem;
 }
+
 aside p {
   display: none;
 }
+
 .toggle-nav {
   float: right;
   padding-right: 1rem;
 }
+
 .toggle-nav::after {
   content: "\f0c9";
   font-family: 'FontAwesome';
   font-size: 2rem;
   color: #333;
 }
+
 .toggle-nav.active::after {
   content: "\f00d";
   font-family: 'FontAwesome';
 }
+
 @media screen and (min-width: 1080px) {
   aside {
     display: block;
@@ -130,42 +153,52 @@ aside p {
     display: none;
   }
 }
+
 .active .fa {
   color: #0070C2;
 }
+
 .fa {
   color: #99c6e5;
   padding-right: 1rem;
 }
+
 .mise-title {
   margin: 0;
 }
+
 .mise-subtitle {
   margin-top: 0;
   margin-bottom: 2rem;
-  color: rgba(255,255,255, .8);
+  color: rgba(255, 255, 255, .8);
 }
+
 .example {
   background: #e5f0f8;
   margin-bottom: .5rem;
   border: 1px solid #7fb7e0;
 }
+
 .example:nth-of-type(odd) {
   background: #cce2f2;
 }
+
 .example.special {
   background: #0070C2;
   border: 1px solid #004e87;
   color: #ffffff;
 }
+
 .xl-container {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .fixed {
   position: fixed;
   top: 0;
 }
+
 @media screen and (min-width: 1080px) {
   .margin {
     margin-left: 220px;

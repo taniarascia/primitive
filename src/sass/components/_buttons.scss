@@ -20,12 +20,20 @@
   text-align: center;
   cursor: pointer;
 }
+
 // Buttons on hover
 %buttons-hover {
   background: darken($button-background, 10%);
   color: $button-color;
   text-decoration: none;
 }
+
+%buttons-focus {
+  background: darken($button-background, 10%);
+  color: $button-color;
+  text-decoration: none;
+}
+
 // Apply styles to .button class, button element, and button-based inputs
 .button,
 a.button,
@@ -38,18 +46,22 @@ button,
     display: inline-block;
     vertical-align: middle;
   }
-  &:hover,
+  &:hover {
+    @extend %buttons-hover;
+  }
   &:focus,
   &:active {
-    @extend %buttons-hover;
+    @extend %buttons-focus;
   }
   // Secondary button color
   &.accent {
-    background: $accent-color;
-    &:hover,
+    background: $secondary-color;
+    &:hover {
+      background: darken($secondary-color, 10%);
+    }
     &:focus,
     &:active {
-      background: darken($accent-color, 10%);
+      background: darken($secondary-color, 10%);
     }
   }
   // Round buttons
@@ -70,7 +82,11 @@ button,
     background-image: $gradient-background;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0), inset 0 0 2px rgba(255, 255, 255, 1);
-    &:hover,
+    &:hover {
+      border: $gradient-border-hover;
+      background-image: $gradient-background-hover;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0), inset 0 0 2px rgba(255, 255, 255, .5);
+    }
     &:focus,
     &:active {
       border: $gradient-border-hover;
@@ -83,7 +99,10 @@ button,
     background: $muted-background;
     border: $muted-border;
     color: $muted-color;
-    &:hover,
+    &:hover {
+      border: $muted-border-hover;
+      background: $muted-background-hover;
+    }
     &:focus,
     &:active {
       border: $muted-border-hover;

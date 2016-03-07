@@ -45,6 +45,24 @@
       <a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
 Follow</a>
 
+      <div class="row buffer">
+        <div class="column-20">
+          <img src="example/images/html5.png" class="responsive-image">
+        </div>
+        <div class="column-20">
+          <img src="example/images/gulp.png" class="responsive-image">
+        </div>
+        <div class="column-20">
+          <img src="example/images/sass.png" class="responsive-image">
+        </div>
+        <div class="column-20">
+          <img src="example/images/autoprefixer.png" class="responsive-image">
+        </div>
+        <div class="column-20">
+          <img src="example/images/cssnano.png" class="responsive-image">
+        </div>
+      </div>
+
     </div>
   </header>
 
@@ -90,7 +108,17 @@ Follow</a>
 
             <h3>HTML Starting Point</h3>
 
-            <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+            <p>Begin with a basic <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> template that does the following:</p>
+            <ul>
+              <li>Sets the default language and <a href="https://en.wikipedia.org/wiki/UTF-8">character set</a></li>
+              <li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a></li>
+              <li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a></li>
+              <li>Includes the <a href="https://jquery.com/">jQuery</a> library</li>
+              <li>Includes links to your custom CSS, JavaScript, and Favicon</li>
+            </ul>
+            <p>I'm linking to Mise en Place as <code>main.css</code>. You can choose to link to the CSS file and make your own custom CSS file for overrides, or <a href="#sass-main">utilize Sass to customize the style</a>.
+
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
 &lt;head&gt;
@@ -146,7 +174,7 @@ Follow</a>
           <section id="grid">
             <h2>Grid</h2>
 
-            <p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes.</p>
+            <p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes. Resize the screen to see the different breakpoints.</p>
 
             <pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
@@ -661,7 +689,7 @@ Follow</a>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="http://taniarascia.github.io/miseenplace">http://taniarascia.github.io/miseenplace</a></td>
+                    <td><a href="https://taniarascia.github.io/miseenplace">https://taniarascia.github.io/miseenplace</a></td>
                     <td>Description 2</td>
                     <td>Description 3</td>
                   </tr>
@@ -761,7 +789,7 @@ public:
 
             <h3>Vertical Center</h3>
 
-            <p>Vertically center an element with the <code>vertical-center</code> class.</p>
+            <p>Vertically center an element with the <code>vertical-center</code> class. (Uses <a href="http://caniuse.com/#search=flexbox" target="_blank">Flexbox</a>.)</p>
 
             <pre><code class="language-html">&lt;div class="vertical-center"&gt;
 	&lt;div&gt;Vertically centered&lt;/div&gt;
@@ -815,7 +843,7 @@ public:
           </section>
           <section id="sass-main">
             <h2>Sass</h2>
-            <p>The project is built on Sass, specifically <strong>SCSS</strong>. If you've never used Sass, <a href="http://www.taniarascia.com/learn-sass-now/" target="_blank">this article will explain everything you need to know to get started.</a></p>
+            <p>The project is built on Sass, specifically <strong>SCSS</strong>. If you've never used Sass, <a href="https://www.taniarascia.com/learn-sass-now/" target="_blank">this article will explain everything you need to know to get started.</a></p>
             <pre><code class="language-scss">// Variables and Mixins
 @import "base/variables";
 @import "base/mixins";
@@ -842,7 +870,7 @@ public:
         <footer class="center">
           <div class="medium-container" style="padding: 30px 0 20px;">
             <hr>
-            <p style="padding-top: 20px;">Built by <a href="http://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/miseenplace" target="_blank">View on GitHub</a>. Open source under the <a href="https://github.com/taniarascia/miseenplace/blob/gh-pages/LICENSE.md" target="_blank">MIT License</a>. </p>
+            <p style="padding-top: 20px;">Built by <a href="https://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/miseenplace" target="_blank">View on GitHub</a>. Open source, of course.
           </div>
         </footer>
       </main>
