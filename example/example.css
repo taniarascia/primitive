@@ -191,6 +191,7 @@ aside li a:focus {
   }
 	.content {
     flex: 7.5;
+    max-width: calc(100% - 220px);
   }
 	 .margin {
     margin-left: 220px;
