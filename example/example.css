@@ -7,15 +7,18 @@ header {
 }
 
 header h1 {
-  color: #333;
+  color: #404040;
   font-size: 3rem;
   letter-spacing: -.1rem;
   font-weight: 300;
 }
 
 h2 {
-  border-bottom: 1px solid #dddddd;
   font-weight: 600;
+}
+
+h3 {
+  color: #606060;
 }
 
 aside {
@@ -31,7 +34,6 @@ aside {
 
 aside h1 {
   padding: 0 1rem;
-  color: #333;
   font-size: 1.8rem;
   margin-bottom: 0;
   margin-top: .5rem;
@@ -40,6 +42,7 @@ aside h1 {
 
 aside p {
   display: none;
+  color: #606060;
 }
 
 aside ul {
@@ -54,7 +57,7 @@ aside nav {
 }
 
 aside li.title {
-  color: #888;
+  color: #606060;
   font-size: .85rem;
   font-weight: 600;
   padding: 1rem 1rem 0;
@@ -65,8 +68,7 @@ aside li a {
   margin: 0 .5rem;
   border-radius: 4px;
   display: block;
-  color: #333;
-  font-weight: 500;
+  color: #404040;
   text-decoration: none;
 }
 
@@ -79,7 +81,7 @@ aside li a:hover,
 aside li a:active,
 aside li a:focus {
   background: #f0f0f0;
-  color: #222;
+  color: #404040;
   text-decoration: none;
 }
 
@@ -100,7 +102,7 @@ aside li a:focus {
   content: "\f0c9";
   font-family: 'FontAwesome';
   font-size: 2rem;
-  color: #333;
+  color: #404040;
 }
 
 .toggle-nav.active::after {
@@ -124,9 +126,13 @@ aside li a:focus {
 .mise-subtitle {
   margin-top: 0;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, .8);
+  color: #606060;
 }
 
+.xs-container {
+  max-width: 450px;
+  margin: 0 auto;
+}
 .xl-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -144,7 +150,7 @@ aside li a:focus {
 }
 
 .padding-top {
-	padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .example {
@@ -183,17 +189,26 @@ aside li a:focus {
     margin: 0 0 1rem;
     padding: 0 1rem;
   }
-	aside nav {
+  aside nav {
     display: block !important;
   }
   .toggle-nav {
     display: none;
   }
-	.content {
+  .content {
     flex: 7.5;
     max-width: calc(100% - 220px);
   }
-	 .margin {
+  .margin {
     margin-left: 220px;
   }
+}
+
+article {
+  margin-bottom: 3rem;
+}
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
