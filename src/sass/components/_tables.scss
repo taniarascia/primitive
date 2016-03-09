@@ -9,7 +9,7 @@ table {
   max-width: 100%;
 }
 
-.striped tbody tr:nth-child(odd) {
+.striped-table tbody tr:nth-child(odd) {
   background-color: $stripes;
 }
 
@@ -34,7 +34,7 @@ td {
 caption {
   padding: 1rem 0;
   caption-side: bottom;
-  color: $darkgray;
+  color: $caption;
 }
 
 // Container for responsive tables

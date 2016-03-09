@@ -1,7 +1,7 @@
 /*! Mise en Place
   by Tania Rascia */
 
-// Variables and Mixins
+// Configuration
 @import "base/variables";
 @import "base/mixins";
 
@@ -12,9 +12,9 @@
 // Components
 @import "components/scaffolding";
 @import "components/grid";
+@import "components/helpers"; 
 @import "components/buttons";
 @import "components/forms";
 @import "components/tables";
 @import "components/navigation";
-@import "components/helpers"; 
 @import "components/layout";

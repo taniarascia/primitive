@@ -2,25 +2,8 @@ body {
   background: #fff;
 }
 
-.flex-container {
-  display: flex;
-}
-
-.content {
-  width: 100%;
-}
-
 header {
-  padding: 100px 0 50px;
-  margin-bottom: 60px;
-}
-
-header a,
-header a:visited,
-header a:active,
-header a:hover {
-  /*color: #fff; 
-  text-decoration: underline; */
+  padding: 100px 0;
 }
 
 header h1 {
@@ -28,12 +11,6 @@ header h1 {
   font-size: 3rem;
   letter-spacing: -.1rem;
   font-weight: 300;
-}
-
-@media screen and (min-width: 1080px) {
-  header {
-    padding: 200px 0;
-  }
 }
 
 h2 {
@@ -50,6 +27,19 @@ aside {
   top: 0;
   width: 100%;
   z-index: 2;
+}
+
+aside h1 {
+  padding: 0 1rem;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  margin-top: .5rem;
+  letter-spacing: -.05rem;
+}
+
+aside p {
+  display: none;
 }
 
 aside ul {
@@ -80,6 +70,11 @@ aside li a {
   text-decoration: none;
 }
 
+aside li a.active {
+  color: #0070C2;
+  text-decoration: none;
+}
+
 aside li a:hover,
 aside li a:active,
 aside li a:focus {
@@ -88,22 +83,12 @@ aside li a:focus {
   text-decoration: none;
 }
 
-aside li a.active {
-  color: #0070C2;
-  text-decoration: none;
+.content {
+  width: 100%;
 }
 
-aside h1 {
-  padding: 0 1rem;
-  color: #333;
-  font-size: 1.8rem;
-  margin-bottom: 0;
-  margin-top: .5rem;
-  letter-spacing: -.05rem;
-}
-
-aside p {
-  display: none;
+.flex-container {
+  display: flex;
 }
 
 .toggle-nav {
@@ -121,37 +106,6 @@ aside p {
 .toggle-nav.active::after {
   content: "\f00d";
   font-family: 'FontAwesome';
-}
-
-@media screen and (min-width: 1080px) {
-  aside {
-    display: block;
-    flex: 0 0 220px;
-    width: 220px;
-    border-bottom: 0;
-  }
-  aside nav {
-    display: block !important;
-  }
-  .content {
-    flex: 7.5;
-  }
-  aside {
-    margin-top: 1rem;
-    position: static;
-  }
-  aside h1 {
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-  aside p {
-    display: block;
-    margin: 0 0 1rem;
-    padding: 0 1rem;
-  }
-  .toggle-nav {
-    display: none;
-  }
 }
 
 .active .fa {
@@ -173,6 +127,26 @@ aside p {
   color: rgba(255, 255, 255, .8);
 }
 
+.xl-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.example-container {
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.padding-top {
+	padding-top: 2rem;
+}
+
 .example {
   background: #e5f0f8;
   margin-bottom: .5rem;
@@ -189,24 +163,36 @@ aside p {
   color: #ffffff;
 }
 
-.xl-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.fixed {
-  position: fixed;
-  top: 0;
-}
-
 @media screen and (min-width: 1080px) {
-  .margin {
+  aside {
+    display: block;
+    flex: 0 0 220px;
+    width: 220px;
+    border-bottom: 0;
+  }
+  aside {
+    margin-top: 1rem;
+    position: static;
+  }
+  aside h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  aside p {
+    display: block;
+    margin: 0 0 1rem;
+    padding: 0 1rem;
+  }
+	aside nav {
+    display: block !important;
+  }
+  .toggle-nav {
+    display: none;
+  }
+	.content {
+    flex: 7.5;
+  }
+	 .margin {
     margin-left: 220px;
   }
-}
-
-.example-container {
-  max-width: 900px;
-  padding: 0 1rem;
-  margin: 0 auto;
 }

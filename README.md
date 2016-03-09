@@ -5,7 +5,12 @@ Mise en Place is a simple starter pack built with Sass that provides helpful, br
 
 ## Getting Started
 
-* Clone the repo: `git clone https://github.com/taniarascia/miseenplace.git`
+* **Quick start** - [Download the stylesheet](https://raw.githubusercontent.com/taniarascia/miseenplace/gh-pages/dist/css/main.css).
+* **Sass integration** - Clone the repo: `git clone https://github.com/taniarascia/miseenplace.git`.
+
+## Documentation
+
+All documentation can be found at [https://taniarascia.github.io/miseenplace](https://taniarascia.github.io/miseenplace).
 
 ## License
 
