@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('workflow', function () {
-  gulp.src('./src/sass/**/*.scss')
+  gulp.src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -22,5 +22,5 @@ gulp.task('workflow', function () {
 
 //Watch task
 gulp.task('default', function () {
-  gulp.watch('./src/sass/**/*.scss', ['workflow']);
+  gulp.watch('./src/scss/**/*.scss', ['workflow']);
 });

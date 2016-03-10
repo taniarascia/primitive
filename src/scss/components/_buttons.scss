@@ -1,0 +1,128 @@
+/* Buttons
+  =============== */
+
+// Main button styling
+%buttons {
+  display: inline-block;
+  line-height: 1;
+  border: $button-borders;
+  border-radius: $button-border-radius;
+  background: $button-background;
+  color: $button-color;
+  font-weight: $button-font-weight;
+  font-family: $button-font-family;
+  font-size: $button-font-size;
+  text-transform: uppercase;
+  padding: .7rem 1.2rem;
+  margin: .5rem 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+// Buttons on hover
+%buttons-hover {
+  background: darken($button-background, 10%);
+  color: $button-color;
+  text-decoration: none;
+}
+
+// Buttons on focus
+%buttons-focus {
+  background: darken($button-background, 10%);
+  color: $button-color;
+  text-decoration: none;
+}
+
+// Apply styles to .button class, button element, and button-based inputs
+.button,
+a.button,
+button,
+#{$input-buttons} {
+  @extend %buttons;
+  &:before {
+    // Ensure that text inside button classes are vertically centered
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:hover {
+    @extend %buttons-hover;
+  }
+  &:focus,
+  &:active {
+    @extend %buttons-focus;
+  }
+}
+
+// Secondary button color
+.accent-button,
+a.accent-button {
+  background: $secondary-color;
+  &:hover {
+    background: darken($secondary-color, 10%);
+  }
+  &:focus,
+  &:active {
+    background: darken($secondary-color, 10%);
+  }
+}
+
+// Round buttons
+.round-button,
+a.round-button {
+  border-radius: $round-buttons;
+}
+
+// Square buttons
+.square-button,
+a.square-button {
+  border-radius: 0;
+}
+
+// Full width buttons (block level)
+.full-button,
+a.full-button {
+  display: block;
+  width: 100%;
+}
+
+// Gradient buttons
+.gradient-button,
+a.gradient-button {
+  border: $gradient-border;
+  background-image: $gradient-background;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), inset 0 0 2px rgba(255, 255, 255, 1);
+  &:hover {
+    border: $gradient-border-hover;
+    background-image: $gradient-background-hover;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), inset 0 0 2px rgba(255, 255, 255, .5);
+  }
+  &:focus,
+  &:active {
+    border: $gradient-border-hover;
+    background-image: $gradient-background-hover;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), inset 0 0 2px rgba(255, 255, 255, .5);
+  }
+}
+
+// Muted buttons
+.muted-button,
+a.muted-button {
+  background: $muted-background;
+  border: $muted-border;
+  color: $muted-color;
+  &:hover {
+    color: $muted-color;
+    border: $muted-border-hover;
+    background: $muted-background-hover;
+  }
+  &:focus,
+  &:active {
+    color: $muted-color;
+    border: $muted-border-hover;
+    background: $muted-background-hover;
+  }
+}

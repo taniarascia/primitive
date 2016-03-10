@@ -106,22 +106,34 @@ Follow</a>
         <div class="medium-container">
 
           <section id="getting-started">
-            <article>
-              <h2>Getting Started</h2>
 
+            <h2>Getting Started</h2>
+
+            <article>
+              <h3>Download and Installation</h3>
+
+              <p>There are two options for using Mise en Place.</p>
+
+              <ul>
+                <li><strong>CSS (easy)</strong> - <a href="https://raw.githubusercontent.com/taniarascia/miseenplace/gh-pages/dist/css/main.css">Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.
+                  <li><strong>Sass (recommended)</strong> - <a href="#sass-main">Download the source and set up a Sass workflow</a>.</li>
+              </ul>
+            </article>
+
+            <article>
               <h3>HTML Starting Point</h3>
 
               <p>Begin with a basic <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> template that does the following:</p>
               <ul>
-                <li>Sets the default language and <a href="https://en.wikipedia.org/wiki/UTF-8">character set</a></li>
-                <li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a></li>
-                <li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a></li>
-                <li>Includes the <a href="https://jquery.com/">jQuery</a> library</li>
-                <li>Includes links to your custom CSS, JavaScript, and Favicon</li>
+                <li>Sets the <a href="http://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">default language</a> and <a href="https://en.wikipedia.org/wiki/UTF-8">character set</a>.</li>
+                <li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a>.</li>
+                <li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a> to enable responsiveness.</li>
+                <li>Includes the <a href="https://jquery.com/">jQuery</a> library for easy DOM manipulation (optional).</li>
+                <li>Includes links to the <a href="https://raw.githubusercontent.com/taniarascia/miseenplace/gh-pages/dist/css/main.css" target="_blank">Mise en Place CSS file</a>, an empty JavaScript file, and a Favicon.</li>
               </ul>
-              <p>I'm linking to Mise en Place as <code>main.css</code>. You can choose to link to the CSS file and make your own custom CSS file for overrides, or <a href="#sass-main">utilize Sass to customize the style</a>.
 
-                <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 
 &lt;head&gt;
@@ -205,6 +217,7 @@ Follow</a>
                 <div class="large-50 example">50%</div>
                 <div class="large-50 example">50%</div>
               </div>
+              
             </article>
 
             <article>
@@ -973,7 +986,7 @@ public:
                 <li><a href="https://www.taniarascia.com/learn-sass-now/" target="_blank">Learn to use Sass</a></li>
                 <li><a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">Learn to use Gulp</a></li>
               </ul>
-              <p>To summarize, Sass is used to extend your CSS, allowing you to use useful concepts like variables and nesting, as well as compartmentalizing and organizing the code. Gulp is used to process those Sass files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibilty.</p>
+              <p>Sass is used to extend your CSS, allowing you to use useful concepts like variables and nesting, as well as compartmentalizing and organizing the code. Gulp is used to watch for changes and process those Sass files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibilty.</p>
               <p>If you already have Node installed, you can just clone the project...</p>
 
               <pre><code>git clone https://github.com/taniarascia/miseenplace.git</code></pre>
@@ -986,9 +999,56 @@ public:
 
               <pre><code>gulp</code></pre>
 
-              <p>If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
+              <p>The default <code>gulp</code> command will run a watch to compile, minify and prefix your files. If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
 
             </article>
+            
+            <article>
+            
+              <h3>Directory Structure</h3>
+              
+              <p>The project contains the source and destination folders, as well as a few necessary project files.</p>
+              
+              <ul>
+                <li><strong>dist</strong> - the distribution folder that contains the final CSS, JavaScript, and HTML output.</li>
+                <li><strong>src</strong> - the source folder that contains all the <code>scss</code> files and folders.</li>
+                <li><strong>.gitignore</strong> - ignore <code>node_modules</code> and <code>.sass-cache</code> files.
+                <li><strong>gulpfile.js</strong> - the Gulp project that will compile, minify and prefix the <code>scss</code> files.</li>
+                <li><strong>package.json</strong> - npm package folder to initialize <code>node_modules</code></li>
+              </ul>                
+              
+              <pre>dist/
+├── css/
+│   ├── main.css
+│   └── main.css.map
+├── js/
+│   └── script.js
+├── images/
+│   └── favicon.png
+├── index.html
+src/
+└── scss/
+    ├── base/
+    │   ├── _mixins.scss
+    │   ├── _normalize.scss
+    │   ├── _reset.scss
+    │   └── _variables.scss
+    └── components/
+        ├── _scaffolding.scss
+        ├── _grid.scss
+        ├── _helpers.scss
+        ├── _buttons.scss
+        ├── _forms.scss
+        ├── _tables.scss
+        ├── _navigation.scss
+        └── _layout.scss
+        main.scss
+.gitignore
+LICENSE.md
+README.md
+gulpfile.js                                                     
+package.json</pre>
+              
 
             <article>
 
