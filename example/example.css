@@ -9,7 +9,6 @@ header {
 header h1 {
   color: #404040;
   font-size: 3rem;
-  letter-spacing: -.1rem;
   font-weight: 300;
 }
 
@@ -123,12 +122,6 @@ aside li a:focus {
   margin: 0;
 }
 
-.mise-subtitle {
-  margin-top: 0;
-  margin-bottom: 2rem;
-  color: #606060;
-}
-
 .xs-container {
   max-width: 450px;
   margin: 0 auto;
@@ -154,13 +147,14 @@ aside li a:focus {
 }
 
 .example {
-  background: #e5f0f8;
+  background: #E9F6E9;
   margin-bottom: .5rem;
-  border: 1px solid #7fb7e0;
+  border: 1px solid #8DD48D;
 }
 
 .example:nth-of-type(odd) {
   background: #cce2f2;
+  border: 1px solid #7fb7e0;
 }
 
 .example.special {
