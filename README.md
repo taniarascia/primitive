@@ -9,7 +9,7 @@ Primitive is a simple starter pack built with Sass that provides helpful, browse
 
 ## Documentation
 
-All documentation can be found at [https://taniarascia.github.io/miseenplace](https://taniarascia.github.io/primitive).
+All documentation can be found at [https://taniarascia.github.io/primitive](https://taniarascia.github.io/primitive).
 
 ## License
 
