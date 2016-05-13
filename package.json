@@ -1,5 +1,5 @@
 {
-  "name": "miseenplace",
+  "name": "primitive",
   "version": "1.0.0",
   "description": "A Sass starter-pack for front-end web developers",
   "main": "gulpfile.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taniarascia/miseenplace.git"
+    "url": "git+https://github.com/taniarascia/primitive.git"
   },
   "keywords": [
     "sass",
@@ -27,7 +27,7 @@
   "author": "Tania Rascia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taniarascia/miseenplace/issues"
+    "url": "https://github.com/taniarascia/primitive/issues"
   },
-  "homepage": "https://taniarascia.github.io/miseenplace"
+  "homepage": "https://taniarascia.github.io/primitive"
 }
