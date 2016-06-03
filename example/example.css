@@ -147,21 +147,17 @@ aside li a:focus {
 }
 
 .example {
-  background: #009E56;
+  background: #efefef;
   margin-bottom: .5rem;
-  border: 1px solid #006e3c;
-	color: white;
+  border: 1px solid #aaa;
 }
 
 .example:nth-of-type(odd) {
-  background: #0070C2;
-  border: 1px solid #004e87;
+  background: #e2e2e2;
 }
 
 .example.special {
-  background: #0070C2;
-  border: 1px solid #004e87;
-  color: #ffffff;
+  background: white;
 }
 
 @media screen and (min-width: 1080px) {
