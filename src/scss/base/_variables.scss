@@ -53,8 +53,8 @@ $h6: 1.1rem;
 /* Colors */
 
 $background: #ffffff;
-$primary-color: #0072C0;
-$secondary-color: #009E56;
+$primary-color: #EA8372;
+$secondary-color: #FFB88C;
 $accent-color: #cdcdcd;
 
 /* Links */
@@ -94,13 +94,6 @@ $muted-background: transparent;
 $muted-background-hover: transparent;
 $muted-color: darken($accent-color, 50%);
 
-/* Gradient buttons */
-
-$gradient-border: 1px solid $primary-color;
-$gradient-border-hover: 1px solid darken($primary-color, 20%);
-$gradient-background: linear-gradient(lighten($primary-color, 30%), $primary-color);
-$gradient-background-hover: linear-gradient($primary-color, darken($primary-color, 15%));
-	
 /* Round buttons */
 
 $round-buttons: 40px;

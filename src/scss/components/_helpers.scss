@@ -4,73 +4,73 @@
 // Classic clearfix 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: block;
+	content: " ";
+	display: block;
 }
 
 .clearfix:after {
-  clear: both;
+	clear: both;
 }
 
 // Text alignment
 .text-left {
-  text-align: left;
+	text-align: left;
 }
 
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 // Display
 .block {
-  display: block;
+	display: block;
 }
 
 .inline-block {
-  display: inline-block;
+	display: inline-block;
 }
 
 // Horizontal center
 .center {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 // Vertical center
 .vertical-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 // Responsive Images
 .responsive-image {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 // Display State
 .show {
-  display: block !important;
+	display: block !important;
 }
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 .invisible {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 // Screen reader text for accessibility
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
 }

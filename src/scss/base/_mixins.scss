@@ -12,5 +12,5 @@
 @mixin large-breakpoint {
 	@media (min-width: #{$desktop}) {
 		@content;
-	} 
+	}
 }

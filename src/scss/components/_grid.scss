@@ -3,34 +3,34 @@
 
 // Mobile column view
 %full-width-column {
-  width: 100%;
-  margin-bottom: $row-margin;
+	width: 100%;
+	margin-bottom: $row-margin;
 }
 
 // Non collapsing columns
 %no-collapse {
-  float: left;
+	float: left;
 }
 
 // Breakpoint view
 @include small-breakpoint {
-  %percentage-width-column,
-  %no-collapse {
-    float: left;
-    padding-left: $column-padding;
-    padding-right: $column-padding;
-    margin-bottom: 0;
-  }
+	%percentage-width-column,
+	%no-collapse {
+		float: left;
+		padding-left: $column-padding;
+		padding-right: $column-padding;
+		margin-bottom: 0;
+	}
 }
 
 // Clearfix row
 .row {
-  &::before,
-  &::after {
-    display: block;
-    content: ' ';
-    clear: both;
-  }
+	&::before,
+	&::after {
+		display: block;
+		content: ' ';
+		clear: both;
+	}
 }
 
 
@@ -38,65 +38,65 @@
 
 // On mobile, all columns are full width with a bottom margin
 @each $entry in $grid {
-  .small-#{floor($entry)},
-  .large-#{floor($entry)} {
-    @extend %full-width-column;
-  }
-  .column-#{floor($entry)} {
-    width: percentage($entry) * 0.01;
-    @extend %no-collapse;
-  }
+	.small-#{floor($entry)},
+	.large-#{floor($entry)} {
+		@extend %full-width-column;
+	}
+	.column-#{floor($entry)} {
+		width: percentage($entry) * 0.01;
+		@extend %no-collapse;
+	}
 }
 
 
 /* Small screen breakpoint */
 
 @include small-breakpoint {
-  // Float all columns to the left for small screens
-  @each $entry in $grid {
-    .small-#{floor($entry)} {
-      width: percentage($entry) * 0.01;
-      @extend %percentage-width-column;
-    }
-    // Small offsets
-    .push-small-#{floor($entry)} {
-      margin-left: percentage($entry) * 0.01;
-    }
-  }
+	// Float all columns to the left for small screens
+	@each $entry in $grid {
+		.small-#{floor($entry)} {
+			width: percentage($entry) * 0.01;
+			@extend %percentage-width-column;
+		}
+		// Small offsets
+		.push-small-#{floor($entry)} {
+			margin-left: percentage($entry) * 0.01;
+		}
+	}
 }
 
 
 /* Large screen breakpoint */
 
 @include large-breakpoint {
-  // Float columns to the left at for large screens
-  @each $entry in $grid {
-    .large-#{floor($entry)} {
-      width: percentage($entry) * 0.01;
-      @extend %percentage-width-column;
-    }
-    // Large offsets
-    .push-large-#{floor($entry)} {
-      margin-left: percentage($entry) * 0.01;
-    }
-  }
+	// Float columns to the left at for large screens
+	@each $entry in $grid {
+		.large-#{floor($entry)} {
+			width: percentage($entry) * 0.01;
+			@extend %percentage-width-column;
+		}
+		// Large offsets
+		.push-large-#{floor($entry)} {
+			margin-left: percentage($entry) * 0.01;
+		}
+	}
 }
 
 
 /* Padding */
 
 .no-padding > * {
-  padding: 0;
+	padding: 0;
 }
 
 .buffer {
-  padding: $row-buffer;
+	padding: $row-buffer;
 }
 
 .gutters {
-  padding: 0;
+	padding: 0;
 }
 
 .gutters ~ .gutters {
-  padding-left: $column-padding;
+	padding-left: $column-padding;
 }

@@ -1,16 +1,38 @@
 body {
 	background: #fff;
-	font-weight: 300;
+	font-weight: 400;
+	font-family: 'Open Sans';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Open Sans';
+	letter-spacing: -.05rem;
 }
 
 header {
+	background: linear-gradient(to right, #FFB88C, #EA8372);
 	padding: 100px 0;
+	margin-bottom: 60px;
 }
 
 header h1 {
-	color: #404040;
+	color: rgba(255, 255, 255, 1);
 	font-size: 3rem;
-	font-weight: 300;
+	font-weight: 400;
+}
+
+header p {
+	color: rgba(255, 255, 255, .9);
+}
+
+header a:hover {
+	color: black;
+	text-decoration: none;
 }
 
 h1 {
@@ -18,7 +40,7 @@ h1 {
 }
 
 h2 {
-	font-weight: 400;
+	font-weight: 600;
 }
 
 h3 {
@@ -26,8 +48,13 @@ h3 {
 	color: #606060;
 }
 
+hr {
+	border-top: 1px solid #eee;
+}
+
 a {
-	color: #a35b4f;
+	color: #000;
+	text-decoration: underline;
 }
 
 a:hover,
@@ -86,7 +113,7 @@ aside li a {
 	display: block;
 	color: #404040;
 	text-decoration: none;
-	font-size: .95rem;
+	font-size: 1rem;
 	font-weight: 400;
 }
 
@@ -142,7 +169,7 @@ aside li a.active:focus {
 }
 
 .fa {
-	color: #E4C2BD;
+	color: #343434;
 	padding-right: 1rem;
 }
 
@@ -181,6 +208,8 @@ aside li a.active:focus {
 	background: linear-gradient(to right, #FFB88C, #EA8372);
 	margin-bottom: .5rem;
 	border: 0px solid #aaa;
+	font-weight: 600;
+	color: white;
 }
 
 .example:nth-of-type(odd) {}
@@ -222,11 +251,19 @@ aside li a.active:focus {
 	}
 }
 
+section {
+	padding-top: .25rem;
+}
+
 article {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 .footer {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+}
+
+::selection {
+	background: #ffd4ba;
 }
