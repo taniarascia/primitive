@@ -25,13 +25,13 @@
 
 	<header class="center vertical-center">
 		<div class="small-container">
-			<h1 class="mise-title">Primitive</h1>
+			<h1>Primitive</h1>
 			<p>Primitive is a simple starter pack built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
 
 		</div>
 	</header>
 
-	<div class="xl-container">
+	<section class="primitive">
 
 		<div class="flex-container">
 
@@ -287,29 +287,42 @@
 								<div class="small-50 example">No padding</div>
 							</div>
 
-							<p>Use <code>buffer</code> on a row if you want top and bottom spacing on the row.</p>
-
-							<pre><code class="language-html">&lt;div class="row buffer"&gt;
-   &lt;!-- etc --&gt;
-&lt;/div&gt;</code></pre>
-
-							<div class="row buffer">
-								<div class="small-50 example">50%</div>
-								<div class="small-50 example">50%</div>
-							</div>
-
 							<p>Use <code>gutters</code> on columns if you want no left or right padding on the first and last column.</p>
 
 							<pre><code class="language-html">&lt;div class="row"&gt;
-	&lt;div class="small-33 gutters"&gt;		
-	&lt;div class="small-33 gutters"&gt;		
-	&lt;div class="small-33 gutters"&gt;		
+	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;	
+	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;		
+	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;		
 &lt;/div&gt;</code></pre>
 
 							<div class="row">
 								<div class="small-33 example gutters">No left padding</div>
-								<div class="small-33 example gutters">Padding</div>
-								<div class="small-33 example gutters">No right padding</div>
+								<div class="small-33 example gutters text-center">Padding</div>
+								<div class="small-33 example gutters text-right">No right padding</div>
+							</div>
+
+							<h3>Flex Grid</h3>
+
+							<p>Create infinitely repeating cells with a flex grid.</p>
+
+							<pre><code class="language-html">&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+							<div class="grid">
+								<div class="cell example">&nbsp;</div>
+								<div class="cell example">&nbsp;</div>
+							</div>
+							<div class="grid">
+								<div class="cell example">&nbsp;</div>
+								<div class="cell example">&nbsp;</div>
+								<div class="cell example">&nbsp;</div>
 							</div>
 
 						</article>
@@ -440,7 +453,7 @@
 
 							<button class="full-button">Button</button>
 							<input type="submit" value="Submit" class="full-button accent-button square-button">
-							<input type="button" value="Input" class="full-button round-button gradient-button">
+							<input type="button" value="Input" class="full-button round-button">
 							<a class="full-button muted-button button">Link</a>
 
 						</article>
@@ -996,14 +1009,16 @@ README.md
 gulpfile.js                                                     
 package.json</pre>
 
-
-							<article>
-
-								<h3>Main Sass File</h3>
+						</article>
 
 
-								<p>In the main Sass file, <strong>main.scss</strong>, we'll pull in the configuration (variables and mixins) first, followed by resets, then all the components.</p>
-								<pre><code class="language-scss">// Configuration
+						<article>
+
+							<h3>Main Sass File</h3>
+
+
+							<p>In the main Sass file, <strong>main.scss</strong>, we'll pull in the configuration (variables and mixins) first, followed by resets, then all the components.</p>
+							<pre><code class="language-scss">// Configuration
 @import "base/variables";
 @import "base/mixins";
 
@@ -1021,9 +1036,9 @@ package.json</pre>
 @import "components/navigation";
 @import "components/layout";</code></pre>
 
-								<p>Most of the components should be self-explanatory. <strong>Scaffolding</strong> is the main styling of typography, links, headings, etc. <strong>Navigation</strong> and <strong>layout</strong> are empty files, but I kept them in because they're generally necessary. Add more files as necessary (3rd party, fonts, etc).</p>
+							<p>Most of the components should be self-explanatory. <strong>Scaffolding</strong> is the main styling of typography, links, headings, etc. <strong>Navigation</strong> and <strong>layout</strong> are empty files, but I kept them in because they're generally necessary. Add more files as necessary (3rd party, fonts, etc).</p>
 
-							</article>
+						</article>
 
 
 					</section>
@@ -1043,15 +1058,14 @@ package.json</pre>
  *
  * All variables and most of the configuration is defined on this page. */
 
-/* Containers */
 
+// Containers
 $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
 
-/* Breakpoints */
-
+// Breakpoints
 $mobile: $x-small;
 $desktop: $medium;
 
@@ -1065,10 +1079,8 @@ $desktop: $medium;
 $grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
 $column-padding: 1rem;
 $row-margin: 1rem;
-$row-buffer: 5em 0;
 
-/* Main typography */
-
+// Typography
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
@@ -1077,48 +1089,41 @@ $font-size: 1rem;
 $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-/* Heading typography */
-
 $heading-font-color: #404040;
-$heading-font-weight: 500;
+$heading-font-weight: 400;
 $heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;
+
 $h1: 2.2rem;
 $h2: 1.9rem;
 $h3: 1.6rem;
 $h4: 1.4rem;
 $h5: 1.2rem;
 $h6: 1.1rem;
-	
-/* Colors */
 
+// Colors
 $background: #ffffff;
 $primary-color: #EA8372;
 $secondary-color: #FFB88C;
 $accent-color: #cdcdcd;
 
-/* Links */
-
+// Links
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 
-/* Borders */
-
+// Borders
 $border-width: 1px;
 $border-style: solid;
 $border-color: #cdcdcd;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
-/* Buttons */
-
+// Buttons
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-
-/* Button borders */
 
 $button-border-width: 0px;
 $button-border-style: solid;
@@ -1126,41 +1131,37 @@ $button-border-color: $button-background;
 $button-border-radius: $border-radius;
 $button-borders: $button-border-width $button-border-style $button-border-color;
 
-/* Muted buttons */
-
+// Muted Buttons
 $muted-border: 1px solid $accent-color;
 $muted-border-hover: 1px solid darken($accent-color, 30%);
 $muted-background: transparent;
 $muted-background-hover: transparent;
 $muted-color: darken($accent-color, 50%);
+$muted-color-hover: darken($accent-color, 50%);
 
-/* Round buttons */
-
+// Round Buttons
 $round-buttons: 40px;
 
-/* Forms */
-
-/* Most HTML5 input fields are placed in a variable. Remove any you don't need. */
-
+// Forms
 $input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
-$placeholder: darken($accent-color, 20%);
 $input-height: 2.4rem;
+$placeholder: darken($accent-color, 20%);
+$form-border: 1px solid #cdcdcd;
+$form-border-hover: 1px solid darken(#cdcdcd, 10%);
+$form-border-focus: 1px solid #898989;
 
-/* Tables */
-
+// Tables
 $stripes: #f0f0f0;
 $caption: darken($accent-color, 20%);
 
-/* Code */
-
+// Code
 $code-color: $font-color;
 $code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
 
-/* Miscellaneous */
-
+// Miscellaneous
 $highlight: #ffeea8;
 $bq-border: 8px solid $border-color;
 $error: #D33C40;</code></pre>
@@ -1171,9 +1172,10 @@ $error: #D33C40;</code></pre>
 
 					</section>
 
+
 				</div>
 
-				<footer class="footer center">
+				<footer class="footer text-center">
 					<div class="medium-container">
 
 						<hr>
@@ -1207,8 +1209,9 @@ Follow</a>
 			</main>
 
 		</div>
+		
+	</section>
 
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="example/prism.js"></script>

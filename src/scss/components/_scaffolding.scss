@@ -26,11 +26,6 @@ h6 {
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
 	color: $heading-font-color;
-	span {
-		font-size: 65%;
-		color: lighten($font-color, 20%);
-		padding-left: .5rem;
-	}
 }
 
 // Individual styling
@@ -146,6 +141,12 @@ dt {
 
 dd {
 	margin-bottom: .5rem;
+}
+
+// Full container 
+
+.full-container {
+	padding: 0 1rem;
 }
 
 // Container

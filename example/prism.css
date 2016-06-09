@@ -1,62 +1,51 @@
-/* http://prismjs.com/download.html?themes=prism-twilight&languages=markup+css+clike+javascript+css-extras+scss&plugins=show-language */
-
-
-/**
- * prism.js Twilight theme
- * Based (more or less) on the Twilight theme originally of Textmate fame.
- * @author Remy Bach
- */
-
-pre {
-	font-size: .85rem;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #343434;
-  direction: ltr;
-  font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
-  text-shadow: none;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  font-size: .85rem;
+	color: #343434;
+	direction: ltr;
+	font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	text-shadow: none;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	font-size: .85rem;
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-  background: #FAFAFA;
-  /* #141414 */
+	background: #FAFAFA;
 }
 
 
 /* Code blocks */
 
-pre[class*="language-"] {
-  border: 1px solid #eee;
-  margin: 1rem 0;
-  overflow: auto;
-  padding: 1em;
+pre[class*="language-"],
+pre {
+	border: 1px solid #eee;
+	margin: 1rem 0;
+	overflow: auto;
+	padding: 1em;
+	background: #fafafa;
+	font-size: .85rem;
 }
 
 
 /* Inline code */
 
 :not(pre) > code[class*="language-"] {
-  border-radius: .3em;
-  padding: .15em .2em .05em;
-  white-space: normal;
+	border-radius: .3em;
+	padding: .15em .2em .05em;
+	white-space: normal;
 }
 
 :not(pre) > code {
@@ -76,7 +65,7 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog,
 .token.cdata {
-	color:  #A9A9A9;
+	color: #A9A9A9;
 }
 
 .token.namespace {
@@ -91,6 +80,7 @@ pre[class*="language-"] {
 .token.punctuation {
 	color: #343434;
 }
+
 .language-html .token.punctuation {
 	color: #AE6538;
 }
@@ -115,7 +105,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.regex,
 .token.inserted {
-	color: #49658C;
+	color: #6d83a3;
 }
 
 .token.delimiter {
@@ -125,7 +115,7 @@ pre[class*="language-"] {
 }
 
 .token.atrule {
-	color: #D6ACD6;
+	color: #6d83a3;
 }
 
 .token.keyword {
@@ -145,7 +135,7 @@ pre[class*="language-"] {
 }
 
 .token.class-name {
-	color: #D6ACD6;
+	color: #6d83a3;
 }
 
 .token.deleted,
@@ -167,9 +157,4 @@ pre[class*="language-"] {
 
 .token.italic {
 	font-style: italic;
-}
-
-code[class*=language-scss],
-.language-css {
-  color: #343434;
 }

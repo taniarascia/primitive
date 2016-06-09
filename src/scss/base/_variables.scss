@@ -3,15 +3,14 @@
  *
  * All variables and most of the configuration is defined on this page. */
 
-/* Containers */
 
+// Containers
 $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
 
-/* Breakpoints */
-
+// Breakpoints
 $mobile: $x-small;
 $desktop: $medium;
 
@@ -25,10 +24,8 @@ $desktop: $medium;
 $grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
 $column-padding: 1rem;
 $row-margin: 1rem;
-$row-buffer: 5em 0;
 
-/* Main typography */
-
+// Typography
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
@@ -37,48 +34,41 @@ $font-size: 1rem;
 $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
-/* Heading typography */
-
 $heading-font-color: #404040;
-$heading-font-weight: 500;
+$heading-font-weight: 400;
 $heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;
+
 $h1: 2.2rem;
 $h2: 1.9rem;
 $h3: 1.6rem;
 $h4: 1.4rem;
 $h5: 1.2rem;
 $h6: 1.1rem;
-	
-/* Colors */
 
+// Colors
 $background: #ffffff;
 $primary-color: #EA8372;
 $secondary-color: #FFB88C;
 $accent-color: #cdcdcd;
 
-/* Links */
-
+// Links
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 
-/* Borders */
-
+// Borders
 $border-width: 1px;
 $border-style: solid;
 $border-color: #cdcdcd;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
-/* Buttons */
-
+// Buttons
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-
-/* Button borders */
 
 $button-border-width: 0px;
 $button-border-style: solid;
@@ -86,41 +76,37 @@ $button-border-color: $button-background;
 $button-border-radius: $border-radius;
 $button-borders: $button-border-width $button-border-style $button-border-color;
 
-/* Muted buttons */
-
+// Muted Buttons
 $muted-border: 1px solid $accent-color;
 $muted-border-hover: 1px solid darken($accent-color, 30%);
 $muted-background: transparent;
 $muted-background-hover: transparent;
 $muted-color: darken($accent-color, 50%);
+$muted-color-hover: darken($accent-color, 50%);
 
-/* Round buttons */
-
+// Round Buttons
 $round-buttons: 40px;
 
-/* Forms */
-
-/* Most HTML5 input fields are placed in a variable. Remove any you don't need. */
-
+// Forms
 $input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
-$placeholder: darken($accent-color, 20%);
 $input-height: 2.4rem;
+$placeholder: darken($accent-color, 20%);
+$form-border: 1px solid #cdcdcd;
+$form-border-hover: 1px solid darken(#cdcdcd, 10%);
+$form-border-focus: 1px solid #898989;
 
-/* Tables */
-
+// Tables
 $stripes: #f0f0f0;
 $caption: darken($accent-color, 20%);
 
-/* Code */
-
+// Code
 $code-color: $font-color;
 $code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
 
-/* Miscellaneous */
-
+// Miscellaneous
 $highlight: #ffeea8;
 $bq-border: 8px solid $border-color;
 $error: #D33C40;

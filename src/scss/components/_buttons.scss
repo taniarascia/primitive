@@ -102,7 +102,7 @@ a.muted-button {
 	}
 	&:focus,
 	&:active {
-		color: $muted-color;
+		color: $muted-color-hover;
 		border: $muted-border-hover;
 		background: $muted-background-hover;
 	}

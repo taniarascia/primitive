@@ -54,7 +54,7 @@ $(document).ready(function () {
   
     function sticky_relocate() {
     var window_top = $(window).scrollTop();
-    var div_top = $('.xl-container').offset().top;
+    var div_top = $('.primitive').offset().top;
     console.log(div_top)
     if (window_top > div_top) {
       $('aside').addClass('fixed');
@@ -72,7 +72,7 @@ $(document).ready(function () {
   });
 
   // Stick to top
-  var stickyOffset = $('.xl-container').offset().top;
+  var stickyOffset = $('.primitive').offset().top;
 
   $(document).scroll(function () {
     var navbar = $('aside');
