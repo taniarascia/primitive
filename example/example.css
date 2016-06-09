@@ -239,3 +239,15 @@ article {
 ::selection {
 	background: #fae6e2;
 }
+
+body::-webkit-scrollbar {
+	background: linear-gradient(to top, #EB8573, #FFB88C);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(to top, #EB8573, #FFB88C);
+}
+
+body::-webkit-scrollbar-track {
+	background: #eee;
+}
