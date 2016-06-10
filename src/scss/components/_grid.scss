@@ -1,37 +1,72 @@
 /* Grid
 =============== */
 
+/* Grid */
+
+/* All grid sizes are based on percentages and placed in an array. Remove
+ * any you don't need. Any decimal will be rounded down for its respective
+ * class name - 33.3333 will be .column-33.
+ */
+
+$grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
+$column-padding: 1rem;
+$row-margin: 1rem;
+
+// The rows have a negative margin
+// which are offset by the padding 
+// on the columns.
+%column-padding {
+	padding-left: $column-padding;
+	padding-right: $column-padding;
+}
+
+%row-margin {
+	margin-left: -$column-padding;
+	margin-right: -$column-padding;
+}
+
 // Mobile column view
 %full-width-column {
 	width: 100%;
 	margin-bottom: $row-margin;
 }
 
-// Non collapsing columns
-%no-collapse {
-	float: left;
-}
-
-// Breakpoint view
-@include small-breakpoint {
-	%no-collapse {
-		float: left;
-		padding-left: $column-padding;
-		padding-right: $column-padding;
-		margin-bottom: 0;
-	}
-}
-
 // Clearfix row
 .row {
+	@extend %row-margin;
 	&::before,
 	&::after {
 		display: block;
 		content: ' ';
 		clear: both;
-		margin-left: -1rem;
-		margin-right: -1rem;
 	}
+}
+
+// Flex row
+.flex-row {
+	@extend %row-margin;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-column {
+	@extend %column-padding;
+	flex-basis: auto;
+	flex-grow: 1;
+}
+
+.flex-small,
+.flex-large {
+	@extend %column-padding;
+	flex-basis: 100%;
+	margin-bottom: $row-margin;
+}
+
+
+/* Padding */
+
+.no-padding > * {
+	padding: 0;
 }
 
 
@@ -42,10 +77,12 @@
 	.small-#{floor($entry)},
 	.large-#{floor($entry)} {
 		@extend %full-width-column;
+		@extend %column-padding;
 	}
 	.column-#{floor($entry)} {
 		width: percentage($entry) * 0.01;
-		@extend %no-collapse;
+		float: left;
+		@extend %column-padding;
 	}
 }
 
@@ -58,18 +95,16 @@
 		.small-#{floor($entry)} {
 			width: percentage($entry) * 0.01;
 			float: left;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			margin-bottom: 0;
-		}
-		.large-#{floor($entry)} {
-			padding-left: 1rem;
-			padding-right: 1rem;
 			margin-bottom: 0;
 		}
 		// Small offsets
 		.push-small-#{floor($entry)} {
 			margin-left: percentage($entry) * 0.01;
+		}
+		.flex-small {
+			flex-basis: auto;
+			flex-grow: 1;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -91,32 +126,10 @@
 		.push-large-#{floor($entry)} {
 			margin-left: percentage($entry) * 0.01;
 		}
+		.flex-large {
+			flex-basis: auto;
+			flex-grow: 1;
+			margin-bottom: 0;
+		}
 	}
-}
-
-
-/* Padding */
-
-.no-padding > * {
-	padding: 0;
-}
-
-.gutters {
-	padding: 0;
-}
-
-.gutters ~ .gutters {
-	padding-left: $column-padding;
-}
-
-
-/* Flex Grid */
-
-.grid {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.cell {
-	flex-grow: 1;
 }

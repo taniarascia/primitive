@@ -47,7 +47,6 @@ header {
 	margin-top: 60px;
 	background: linear-gradient(to right, #FFB88C, #EA8372);
 	padding: 60px 0;
-	margin-bottom: 30px;
 }
 
 header h1 {
@@ -58,6 +57,28 @@ header h1 {
 
 header p {
 	color: rgba(255, 255, 255, .9);
+}
+
+.setup {
+	margin-bottom: 0;
+}
+
+.installation {
+	background: white;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+	.setup {
+		background: #fafafa;
+		margin-bottom: 60px;
+	}
+	.installation {
+		padding: 60px;
+		border: 1px solid #efefef;
+		margin-top: -100px;
+		margin-bottom: -100px;
+	}
 }
 
 
@@ -80,6 +101,10 @@ aside h1 {
 	margin-bottom: 0;
 	margin-top: .5rem;
 	letter-spacing: -.05rem;
+}
+
+aside h1 a {
+	text-decoration: none;
 }
 
 aside ul {
@@ -183,10 +208,10 @@ article {
 }
 
 .example {
+	margin-bottom: .5rem;
 	padding-top: .25rem;
 	padding-bottom: .25rem;
 	background: linear-gradient(to right, #FFB88C, #EA8372);
-	margin-bottom: .5rem;
 	border: 0px solid #aaa;
 	font-weight: 600;
 	color: white;
@@ -201,7 +226,7 @@ article {
 
 @media screen and (min-width: 1080px) {
 	header {
-		margin: 0 0 60px 0;
+		margin: 0;
 		padding: 100px 0;
 	}
 	aside {
@@ -234,6 +259,20 @@ article {
 	article {
 		margin-bottom: 3rem;
 	}
+}
+
+.logos {
+	max-width: 150px;
+}
+
+@media screen and (min-width: 800px) {
+	.flex-50 {
+		flex: 5;
+	}
+}
+
+.padding-top {
+	padding-top: 1rem;
 }
 
 ::selection {

@@ -144,7 +144,6 @@ dd {
 }
 
 // Full container 
-
 .full-container {
 	padding: 0 1rem;
 }
@@ -167,4 +166,15 @@ dd {
 .medium-container {
 	@extend .container;
 	max-width: $medium;
+}
+
+// Content
+.content-section {
+	padding: 30px 0;
+}
+
+@include small-breakpoint {
+	.content-section {
+		padding: 60px 0;
+	}
 }

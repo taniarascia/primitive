@@ -31,13 +31,32 @@
 		</div>
 	</header>
 
+	<section class="setup content-section">
+		<div class="installation small-container">
+			<h2>Download and Installation</h2>
+			<p>There are two options for using Primitive.</p>
+			<div class="flex-row padding-top">
+				<div class="flex-large flex-50">
+					<img src="example/images/css3.png" class="logos">
+					<h4><strong>CSS</strong> (easy)</h4>
+					<p><a href="https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.css">Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.</p>
+				</div>
+				<div class="flex-large flex-50">
+					<img src="example/images/sass.png" class="logos">
+					<h4><strong>Sass</strong> (recommended)</h4>
+					<p><a href="#sass-main">Download the source</a> and set up a Sass workflow with Gulp.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="primitive">
 
 		<div class="flex-container">
 
 			<aside>
 				<div class="toggle-nav"></div>
-				<h1>Primitive</h1>
+				<h1><a href="index.html">Primitive</a></h1>
 				<nav>
 
 					<ul>
@@ -69,21 +88,8 @@
 
 					<section id="getting-started">
 
-						<h2>Getting Started</h2>
-
 						<article>
-							<h3>Download and Installation</h3>
-
-							<p>There are two options for using Primitive.</p>
-
-							<ul>
-								<li><strong>CSS (easy)</strong> - <a href="https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.css">Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.
-									<li><strong>Sass (recommended)</strong> - <a href="#sass-main">Download the source and set up a Sass workflow</a>.</li>
-							</ul>
-						</article>
-
-						<article>
-							<h3>HTML Starting Point</h3>
+							<h2>HTML Starting Point</h2>
 
 							<p>Begin with a basic <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> template that does the following:</p>
 							<ul>
@@ -171,13 +177,13 @@
 &lt;/div&gt;</code></pre>
 
 							<div class="row">
-								<div class="small-50 example">50%</div>
-								<div class="small-50 example">50%</div>
+								<div class="small-50 example">50</div>
+								<div class="small-50 example">50</div>
 							</div>
 
 							<div class="row">
-								<div class="large-50 example">50%</div>
-								<div class="large-50 example">50%</div>
+								<div class="large-50 example">50</div>
+								<div class="large-50 example">50</div>
 							</div>
 
 						</article>
@@ -195,27 +201,27 @@
 &lt;/div&gt;</code></pre>
 
 							<div class="row">
-								<div class="column-100 example">100%</div>
+								<div class="column-100 example">100</div>
 							</div>
 							<div class="row">
-								<div class="column-90 example">90%</div>
-								<div class="column-10 example">10%</div>
+								<div class="column-90 example">90</div>
+								<div class="column-10 example">10</div>
 							</div>
 							<div class="row no-collapse">
-								<div class="column-80 example">80%</div>
-								<div class="column-20 example">20%</div>
+								<div class="column-80 example">80</div>
+								<div class="column-20 example">20</div>
 							</div>
 							<div class="row no-collapse">
-								<div class="column-70 example">70%</div>
-								<div class="column-30 example">30%</div>
+								<div class="column-70 example">70</div>
+								<div class="column-30 example">30</div>
 							</div>
 							<div class="row no-collapse">
-								<div class="column-60 example">60%</div>
-								<div class="column-40 example">40%</div>
+								<div class="column-60 example">60</div>
+								<div class="column-40 example">40</div>
 							</div>
 							<div class="row no-collapse">
-								<div class="column-50 example">50%</div>
-								<div class="column-50 example">50%</div>
+								<div class="column-50 example">50</div>
+								<div class="column-50 example">50</div>
 							</div>
 						</article>
 
@@ -232,19 +238,19 @@
 &lt;/div&gt;</code></pre>
 
 							<div class="row">
-								<div class="push-small-10 small-90 example">90%</div>
+								<div class="push-small-10 small-90 example">9</div>
 							</div>
 							<div class="row">
-								<div class="push-small-20 small-80 example">80%</div>
+								<div class="push-small-20 small-80 example">8</div>
 							</div>
 							<div class="row">
-								<div class="push-small-30 small-70 example">70%</div>
+								<div class="push-small-30 small-70 example">7</div>
 							</div>
 							<div class="row">
-								<div class="push-small-40 small-60 example">60%</div>
+								<div class="push-small-40 small-60 example">6</div>
 							</div>
 							<div class="row">
-								<div class="push-small-50 small-50 example">50%</div>
+								<div class="push-small-50 small-50 example">5</div>
 							</div>
 						</article>
 
@@ -287,42 +293,50 @@
 								<div class="small-50 example">No padding</div>
 							</div>
 
-							<p>Use <code>gutters</code> on columns if you want no left or right padding on the first and last column.</p>
-
-							<pre><code class="language-html">&lt;div class="row"&gt;
-	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;	
-	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;		
-	&lt;div class="small-33 gutters"&gt;&lt;/div&gt;		
-&lt;/div&gt;</code></pre>
-
-							<div class="row">
-								<div class="small-33 example gutters">No left padding</div>
-								<div class="small-33 example gutters text-center">Padding</div>
-								<div class="small-33 example gutters text-right">No right padding</div>
-							</div>
-
 							<h3>Flex Grid</h3>
 
 							<p>Create infinitely repeating cells with a flex grid.</p>
 
-							<pre><code class="language-html">&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;cell&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-							<div class="grid">
-								<div class="cell example">&nbsp;</div>
-								<div class="cell example">&nbsp;</div>
+							<div class="flex-row">
+								<div class="flex-column example">2</div>
+								<div class="flex-column example">2</div>
 							</div>
-							<div class="grid">
-								<div class="cell example">&nbsp;</div>
-								<div class="cell example">&nbsp;</div>
-								<div class="cell example">&nbsp;</div>
+							<div class="flex-row">
+								<div class="flex-column example">3</div>
+								<div class="flex-column example">3</div>
+								<div class="flex-column example">3</div>
+							</div>
+
+							<h3>Flex Breakpoints</h3>
+
+							<p>The same breakpoints are available for the flex grid.</p>
+
+							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+							<div class="flex-row">
+								<div class="flex-small example">2</div>
+								<div class="flex-small example">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-large example">3</div>
+								<div class="flex-large example">3</div>
 							</div>
 
 						</article>
@@ -336,10 +350,10 @@
 
 							<p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
 
-							<p>Headings all have the same line-height and margins, and only the font size is individually defined. A span inside of an <code>h</code> is muted.</p>
+							<p>Headings all have the same line-height and margins, and only the font size is individually defined.</p>
 
 							<h1>Heading 1</h1>
-							<h2 style="border-bottom:0;font-weight:500;">Heading 2</h2>
+							<h2 style="font-weight:500;">Heading 2</h2>
 							<h3 style="color:#404040;">Heading 3</h3>
 							<h4>Heading 4</h4>
 							<h5>Heading 5</h5>
@@ -817,6 +831,8 @@
 
 							<h3>Definition Lists</h3>
 
+							<p>Definition titles are bold, and margins have been placed after each description.</p>
+
 							<pre><code class="language-html">&lt;dl&gt;
 	&lt;dt&gt;Definition Title One&lt;/dt&gt;
 	&lt;dd&gt;First definition description&lt;/dd&gt;
@@ -824,7 +840,6 @@
 	&lt;dd&gt;First definition description&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
 
-							<p>Definition titles are bold, and margins have been placed after each description.</p>
 
 							<dl>
 								<dt>Definition Title One</dt>
@@ -1059,7 +1074,8 @@ package.json</pre>
  * All variables and most of the configuration is defined on this page. */
 
 
-// Containers
+/* Containers */
+
 $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
@@ -1069,18 +1085,8 @@ $large: 1200px;
 $mobile: $x-small;
 $desktop: $medium;
 
-/* Grid */
+/* Typography */
 
-/* All grid sizes are based on percentages and placed in an array. Remove
- * any you don't need. Any decimal will be rounded down for its respective
- * class name - 33.3333 will be .column-33.
- */
-
-$grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
-$column-padding: 1rem;
-$row-margin: 1rem;
-
-// Typography
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
@@ -1101,30 +1107,30 @@ $h4: 1.4rem;
 $h5: 1.2rem;
 $h6: 1.1rem;
 
-// Colors
+/* Colors */
+
 $background: #ffffff;
 $primary-color: #EA8372;
 $secondary-color: #FFB88C;
 $accent-color: #cdcdcd;
-
-// Links
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 
-// Borders
+/* Borders */
+
 $border-width: 1px;
 $border-style: solid;
 $border-color: #cdcdcd;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
-// Buttons
+/* Buttons */
+
 $button-background: $primary-color;
 $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-
 $button-border-width: 0px;
 $button-border-style: solid;
 $button-border-color: $button-background;
@@ -1142,7 +1148,8 @@ $muted-color-hover: darken($accent-color, 50%);
 // Round Buttons
 $round-buttons: 40px;
 
-// Forms
+/* Forms */
+
 $input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $input-height: 2.4rem;
@@ -1151,17 +1158,19 @@ $form-border: 1px solid #cdcdcd;
 $form-border-hover: 1px solid darken(#cdcdcd, 10%);
 $form-border-focus: 1px solid #898989;
 
-// Tables
+/* Tables */
+
 $stripes: #f0f0f0;
 $caption: darken($accent-color, 20%);
 
-// Code
+/* Code */
+
 $code-color: $font-color;
 $code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
 
-// Miscellaneous
+/* Miscellaneous */
 $highlight: #ffeea8;
 $bq-border: 8px solid $border-color;
 $error: #D33C40;</code></pre>
@@ -1209,7 +1218,7 @@ Follow</a>
 			</main>
 
 		</div>
-		
+
 	</section>
 
 

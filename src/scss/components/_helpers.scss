@@ -25,6 +25,10 @@
 	text-align: center;
 }
 
+.text-justify {
+	text-align: justify;
+}
+
 // Display
 .block {
 	display: block;
@@ -32,6 +36,10 @@
 
 .inline-block {
 	display: inline-block;
+}
+
+.inline {
+	display: inline;
 }
 
 // Horizontal center
@@ -66,6 +74,15 @@
 	visibility: hidden;
 }
 
+// Floats
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
 // Screen reader text for accessibility
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -73,12 +90,4 @@
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-}
-
-.float-left {
-	float: left;
-}
-
-.float-right {
-	float: right;
 }
