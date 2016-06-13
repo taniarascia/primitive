@@ -59,6 +59,19 @@ header p {
 	color: rgba(255, 255, 255, .9);
 }
 
+a.example-button {
+	border: 1px solid white;
+	color: white;
+}
+
+a.example-button:hover,
+a.example-button:active,
+a.example-button:focus {
+	border: 1px solid white;
+	background: white;
+	color: #EA8372;
+}
+
 .setup {
 	margin-bottom: 0;
 }
@@ -74,7 +87,7 @@ header p {
 		margin-bottom: 60px;
 	}
 	.installation {
-		padding: 60px;
+		padding: 20px;
 		border: 1px solid #efefef;
 		margin-top: -100px;
 		margin-bottom: -100px;
