@@ -10,11 +10,9 @@
 
 $grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
 $column-padding: 1rem;
-$row-margin: 1rem;
+$margin-bottom: 1rem;
 
-// The rows have a negative margin
-// which are offset by the padding 
-// on the columns.
+// The rows have a negative margin  which are offset by the padding on the columns.
 %column-padding {
 	padding-left: $column-padding;
 	padding-right: $column-padding;
@@ -28,7 +26,7 @@ $row-margin: 1rem;
 // Mobile column view
 %full-width-column {
 	width: 100%;
-	margin-bottom: $row-margin;
+	margin-bottom: $margin-bottom;
 }
 
 // Clearfix row
@@ -46,6 +44,7 @@ $row-margin: 1rem;
 .flex-row {
 	@extend %row-margin;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 }
 
@@ -59,7 +58,7 @@ $row-margin: 1rem;
 .flex-large {
 	@extend %column-padding;
 	flex-basis: 100%;
-	margin-bottom: $row-margin;
+	margin-bottom: $margin-bottom;
 }
 
 
