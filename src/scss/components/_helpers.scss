@@ -42,13 +42,6 @@
 	display: inline;
 }
 
-// Horizontal center
-.center {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-
 // Vertical center
 .vertical-center {
 	display: flex;
@@ -66,7 +59,7 @@
 	display: block !important;
 }
 
-.hidden {
+.hide {
 	display: none !important;
 }
 
@@ -81,6 +74,22 @@
 
 .float-right {
 	float: right;
+}
+
+.no-padding-top {
+	padding-top: 0;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0;
+}
+
+.padding-top {
+	padding-top: 2rem;
+}
+
+.padding-bottom {
+	padding-bottom: 2rem;
 }
 
 // Screen reader text for accessibility
