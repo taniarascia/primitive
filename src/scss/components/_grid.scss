@@ -50,8 +50,7 @@ $margin-bottom: 1rem;
 
 .flex-column {
 	@extend %column-padding;
-	flex-basis: auto;
-	flex-grow: 1;
+	flex: 1;
 }
 
 .flex-small,
@@ -101,8 +100,7 @@ $margin-bottom: 1rem;
 			margin-left: percentage($entry) * 0.01;
 		}
 		.flex-small {
-			flex-basis: auto;
-			flex-grow: 1;
+			flex: 1;
 			margin-bottom: 0;
 		}
 	}
@@ -126,8 +124,7 @@ $margin-bottom: 1rem;
 			margin-left: percentage($entry) * 0.01;
 		}
 		.flex-large {
-			flex-basis: auto;
-			flex-grow: 1;
+			flex: 1;
 			margin-bottom: 0;
 		}
 	}
