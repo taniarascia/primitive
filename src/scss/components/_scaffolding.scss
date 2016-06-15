@@ -178,11 +178,11 @@ dd {
 
 // Content
 .content-section {
-	padding: 30px 0;
+	padding: $content-padding-mobile;
 }
 
 @include small-breakpoint {
 	.content-section {
-		padding: 60px 0;
+		padding: $content-padding;
 	}
 }
