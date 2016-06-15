@@ -53,6 +53,7 @@ header h1 {
 	color: white;
 	font-size: 3rem;
 	margin: 0;
+	font-family: 'Megrim';
 }
 
 header p {
@@ -110,7 +111,7 @@ aside {
 
 aside h1 {
 	padding: 0 1rem;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	margin-bottom: 0;
 	margin-top: .5rem;
 	letter-spacing: -.05rem;
@@ -118,6 +119,7 @@ aside h1 {
 
 aside h1 a {
 	text-decoration: none;
+	font-family: 'Megrim';
 }
 
 aside ul {
@@ -241,6 +243,9 @@ article {
 	header {
 		margin: 0;
 		padding: 100px 0;
+	}
+	header h1 {
+		font-size: 4rem;
 	}
 	aside {
 		display: block;

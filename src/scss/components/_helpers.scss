@@ -76,6 +76,7 @@
 	float: right;
 }
 
+// Padding
 .no-padding-top {
 	padding-top: 0;
 }
@@ -90,6 +91,12 @@
 
 .padding-bottom {
 	padding-bottom: 2rem;
+}
+
+// Backgrounds
+
+.alternate-background {
+	background: $alternate-background;
 }
 
 // Screen reader text for accessibility

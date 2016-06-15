@@ -43,8 +43,15 @@ $background: #ffffff;
 $primary-color: #EA8372;
 $secondary-color: #FFB88C;
 $accent-color: #cdcdcd;
+$alternate-background: #fafafa;
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
+$highlight: #ffeea8;
+$error: #D33C40;
+
+/* Padding */
+
+
 
 /* Borders */
 
@@ -83,6 +90,7 @@ $round-buttons: 40px;
 $input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $input-buttons: ('[type=submit], [type=reset], [type=button]');
 $input-height: 2.4rem;
+$input-background: #ffffff;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid #cdcdcd;
 $form-border-hover: 1px solid darken(#cdcdcd, 10%);
@@ -96,12 +104,8 @@ $caption: darken($accent-color, 20%);
 /* Code */
 
 $code-color: $font-color;
-$code-family: Menlo,
-monospace;
+$code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
 
-/* Miscellaneous */
-$highlight: #ffeea8;
 $bq-border: 8px solid $border-color;
-$error: #D33C40;
