@@ -24,7 +24,7 @@
 
 // Buttons on hover
 %buttons-hover {
-	border: $button-border-width $button-border-style $button-border-color-hover;
+	border: $button-border-width $button-border-style darken($button-border-color, 10%);
 	background: $button-background-hover;
 	color: $button-color;
 	text-decoration: none;
@@ -32,6 +32,7 @@
 
 // Buttons on focus
 %buttons-focus {
+	border: $button-border-width $button-border-style darken($button-border-color, 10%);
 	background: darken($button-background, 10%);
 	color: $button-color;
 	text-decoration: none;
@@ -61,15 +62,18 @@ button,
 // Secondary button color
 .accent-button,
 a.accent-button {
-	color: $accent-button-color-hover;
+	color: $accent-button-color;
+	border: 1px solid $secondary-color;
 	background: $secondary-color;
 	&:hover {
 		color: $accent-button-color-hover;
+		border: 1px solid darken($secondary-color, 10%);
 		background: darken($secondary-color, 10%);
 	}
 	&:focus,
 	&:active {
 		color: $accent-button-color-hover;
+		border: 1px solid darken($secondary-color, 10%);
 		background: darken($secondary-color, 10%);
 	}
 }

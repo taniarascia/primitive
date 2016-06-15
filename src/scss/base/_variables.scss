@@ -71,15 +71,14 @@ $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-$button-border-width: 0px;
+$button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background;
-$button-border-color-hover: $button-background;
 $button-border-radius: $border-radius;
 $button-text-transform: uppercase;
 
 // Accent buttons
-$accent-botton-color: #ffffff;
+$accent-button-color: #ffffff;
 $accent-button-color-hover: #ffffff;
 
 // Muted Buttons

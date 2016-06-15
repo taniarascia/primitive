@@ -30,16 +30,25 @@
 		header h1 {
 			font-size: 4rem;
 		}
+		
+		.brand {
+			font-size: 1.2rem;
+		}
 	</style>
 </head>
 
 <body>
 
 	<nav>
-		<div class="container text-right">
-			<a href="#!">Support</a>
-			<a href="#!">Learn</a>
-			<a href="#!">Blog</a>
+		<div class="container">
+			<div class="inline-block float-left">
+				<a href="#!" class="brand">Brand</a>
+			</div>
+			<div class="inline-block float-right">
+				<a href="#!">Support</a>
+				<a href="#!">Learn</a>
+				<a href="#!">Blog</a>
+			</div>
 		</div>
 	</nav>
 
@@ -92,8 +101,16 @@ nav a {
 	color: white;
 }
 
+nav a:hover {
+	text-decoration: none;
+}
+
 header h1 {
 	font-size: 4rem;
+}
+
+.brand {
+	font-size: 1.2rem;
 }</pre>
 
 				<h2>Unordered List</h2>
@@ -291,6 +308,10 @@ header h1 {
 			</div>
 		</div>
 	</footer>
+
+	<div class="small-container text-center padding-top padding-bottom">
+		<a href="http://taniarascia.github.io/primitive/">Primitive</a>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/script.js"></script>
