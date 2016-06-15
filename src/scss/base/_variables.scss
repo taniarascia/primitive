@@ -66,6 +66,7 @@ $borders: $border-width $border-style $border-color;
 /* Buttons */
 
 $button-background: $primary-color;
+$button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -73,8 +74,13 @@ $button-font-size: 1rem;
 $button-border-width: 0px;
 $button-border-style: solid;
 $button-border-color: $button-background;
+$button-border-color-hover: $button-background;
 $button-border-radius: $border-radius;
-$button-borders: $button-border-width $button-border-style $button-border-color;
+$button-text-transform: uppercase;
+
+// Accent buttons
+$accent-botton-color: #ffffff;
+$accent-button-color-hover: #ffffff;
 
 // Muted Buttons
 $muted-border: 1px solid $accent-color;

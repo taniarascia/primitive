@@ -5,14 +5,14 @@
 %buttons {
 	display: inline-block;
 	line-height: 1;
-	border: $button-borders;
+	border: $button-border-width $button-border-style $button-border-color;
 	border-radius: $button-border-radius;
 	background: $button-background;
 	color: $button-color;
 	font-weight: $button-font-weight;
 	font-family: $button-font-family;
 	font-size: $button-font-size;
-	text-transform: uppercase;
+	text-transform: $button-text-transform;
 	padding: .7rem 1.2rem;
 	margin: .5rem 0;
 	white-space: nowrap;
@@ -24,7 +24,8 @@
 
 // Buttons on hover
 %buttons-hover {
-	background: darken($button-background, 10%);
+	border: $button-border-width $button-border-style $button-border-color-hover;
+	background: $button-background-hover;
 	color: $button-color;
 	text-decoration: none;
 }
@@ -60,12 +61,15 @@ button,
 // Secondary button color
 .accent-button,
 a.accent-button {
+	color: $accent-button-color-hover;
 	background: $secondary-color;
 	&:hover {
+		color: $accent-button-color-hover;
 		background: darken($secondary-color, 10%);
 	}
 	&:focus,
 	&:active {
+		color: $accent-button-color-hover;
 		background: darken($secondary-color, 10%);
 	}
 }
