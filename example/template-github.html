@@ -18,10 +18,17 @@
 		}
 		
 		nav a {
-			padding: 20px;
+			padding: 10px;
 			line-height: 55px;
 			font-weight: bold;
-			font-size: .9rem;
+			font-size: .8rem;
+		}
+		
+		@media screen and (min-width: 600px) {
+			nav a {
+				padding: 20px;
+				font-size: .9rem;
+			}
 		}
 		
 		header h1 {
@@ -65,7 +72,7 @@
 
 	<main>
 
-		<section class="content-section">
+		<section class="content-section no-padding-bottom">
 			<div class="container text-center">
 				<div class="row">
 					<div class="small-33">
@@ -92,29 +99,19 @@
 				<h1 class="text-center">Regular Content</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hos contra singulos dici est melius. Est, ut dicis, inquam. Si enim ad populum me vocas, eum. Primum in nostrane potestate est, quid meminerimus? </p>
 				<h2>Preformatted</h2>
-				<pre>nav {
-	background: #F5F5F5;
-	height: 55px;
-	border-bottom: 1px solid #e5e5e5;
-}
+				<pre># This is a comment
+class Person
 
-nav a {
-	padding: 20px;
-	line-height: 55px;
-	font-weight: bold;
-	font-size: .9rem;
-}
+  attr_accessor :name
 
-header h1 {
-	font-size: 3rem;
-}
+  def initialize(attributes = {})
+    @name = attributes[:name]
+  end
 
-footer {
-	font-size: .9rem;
-}
-
-.brand { font-size: 1.2rem; color: #333; }
-</pre>
+  def self.greet
+    "hello"
+  end
+end</pre>
 
 				<h2>Unordered List</h2>
 				<ul>

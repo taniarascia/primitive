@@ -17,11 +17,22 @@
 		}
 		
 		nav a {
-			padding: 20px;
+			padding: 10px;
 			line-height: 80px;
 			font-weight: bold;
-			font-size: .9rem;
+			font-size: .8rem;
 			color: white;
+		}
+		
+		@media screen and (min-width: 600px) {
+			nav {
+				height: 80px;
+			}
+			nav a {
+				line-height: 80px;
+				padding: 20px;
+				font-size: .9rem;
+			}
 		}
 		
 		nav a:hover {
@@ -61,7 +72,7 @@
 				<a href="#!">Support</a>
 				<a href="#!">Learn</a>
 				<a href="#!">Blog</a>
-			</div> 
+			</div>
 		</div>
 	</nav>
 
@@ -76,7 +87,7 @@
 
 	<main>
 
-		<section class="content-section">
+		<section class="content-section no-padding-bottom">
 			<div class="container text-center">
 				<div class="row">
 					<div class="small-33">
@@ -103,42 +114,19 @@
 				<h1 class="text-center">Regular Content</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hos contra singulos dici est melius. Est, ut dicis, inquam. Si enim ad populum me vocas, eum. Primum in nostrane potestate est, quid meminerimus? </p>
 				<h2>Preformatted</h2>
-				<pre>nav {
-	background: black;
-	height: 80px;
-}
+				<pre># This is a comment
+class Person
 
-nav a {
-	padding: 20px;
-	line-height: 80px;
-	font-weight: bold;
-	font-size: .9rem;
-	color: white;
-}
+  attr_accessor :name
 
-nav a:hover {
-	color: #2ebd59;
-	text-decoration: none;
-}
+  def initialize(attributes = {})
+    @name = attributes[:name]
+  end
 
-header h1 {
-	font-size: 3rem;
-	font-weight: 600;
-}
-
-footer {
-	background: black;
-	color: white;
-	font-size: .9rem;
-}
-
-footer h3 {
-	color: white;
-}
-
-.brand {
-	font-size: 1.2rem;
-}</pre>
+  def self.greet
+    "hello"
+  end
+end</pre>
 
 				<h2>Unordered List</h2>
 				<ul>
