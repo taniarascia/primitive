@@ -22,6 +22,7 @@ $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
 $font-size: 1rem;
+$body-font-size: 1rem;
 $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
@@ -48,6 +49,7 @@ $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 $highlight: #ffeea8;
 $error: #D33C40;
+$bq-border: 8px solid #cdcdcd;
 
 /* Padding */
 
@@ -114,5 +116,3 @@ $code-color: $font-color;
 $code-family: Menlo, monospace;
 $code-background: #f4f4f4;
 $code-borders: $borders;
-
-$bq-border: 8px solid $border-color;

@@ -293,6 +293,10 @@ article {
 	padding-top: 1rem;
 }
 
+.templates a img:hover {
+	opacity: .8;
+}
+
 ::selection {
 	background: #fae6e2;
 }

@@ -125,11 +125,35 @@
 
 &lt;/html&gt;</code></pre>
 						</article>
-						
-						<article>
-						<h3>Example Template</h3>
+
+						<article class="templates">
+							<h3>Example Template</h3>
 							<p>An example template is provided, so that you may make changes to the colors and other configuration and see how the final product looks in a real-world example.</p>
-						<a href="example/template.html" class="button">View Template</a>
+							<a href="example/template.html" class="button">View Template</a>
+							<p>Here are a few examples of how making a few small changes can transform the template.</p>
+
+							<div class="row">
+								<div class="small-25">
+									<a href="template-slack.html">
+										<img src="example/images/slack.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="template-apple.html">
+										<img src="example/images/apple.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="template-github.html">
+										<img src="example/images/github.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="template-spotify.html">
+										<img src="example/images/spotify.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+							</div>
 						</article>
 					</section>
 
@@ -1136,6 +1160,7 @@ $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
 $font-size: 1rem;
+$body-font-size: 1rem;
 $line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
@@ -1162,6 +1187,7 @@ $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 $highlight: #ffeea8;
 $error: #D33C40;
+$bq-border: 8px solid $border-color;
 
 /* Padding */
 
@@ -1180,15 +1206,20 @@ $borders: $border-width $border-style $border-color;
 /* Buttons */
 
 $button-background: $primary-color;
+$button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
 $button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
-$button-border-width: 0px;
+$button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
-$button-borders: $button-border-width $button-border-style $button-border-color;
+$button-text-transform: uppercase;
+
+// Accent buttons
+$accent-button-color: #ffffff;
+$accent-button-color-hover: #ffffff;
 
 // Muted Buttons
 $muted-border: 1px solid $accent-color;
@@ -1222,14 +1253,12 @@ $caption: darken($accent-color, 20%);
 $code-color: $font-color;
 $code-family: Menlo, monospace;
 $code-background: #f4f4f4;
-$code-borders: $borders;
-
-$bq-border: 8px solid $border-color;</code></pre>
+$code-borders: $borders;</code></pre>
 
 							<p>Changing these default configurations will go a long way in setting the tone of the rest of your site.</p>
 							<p>Use the example template to see how the changes you make to <strong>_variables.scss</strong> look.</p>
 							<p><a href="example/template.html" class="button">Example Template</a></p>
-						   <p>From here, the design is up to you. Happy coding!</p>
+							<p>From here, the design is up to you. Happy coding!</p>
 
 						</article>
 
