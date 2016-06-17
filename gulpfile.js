@@ -14,7 +14,9 @@ gulp.task('workflow', function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(cssnano({zindex: false}))
+    .pipe(cssnano({
+      zindex: false
+    }))
     .pipe(sourcemaps.write('./'))
 
   .pipe(gulp.dest('./dist/css/'))

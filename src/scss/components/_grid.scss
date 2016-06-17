@@ -1,7 +1,9 @@
 /* Grid
 =============== */
 
+
 /* Grid */
+
 
 /* All grid sizes are based on percentages and placed in an array. Remove
  * any you don't need. Any decimal will be rounded down for its respective
@@ -14,110 +16,111 @@ $margin-bottom: 1rem;
 
 // The rows have a negative margin  which are offset by the padding on the columns.
 %column-padding {
-	padding-left: $column-padding;
-	padding-right: $column-padding;
+  padding-left: $column-padding;
+  padding-right: $column-padding;
 }
 
 %row-margin {
-	margin-left: -$column-padding;
-	margin-right: -$column-padding;
+  margin-left: -$column-padding;
+  margin-right: -$column-padding;
 }
 
 // Mobile column view
 %full-width-column {
-	width: 100%;
-	margin-bottom: $margin-bottom;
+  width: 100%;
+  margin-bottom: $margin-bottom;
 }
 
 // Clearfix row
 .row {
-	@extend %row-margin;
-	&::before,
-	&::after {
-		display: block;
-		content: ' ';
-		clear: both;
-	}
+  @extend %row-margin;
+  &::before,
+  &::after {
+    display: block;
+    content: ' ';
+    clear: both;
+  }
 }
 
 // Flex row
 .flex-row {
-	@extend %row-margin;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+  @extend %row-margin;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .flex-column {
-	@extend %column-padding;
-	flex: 1;
+  @extend %column-padding;
+  flex: 1;
 }
 
 .flex-small,
 .flex-large {
-	@extend %column-padding;
-	flex-basis: 100%;
-	margin-bottom: $margin-bottom;
+  @extend %column-padding;
+  flex-basis: 100%;
+  margin-bottom: $margin-bottom;
 }
+
 
 /* Mobile view */
 
 // On mobile, all columns are full width with a bottom margin
 @each $entry in $grid {
-	.small-#{floor($entry)},
-	.large-#{floor($entry)} {
-		@extend %full-width-column;
-		@extend %column-padding;
-	}
-	.column-#{floor($entry)} {
-		width: percentage($entry) * 0.01;
-		float: left;
-		@extend %column-padding;
-	}
+  .small-#{floor($entry)},
+  .large-#{floor($entry)} {
+    @extend %full-width-column;
+    @extend %column-padding;
+  }
+  .column-#{floor($entry)} {
+    width: percentage($entry) * 0.01;
+    float: left;
+    @extend %column-padding;
+  }
 }
 
 
 /* Small screen breakpoint */
 
 @include small-breakpoint {
-	// Float all columns to the left for small screens
-	@each $entry in $grid {
-		.small-#{floor($entry)} {
-			width: percentage($entry) * 0.01;
-			float: left;
-			margin-bottom: 0;
-		}
-		// Small offsets
-		.push-small-#{floor($entry)} {
-			margin-left: percentage($entry) * 0.01;
-		}
-		.flex-small {
-			flex: 1;
-			margin-bottom: 0;
-		}
-	}
+  // Float all columns to the left for small screens
+  @each $entry in $grid {
+    .small-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      float: left;
+      margin-bottom: 0;
+    }
+    // Small offsets
+    .push-small-#{floor($entry)} {
+      margin-left: percentage($entry) * 0.01;
+    }
+    .flex-small {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
 }
 
 
 /* Large screen breakpoint */
 
 @include large-breakpoint {
-	// Float columns to the left at for large screens
-	@each $entry in $grid {
-		.large-#{floor($entry)} {
-			width: percentage($entry) * 0.01;
-			float: left;
-			padding-left: 1rem;
-			padding-right: 1rem;
-			margin-bottom: 0;
-		}
-		// Large offsets
-		.push-large-#{floor($entry)} {
-			margin-left: percentage($entry) * 0.01;
-		}
-		.flex-large {
-			flex: 1;
-			margin-bottom: 0;
-		}
-	}
+  // Float columns to the left at for large screens
+  @each $entry in $grid {
+    .large-#{floor($entry)} {
+      width: percentage($entry) * 0.01;
+      float: left;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 0;
+    }
+    // Large offsets
+    .push-large-#{floor($entry)} {
+      margin-left: percentage($entry) * 0.01;
+    }
+    .flex-large {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
 }

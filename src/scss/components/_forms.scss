@@ -3,127 +3,127 @@
 
 // Display for all input fields (except buttons and checkbox) 
 %forms {
-	display: block;
-	background: transparent;
-	border: $form-border;
-	border-radius: $border-radius;
-	padding: .6rem;
-	outline: none;
-	vertical-align: middle;
-	height: $input-height;
-	background: $input-background;
+  display: block;
+  background: transparent;
+  border: $form-border;
+  border-radius: $border-radius;
+  padding: .6rem;
+  outline: none;
+  vertical-align: middle;
+  height: $input-height;
+  background: $input-background;
 }
 
 // Input fields on hover
 %forms-hover {
-	border: $form-border-hover;
+  border: $form-border-hover;
 }
 
 // Input fields on focus 
 %forms-focus {
-	border: $form-border-focus;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 40%);
+  border: $form-border-focus;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 40%);
 }
 
 // Variable containing all input fields 
 #{$input-fields} {
-	width: 100%; // Expands the full width of the container
-	max-width: 100%; // But no more!
-	@extend %forms;
-	&:hover {
-		@extend %forms-hover;
-	}
-	&:focus,
-	&:active {
-		@extend %forms-focus;
-	}
+  width: 100%; // Expands the full width of the container
+  max-width: 100%; // But no more!
+  @extend %forms;
+  &:hover {
+    @extend %forms-hover;
+  }
+  &:focus,
+  &:active {
+    @extend %forms-focus;
+  }
 }
 
 // Horizontal forms have no set width on large screen view 
 @include small-breakpoint {
-	.horizontal-form {
-		#{$input-fields} {
-			display: inline-block;
-			width: auto;
-		}
-	}
+  .horizontal-form {
+    #{$input-fields} {
+      display: inline-block;
+      width: auto;
+    }
+  }
 }
 
 textarea {
-	overflow: auto;
-	height: auto;
+  overflow: auto;
+  height: auto;
 }
 
 fieldset {
-	border: 1px solid $border-color;
-	border-radius: $border-radius;
-	padding: .5rem 1rem;
-	margin: 15px 2px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: .5rem 1rem;
+  margin: 15px 2px;
 }
 
 legend {
-	padding: 0 .5rem;
-	font-weight: 600;
+  padding: 0 .5rem;
+  font-weight: 600;
 }
 
 // Fix issues with select
 select {
-	color: $font-color;
-	-webkit-appearance: none;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==);
-	background-position: right center;
-	background-repeat: no-repeat;
-	line-height: 1;
-	-moz-appearance: none;
+  color: $font-color;
+  -webkit-appearance: none;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==);
+  background-position: right center;
+  background-repeat: no-repeat;
+  line-height: 1;
+  -moz-appearance: none;
 }
 
 // Make range full width
 [type=range] {
-	width: 100%;
+  width: 100%;
 }
 
 // Labels
 label {
-	font-weight: 600;
-	max-width: 100%;
-	display: block;
-	margin: .5rem 0;
+  font-weight: 600;
+  max-width: 100%;
+  display: block;
+  margin: .5rem 0;
 }
 
 @include small-breakpoint {
-	.horizontal-form {
-		// Horizontal forms are inline-block
-		label,
-		#{$input-buttons} {
-			display: inline-block;
-			margin: .5rem 0;
-		}
-	}
-	.split-form {
-		// Split forms have right aligned labels and margins on the column
-		label {
-			text-align: right;
-			padding: 0 .5rem;
-			margin-bottom: 1rem;
-		}
-	}
+  .horizontal-form {
+    // Horizontal forms are inline-block
+    label,
+    #{$input-buttons} {
+      display: inline-block;
+      margin: .5rem 0;
+    }
+  }
+  .split-form {
+    // Split forms have right aligned labels and margins on the column
+    label {
+      text-align: right;
+      padding: 0 .5rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 // Errors
 input,
 select,
 textarea {
-	&.has-error {
-		border: 1px solid $error;
-		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($error, 35%);
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		&.has-error {
-			@extend .has-error;
-		}
-	}
+  &.has-error {
+    border: 1px solid $error;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($error, 35%);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &.has-error {
+      @extend .has-error;
+    }
+  }
 }
 
 // Placeholder Text 
@@ -131,5 +131,5 @@ textarea {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-	color: $placeholder;
+  color: $placeholder;
 }
