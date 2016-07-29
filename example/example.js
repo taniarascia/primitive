@@ -1,10 +1,10 @@
 $(document).ready(function () {
-$('#eighties').click(function (){
-   $('link[href="example/example.css"]').attr('href','example/eighties.css');
-});
-$('#boring').click(function (){
-   $('link[href="example/eighties.css"]').attr('href','example/example.css');
-});
+	$('#eighties').click(function () {
+		$('link[href="example/example.css"]').attr('href', 'example/eighties.css');
+	});
+	$('#boring').click(function () {
+		$('link[href="example/eighties.css"]').attr('href', 'example/example.css');
+	});
 	$(document).on("scroll", onScroll);
 
 	// Smooth scroll
@@ -16,9 +16,9 @@ $('#boring').click(function (){
 		})
 		$(this).addClass('active');
 
-		var target = this.hash,
-			menu = target;
-		$target = $(target);
+		var target = this.hash;
+		var menu = target;
+		var $target = $(target);
 		$('html, body').stop().animate({
 			'scrollTop': $target.offset().top + 2
 		}, 300, 'swing', function () {
@@ -30,7 +30,7 @@ $('#boring').click(function (){
 	// Active scroll
 	function onScroll(event) {
 		var scrollPos = $(document).scrollTop();
-		$('aside a').each(function () {
+		$('nav a').each(function () {
 			var currLink = $(this);
 			var refElement = $(currLink.attr("href"));
 			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {

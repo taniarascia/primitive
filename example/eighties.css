@@ -143,8 +143,9 @@ aside nav {
 
 aside li.title {
 	color: #FF2155;
-	font-size: .85rem;
+	font-size: 1rem;
 	padding: 1rem 1rem 0;
+	font-family: 'Press Start 2P';
 }
 
 aside li a {
@@ -154,26 +155,32 @@ aside li a {
 	color: #fff;
 	text-decoration: none;
 	font-size: .9rem;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
 
 aside li a.active {
-	color: #F7F461;
+	background: #FF2155 !important;
+	border: 1px solid #fff;
+	border-radius: 4px;
 }
 
 aside li a:hover,
 aside li a:active,
 aside li a:focus {
 	background: rgba(20, 20, 20, .9);
-	color: #F7F461;
+	color: #fff;
 	text-decoration: none;
+	border: 1px solid #fff;
 }
 
 aside li a.active:hover,
 aside li a.active:active,
 aside li a.active:focus {
 	background: rgba(20, 20, 20, .9);
-	color: #F7F461;
+	color: #fff;
 	text-decoration: none;
+	border: 1px solid #fff;
 }
 
 .fa {
@@ -182,7 +189,7 @@ aside li a.active:focus {
 }
 
 .active .fa {
-	color: #F7F461;
+	color: #fff;
 }
 
 .toggle-nav {
@@ -385,9 +392,9 @@ pre[class*="language-"] {
 }
 
 :not(pre) > code {
-	border: 1px solid #ED1C24;
+	border: 1px solid #FFB8DE;
 	background: transparent;
-	color: #ED1C24;
+	color: #FFB8DE;
 }
 
 pre code,
