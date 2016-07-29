@@ -327,6 +327,12 @@ article {
 	opacity: .8;
 }
 
+.templates .row {
+	background: white;
+	padding: 1rem;
+	border-radius: 4px;
+}
+
 ::selection {
 	background: #FF2155;
 }
