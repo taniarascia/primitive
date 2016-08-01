@@ -36,10 +36,11 @@ h6 {
 	font-family: 'Press Start 2P';
 	letter-spacing: -.05rem;
 	color: #FCB42A !important;
+	font-weight: 400;
 }
 
 h2 {
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 1.5rem;
 }
 
@@ -67,6 +68,7 @@ header h1 {
 
 header p {
 	color: rgba(255, 255, 255, .9);
+	font-family: 'Press Start 2P';
 }
 
 a.example-button {
@@ -279,10 +281,11 @@ article {
 @media screen and (min-width: 1080px) {
 	header {
 		margin: 0;
-		padding: 100px 0;
+		padding: 60px 0 100px;
 	}
 	header h1 {
 		font-size: 4rem;
+		margin-bottom: 60px;
 	}
 	aside {
 		display: block;
@@ -417,6 +420,7 @@ a.muted-button {
 	!important;
 	font-family: 'Press Start 2P';
 	color: #fff;
+	font-size: .9rem;
 }
 
 .button:hover,
@@ -455,7 +459,7 @@ input.has-error {
 }
 
 .striped-table tbody tr:nth-child(odd) {
-	background-color: rgba(20, 20, 20, .95);
+	background-color: rgba(40, 40, 40, .95);
 }
 
 [type=color],
@@ -477,4 +481,11 @@ textarea {
 	background: rgba(40, 40, 40, .95);
 	border: 1px solid rgba(80, 80, 80, .95);
 	box-shadow: none;
+}
+
+pre,
+pre code,
+code,
+:not(pre)>code {
+	font-family: Courier New, monospace;
 }
