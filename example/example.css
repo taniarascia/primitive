@@ -1,7 +1,7 @@
 /* Primitive */
 
 body {
-	font-family: 'Open Sans';
+	font-family: 'Roboto';
 }
 
 hr {
@@ -16,7 +16,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-	color: #EA8372;
+	color: #1E6BD6;
 }
 
 
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Open Sans';
+	font-family: 'Roboto';
 	letter-spacing: -.05rem;
 }
 
@@ -295,10 +295,6 @@ article {
 
 .templates a img:hover {
 	opacity: .8;
-}
-
-::selection {
-	background: #fae6e2;
 }
 
 #eighties {

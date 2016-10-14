@@ -11,7 +11,7 @@
 	<meta name="description" content="A simple Sass starter pack.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link rel="stylesheet" href="example/prism.css">
@@ -933,15 +933,17 @@ $desktop: $medium;
 
 /* Typography */
 
+// Body font
+$font-size: 1rem;
+$body-font-size: 1rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
-$font-size: 1rem;
-$body-font-size: 1rem;
-$line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.5;
 
+// Headings
 $heading-font-color: #404040;
 $heading-font-weight: 400;
 $heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -957,15 +959,15 @@ $h6: 1.1rem;
 /* Colors */
 
 $background: #ffffff;
-$primary-color: #EA8372;
-$secondary-color: #FFB88C;
+$primary-color: #1E6BD6;
+$secondary-color: #47CE90;
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 $highlight: #ffeea8;
 $error: #D33C40;
-$bq-border: 8px solid $border-color;
+$bq-border: 8px solid #cdcdcd;
 
 /* Padding */
 
@@ -996,6 +998,7 @@ $button-border-radius: $border-radius;
 $button-text-transform: uppercase;
 
 // Accent buttons
+$accent-button-background: $secondary-color;
 $accent-button-color: #ffffff;
 $accent-button-color-hover: #ffffff;
 

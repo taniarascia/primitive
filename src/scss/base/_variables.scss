@@ -17,18 +17,22 @@ $desktop: $medium;
 
 /* Typography */
 
+// Body font
+$font-size: 1rem;
+$body-font-size: 1rem;
 $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
-$font-size: 1rem;
-$body-font-size: 1rem;
-$line-height: 1.5;
 $font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.5;
+
+// Headings
 $heading-font-color: #404040;
 $heading-font-weight: 400;
 $heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;
+
 $h1: 2.2rem;
 $h2: 1.9rem;
 $h3: 1.6rem;
@@ -78,6 +82,7 @@ $button-border-radius: $border-radius;
 $button-text-transform: uppercase;
 
 // Accent buttons
+$accent-button-background: $secondary-color;
 $accent-button-color: #ffffff;
 $accent-button-color-hover: #ffffff;
 

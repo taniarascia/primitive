@@ -77,7 +77,7 @@ $margin-bottom: 1rem;
     float: left;
     @extend %column-padding;
   }
-}
+} 
 
 
 /* Small screen breakpoint */
@@ -94,11 +94,12 @@ $margin-bottom: 1rem;
     .push-small-#{floor($entry)} {
       margin-left: percentage($entry) * 0.01;
     }
-    .flex-small {
-      flex: 1;
-      margin-bottom: 0;
-    }
   }
+	
+	.flex-small {
+		flex: 1;
+		margin-bottom: 0;
+	}
 }
 
 
@@ -118,9 +119,9 @@ $margin-bottom: 1rem;
     .push-large-#{floor($entry)} {
       margin-left: percentage($entry) * 0.01;
     }
-    .flex-large {
-      flex: 1;
-      margin-bottom: 0;
-    }
   }
+	.flex-large {
+		flex: 1;
+		margin-bottom: 0;
+	}
 }
