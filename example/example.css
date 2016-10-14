@@ -1,7 +1,7 @@
 /* Primitive */
 
 body {
-	font-family: 'Roboto';
+	font-family: 'Open Sans', sans-serif;
 }
 
 hr {
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto';
+	font-family: 'Open Sans', sans-serif;
 	letter-spacing: -.05rem;
 }
 
