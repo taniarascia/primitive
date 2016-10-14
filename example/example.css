@@ -45,7 +45,7 @@ h3 {
 
 header {
 	margin-top: 60px;
-	background: linear-gradient(to right, #FFB88C, #EA8372);
+	background: linear-gradient(to right, #7474BF, #348AC7);
 	padding: 60px 0;
 }
 
@@ -147,7 +147,7 @@ aside li a {
 }
 
 aside li a.active {
-	color: #EA8372;
+	color: #1E6BD6;
 }
 
 aside li a:hover,
@@ -162,7 +162,7 @@ aside li a.active:hover,
 aside li a.active:active,
 aside li a.active:focus {
 	background: #f0f0f0;
-	color: #EA8372;
+	color: #1E6BD6;
 	text-decoration: none;
 }
 
@@ -172,7 +172,7 @@ aside li a.active:focus {
 }
 
 .active .fa {
-	color: #EA8372;
+	color: #1E6BD6;
 }
 
 .toggle-nav {
@@ -226,7 +226,7 @@ article {
 	margin-bottom: .5rem;
 	padding-top: .25rem;
 	padding-bottom: .25rem;
-	background: linear-gradient(to right, #FFB88C, #EA8372);
+	background: linear-gradient(to right, #7474BF, #348AC7);
 	border: 0px solid #aaa;
 	font-weight: 600;
 	color: white;
@@ -299,18 +299,6 @@ article {
 
 ::selection {
 	background: #fae6e2;
-}
-
-body::-webkit-scrollbar {
-	background: linear-gradient(to top, #EB8573, #FFB88C);
-}
-
-body::-webkit-scrollbar-thumb {
-	background: linear-gradient(to top, #EB8573, #FFB88C);
-}
-
-body::-webkit-scrollbar-track {
-	background: #eee;
 }
 
 #eighties {
