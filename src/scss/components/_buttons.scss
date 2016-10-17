@@ -44,11 +44,9 @@ a.button,
 button,
 #{$input-buttons} {
 	@extend %buttons;
-	&:before {
-		// Ensure that text inside button classes are vertically centered
-		content: '';
-		display: inline-block;
-		vertical-align: middle;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
 	}
 	&:hover {
 		@extend %buttons-hover;
