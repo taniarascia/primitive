@@ -11,7 +11,7 @@
 	<meta name="description" content="A simple Sass starter pack.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link rel="stylesheet" href="example/prism.css">
@@ -20,7 +20,7 @@
 	<link rel="icon" href="example/favicon.png">
 </head>
 
-	
+
 
 <body>
 
@@ -28,9 +28,29 @@
 		<div class="small-container">
 			<h1>Primitive</h1>
 			<p>Primitive is a simple starter pack built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
-			<a href="https://github.com/taniarascia/primitive" target="_blank" class="button muted-button example-button">GitHub Source</a> <a href="https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.css" download class="button muted-button example-button">Download CSS</a>
-			<a id="boring" class="button">Boring Mode</a>
-			<a id="eighties" class="button">EIGHTIES MODE!</a>
+			<div class="padding-top">
+				<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+				<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+				<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Primitive, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
+				<script>
+					! function (d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0],
+							p = /^http:/.test(d.location) ? 'http' : 'https';
+						if (!d.getElementById(id)) {
+							js = d.createElement(s);
+							js.id = id;
+							js.src = p + '://platform.twitter.com/widgets.js';
+							fjs.parentNode.insertBefore(js, fjs);
+						}
+					}(document, 'script', 'twitter-wjs');
+				</script>
+				<a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
+Follow</a>
+			</div>
+			<div>
+				<a id="boring" class="button">Boring Mode</a>
+				<a id="eighties" class="button">EIGHTIES MODE!</a>
+			</div>
 		</div>
 	</header>
 
@@ -1047,25 +1067,7 @@ $code-borders: $borders;</code></pre>
 						<hr>
 						<p style="padding-top: 20px;">
 							Built by <a href="https://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/primitive" target="_blank">View on GitHub</a>. Open source, of course.</p>
-						<div style="padding-top: 10px;">
-							<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-							<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-							<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Primitive, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
-							<script>
-								! function (d, s, id) {
-									var js, fjs = d.getElementsByTagName(s)[0],
-										p = /^http:/.test(d.location) ? 'http' : 'https';
-									if (!d.getElementById(id)) {
-										js = d.createElement(s);
-										js.id = id;
-										js.src = p + '://platform.twitter.com/widgets.js';
-										fjs.parentNode.insertBefore(js, fjs);
-									}
-								}(document, 'script', 'twitter-wjs');
-							</script>
-							<a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
-Follow</a>
-						</div>
+
 					</div>
 				</footer>
 			</main>

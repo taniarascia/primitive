@@ -2,8 +2,8 @@
   =============== */
 
 // Classic clearfix 
-.clearfix:before,
-.clearfix:after {
+.clearfix::before,
+.clearfix::after {
 	content: " ";
 	display: block;
 }
@@ -49,7 +49,7 @@
 	justify-content: center;
 }
 
-// Responsive Images
+// Responsive images
 .responsive-image {
 	max-width: 100%;
 }
@@ -93,6 +93,7 @@
 	padding-bottom: $padding;
 }
 
+// Margins
 .no-margin-top {
 	margin-top: 0;
 }
