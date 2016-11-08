@@ -15,6 +15,19 @@ $large: 1200px;
 $mobile: $x-small;
 $desktop: $medium;
 
+/* Colors */
+
+$background: #ffffff;
+$primary-color: #1E6BD6;
+$secondary-color: #47CE90;
+$accent-color: #cdcdcd;
+$alternate-background: #fafafa;
+$link-color: $primary-color;
+$link-hover-color: lighten($link-color, 15%);
+$highlight: #ffeea8;
+$error: #D33C40;
+$bq-border: 8px solid #cdcdcd;
+
 /* Typography */
 
 // Body font
@@ -39,19 +52,6 @@ $h3: 1.6rem;
 $h4: 1.4rem;
 $h5: 1.2rem;
 $h6: 1.1rem;
-
-/* Colors */
-
-$background: #ffffff;
-$primary-color: #1E6BD6;
-$secondary-color: #47CE90;
-$accent-color: #cdcdcd;
-$alternate-background: #fafafa;
-$link-color: $primary-color;
-$link-hover-color: lighten($link-color, 15%);
-$highlight: #ffeea8;
-$error: #D33C40;
-$bq-border: 8px solid #cdcdcd;
 
 /* Padding */
 
@@ -99,9 +99,8 @@ $round-buttons: 40px;
 
 /* Forms */
 
-$input-fields: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
-$input-buttons: ('[type=submit], [type=reset], [type=button]');
-$input-height: 2.4rem;
+$forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
 $input-background: #ffffff;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid #cdcdcd;

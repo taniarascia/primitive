@@ -39,10 +39,7 @@
 }
 
 // Apply styles to .button class, button element, and button-based inputs
-.button,
-a.button,
-button,
-#{$input-buttons} {
+#{$buttons} {
 	@extend %buttons;
 	&::-moz-focus-inner {
 		border: 0;
@@ -63,11 +60,7 @@ a.accent-button {
 	color: $accent-button-color;
 	border: 1px solid $accent-button-background;
 	background: $accent-button-background;
-	&:hover {
-		color: $accent-button-color-hover;
-		border: 1px solid darken($accent-button-background, 10%);
-		background: darken($accent-button-background, 10%);
-	}
+	&:hover,
 	&:focus,
 	&:active {
 		color: $accent-button-color-hover;
@@ -82,11 +75,7 @@ a.muted-button {
 	background: $muted-background;
 	border: $muted-border;
 	color: $muted-color;
-	&:hover {
-		color: $muted-color;
-		border: $muted-border-hover;
-		background: $muted-background-hover;
-	}
+	&:hover,
 	&:focus,
 	&:active {
 		color: $muted-color-hover;

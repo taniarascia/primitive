@@ -60,6 +60,10 @@ header p {
 	color: rgba(255, 255, 255, .9);
 }
 
+header a {
+	color: white;
+}
+
 a.example-button {
 	border: 1px solid white;
 	color: white;

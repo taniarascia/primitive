@@ -25,7 +25,7 @@
 }
 
 // Variable containing all input fields 
-#{$input-fields} {
+#{$forms} {
 	width: 100%; // Expands the full width of the container
 	max-width: 100%; // But no more!
 	@extend %forms;
@@ -41,7 +41,7 @@
 // Horizontal forms have no set width on large screen view 
 @include small-breakpoint {
 	.horizontal-form {
-		#{$input-fields} {
+		#{$forms} {
 			display: inline-block;
 			width: auto;
 		}
@@ -91,7 +91,7 @@ label {
 	.horizontal-form {
 		// Horizontal forms are inline-block
 		label,
-		#{$input-buttons} {
+		#{$buttons} {
 			display: inline-block;
 			margin: .5rem 0;
 		}
