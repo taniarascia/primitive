@@ -19,11 +19,11 @@ gulp.task('workflow', function () {
             zindex: false
         }))
         .pipe(sourcemaps.write('./'))
-
-        .pipe(rename({
-            suffix: '.min'
+        .pipe(rename(function (path) {
+            if(path.extname === '.css') {
+                path.basename += '.min';
+            }
         }))
-
         .pipe(gulp.dest('./dist/css/'))
 });
 
