@@ -4,7 +4,7 @@ Primitive is a simple starter pack built with Sass that provides helpful, browse
 
 ## Getting Started
 
-* **Quick start** - [Download the stylesheet](https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.css).
+* **Quick start** - [Download the stylesheet](https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.min.css).
 * **Sass integration** - Clone the repo: `git clone https://github.com/taniarascia/primitive.git`.
 
 ## Documentation
