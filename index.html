@@ -11,7 +11,6 @@
 	<meta name="description" content="A simple Sass starter pack.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/main.min.css">
 	<link rel="stylesheet" href="example/prism.css">
@@ -26,9 +25,7 @@
 		<div class="small-container">
 			<h1>Primitive</h1>
 			<p>Primitive is a simple starter pack built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
-			<div class="padding-top">
-				<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-				<iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+				<p><iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
 				<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Primitive, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
 				<script>
 					! function (d, s, id) {
@@ -42,13 +39,11 @@
 						}
 					}(document, 'script', 'twitter-wjs');
 				</script>
-				<a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
-Follow</a>
-			</div>
-			<div>
+			</p>
+			<p>
 				<a id="boring" class="button">Boring Mode</a>
 				<a id="eighties" class="button">EIGHTIES MODE!</a>
-			</div>
+			</p>
 		</div>
 	</header>
 
@@ -139,7 +134,7 @@ Follow</a>
 						<article class="templates">
 							<h3>Example Template</h3>
 							<p>An example template is provided, so that you may make changes to the colors and other configuration and see how the final product looks in a real-world example.</p>
-							<a href="example/template.html" class="button">View Template</a>
+							<p><a href="example/template.html" class="button">View Template</a></p>
 							<p>Here are a few examples of how making a few small changes can transform the template.</p>
 
 							<div class="row">
@@ -334,7 +329,7 @@ Follow</a>
 							<p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
 							<p>Headings all have the same line-height and margins, and only the font size is individually defined.</p>
 							<h1>Heading 1</h1>
-							<h2 style="font-weight:500;">Heading 2</h2>
+							<h2 style="font-weight:400;">Heading 2</h2>
 							<h3 style="color:#404040;">Heading 3</h3>
 							<h4>Heading 4</h4>
 							<h5>Heading 5</h5>
@@ -760,7 +755,7 @@ public:
 	&lt;div&gt;Vertically centered&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 							<div class="vertical-center example" style="height: 100px;">
-								<div class="example" style="background: rgba(0,0,0,.2);color: white;padding:5px;">Vertically centered</div>
+								<div class="example">Vertically centered</div>
 							</div>
 						</article>
 						<article>
@@ -946,6 +941,7 @@ $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
+$full: 100%;
 
 // Breakpoints
 $mobile: $x-small;
@@ -958,6 +954,7 @@ $primary-color: #1E6BD6;
 $secondary-color: #47CE90;
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
+$alternate-color: #404040;
 $link-color: $primary-color;
 $link-hover-color: lighten($link-color, 15%);
 $highlight: #ffeea8;
@@ -987,11 +984,11 @@ $h2: 1.9rem;
 $h3: 1.6rem;
 $h4: 1.4rem;
 $h5: 1.2rem;
-$h6: 1.1rem;
 
 /* Padding */
 
 $padding: 2rem;
+$margins: 1.5rem;
 $content-padding: 60px 0;
 $content-padding-mobile: 30px 0;
 
@@ -1008,14 +1005,14 @@ $borders: $border-width $border-style $border-color;
 $button-background: $primary-color;
 $button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
-$button-font-weight: 600;
+$button-font-weight: 500;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
 $button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
-$button-text-transform: uppercase;
+$button-text-transform: normal;
 
 // Accent buttons
 $accent-button-background: $secondary-color;
@@ -1037,11 +1034,11 @@ $round-buttons: 40px;
 
 $forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
-$input-background: #ffffff;
+$input-background: transparent;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid #cdcdcd;
 $form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid #898989;
+$form-border-focus: 1px solid $link-color;
 
 /* Tables */
 

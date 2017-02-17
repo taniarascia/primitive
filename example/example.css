@@ -1,8 +1,5 @@
 /* Primitive */
 
-body {
-	font-family: 'Open Sans', sans-serif;
-}
 
 hr {
 	border-top: 1px solid #eee;
@@ -28,7 +25,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Open Sans', sans-serif;
 	letter-spacing: -.05rem;
 }
 
@@ -45,14 +41,13 @@ h3 {
 
 header {
 	margin-top: 60px;
-	background: linear-gradient(to right, #7474BF, #348AC7);
+	background: #1E6BD6;
 	padding: 60px 0;
 }
 
 header h1 {
 	color: white;
 	font-size: 2rem;
-	margin: 0;
 	font-family: 'Press Start 2P';
 }
 
@@ -116,8 +111,8 @@ aside {
 aside h1 {
 	padding: 0 1rem;
 	font-size: 1.3rem;
-	margin-bottom: 0;
-	margin-top: .8rem;
+	margin-bottom: 0 !important;
+	margin-top: .8rem !important;
 	letter-spacing: -.05rem;
 }
 
@@ -230,10 +225,8 @@ article {
 	margin-bottom: .5rem;
 	padding-top: .25rem;
 	padding-bottom: .25rem;
-	background: linear-gradient(to right, #7474BF, #348AC7);
-	border: 0px solid #aaa;
-	font-weight: 600;
-	color: white;
+	border: 1px solid #1E6BD6;
+	font-weight: 400;
 }
 
 .footer {

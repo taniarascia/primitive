@@ -57,6 +57,7 @@ $h5: 1.2rem;
 /* Padding */
 
 $padding: 2rem;
+$margins: 1.5rem;
 $content-padding: 60px 0;
 $content-padding-mobile: 30px 0;
 
@@ -73,14 +74,14 @@ $borders: $border-width $border-style $border-color;
 $button-background: $primary-color;
 $button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
-$button-font-weight: 600;
+$button-font-weight: 500;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
 $button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
-$button-text-transform: uppercase;
+$button-text-transform: normal;
 
 // Accent buttons
 $accent-button-background: $secondary-color;
@@ -102,11 +103,11 @@ $round-buttons: 40px;
 
 $forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
-$input-background: #ffffff;
+$input-background: transparent;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid #cdcdcd;
 $form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid #898989;
+$form-border-focus: 1px solid $link-color;
 
 /* Tables */
 

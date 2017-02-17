@@ -31,8 +31,7 @@ pre[class*="language-"],
 
 pre[class*="language-"],
 pre {
-  border: 1px solid #eee;
-  margin: 1rem 0;
+  border: 0px solid #eee;
   overflow: auto;
   padding: 1em;
   background: #F7F8F9;
@@ -43,15 +42,15 @@ pre {
 /* Inline code */
 
 :not(pre) > code[class*="language-"] {
-  border-radius: .3em;
   padding: .15em .2em .05em;
   white-space: normal;
 }
 
 :not(pre) > code {
-  border: 1px solid #eee;
+  border: 0px solid #eee;
   background: #F7F8F9;
   color: #d14;
+	border-radius: 0;
 }
 
 
@@ -74,7 +73,7 @@ pre {
 
 .token.string,
 .token.attr-value {
-  color: #159570;
+  color: #0ca47b;
 }
 
 .token.punctuation {
@@ -82,7 +81,7 @@ pre {
 }
 
 .language-html .token.punctuation {
-  color: #3297d3;
+  color: #1E6BD6;
 }
 
 .token.operator {
@@ -144,7 +143,7 @@ pre {
 }
 
 .token.tag {
-  color: #3297d3;
+  color: #1E6BD6;
 }
 
 .language-autohotkey .token.keyword {
