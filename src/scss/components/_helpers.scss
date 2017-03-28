@@ -52,6 +52,7 @@
 // Responsive images
 .responsive-image {
 	max-width: 100%;
+	height: auto;
 }
 
 // Display State
@@ -86,11 +87,11 @@
 }
 
 .padding-top {
-	padding-top: $padding;
+	padding-top: 2rem;
 }
 
 .padding-bottom {
-	padding-bottom: $padding;
+	padding-bottom: 2rem;
 }
 
 // Margins
@@ -103,11 +104,11 @@
 }
 
 .margin-top {
-	margin-top: $padding;
+	margin-top: 2rem;
 }
 
 .margin-bottom {
-	margin-bottom: $padding;
+	margin-bottom: 2rem;
 }
 
 // Backgrounds

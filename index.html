@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<title>Primitive - Front End Developer Workflow</title>
+	<title>Primitive CSS Framework</title>
 
 	<meta name="author" content="Tania Rascia">
 	<meta name="description" content="A simple Sass starter pack.">
@@ -13,8 +13,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 	<link rel="stylesheet" href="dist/css/main.min.css">
-	<link rel="stylesheet" href="example/prism.css">
-	<link rel="stylesheet" href="example/example.css">
+	<link rel="stylesheet" href="example/css/prism.css">
+	<link rel="stylesheet" href="example/css/example.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="icon" href="example/favicon.png">
 </head>
@@ -25,20 +25,7 @@
 		<div class="small-container">
 			<h1>Primitive</h1>
 			<p>Primitive is a simple starter pack built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
-				<p><iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
-				<a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Primitive, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
-				<script>
-					! function (d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0],
-							p = /^http:/.test(d.location) ? 'http' : 'https';
-						if (!d.getElementById(id)) {
-							js = d.createElement(s);
-							js.id = id;
-							js.src = p + '://platform.twitter.com/widgets.js';
-							fjs.parentNode.insertBefore(js, fjs);
-						}
-					}(document, 'script', 'twitter-wjs');
-				</script>
+			<p><iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
 			</p>
 			<p>
 				<a id="boring" class="button">Boring Mode</a>
@@ -96,8 +83,11 @@
 			</aside>
 
 			<main class="content" id="main-content">
+
 				<div class="medium-container">
+
 					<section id="getting-started">
+
 						<article>
 							<h2>HTML Starting Point</h2>
 
@@ -130,7 +120,11 @@
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
+					
+							<p>View all HTML5 with Primitive CSS applied to them.</p>
+							<p><a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
 						</article>
+
 						<article class="templates">
 							<h3>Example Template</h3>
 							<p>An example template is provided, so that you may make changes to the colors and other configuration and see how the final product looks in a real-world example.</p>
@@ -139,28 +133,30 @@
 
 							<div class="row">
 								<div class="small-25">
-									<a href="example/template-slack.html">
+									<a href="example/templates/template-slack.html">
 										<img src="example/images/slack.png" class="responsive-image" style="max-width:100px;">
 									</a>
 								</div>
 								<div class="small-25">
-									<a href="example/template-apple.html">
+									<a href="example/templates/template-apple.html">
 										<img src="example/images/apple.png" class="responsive-image" style="max-width:100px;">
 									</a>
 								</div>
 								<div class="small-25">
-									<a href="example/template-github.html">
+									<a href="example/templates/template-github.html">
 										<img src="example/images/github.png" class="responsive-image" style="max-width:100px;">
 									</a>
 								</div>
 								<div class="small-25">
-									<a href="example/template-spotify.html">
+									<a href="example/templates/template-spotify.html">
 										<img src="example/images/spotify.png" class="responsive-image" style="max-width:100px;">
 									</a>
 								</div>
 							</div>
 						</article>
+
 					</section>
+
 					<section id="containers">
 						<h2>Containers</h2>
 						<p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
@@ -170,6 +166,7 @@
 &lt;div&gt;None&lt;/div&gt;</code></pre>
 					</section>
 				</div>
+
 				<article>
 					<div class="small-container example">
 						Small container - 800px
@@ -187,7 +184,9 @@
 						No container
 					</div>
 				</article>
+
 				<div class="medium-container">
+
 					<section id="grid">
 						<article>
 							<h2>Grid</h2>
@@ -240,6 +239,7 @@
 								<div class="column-50 example">50</div>
 							</div>
 						</article>
+
 						<article>
 							<h3>Offsets</h3>
 							<p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
@@ -264,6 +264,7 @@
 								<div class="push-small-50 small-50 example">50</div>
 							</div>
 						</article>
+
 						<article>
 							<h3>Repeating Grid</h3>
 							<p>The grid will wrap and repeat onto the next line if you continue.</p>
@@ -282,6 +283,7 @@
 								<div class="small-33 example">33</div>
 							</div>
 						</article>
+
 						<article>
 							<h3>Flex Grid</h3>
 							<p>Create infinitely repeating cells with a flex grid.</p>
@@ -322,18 +324,22 @@
 								<div class="flex-large example">2</div>
 							</div>
 						</article>
+
 					</section>
+
 					<section id="typography">
+
 						<article>
 							<h2>Typography</h2>
 							<p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
 							<p>Headings all have the same line-height and margins, and only the font size is individually defined.</p>
 							<h1>Heading 1</h1>
-							<h2 style="font-weight:400;">Heading 2</h2>
+							<h2>Heading 2</h2>
 							<h3 style="color:#404040;">Heading 3</h3>
 							<h4>Heading 4</h4>
 							<h5>Heading 5</h5>
 						</article>
+
 						<article>
 							<h3>Blockquote</h3>
 							<p>Blockquote is set to have a left border, with the browser default padding removed. A <code>cite</code> will be right aligned and italicized.
@@ -346,8 +352,11 @@
 									<cite>Gandalf the Gray</cite>
 								</blockquote>
 						</article>
+
 					</section>
+
 					<section id="buttons">
+
 						<article>
 							<h2>Buttons</h2>
 							<p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
@@ -360,6 +369,7 @@
 							<input type="button" value="Input">
 							<a class="button">Link</a>
 						</article>
+
 						<article>
 							<h3>Accent Buttons</h3>
 							<p>Adding an <code>accent-button</code> class will display a secondary color.</p>
@@ -369,6 +379,7 @@
 							<input type="button" value="Input" class="accent-button">
 							<a class="button accent-button">Link</a>
 						</article>
+
 						<article>
 							<h3>Muted Buttons</h3>
 							<p>Adding a <code>muted-button</code> class will create ghost/outline buttons.</p>
@@ -378,6 +389,7 @@
 							<input type="button" value="Input" class="muted-button">
 							<a class="muted-button button">Link</a>
 						</article>
+
 						<article>
 							<h3>Round Buttons</h3>
 							<p>Adding a <code>round-button</code> class will create rounded buttons.</p>
@@ -387,6 +399,7 @@
 							<input type="button" value="Input" class="round-button">
 							<a class="round-button button">Link</a>
 						</article>
+
 						<article>
 							<h3>Square Buttons</h3>
 							<p>Adding a <code>square-button</code> class will create square buttons.</p>
@@ -396,6 +409,7 @@
 							<input type="button" value="Input" class="square-button">
 							<a class="square-button button">Link</a>
 						</article>
+
 						<article>
 							<h3>Full Width Buttons</h3>
 							<p>Adding a <code>full-button</code> class will create full-width, block level buttons. Button styles can be combined.</p>
@@ -406,7 +420,9 @@
 							<a class="full-button muted-button button">Link</a>
 						</article>
 					</section>
+
 					<section id="forms">
+
 						<article>
 							<h2>Forms</h2>
 							<p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
@@ -427,6 +443,7 @@
   &lt;/label&gt;
   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
 &lt;/form&gt;</code></pre>
+
 							<form>
 								<label for="name">Name</label>
 								<input type="text" id="name" placeholder="First Name">
@@ -446,20 +463,7 @@
 								<input type="button" value="Submit">
 							</form>
 						</article>
-						<article>
-							<h3>Horizontal Forms</h3>
-							<p>Add a <code>horizontal-form</code> class to make an inline form.</p>
-							<pre><code class="language-html">&lt;form class=&quot;horizontal-form&quot;&gt;
-  &lt;!-- --&gt;
-&lt;/form&gt;</code></pre>
-							<form class="horizontal-form">
-								<label for="email-horizontal">Email</label>
-								<input type="email" id="email-horizontal" placeholder="Email Address">
-								<label for="password-horizontal">Password</label>
-								<input type="password" id="password-horizontal" placeholder="Password">
-								<input type="button" value="Submit">
-							</form>
-						</article>
+
 						<article>
 							<h3>Split Forms</h3>
 							<p>Add a <code>split-form</code> class to enable left-aligned labels. Combine with rows for versitile layout possibilities.</p>
@@ -492,6 +496,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+
 							<form class="split-form">
 								<div class="row">
 									<div class="small-10">
@@ -522,6 +527,7 @@
 								</div>
 							</form>
 						</article>
+
 						<article>
 							<h3>Form Validation</h3>
 							<p>An input field with a <code>has-error</code> class.</p>
@@ -531,8 +537,11 @@
 								<input type="text" id="name-error" placeholder="Name" class="has-error">
 							</form>
 						</article>
+
 					</section>
+
 					<section id="tables">
+
 						<article>
 							<h2>Tables</h2>
 							<p>Tables are set to a width of 100%, with a bottom border and bold headings.</p>
@@ -603,6 +612,7 @@
 								</tbody>
 							</table>
 						</article>
+
 						<article>
 							<h3>Striped Tables</h3>
 							<p>Add a <code>striped</code> class for alternating row background colors.</p>
@@ -636,6 +646,7 @@
 								</tbody>
 							</table>
 						</article>
+
 						<article>
 							<h3>Contained Tables</h3>
 							<p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
@@ -675,8 +686,11 @@
 								</table>
 							</div>
 						</article>
+
 					</section>
+
 					<section id="lists">
+
 						<article>
 							<h2>Lists</h2>
 							<p>Regular ordered and unordered lists have no special styling applied to them.</p>
@@ -714,6 +728,7 @@
 								</div>
 							</div>
 						</article>
+
 						<article>
 							<h3>Definition Lists</h3>
 							<p>Definition titles are bold, and margins have been placed after each description.</p>
@@ -730,8 +745,11 @@
 								<dd>First definition description</dd>
 							</dl>
 						</article>
+
 					</section>
+
 					<section id="code">
+
 						<article>
 							<h2>Code</h2>
 							<p>Style has been added for inline <code>&lt;code&gt;</code> tags, and <code>&lt;kbd&gt;</code> is a <kbd>keyboard input</kbd>. </p>
@@ -742,12 +760,16 @@ public:
   static const string VOILA = "Voila";
 }</code></pre>
 						</article>
+
 					</section>
+
 					<section id="helpers">
+
 						<article>
 							<h2>Helpers</h2>
 							<p>Helper classes are helpful for templating.</p>
 						</article>
+
 						<article>
 							<h3>Vertical Center</h3>
 							<p>Vertically center an element with the <code>vertical-center</code> class. (Uses <a href="http://caniuse.com/#search=flexbox" target="_blank">Flexbox</a>.)</p>
@@ -758,6 +780,7 @@ public:
 								<div class="example">Vertically centered</div>
 							</div>
 						</article>
+
 						<article>
 							<h3>Text Alignment</h3>
 							<p>Use <code>text-left</code>, <code>text-right</code>, and <code>text-center</code> to align content.</p>
@@ -768,17 +791,20 @@ public:
 							<p class="text-center"><span class="example" style="padding: 5px;">Center</span></p>
 							<p class="text-right"><span class="example" style="padding: 5px;">Right</span></p>
 						</article>
+
 						<article>
 							<h3>Screen Reader Text</h3>
 							<p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, or want to skip navigation, use the <code>screen-reader-text</code> class to hide content visually.
 								<pre><code class="language-html">&lt;a class=&quot;screen-reader-text&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;</code></pre>
 						</article>
+
 						<article>
 							<h3>Responsive Images</h3>
 							<p>Add a <code>responsive-image</code> class for responsive images.</p>
 							<pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
 							<img src="https://placehold.it/1000x100" class="responsive-image" alt="Example of responsive-image CSS class">
 						</article>
+
 						<article>
 							<h3>More Helper Classes</h3>
 							<table>
@@ -788,10 +814,6 @@ public:
 										<th>What it does</th>
 									</tr>
 								</thead>
-								<tr>
-									<td><code>.text-justify</code></td>
-									<td><code>text-align: justify</code></td>
-								</tr>
 								<tr>
 									<td><code>.float-left</code></td>
 									<td><code>float: left</code></td>
@@ -837,16 +859,35 @@ public:
 									<td><code>padding-bottom: 0</code></td>
 								</tr>
 								<tr>
+									<td><code>.margin-top</code></td>
+									<td><code>margin-top: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-top</code></td>
+									<td><code>margin-top: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.margin-bottom</code></td>
+									<td><code>margin-bottom: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-bottom</code></td>
+									<td><code>margin-bottom: 0</code></td>
+								</tr>
+								<tr>
 									<td><code>.content-section</code></td>
 									<td><code>padding: 60px 0</code> (30px on mobile)</td>
 								</tr>
 							</table>
 						</article>
+
 					</section>
+
 					<section id="sass-main">
+
 						<article>
 							<h2>Sass</h2>
-							<p>This project is built with Sass (SCSS) and Gulp. Not familiar?</p>
+							<p>This project is built with Sass (SCSS) and Gulp. If you're not familiar with these technologies, please read the tutorials below.</p>
 							<ul>
 								<li><a href="https://www.taniarascia.com/learn-sass-now/" target="_blank">Learn to use Sass</a></li>
 								<li><a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">Learn to use Gulp</a></li>
@@ -860,6 +901,7 @@ public:
 							<pre><code>gulp</code></pre>
 							<p>The default <code>gulp</code> command will run a watch to compile, minify and prefix your files. If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
 						</article>
+
 						<article>
 							<h3>Directory Structure</h3>
 							<p>The project contains the source and destination folders, as well as a few necessary project files.</p>
@@ -902,6 +944,7 @@ README.md
 gulpfile.js                                                     
 package.json</pre>
 						</article>
+
 						<article>
 							<h3>Main Sass File</h3>
 							<p>In the main Sass file, <strong>main.scss</strong>, we'll pull in the configuration (variables and mixins) first, followed by resets, then all the components.</p>
@@ -924,8 +967,11 @@ package.json</pre>
 @import "components/layout";</code></pre>
 							<p>Most of the components should be self-explanatory. <strong>Scaffolding</strong> is the main styling of typography, links, headings, etc. <strong>Navigation</strong> and <strong>layout</strong> are empty files, but I kept them in because they're generally necessary. Add more files as necessary (3rd party, fonts, etc).</p>
 						</article>
+
 					</section>
+
 					<section id="sass-config">
+
 						<article>
 							<h2>Configuration</h2>
 							<p>Much of the design can be configured just by changing some settings in <strong>_variables.scss</strong>. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized.</p>
@@ -941,25 +987,25 @@ $x-small: 600px;
 $small: 800px;
 $medium: 1000px;
 $large: 1200px;
-$full: 100%;
 
-// Breakpoints
+/* Breakpoints */
+
 $mobile: $x-small;
 $desktop: $medium;
 
 /* Colors */
 
-$background: #ffffff;
+$background: white;
 $primary-color: #1E6BD6;
 $secondary-color: #47CE90;
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
 $alternate-color: #404040;
 $link-color: $primary-color;
-$link-hover-color: lighten($link-color, 15%);
+$link-hover-color: darken($link-color, 15%);
 $highlight: #ffeea8;
 $error: #D33C40;
-$bq-border: 8px solid #cdcdcd;
+$bq-border: 16px solid #f0f0f0;
 
 /* Typography */
 
@@ -970,24 +1016,32 @@ $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
-$font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-$line-height: 1.5;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.6;
 
 // Headings
 $heading-font-color: #404040;
-$heading-font-weight: 400;
-$heading-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-weight: 600;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $heading-line-height: 1.2;
 
-$h1: 2.2rem;
-$h2: 1.9rem;
-$h3: 1.6rem;
-$h4: 1.4rem;
-$h5: 1.2rem;
+// Mobile heading font size
+$h1-mobile: 1.75rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.25rem;
+$h4-mobile: 1.1rem;
+$h5-mobile: 1rem;
+
+// Heading font size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
 
 /* Padding */
 
-$padding: 2rem;
+$padding: 1rem;
 $margins: 1.5rem;
 $content-padding: 60px 0;
 $content-padding-mobile: 30px 0;
@@ -996,7 +1050,7 @@ $content-padding-mobile: 30px 0;
 
 $border-width: 1px;
 $border-style: solid;
-$border-color: #cdcdcd;
+$border-color: #dedede;
 $border-radius: 4px;
 $borders: $border-width $border-style $border-color;
 
@@ -1005,14 +1059,14 @@ $borders: $border-width $border-style $border-color;
 $button-background: $primary-color;
 $button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
-$button-font-weight: 500;
+$button-font-weight: 600;
 $button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
 $button-border-width: 1px;
 $button-border-style: solid;
 $button-border-color: $button-background;
 $button-border-radius: $border-radius;
-$button-text-transform: normal;
+$button-text-transform: none;
 
 // Accent buttons
 $accent-button-background: $secondary-color;
@@ -1043,25 +1097,29 @@ $form-border-focus: 1px solid $link-color;
 /* Tables */
 
 $stripes: #f0f0f0;
-$caption: darken($accent-color, 20%);
+$caption: #ababab;
 
 /* Code */
 
 $code-color: $font-color;
+$code-size: 14px;
 $code-family: Menlo, monospace;
-$code-background: #f4f4f4;
+$code-background: transparent;
 $code-borders: $borders;</code></pre>
 							<p>Changing these default configurations will go a long way in setting the tone of the rest of your site.</p>
 							<p>Use the example template to see how the changes you make to <strong>_variables.scss</strong> look.</p>
-							<p><a href="example/template.html" class="button">Example Template</a></p>
+							<p><a href="example/templates/template.html" class="button">Example Template</a> <a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
 							<p>From here, the design is up to you. Happy coding!</p>
 						</article>
+
 					</section>
+
 				</div>
+
 				<footer class="footer text-center">
 					<div class="medium-container">
 						<hr>
-						<p style="padding-top: 20px;">
+						<p class="padding-top">
 							Built by <a href="https://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/primitive" target="_blank">View on GitHub</a>. Open source, of course.</p>
 
 					</div>
@@ -1072,8 +1130,8 @@ $code-borders: $borders;</code></pre>
 	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="example/prism.js"></script>
-	<script src="example/example.js"></script>
+	<script src="example/js/prism.js"></script>
+	<script src="example/js/example.js"></script>
 </body>
 
 </html>

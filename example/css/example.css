@@ -1,10 +1,5 @@
 /* Primitive */
 
-
-hr {
-	border-top: 1px solid #eee;
-}
-
 a {
 	color: #000;
 	text-decoration: underline;
@@ -18,19 +13,6 @@ a:focus {
 
 
 /* Headings */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	letter-spacing: -.05rem;
-}
-
-h2 {
-	font-weight: 600;
-}
 
 h3 {
 	color: #606060;
@@ -284,10 +266,6 @@ article {
 	.flex-50 {
 		flex: 5;
 	}
-}
-
-.padding-top {
-	padding-top: 1rem;
 }
 
 .templates a img:hover {

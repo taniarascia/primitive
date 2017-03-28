@@ -19,8 +19,18 @@ body {
 p,
 ol,
 ul,
-dl {
+dl,
+table {
 	margin: 0 0 $margins 0;
+}
+
+// Remove extra margin for nested lists
+ul li ul {
+	margin-bottom: 0;
+}
+
+ol li ol {
+	margin-bottom: 0;
 }
 
 // Headings
@@ -29,7 +39,7 @@ h2,
 h3,
 h4,
 h5 {
-	margin: 0 0 $margins 0;
+	margin: $margins 0;
 	font-weight: $heading-font-weight;
 	font-family: $heading-font-family;
 	line-height: $heading-line-height;
@@ -39,25 +49,57 @@ h5 {
 	}
 }
 
-// Individual styling
+// Increased margin on additional headings
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+	margin-top: 2rem;
+}
+
+// Heading individual styles
 h1 {
-	font-size: $h1;
+	font-size: $h1-mobile;
 }
 
 h2 {
-	font-size: $h2;
+	font-size: $h2-mobile;
 }
 
 h3 {
-	font-size: $h3;
+	font-size: $h3-mobile;
 }
 
 h4 {
-	font-size: $h4;
+	font-size: $h4-mobile;
 }
 
 h5 {
-	font-size: $h5;
+	font-size: $h5-mobile;
+}
+
+@include small-breakpoint {
+	// Increased margin on additional headings
+	h1:not(:first-child),
+	h2:not(:first-child),
+	h3:not(:first-child) {
+		margin-top: 2.5rem;
+	}
+	// Heading desktop individual styles
+	h1 {
+		font-size: $h1;
+	}
+	h2 {
+		font-size: $h2;
+	}
+	h3 {
+		font-size: $h3;
+	}
+	h4 {
+		font-size: $h4;
+	}
+	h5 {
+		font-size: $h5;
+	}
 }
 
 // Link styling
@@ -86,9 +128,9 @@ blockquote {
 	font-size: 1.5rem;
 	cite {
 		display: block;
-		margin-top: 25px;
+		margin-top: $margins;
 		font-size: 1rem;
-		text-align: right
+		text-align: right;
 	}
 }
 
@@ -101,7 +143,7 @@ pre {
 	tab-size: 2;
 	color: $code-color;
 	font-family: $code-family;
-	font-size: .9rem;
+	font-size: $code-size;
 	margin: 0 0 $margins 0;
 	code {
 		font-family: $code-family;
@@ -118,7 +160,7 @@ kbd {
 	color: #333;
 	display: inline-block;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: .8rem;
+	font-size: 13px;
 	line-height: 1.4;
 	margin: 0 .1em;
 	padding: .1em .6em;
@@ -126,10 +168,11 @@ kbd {
 }
 
 // Inline code styling
-:not(pre) > code {
+:not(pre)>code {
 	color: $code-color;
 	background: $code-background;
 	font-family: $code-family;
+	font-size: $code-size;
 	padding: 0 0.2rem;
 	border: $borders;
 	border-radius: $border-radius;
@@ -144,30 +187,23 @@ hr {
 
 // Definition list
 dt {
-	font-weight: bold;
+	font-weight: 600;
 }
 
 dd {
 	margin-bottom: .5rem;
 }
 
-// Clean lists
-.clean-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 // Full container 
 .full-container {
-	max-width: $full;
+	max-width: 100%;
 	padding: 0 1rem;
 }
 
 // Container
 .container {
 	max-width: $large;
-	padding: 0 1rem;
+	padding: 0 $padding;
 	margin-left: auto;
 	margin-right: auto;
 }

@@ -8,10 +8,10 @@
  */
 
 html {
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
 }
 
 
@@ -20,7 +20,7 @@ html {
  */
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 
@@ -47,7 +47,7 @@ menu,
 nav,
 section,
 summary {
-  display: block;
+	display: block;
 }
 
 
@@ -60,10 +60,10 @@ audio,
 canvas,
 progress,
 video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
 }
 
 
@@ -73,8 +73,8 @@ video {
  */
 
 audio:not([controls]) {
-  display: none;
-  height: 0;
+	display: none;
+	height: 0;
 }
 
 
@@ -85,7 +85,7 @@ audio:not([controls]) {
 
 [hidden],
 template {
-  display: none;
+	display: none;
 }
 
 
@@ -108,7 +108,7 @@ a {
 
 a:active,
 a:hover {
-  outline: 0;
+	outline: 0;
 }
 
 
@@ -131,7 +131,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 
@@ -176,18 +176,18 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 
@@ -200,7 +200,7 @@ sub {
  */
 
 img {
-  border: 0;
+	border: 0;
 }
 
 
@@ -209,7 +209,7 @@ img {
  */
 
 svg:not(:root) {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 
@@ -230,8 +230,8 @@ figure {
  */
 
 hr {
-  box-sizing: content-box;
-  height: 0;
+	box-sizing: content-box;
+	height: 0;
 }
 
 
@@ -240,7 +240,7 @@ hr {
  */
 
 pre {
-  overflow: auto;
+	overflow: auto;
 }
 
 
@@ -271,27 +271,27 @@ samp {
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
+ *
 
 button,
 input,
 select,
 textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
+	color: inherit;
+	/* 1 *
+	font: inherit;
+	/* 2 *
+	margin: 0;
+	/* 3 *
 }
 
 
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
+ *
 
 button {
-  overflow: visible;
+	overflow: visible;
 }
 
 
@@ -300,11 +300,11 @@ button {
  * All other form control elements do not inherit `text-transform` values.
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
- */
+ *
 
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 
@@ -314,19 +314,19 @@ select {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- */
+ *
 
 button,
 html input[type="button"],
 
-/* 1 */
+/* 1 *
 
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
+	-webkit-appearance: button;
+	/* 2 *
+	cursor: pointer;
+	/* 3 *
 }
 
 
@@ -336,7 +336,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-  cursor: default;
+	cursor: default;
 }
 
 
@@ -346,18 +346,18 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+	border: 0;
+	padding: 0;
 }
 
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
- */
+ *
 
 input {
-  line-height: normal;
+	line-height: normal;
 }
 
 
@@ -367,14 +367,14 @@ input {
  *
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
- */
+ *
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+	box-sizing: border-box;
+	/* 1 *
+	padding: 0;
+	/* 2 *
 }
 
 

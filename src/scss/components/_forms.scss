@@ -6,10 +6,15 @@
 	display: block;
 	border: $form-border;
 	border-radius: $border-radius;
-	padding: .5rem;
+	padding: .75rem;
 	outline: none;
 	vertical-align: middle;
 	background: $input-background;
+	margin-bottom: .5rem;
+	font-size: 1rem;
+	width: 100%;
+	max-width: 100%;
+	line-height: 1;
 }
 
 // Input fields on hover
@@ -20,13 +25,11 @@
 // Input fields on focus 
 %forms-focus {
 	border: $form-border-focus;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 40%);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 30%);
 }
 
 // Variable containing all input fields 
 #{$forms} {
-	width: 100%; // Expands the full width of the container
-	max-width: 100%; // But no more!
 	@extend %forms;
 	&:hover {
 		@extend %forms-hover;
@@ -34,16 +37,6 @@
 	&:focus,
 	&:active {
 		@extend %forms-focus;
-	}
-}
-
-// Horizontal forms have no set width on large screen view 
-@include small-breakpoint {
-	.horizontal-form {
-		#{$forms} {
-			display: inline-block;
-			width: auto;
-		}
 	}
 }
 
@@ -55,8 +48,8 @@ textarea {
 fieldset {
 	border: 1px solid $border-color;
 	border-radius: $border-radius;
-	padding: .5rem 1rem;
-	margin: 15px 2px;
+	padding: $padding;
+	margin: $margins 0;
 }
 
 legend {
@@ -83,18 +76,10 @@ label {
 	font-weight: 600;
 	max-width: 100%;
 	display: block;
-	margin: .5rem 0;
+	margin: 1rem 0 .5rem;
 }
 
 @include small-breakpoint {
-	.horizontal-form {
-		// Horizontal forms are inline-block
-		label,
-		#{$buttons} {
-			display: inline-block;
-			margin: .5rem 0;
-		}
-	}
 	.split-form {
 		// Split forms have right aligned labels and margins on the column
 		label {

@@ -17,7 +17,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  font-size: .85rem;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -48,8 +48,8 @@ pre {
 
 :not(pre) > code {
   border: 0px solid #eee;
-  background: #F7F8F9;
   color: #d14;
+	font-size: 14px;
 	border-radius: 0;
 }
 

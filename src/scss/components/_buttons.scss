@@ -3,8 +3,8 @@
 
 // Main button styling
 %buttons {
+	-webkit-appearance: none;
 	display: inline-block;
-	line-height: 1;
 	border: $button-border-width $button-border-style $button-border-color;
 	border-radius: $button-border-radius;
 	background: $button-background;
@@ -13,13 +13,13 @@
 	font-family: $button-font-family;
 	font-size: $button-font-size;
 	text-transform: $button-text-transform;
-	padding: .7rem 1.2rem;
-	margin: 0;
-	white-space: nowrap;
+	padding: .75rem 1.25rem;
+	margin: 0 0 .5rem 0;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
+	line-height: 1;
 }
 
 // Buttons on hover
