@@ -12,12 +12,6 @@ a:focus {
 }
 
 
-/* Headings */
-
-h3 {
-	color: #606060;
-}
-
 
 /* Header */
 
@@ -191,7 +185,7 @@ aside li a.active:focus {
 }
 
 .primitive {
-	max-width: 1400px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
 
@@ -218,13 +212,13 @@ article {
 
 /* Desktop Styles */
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 800px) {
 	header {
 		margin: 0;
-		padding: 100px 0;
+		padding: 60px 0;
 	}
 	header h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 	aside {
 		display: block;
@@ -249,6 +243,7 @@ article {
 	.content {
 		flex: 7.5;
 		max-width: calc(100% - 220px);
+		padding: 0 2rem;
 	}
 	.margin {
 		margin-left: 220px;
