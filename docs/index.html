@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Primitive CSS Framework</title>
+
+	<meta name="author" content="Tania Rascia">
+	<meta name="description" content="A simple Sass starter pack.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" href="../dist/css/main.min.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="css/example.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="icon" href="favicon.png">
+</head>
+
+<body>
+
+	<header class="text-center vertical-center">
+		<div class="small-container">
+			<h1>Primitive</h1>
+			<p>Primitive is a simple starter pack built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
+			<p><iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+			</p>
+			<p>
+				<a id="boring" class="button">Boring Mode</a>
+				<a id="eighties" class="button">EIGHTIES MODE!</a>
+			</p>
+		</div>
+	</header>
+
+	<section class="setup content-section">
+		<div class="installation small-container">
+			<h2>Download and Installation</h2>
+			<p>There are two options for using Primitive.</p>
+			<div class="flex-row padding-top">
+				<div class="flex-large flex-50">
+					<img src="images/css3.png" class="logos">
+					<h4><strong>CSS</strong> (easy)</h4>
+					<p><a href="https://taniarascia.github.io/primitive/dist/css/main.min.css" download>Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.</p>
+				</div>
+				<div class="flex-large flex-50">
+					<img src="images/sass.png" class="logos">
+					<h4><strong>Sass</strong> (recommended)</h4>
+					<p><a href="#sass-main">Download the source</a> and set up a Sass workflow with Gulp.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="primitive">
+
+		<div class="flex-container">
+
+			<aside>
+				<div class="toggle-nav"></div>
+				<h1><a href="index.html">Primitive</a></h1>
+				<nav>
+					<ul>
+						<li class="title">HTML</li>
+						<li><a href="#getting-started"><i class="fa fa-cog"></i>Getting Started</a></li>
+						<li><a href="#containers"><i class="fa fa-cube"></i>Containers</a></li>
+						<li><a href="#grid"><i class="fa fa-th"></i>Grid</a></li>
+						<li><a href="#typography"><i class="fa fa-font"></i>Typography</a></li>
+						<li><a href="#buttons"><i class="fa fa-hand-pointer-o"></i><span class="screen-reader-text">HTML</span>Buttons</a></li>
+						<li><a href="#forms"><i class="fa fa-check-square-o"></i>Forms</a></li>
+						<li><a href="#tables"><i class="fa fa-table"></i>Tables</a></li>
+						<li><a href="#lists"><i class="fa fa-list"></i>Lists</a></li>
+						<li><a href="#code"><i class="fa fa-code"></i>Code</a></li>
+						<li><a href="#helpers"><i class="fa fa-medkit"></i>Helpers</a></li>
+					</ul>
+					<ul>
+						<li class="title">Sass</li>
+						<li><a href="#sass-main"><i class="fa fa-terminal"></i>How to Use</a></li>
+						<li><a href="#sass-config"><i class="fa fa-usd"></i>Configuration</a></li>
+					</ul>
+				</nav>
+			</aside>
+
+			<main class="content" id="main-content">
+
+				<div class="medium-container">
+
+					<section id="getting-started">
+
+						<article>
+							<h2>HTML Starting Point</h2>
+
+							<p>Begin with a basic <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> template that does the following:</p>
+							<ul>
+								<li>Sets the <a href="http://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">default language</a> and <a href="https://en.wikipedia.org/wiki/UTF-8">character set</a>.</li>
+								<li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a>.</li>
+								<li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a> to enable responsiveness.</li>
+								<li>Includes the <a href="https://jquery.com/">jQuery</a> library for easy DOM manipulation (optional).</li>
+								<li>Includes links to the <a href="https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.min.css" target="_blank">Primitive CSS file</a>, an empty JavaScript file, and a Favicon.</li>
+							</ul>
+							<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+  &lt;title&gt;&lt;/title&gt;
+
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.min.css&quot;&gt;
+  &lt;link rel=&quot;icon&quot; href=&quot;images/favicon.png&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+					
+							<p>View all HTML5 with Primitive CSS applied to them.</p>
+							<p><a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
+						</article>
+
+						<article class="templates">
+							<h3>Example Template</h3>
+							<p>An example template is provided, so that you may make changes to the colors and other configuration and see how the final product looks in a real-world example.</p>
+							<p><a href="template.html" class="button">View Template</a></p>
+							<p>Here are a few examples of how making a few small changes can transform the template.</p>
+
+							<div class="row">
+								<div class="small-25">
+									<a href="templates/template-slack.html">
+										<img src="images/slack.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="templates/template-apple.html">
+										<img src="images/apple.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="templates/template-github.html">
+										<img src="images/github.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+								<div class="small-25">
+									<a href="templates/template-spotify.html">
+										<img src="images/spotify.png" class="responsive-image" style="max-width:100px;">
+									</a>
+								</div>
+							</div>
+						</article>
+
+					</section>
+
+					<section id="containers">
+						<h2>Containers</h2>
+						<p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
+						<pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
+&lt;div class=&quot;medium-container&quot;&gt;Medium&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;
+&lt;div&gt;None&lt;/div&gt;</code></pre>
+					</section>
+				</div>
+
+				<article>
+					<div class="small-container example">
+						Small container - 800px
+					</div>
+					<div class="medium-container example">
+						Medium container - 1000px
+					</div>
+					<div class="container example">
+						Container - 1200px
+					</div>
+					<div class="full-container example">
+						Container - Full (100%)
+					</div>
+					<div class="example">
+						No container
+					</div>
+				</article>
+
+				<div class="medium-container">
+
+					<section id="grid">
+						<article>
+							<h2>Grid</h2>
+							<p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes. Resize the screen to see the different breakpoints.</p>
+							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
+  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="row">
+								<div class="small-50 example">50</div>
+								<div class="small-50 example">50</div>
+							</div>
+							<div class="row">
+								<div class="large-50 example">50</div>
+								<div class="large-50 example">50</div>
+							</div>
+						</article>
+						<article>
+							<h3>No Collapse</h3>
+							<p>If the grid shouldn't collapse to 100% width on small screens, use a <code>column-</code> class.</p>
+							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="row">
+								<div class="column-100 example">100</div>
+							</div>
+							<div class="row">
+								<div class="column-90 example">90</div>
+								<div class="column-10 example">10</div>
+							</div>
+							<div class="row no-collapse">
+								<div class="column-80 example">80</div>
+								<div class="column-20 example">20</div>
+							</div>
+							<div class="row no-collapse">
+								<div class="column-70 example">70</div>
+								<div class="column-30 example">30</div>
+							</div>
+							<div class="row no-collapse">
+								<div class="column-60 example">60</div>
+								<div class="column-40 example">40</div>
+							</div>
+							<div class="row no-collapse">
+								<div class="column-50 example">50</div>
+								<div class="column-50 example">50</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Offsets</h3>
+							<p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
+							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;push-small-10 small-90&quot;&gt;90%&lt;/div&gt;
+  &lt;div class=&quot;push-small-20 small-80&quot;&gt;80%&lt;/div&gt;
+  &lt;!-- etc --&gt;
+&lt;/div&gt;</code></pre>
+							<div class="row">
+								<div class="push-small-10 small-90 example">90</div>
+							</div>
+							<div class="row">
+								<div class="push-small-20 small-80 example">80</div>
+							</div>
+							<div class="row">
+								<div class="push-small-30 small-70 example">70</div>
+							</div>
+							<div class="row">
+								<div class="push-small-40 small-60 example">60</div>
+							</div>
+							<div class="row">
+								<div class="push-small-50 small-50 example">50</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Repeating Grid</h3>
+							<p>The grid will wrap and repeat onto the next line if you continue.</p>
+							<pre><code class="language-html">&lt;div class="row"&gt;
+	&lt;div class="small-33"&gt;33%&lt;/div&gt;
+	&lt;div class="small-33"&gt;33%&lt;/div&gt;
+   &lt;!-- etc --&gt;
+&lt;/div&gt;</code></pre>
+							<div class="row">
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+								<div class="small-33 example">33</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Flex Grid</h3>
+							<p>Create infinitely repeating cells with a flex grid.</p>
+							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="flex-row">
+								<div class="flex-column example">2</div>
+								<div class="flex-column example">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-column example">3</div>
+								<div class="flex-column example">3</div>
+								<div class="flex-column example">3</div>
+							</div>
+							<h3>Flex Breakpoints</h3>
+							<p>The same breakpoints are available for the flex grid.</p>
+							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-row&quot;&gt;
+	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;flex-large&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="flex-row">
+								<div class="flex-small example">2</div>
+								<div class="flex-small example">2</div>
+							</div>
+							<div class="flex-row">
+								<div class="flex-large example">2</div>
+								<div class="flex-large example">2</div>
+							</div>
+						</article>
+
+					</section>
+
+					<section id="typography">
+
+						<article>
+							<h2>Typography</h2>
+							<p>The font size is set to <code>1rem</code> on the <code>html</code> element, so all font sizing will cascade from the root.</p>
+							<p>Headings all have the same line-height and margins, and only the font size is individually defined.</p>
+							<h1>Heading 1</h1>
+							<h2>Heading 2</h2>
+							<h3 style="color:#404040;">Heading 3</h3>
+							<h4>Heading 4</h4>
+							<h5>Heading 5</h5>
+						</article>
+
+						<article>
+							<h3>Blockquote</h3>
+							<p>Blockquote is set to have a left border, with the browser default padding removed. A <code>cite</code> will be right aligned and italicized.
+								<pre><code class="language-html">&lt;blockquote&gt;
+	&lt;p&gt;Keep it secret. Keep it safe.&lt;/p&gt;
+	&lt;cite&gt;Gandalf the Gray&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre>
+								<blockquote>
+									<p>Keep it secret. Keep it safe.</p>
+									<cite>Gandalf the Gray</cite>
+								</blockquote>
+						</article>
+
+					</section>
+
+					<section id="buttons">
+
+						<article>
+							<h2>Buttons</h2>
+							<p>Button elements, links with a <code>button</code> class, and input elements should all render exactly the same.</p>
+							<pre><code class="language-html">&lt;button&gt;Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input&quot;&gt;
+&lt;a class=&quot;button&quot;&gt;Link&lt;/a&gt;</code></pre>
+							<button>Button</button>
+							<input type="submit" value="Submit">
+							<input type="button" value="Input">
+							<a class="button">Link</a>
+						</article>
+
+						<article>
+							<h3>Accent Buttons</h3>
+							<p>Adding an <code>accent-button</code> class will display a secondary color.</p>
+							<pre><code class="language-html">&lt;button class="accent-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="accent-button">Button</button>
+							<input type="submit" value="Submit" class="accent-button">
+							<input type="button" value="Input" class="accent-button">
+							<a class="button accent-button">Link</a>
+						</article>
+
+						<article>
+							<h3>Muted Buttons</h3>
+							<p>Adding a <code>muted-button</code> class will create ghost/outline buttons.</p>
+							<pre><code class="language-html">&lt;button class="muted-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="muted-button">Button</button>
+							<input type="submit" value="Submit" class="muted-button">
+							<input type="button" value="Input" class="muted-button">
+							<a class="muted-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Round Buttons</h3>
+							<p>Adding a <code>round-button</code> class will create rounded buttons.</p>
+							<pre><code class="language-html">&lt;button class="round-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="round-button">Button</button>
+							<input type="submit" value="Submit" class="round-button">
+							<input type="button" value="Input" class="round-button">
+							<a class="round-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Square Buttons</h3>
+							<p>Adding a <code>square-button</code> class will create square buttons.</p>
+							<pre><code class="language-html">&lt;button class="square-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="square-button">Button</button>
+							<input type="submit" value="Submit" class="square-button">
+							<input type="button" value="Input" class="square-button">
+							<a class="square-button button">Link</a>
+						</article>
+
+						<article>
+							<h3>Full Width Buttons</h3>
+							<p>Adding a <code>full-button</code> class will create full-width, block level buttons. Button styles can be combined.</p>
+							<pre><code class="language-html">&lt;button class="full-button"&gt;Button&lt;/button&gt;</code></pre>
+							<button class="full-button">Button</button>
+							<input type="submit" value="Submit" class="full-button accent-button square-button">
+							<input type="button" value="Input" class="full-button round-button">
+							<a class="full-button muted-button button">Link</a>
+						</article>
+					</section>
+
+					<section id="forms">
+
+						<article>
+							<h2>Forms</h2>
+							<p>Default forms will have full-width, block level labels, inputs, selects, and textareas.</p>
+							<pre><code class="language-html">&lt;form&gt;
+  &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
+  &lt;label for=&quot;choose&quot;&gt;Select&lt;/label&gt;
+  &lt;select id=&quot;choose&quot;&gt;
+    &lt;option disabled selected&gt;Please select&lt;/option&gt;
+    &lt;option value="option-1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option-2"&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for=&quot;comments&quot;&gt;Additional Comments&lt;/label&gt;
+  &lt;textarea id=&quot;comments&quot;&gt;&lt;/textarea&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    Remember me
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+
+							<form>
+								<label for="name">Name</label>
+								<input type="text" id="name" placeholder="First Name">
+								<label for="email">Email</label>
+								<input type="email" id="email" placeholder="Email address">
+								<label for="choose">Select</label>
+								<select id="choose">
+									<option disabled selected>Please select</option>
+									<option value="option-1">Option 1</option>
+									<option value="option-2">Option 2</option>
+								</select>
+								<label for="comments">Additional Comments</label>
+								<textarea id="comments"></textarea>
+								<label>
+									<input type="checkbox"> Remember me
+								</label>
+								<input type="button" value="Submit">
+							</form>
+						</article>
+
+						<article>
+							<h3>Split Forms</h3>
+							<p>Add a <code>split-form</code> class to enable left-aligned labels. Combine with rows for versitile layout possibilities.</p>
+							<pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
+      &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;small-40&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
+      &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;small-40&quot;&gt;
+      &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;small-10&quot;&gt;
+      &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;small-90&quot;&gt;
+      &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;push-small-10 small-10&quot;&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+							<form class="split-form">
+								<div class="row">
+									<div class="small-10">
+										<label for="name-split">Name</label>
+									</div>
+									<div class="small-40">
+										<input type="text" id="name-split" placeholder="First Name">
+									</div>
+									<div class="small-10">
+										<label for="email-split">Email</label>
+									</div>
+									<div class="small-40">
+										<input type="email" id="email-split" placeholder="Email Address">
+									</div>
+								</div>
+								<div class="row">
+									<div class="small-10">
+										<label for="url">URL</label>
+									</div>
+									<div class="small-90">
+										<input type="url" id="url" placeholder="Website URL">
+									</div>
+								</div>
+								<div class="row">
+									<div class="push-small-10 small-10">
+										<input type="button" value="Submit">
+									</div>
+								</div>
+							</form>
+						</article>
+
+						<article>
+							<h3>Form Validation</h3>
+							<p>An input field with a <code>has-error</code> class.</p>
+							<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
+							<form>
+								<label for="name-error">Name</label>
+								<input type="text" id="name-error" placeholder="Name" class="has-error">
+							</form>
+						</article>
+
+					</section>
+
+					<section id="tables">
+
+						<article>
+							<h2>Tables</h2>
+							<p>Tables are set to a width of 100%, with a bottom border and bold headings.</p>
+							<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Head 1&lt;/th&gt;
+      &lt;th&gt;Head 2&lt;/th&gt;
+      &lt;th&gt;Head 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Footer 1&lt;/th&gt;
+      &lt;th&gt;Footer 2&lt;/th&gt;
+      &lt;th&gt;Footer 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Description 1&lt;/td&gt;
+      &lt;td&gt;Description 2&lt;/td&gt;
+      &lt;td&gt;Description 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+							<table>
+								<thead>
+									<tr>
+										<th>Head 1</th>
+										<th>Head 2</th>
+										<th>Head 3</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>Footer 1</th>
+										<th>Footer 2</th>
+										<th>Footer 3</th>
+									</tr>
+								</tfoot>
+								<tbody>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+
+						<article>
+							<h3>Striped Tables</h3>
+							<p>Add a <code>striped</code> class for alternating row background colors.</p>
+							<pre><code class="language-html">&lt;table class=&quot;striped-table&quot;&gt;
+  &lt;!-- etc --&gt;
+&lt;/table&gt;</code></pre>
+							<table class="striped-table">
+								<thead>
+									<tr>
+										<th>Head 1</th>
+										<th>Head 2</th>
+										<th>Head 3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+									<tr>
+										<td>Description 1</td>
+										<td>Description 2</td>
+										<td>Description 3</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
+
+						<article>
+							<h3>Contained Tables</h3>
+							<p>Wrap the table in a <code>contain-table</code> class to prevent tables with a lot of content from stretching on small screens.</p>
+							<pre><code class="language-html">&lt;div class=&quot;contain-table&quot;&gt;
+  &lt;table&gt;
+  &lt;!-- etc --&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+							<div class="contain-table">
+								<table>
+									<thead>
+										<tr>
+											<th>Head 1</th>
+											<th>Head 2</th>
+											<th>Head 3</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="https://taniarascia.github.io/primitive">https://taniarascia.github.io/primitive</a></td>
+											<td>Description 2</td>
+											<td>Description 3</td>
+										</tr>
+										<tr>
+											<td>Description 1</td>
+											<td>Description 2</td>
+											<td>Description 3</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>Footer 1</td>
+											<td>Footer 2</td>
+											<td>Footer 3</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</article>
+
+					</section>
+
+					<section id="lists">
+
+						<article>
+							<h2>Lists</h2>
+							<p>Regular ordered and unordered lists have no special styling applied to them.</p>
+							<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;List item one
+		&lt;ul&gt;
+			&lt;li&gt;Nested list item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;List item two&lt;/li&gt;
+	&lt;li&gt;List item three&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+							<div class="row">
+								<div class="large-50">
+									<ul>
+										<li>List item one
+											<ul>
+												<li>Nested list item </li>
+											</ul>
+										</li>
+										<li>List item two</li>
+										<li>List item three</li>
+									</ul>
+								</div>
+								<div class="large-50">
+									<ol>
+										<li>List item one
+											<ol>
+												<li>Nested list item</li>
+											</ol>
+										</li>
+										<li>List item two</li>
+										<li>List item three</li>
+									</ol>
+								</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Definition Lists</h3>
+							<p>Definition titles are bold, and margins have been placed after each description.</p>
+							<pre><code class="language-html">&lt;dl&gt;
+	&lt;dt&gt;Definition Title One&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+	&lt;dt&gt;Definition Title Two&lt;/dt&gt;
+	&lt;dd&gt;First definition description&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+							<dl>
+								<dt>Definition Title One</dt>
+								<dd>First definition description</dd>
+								<dt>Definition Title Two</dt>
+								<dd>First definition description</dd>
+							</dl>
+						</article>
+
+					</section>
+
+					<section id="code">
+
+						<article>
+							<h2>Code</h2>
+							<p>Style has been added for inline <code>&lt;code&gt;</code> tags, and <code>&lt;kbd&gt;</code> is a <kbd>keyboard input</kbd>. </p>
+							<o>Place blocks of preformatted code in a <code>&lt;pre&gt;&lt;code&gt;</code>.</p>
+								<pre><code>class Voila {
+public:
+  // Voila
+  static const string VOILA = "Voila";
+}</code></pre>
+						</article>
+
+					</section>
+
+					<section id="helpers">
+
+						<article>
+							<h2>Helpers</h2>
+							<p>Helper classes are helpful for templating.</p>
+						</article>
+
+						<article>
+							<h3>Vertical Center</h3>
+							<p>Vertically center an element with the <code>vertical-center</code> class. (Uses <a href="http://caniuse.com/#search=flexbox" target="_blank">Flexbox</a>.)</p>
+							<pre><code class="language-html">&lt;div class="vertical-center"&gt;
+	&lt;div&gt;Vertically centered&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+							<div class="vertical-center example" style="height: 100px;">
+								<div class="example">Vertically centered</div>
+							</div>
+						</article>
+
+						<article>
+							<h3>Text Alignment</h3>
+							<p>Use <code>text-left</code>, <code>text-right</code>, and <code>text-center</code> to align content.</p>
+							<pre><code class="language-html">&lt;p class=&quot;text-left&quot;&gt;Left&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;Center&lt;/p&gt;
+&lt;p class=&quot;text-right&quot;&gt;Right&lt;/p&gt;</code></pre>
+							<p class="text-left"><span class="example" style="padding: 5px;">Left</span></p>
+							<p class="text-center"><span class="example" style="padding: 5px;">Center</span></p>
+							<p class="text-right"><span class="example" style="padding: 5px;">Right</span></p>
+						</article>
+
+						<article>
+							<h3>Screen Reader Text</h3>
+							<p>Accessibility is important - if you have a label that should be hidden but accessible, or use an icon as a link, or want to skip navigation, use the <code>screen-reader-text</code> class to hide content visually.
+								<pre><code class="language-html">&lt;a class=&quot;screen-reader-text&quot; href=&quot;#content&quot;&gt;Skip Navigation&lt;/a&gt;</code></pre>
+						</article>
+
+						<article>
+							<h3>Responsive Images</h3>
+							<p>Add a <code>responsive-image</code> class for responsive images.</p>
+							<pre><code class="language-html">&lt;img src="#" class="responsive-image" alt="Responsive Image"&gt;</code></pre>
+							<img src="https://placehold.it/1000x100" class="responsive-image" alt="Example of responsive-image CSS class">
+						</article>
+
+						<article>
+							<h3>More Helper Classes</h3>
+							<table>
+								<thead>
+									<tr>
+										<th>Class</th>
+										<th>What it does</th>
+									</tr>
+								</thead>
+								<tr>
+									<td><code>.float-left</code></td>
+									<td><code>float: left</code></td>
+								</tr>
+								<tr>
+									<td><code>.float-right</code></td>
+									<td><code>float: right</code></td>
+								</tr>
+								<tr>
+									<td><code>.block</code></td>
+									<td><code>display: block</code></td>
+								</tr>
+								<tr>
+									<td><code>.inline-block</code></td>
+									<td><code>display: inline-block</code></td>
+								</tr>
+								<tr>
+									<td><code>.inline</code></td>
+									<td><code>display: inline</code></td>
+								</tr>
+								<tr>
+									<td><code>.show</code></td>
+									<td><code>display: block !important</code></td>
+								</tr>
+								<tr>
+									<td><code>.hide</code></td>
+									<td><code>display: none !important</code></td>
+								</tr>
+								<tr>
+									<td><code>.padding-top</code></td>
+									<td><code>padding-top: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-padding-top</code></td>
+									<td><code>padding-top: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.padding-bottom</code></td>
+									<td><code>padding-bottom: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-padding-bottom</code></td>
+									<td><code>padding-bottom: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.margin-top</code></td>
+									<td><code>margin-top: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-top</code></td>
+									<td><code>margin-top: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.margin-bottom</code></td>
+									<td><code>margin-bottom: 2rem</code></td>
+								</tr>
+								<tr>
+									<td><code>.no-margin-bottom</code></td>
+									<td><code>margin-bottom: 0</code></td>
+								</tr>
+								<tr>
+									<td><code>.content-section</code></td>
+									<td><code>padding: 60px 0</code> (30px on mobile)</td>
+								</tr>
+							</table>
+						</article>
+
+					</section>
+
+					<section id="sass-main">
+
+						<article>
+							<h2>Sass</h2>
+							<p>This project is built with Sass (SCSS) and Gulp. If you're not familiar with these technologies, please read the tutorials below.</p>
+							<ul>
+								<li><a href="https://www.taniarascia.com/learn-sass-now/" target="_blank">Learn to use Sass</a></li>
+								<li><a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">Learn to use Gulp</a></li>
+							</ul>
+							<p>Sass is used to extend your CSS, allowing you to use useful concepts like variables and nesting, as well as compartmentalizing and organizing the code. Gulp is used to watch for changes and process those Sass files into regular CSS files, as well as minifying and adding prefixes for cross-browser compatibilty.</p>
+							<p>If you already have Node installed, you can just clone the project...</p>
+							<pre><code>git clone https://github.com/taniarascia/primitive.git</code></pre>
+							<p>install the dev dependencies in the root of the project...</p>
+							<pre><code>npm install</code></pre>
+							<p>and run.</p>
+							<pre><code>gulp</code></pre>
+							<p>The default <code>gulp</code> command will run a watch to compile, minify and prefix your files. If that doesn't make sense, read the <a href="https://www.taniarascia.com/getting-started-with-gulp/" targer="_blank">aformentioned article</a> and you'll be up to speed in no time.</p>
+						</article>
+
+						<article>
+							<h3>Directory Structure</h3>
+							<p>The project contains the source and destination folders, as well as a few necessary project files.</p>
+							<ul>
+								<li><strong>dist</strong> - the distribution folder that contains the final CSS, JavaScript, and HTML output.</li>
+								<li><strong>src</strong> - the source folder that contains all the <code>scss</code> files and folders.</li>
+								<li><strong>.gitignore</strong> - ignore <code>node_modules</code> and <code>.sass-cache</code> files.
+									<li><strong>gulpfile.js</strong> - the Gulp project that will compile, minify and prefix the <code>scss</code> files.</li>
+									<li><strong>package.json</strong> - npm package folder to initialize <code>node_modules</code></li>
+							</ul>
+							<pre>dist/
+├── css/
+│   ├── main.min.css
+│   └── main.css.map
+├── js/
+│   └── script.js
+├── images/
+│   └── favicon.png
+├── index.html
+src/
+└── scss/
+    ├── base/
+    │   ├── _mixins.scss
+    │   ├── _normalize.scss
+    │   ├── _reset.scss
+    │   └── _variables.scss
+    └── components/
+        ├── _scaffolding.scss
+        ├── _grid.scss
+        ├── _helpers.scss
+        ├── _buttons.scss
+        ├── _forms.scss
+        ├── _tables.scss
+        ├── _navigation.scss
+        └── _layout.scss
+        main.scss
+.gitignore
+LICENSE.md
+README.md
+gulpfile.js                                                     
+package.json</pre>
+						</article>
+
+						<article>
+							<h3>Main Sass File</h3>
+							<p>In the main Sass file, <strong>main.scss</strong>, we'll pull in the configuration (variables and mixins) first, followed by resets, then all the components.</p>
+							<pre><code class="language-scss">// Configuration
+@import "base/variables";
+@import "base/mixins";
+
+// Reset
+@import "base/normalize";
+@import "base/reset";
+
+// Components
+@import "components/scaffolding";
+@import "components/grid";
+@import "components/helpers"; 
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/navigation";
+@import "components/layout";</code></pre>
+							<p>Most of the components should be self-explanatory. <strong>Scaffolding</strong> is the main styling of typography, links, headings, etc. <strong>Navigation</strong> and <strong>layout</strong> are empty files, but I kept them in because they're generally necessary. Add more files as necessary (3rd party, fonts, etc).</p>
+						</article>
+
+					</section>
+
+					<section id="sass-config">
+
+						<article>
+							<h2>Configuration</h2>
+							<p>Much of the design can be configured just by changing some settings in <strong>_variables.scss</strong>. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized.</p>
+							<pre><code class="language-scss">/* Variables
+ * ===============
+ *
+ * All variables and most of the configuration is defined on this page. */
+
+
+/* Containers */
+
+$x-small: 600px;
+$small: 800px;
+$medium: 1000px;
+$large: 1200px;
+
+/* Breakpoints */
+
+$mobile: $x-small;
+$desktop: $medium;
+
+/* Colors */
+
+$background: white;
+$primary-color: #1E6BD6;
+$secondary-color: #47CE90;
+$accent-color: #cdcdcd;
+$alternate-background: #fafafa;
+$alternate-color: #404040;
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 15%);
+$highlight: #ffeea8;
+$error: #D33C40;
+$bq-border: 16px solid #f0f0f0;
+
+/* Typography */
+
+// Body font
+$font-size: 1rem;
+$body-font-size: 1rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: #404040;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$line-height: 1.6;
+
+// Headings
+$heading-font-color: #404040;
+$heading-font-weight: 600;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-line-height: 1.2;
+
+// Mobile heading font size
+$h1-mobile: 1.75rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.25rem;
+$h4-mobile: 1.1rem;
+$h5-mobile: 1rem;
+
+// Heading font size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+
+/* Padding */
+
+$padding: 1rem;
+$margins: 1.5rem;
+$content-padding: 60px 0;
+$content-padding-mobile: 30px 0;
+
+/* Borders */
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: #dedede;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
+
+/* Buttons */
+
+$button-background: $primary-color;
+$button-background-hover: darken($button-background, 10%);
+$button-color: #ffffff;
+$button-font-weight: 600;
+$button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$button-font-size: 1rem;
+$button-border-width: 1px;
+$button-border-style: solid;
+$button-border-color: $button-background;
+$button-border-radius: $border-radius;
+$button-text-transform: none;
+
+// Accent buttons
+$accent-button-background: $secondary-color;
+$accent-button-color: #ffffff;
+$accent-button-color-hover: #ffffff;
+
+// Muted Buttons
+$muted-border: 1px solid $accent-color;
+$muted-border-hover: 1px solid darken($accent-color, 30%);
+$muted-background: transparent;
+$muted-background-hover: transparent;
+$muted-color: darken($accent-color, 50%);
+$muted-color-hover: darken($accent-color, 50%);
+
+// Round Buttons
+$round-buttons: 40px;
+
+/* Forms */
+
+$forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$input-background: transparent;
+$placeholder: darken($accent-color, 20%);
+$form-border: 1px solid #cdcdcd;
+$form-border-hover: 1px solid darken(#cdcdcd, 10%);
+$form-border-focus: 1px solid $link-color;
+
+/* Tables */
+
+$stripes: #f0f0f0;
+$caption: #ababab;
+
+/* Code */
+
+$code-color: $font-color;
+$code-size: 14px;
+$code-family: Menlo, monospace;
+$code-background: transparent;
+$code-borders: $borders;</code></pre>
+							<p>Changing these default configurations will go a long way in setting the tone of the rest of your site.</p>
+							<p>Use the example template to see how the changes you make to <strong>_variables.scss</strong> look.</p>
+							<p><a href="templates/template.html" class="button">Example Template</a> <a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
+							<p>From here, the design is up to you. Happy coding!</p>
+						</article>
+
+					</section>
+
+				</div>
+
+				<footer class="footer text-center">
+					<div class="medium-container">
+						<hr>
+						<p class="padding-top">
+							Built by <a href="https://www.taniarascia.com">Tania Rascia</a>. <a href="https://github.com/taniarascia/primitive" target="_blank">View on GitHub</a>. Open source, of course.</p>
+
+					</div>
+				</footer>
+			</main>
+
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/prism.js"></script>
+	<script src="js/example.js"></script>
+</body>
+
+</html>

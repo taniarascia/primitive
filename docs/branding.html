@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Power of Branding</title>
+
+  <link rel="stylesheet" href="../dist/css/main.min.css">
+  <link rel="icon" href="../dist/images/favicon.png">
+
+  <style>
+    a {
+      color: #049ae5;
+    }
+    
+    a:hover,
+    a:focus,
+    a:active {
+      color: #4fb8ec;
+    }
+    
+    .small-25 {
+      width: 50%;
+      float: left;
+    }
+    
+    @media screen and (min-width: 600px) {
+      .small-25 {
+        width: 25%;
+      }
+    }
+    
+    a img:hover {
+      opacity: .8;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="text-center content-section alternate-background">
+    <div class="small-container">
+      <h1>The Power of Branding</h1>
+      <p>Small changes applied to a <a href="template.html">generic template</a> can convey a brand identity.</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="content-section no-padding-bottom">
+      <div class="container text-center">
+        <div class="row">
+          <div class="small-25">
+            <a href="templates/template-slack.html">
+              <img src="images/slack.png" class="responsive-image">
+            </a>
+          </div>
+          <div class="small-25">
+            <a href="templates/template-apple.html">
+              <img src="images/apple.png" class="responsive-image">
+            </a>
+          </div>
+          <div class="small-25">
+            <a href="templates/template-github.html">
+              <img src="images/github.png" class="responsive-image">
+            </a>
+          </div>
+          <div class="small-25">
+            <a href="templates/template-spotify.html">
+              <img src="images/spotify.png" class="responsive-image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer text-center padding-top">
+      <div class="medium-container">
+
+        <p class="padding-top">
+          Built by <a href="https://www.taniarascia.com">Tania Rascia</a>.
+
+          <div style="padding-top: 10px;">
+            <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&repo=primitive&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=taniarascia&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+            <a href="https://twitter.com/share" class="twitter-share-button" {count} data-text="Primitive, a simple Sass starter pack." data-via="taniarascia">Tweet</a>
+            <script>
+              ! function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = p + '://platform.twitter.com/widgets.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }
+              }(document, 'script', 'twitter-wjs');
+            </script>
+            <a class="twitter-follow-button" href="https://twitter.com/taniarascia" data-show-screen-name="false">
+Follow</a>
+          </div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+
+</html>

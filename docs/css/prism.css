@@ -1,0 +1,159 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #343434;
+  direction: ltr;
+  font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  text-shadow: none;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #F7F8F9;
+}
+
+
+/* Code blocks */
+
+pre[class*="language-"],
+pre {
+  border: 0px solid #eee;
+  overflow: auto;
+  padding: 1em;
+  background: #F7F8F9;
+  font-size: .85rem;
+}
+
+
+/* Inline code */
+
+:not(pre) > code[class*="language-"] {
+  padding: .15em .2em .05em;
+  white-space: normal;
+}
+
+:not(pre) > code {
+  border: 0px solid #eee;
+  color: #d14;
+	font-size: 14px;
+	border-radius: 0;
+}
+
+
+/* Syntax Highlighting */
+
+.token.doctype {
+  background: #000000;
+  color: #fff;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #898989;
+}
+
+.token.namespace {
+  opacity: .7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #0ca47b;
+}
+
+.token.punctuation {
+  color: #343434;
+}
+
+.language-html .token.punctuation {
+  color: #1E6BD6;
+}
+
+.token.operator {
+  color: $operator;
+}
+
+.token.variable {
+  color: #d14;
+}
+
+.token.property {
+  color: #D5D5D5;
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.constant,
+.token.regex,
+.token.inserted {
+  color: #fa755a;
+}
+
+.token.delimiter {
+  background: #000;
+  color: #fff;
+  padding: 1px 2px;
+}
+
+.token.atrule {
+  color: #6772e5;
+}
+
+.token.keyword {
+  color: #6772e5;
+}
+
+.language-autohotkey .token.selector {
+  color: #333;
+}
+
+.token.attr-name {
+  color: #555;
+}
+
+.token.function {
+  color: #6772e5;
+}
+
+.token.class-name {
+  color: #6772e5;
+}
+
+.token.deleted,
+.language-autohotkey .token.tag {
+  color:  #d14;
+}
+
+.token.tag {
+  color: #1E6BD6;
+}
+
+.language-autohotkey .token.keyword {
+  color: #333;
+}
+
+.token.selector {
+  color: #d14;
+}
+
+.token.italic {
+  font-style: italic;
+}
