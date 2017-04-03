@@ -1,9 +1,9 @@
 $(document).ready(function () {
 	$('#eighties').click(function () {
-		$('link[href="example/css/example.css"]').attr('href', 'example/css/eighties.css');
+		$('link[href="css/example.css"]').attr('href', 'css/eighties.css');
 	});
 	$('#boring').click(function () {
-		$('link[href="example/css/eighties.css"]').attr('href', 'example/css/example.css');
+		$('link[href="css/eighties.css"]').attr('href', 'css/example.css');
 	});
 	$(document).on("scroll", onScroll);
 

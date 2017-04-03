@@ -17,7 +17,7 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  font-size: 15px;
+  font-size: 14px;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -30,11 +30,11 @@ pre[class*="language-"],
 
 pre[class*="language-"],
 pre {
-  border-left: 4px solid #eee;
   overflow: auto;
-  padding: 0 1rem 0 2rem;
-  font-size: 15px;
-	margin: 2rem 0 2rem -2rem;
+  padding: 1rem;
+  font-size: 14px;
+	margin: 1rem 0;
+	background: rgba(0,0,0,.05);
 }
 
 
