@@ -42,7 +42,7 @@
 				<div class="flex-large flex-50">
 					<img src="images/css3.png" class="logos">
 					<h4><strong>CSS</strong> (easy)</h4>
-					<p><a href="https://taniarascia.github.io/primitive/dist/css/main.min.css" download>Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.</p>
+					<p><a href="https://taniarascia.github.io/primitive/css/main.min.css" download>Download the stylesheet</a>, link to it in the <code>&lt;head&gt;</code>, and place all your custom CSS in a separate stylesheet.</p>
 				</div>
 				<div class="flex-large flex-50">
 					<img src="images/sass.png" class="logos">
@@ -97,7 +97,7 @@
 								<li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a>.</li>
 								<li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a> to enable responsiveness.</li>
 								<li>Includes the <a href="https://jquery.com/">jQuery</a> library for easy DOM manipulation (optional).</li>
-								<li>Includes links to the <a href="https://raw.githubusercontent.com/taniarascia/primitive/gh-pages/dist/css/main.min.css" target="_blank">Primitive CSS file</a>, an empty JavaScript file, and a Favicon.</li>
+								<li>Includes links to the <a href="https://taniarascia.github.io/primitive/css/main.min.css" target="_blank">Primitive CSS file</a>, an empty JavaScript file, and a Favicon.</li>
 							</ul>
 							<pre><code class="language-html">&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -120,70 +120,40 @@
 &lt;/body&gt;
 
 &lt;/html&gt;</code></pre>
-					
+
 							<p>View all HTML5 with Primitive CSS applied to them.</p>
-							<p><a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
-						</article>
-
-						<article class="templates">
-							<h3>Example Template</h3>
-							<p>An example template is provided, so that you may make changes to the colors and other configuration and see how the final product looks in a real-world example.</p>
-							<p><a href="template.html" class="button">View Template</a></p>
-							<p>Here are a few examples of how making a few small changes can transform the template.</p>
-
-							<div class="row">
-								<div class="small-25">
-									<a href="templates/template-slack.html">
-										<img src="images/slack.png" class="responsive-image" style="max-width:100px;">
-									</a>
-								</div>
-								<div class="small-25">
-									<a href="templates/template-apple.html">
-										<img src="images/apple.png" class="responsive-image" style="max-width:100px;">
-									</a>
-								</div>
-								<div class="small-25">
-									<a href="templates/template-github.html">
-										<img src="images/github.png" class="responsive-image" style="max-width:100px;">
-									</a>
-								</div>
-								<div class="small-25">
-									<a href="templates/template-spotify.html">
-										<img src="images/spotify.png" class="responsive-image" style="max-width:100px;">
-									</a>
-								</div>
-							</div>
+							<p><a href="https://taniarascia.github.io/html5-test/" class="button">HTML5 Elements Test</a></p>
 						</article>
 
 					</section>
 
 					<section id="containers">
-						<h2>Containers</h2>
-						<p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
-						<pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
+						<article>
+							<h2>Containers</h2>
+							<p>There are three container sizes for content that are centered with left and right padding. Content without a container will span the width of the viewport.</p>
+							<pre><code class="language-html">&lt;div class=&quot;small-container&quot;&gt;Small&lt;/div&gt;
 &lt;div class=&quot;medium-container&quot;&gt;Medium&lt;/div&gt;
-&lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;
-&lt;div&gt;None&lt;/div&gt;</code></pre>
+&lt;div class=&quot;container&quot;&gt;Large&lt;/div&gt;</code></pre>
+
+							<table>
+								<thead>
+									<tr>
+										<th>Small</th>
+										<th>Medium</th>
+										<th>Large</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>800px</td>
+										<td>1000px</td>
+										<td>1200px</td>
+									</tr>
+								</tbody>
+							</table>
+						</article>
 					</section>
 				</div>
-
-				<article>
-					<div class="small-container example">
-						Small container - 800px
-					</div>
-					<div class="medium-container example">
-						Medium container - 1000px
-					</div>
-					<div class="container example">
-						Container - 1200px
-					</div>
-					<div class="full-container example">
-						Container - Full (100%)
-					</div>
-					<div class="example">
-						No container
-					</div>
-				</article>
 
 				<div class="medium-container">
 
@@ -237,31 +207,6 @@
 							<div class="row no-collapse">
 								<div class="column-50 example">50</div>
 								<div class="column-50 example">50</div>
-							</div>
-						</article>
-
-						<article>
-							<h3>Offsets</h3>
-							<p>Use a <code>push-small-</code> or <code>push-large-</code> class to offset the columns.</p>
-							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;push-small-10 small-90&quot;&gt;90%&lt;/div&gt;
-  &lt;div class=&quot;push-small-20 small-80&quot;&gt;80%&lt;/div&gt;
-  &lt;!-- etc --&gt;
-&lt;/div&gt;</code></pre>
-							<div class="row">
-								<div class="push-small-10 small-90 example">90</div>
-							</div>
-							<div class="row">
-								<div class="push-small-20 small-80 example">80</div>
-							</div>
-							<div class="row">
-								<div class="push-small-30 small-70 example">70</div>
-							</div>
-							<div class="row">
-								<div class="push-small-40 small-60 example">60</div>
-							</div>
-							<div class="row">
-								<div class="push-small-50 small-50 example">50</div>
 							</div>
 						</article>
 
@@ -1107,8 +1052,7 @@ $code-family: Menlo, monospace;
 $code-background: transparent;
 $code-borders: $borders;</code></pre>
 							<p>Changing these default configurations will go a long way in setting the tone of the rest of your site.</p>
-							<p>Use the example template to see how the changes you make to <strong>_variables.scss</strong> look.</p>
-							<p><a href="templates/template.html" class="button">Example Template</a> <a href="dist/test.html" class="button">HTML5 Elements Test</a></p>
+							<p><a href="https://taniarascia.github.io/html5-test/" class="button">HTML5 Elements Test</a></p>
 							<p>From here, the design is up to you. Happy coding!</p>
 						</article>
 

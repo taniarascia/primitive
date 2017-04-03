@@ -1,16 +1,13 @@
 /* Grid
 =============== */
 
-
-/* Grid */
-
-
 /* All grid sizes are based on percentages and placed in an array. Remove
  * any you don't need. Any decimal will be rounded down for its respective
  * class name - 33.3333 will be .column-33.
  */
 
 $grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
+
 $column-padding: 1rem;
 $margin-bottom: 1rem;
 
@@ -19,7 +16,7 @@ $margin-bottom: 1rem;
   padding-left: $column-padding;
   padding-right: $column-padding;
 }
-
+ 
 %row-margin {
   margin-left: -$column-padding;
   margin-right: -$column-padding;
@@ -90,12 +87,7 @@ $margin-bottom: 1rem;
       float: left;
       margin-bottom: 0;
     }
-    // Small offsets
-    .push-small-#{floor($entry)} {
-      margin-left: percentage($entry) * 0.01;
-    }
   }
-	
 	.flex-small {
 		flex: 1;
 		margin-bottom: 0;
@@ -114,10 +106,6 @@ $margin-bottom: 1rem;
       padding-left: 1rem;
       padding-right: 1rem;
       margin-bottom: 0;
-    }
-    // Large offsets
-    .push-large-#{floor($entry)} {
-      margin-left: percentage($entry) * 0.01;
     }
   }
 	.flex-large {
