@@ -17,13 +17,12 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  font-size: 14px;
-  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-  background: #F7F8F9;
 }
 
 
@@ -31,11 +30,11 @@ pre[class*="language-"],
 
 pre[class*="language-"],
 pre {
-  border: 0px solid #eee;
+  border-left: 4px solid #eee;
   overflow: auto;
-  padding: 1em;
-  background: #F7F8F9;
-  font-size: .85rem;
+  padding: 0 1rem 0 2rem;
+  font-size: 15px;
+	margin: 2rem 0 2rem -2rem;
 }
 
 
@@ -48,9 +47,10 @@ pre {
 
 :not(pre) > code {
   border: 0px solid #eee;
-  color: #d14;
+  color: #c7254e;
 	font-size: 14px;
 	border-radius: 0;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 
@@ -73,7 +73,7 @@ pre {
 
 .token.string,
 .token.attr-value {
-  color: #0ca47b;
+  color: #31a354;
 }
 
 .token.punctuation {
@@ -81,15 +81,15 @@ pre {
 }
 
 .language-html .token.punctuation {
-  color: #1E6BD6;
+  color: #3182bd;
 }
 
 .token.operator {
-  color: $operator;
+  color: #222;
 }
 
 .token.variable {
-  color: #d14;
+  color: #A03953;
 }
 
 .token.property {
@@ -104,7 +104,7 @@ pre {
 .token.constant,
 .token.regex,
 .token.inserted {
-  color: #fa755a;
+  color: #e6550d;
 }
 
 .token.delimiter {
@@ -114,15 +114,15 @@ pre {
 }
 
 .token.atrule {
-  color: #6772e5;
+  color: #756bb1;
 }
 
 .token.keyword {
-  color: #6772e5;
+  color: #756bb1;
 }
 
 .language-autohotkey .token.selector {
-  color: #333;
+  color: #222;
 }
 
 .token.attr-name {
@@ -130,28 +130,28 @@ pre {
 }
 
 .token.function {
-  color: #6772e5;
+  color: #756bb1;
 }
 
 .token.class-name {
-  color: #6772e5;
+  color: #756bb1;
 }
 
 .token.deleted,
 .language-autohotkey .token.tag {
-  color:  #d14;
+  color:  #A03953;
 }
 
 .token.tag {
-  color: #1E6BD6;
+  color: #3182bd;
 }
 
 .language-autohotkey .token.keyword {
-  color: #333;
+  color: #222;
 }
 
 .token.selector {
-  color: #d14;
+  color: #A03953;
 }
 
 .token.italic {
