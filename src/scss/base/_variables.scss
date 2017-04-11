@@ -20,7 +20,7 @@ $desktop: $medium;
 
 $background: white;
 $primary-color: #1E6BD6;
-$secondary-color: #24C2AB;
+$secondary-color: #21B983; 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
 $alternate-color: #404040;
@@ -83,7 +83,7 @@ $button-background: $primary-color;
 $button-background-hover: darken($button-background, 10%);
 $button-color: #ffffff;
 $button-font-weight: 600;
-$button-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 $button-font-size: 1rem;
 $button-border-width: 1px;
 $button-border-style: solid;
@@ -119,7 +119,7 @@ $form-border-focus: 1px solid $link-color;
 
 /* Tables */
 
-$stripes: #f0f0f0;
+$stripes: #f8f8f8;
 $caption: #ababab;
 
 /* Code */
