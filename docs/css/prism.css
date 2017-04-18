@@ -89,7 +89,7 @@ pre {
 }
 
 .token.variable {
-  color: #A03953;
+  color: #c7254e;
 }
 
 .token.property {
@@ -139,7 +139,7 @@ pre {
 
 .token.deleted,
 .language-autohotkey .token.tag {
-  color:  #A03953;
+  color:  #c7254e;
 }
 
 .token.tag {
@@ -151,7 +151,7 @@ pre {
 }
 
 .token.selector {
-  color: #A03953;
+  color: #c7254e;
 }
 
 .token.italic {
