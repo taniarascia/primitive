@@ -8,7 +8,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-	color: #1E6BD6;
+	color: #0366ee;
 }
 
 
@@ -16,14 +16,16 @@ a:focus {
 
 header {
 	margin-top: 60px;
-	background: #1E6BD6;
+	background: #2A55F1 url('../images/grid.png') no-repeat left center / cover;
 	padding: 60px 0;
 }
 
 header h1 {
-	color: white;
+	color: transparent;
 	font-size: 2rem;
+	text-transform: uppercase;
 	font-family: 'Press Start 2P';
+	text-shadow: 5px -5px 0 #FCB42A, 1px -1px 0 #000;
 }
 
 header p {
@@ -35,6 +37,7 @@ header a {
 }
 
 a.example-button {
+	background: transparent;
 	border: 1px solid white;
 	color: white;
 }
@@ -44,7 +47,7 @@ a.example-button:active,
 a.example-button:focus {
 	border: 1px solid white;
 	background: white;
-	color: #1E6BD6;
+	color: #0366ee;
 }
 
 .setup {
@@ -92,7 +95,8 @@ aside h1 {
 }
 
 aside h1 a {
-	text-decoration: none;
+	text-transform: uppercase;
+	text-decoration: none !important;
 	font-family: 'Press Start 2P';
 }
 
@@ -121,7 +125,7 @@ aside li a {
 }
 
 aside li a.active {
-	color: #1E6BD6;
+	color: #0366ee;
 }
 
 aside li a:hover,
@@ -136,7 +140,7 @@ aside li a.active:hover,
 aside li a.active:active,
 aside li a.active:focus {
 	background: #f0f0f0;
-	color: #1E6BD6;
+	color: #0366ee;
 	text-decoration: none;
 }
 
@@ -146,7 +150,7 @@ aside li a.active:focus {
 }
 
 .active .fa {
-	color: #1E6BD6;
+	color: #0366ee;
 }
 
 .toggle-nav {
@@ -200,7 +204,7 @@ article {
 	margin-bottom: .5rem;
 	padding-top: .25rem;
 	padding-bottom: .25rem;
-	border: 1px solid #1E6BD6;
+	border: 1px solid #0366ee;
 	font-weight: 400;
 }
 

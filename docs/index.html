@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<title>Primitive CSS Framework</title>
+	<title>Primitive - Sass Boilerplate</title>
 
 	<meta name="author" content="Tania Rascia">
 	<meta name="description" content="A simple Sass starter pack.">
@@ -25,13 +25,13 @@
 	<header class="text-center vertical-center">
 		<div class="small-container">
 			<h1>Primitive</h1>
-			<p>Primitive is a minimalist CSS framework built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
+			<p>Primitive is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.</p>
 			<p>
 				<a class="github-button" href="https://github.com/taniarascia/primitive" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star taniarascia/primitive on GitHub">Star</a>
 				<a class="github-button" href="https://github.com/taniarascia" data-show-count="true"  data-size="large" aria-label="Follow @taniarascia on GitHub">Follow @taniarascia</a>
 			</p>
 			<p>
-				<a id="boring" class="button">Boring Mode</a>
+				<a id="boring" class="button example-button">Boring Mode</a>
 				<a id="eighties" class="button">EIGHTIES MODE!</a>
 			</p>
 		</div>
@@ -99,7 +99,6 @@
 								<li>Sets the <a href="http://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">default language</a> and <a href="https://en.wikipedia.org/wiki/UTF-8">character set</a>.</li>
 								<li>Uses the latest <a href="https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx">Internet Explorer rendering mode</a>.</li>
 								<li>Defines the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">width of the viewport</a> to enable responsiveness.</li>
-								<li>Includes the <a href="https://jquery.com/">jQuery</a> library for easy DOM manipulation (optional).</li>
 								<li>Includes links to the <a href="https://taniarascia.github.io/primitive/css/main.min.css" target="_blank">Primitive CSS file</a>, an empty JavaScript file, and a Favicon.</li>
 							</ul>
 							<pre><code class="language-html">&lt;!doctype html&gt;
@@ -118,7 +117,6 @@
 
 &lt;body&gt;
 
-  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
   &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 
@@ -163,98 +161,7 @@
 					<section id="grid">
 						<article>
 							<h2>Grid</h2>
-							<p>The grid is based on percents - <code>small-50</code> or <code>large-50</code> is 50% of the screen width. The two breakpoints are defined by <code>small</code> or <code>large</code> classes. Resize the screen to see the different breakpoints.</p>
-							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;small-50&quot;&gt;50%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
-  &lt;div class=&quot;large-50&quot;&gt;50%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-							<div class="row">
-								<div class="small-50 example">50</div>
-								<div class="small-50 example">50</div>
-							</div>
-							<div class="row">
-								<div class="large-50 example">50</div>
-								<div class="large-50 example">50</div>
-							</div>
-						</article>
-						<article>
-							<h3>No Collapse</h3>
-							<p>If the grid shouldn't collapse to 100% width on small screens, use a <code>column-</code> class.</p>
-							<pre><code class="language-html">&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;column-90&quot;&gt;90%&lt;/div&gt;
-  &lt;div class=&quot;column-10&quot;&gt;10%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-							<div class="row">
-								<div class="column-100 example">100</div>
-							</div>
-							<div class="row">
-								<div class="column-90 example">90</div>
-								<div class="column-10 example">10</div>
-							</div>
-							<div class="row no-collapse">
-								<div class="column-80 example">80</div>
-								<div class="column-20 example">20</div>
-							</div>
-							<div class="row no-collapse">
-								<div class="column-70 example">70</div>
-								<div class="column-30 example">30</div>
-							</div>
-							<div class="row no-collapse">
-								<div class="column-60 example">60</div>
-								<div class="column-40 example">40</div>
-							</div>
-							<div class="row no-collapse">
-								<div class="column-50 example">50</div>
-								<div class="column-50 example">50</div>
-							</div>
-						</article>
-
-						<article>
-							<h3>Repeating Grid</h3>
-							<p>The grid will wrap and repeat onto the next line if you continue.</p>
-							<pre><code class="language-html">&lt;div class="row"&gt;
-	&lt;div class="small-33"&gt;33%&lt;/div&gt;
-	&lt;div class="small-33"&gt;33%&lt;/div&gt;
-   &lt;!-- etc --&gt;
-&lt;/div&gt;</code></pre>
-							<div class="row">
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-								<div class="small-33 example">33</div>
-							</div>
-						</article>
-
-						<article>
-							<h3>Flex Grid</h3>
-							<p>Create infinitely repeating cells with a flex grid.</p>
-							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
-	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;flex-row&quot;&gt;
-	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;flex-column&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-							<div class="flex-row">
-								<div class="flex-column example">2</div>
-								<div class="flex-column example">2</div>
-							</div>
-							<div class="flex-row">
-								<div class="flex-column example">3</div>
-								<div class="flex-column example">3</div>
-								<div class="flex-column example">3</div>
-							</div>
-							<h3>Flex Breakpoints</h3>
-							<p>The same breakpoints are available for the flex grid.</p>
+							<p>A simple flex grid with two breakpoints.</p>
 							<pre><code class="language-html">&lt;div class=&quot;flex-row&quot;&gt;
 	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
 	&lt;div class=&quot;flex-small&quot;&gt;&lt;/div&gt;
@@ -409,70 +316,6 @@
 									<input type="checkbox"> Remember me
 								</label>
 								<input type="button" value="Submit">
-							</form>
-						</article>
-
-						<article>
-							<h3>Split Forms</h3>
-							<p>Add a <code>split-form</code> class to enable left-aligned labels. Combine with rows for versitile layout possibilities.</p>
-							<pre><code class="language-html">&lt;form class=&quot;split-form&quot;&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
-      &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;small-40&quot;&gt;
-      &lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;First Name&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
-      &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;small-40&quot;&gt;
-      &lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;small-10&quot;&gt;
-      &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;small-90&quot;&gt;
-      &lt;input type=&quot;url&quot; id=&quot;url&quot; placeholder=&quot;Website URL&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;push-small-10 small-10&quot;&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-							<form class="split-form">
-								<div class="row">
-									<div class="small-10">
-										<label for="name-split">Name</label>
-									</div>
-									<div class="small-40">
-										<input type="text" id="name-split" placeholder="First Name">
-									</div>
-									<div class="small-10">
-										<label for="email-split">Email</label>
-									</div>
-									<div class="small-40">
-										<input type="email" id="email-split" placeholder="Email Address">
-									</div>
-								</div>
-								<div class="row">
-									<div class="small-10">
-										<label for="url">URL</label>
-									</div>
-									<div class="small-90">
-										<input type="url" id="url" placeholder="Website URL">
-									</div>
-								</div>
-								<div class="row">
-									<div class="push-small-10 small-10">
-										<input type="button" value="Submit">
-									</div>
-								</div>
 							</form>
 						</article>
 
@@ -943,9 +786,9 @@ $desktop: $medium;
 
 /* Colors */
 
-$background: white;
-$primary-color: #1E6BD6;
-$secondary-color: #21B983; 
+$background: white; 
+$primary-color: #0366EE;
+$secondary-color: #FCB42A; 
 $accent-color: #cdcdcd;
 $alternate-background: #fafafa;
 $alternate-color: #404040;

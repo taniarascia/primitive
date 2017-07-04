@@ -1,13 +1,6 @@
 /* Grid
 =============== */
 
-/* All grid sizes are based on percentages and placed in an array. Remove
- * any you don't need. Any decimal will be rounded down for its respective
- * class name - 33.3333 will be .column-33.
- */
-
-$grid: 10,20,30,40,50,60,70,80,90,100,25,16.6667,33.3333,66.6667,75;
-
 $column-padding: 1rem;
 $margin-bottom: 1rem;
 
@@ -16,27 +9,10 @@ $margin-bottom: 1rem;
   padding-left: $column-padding;
   padding-right: $column-padding;
 }
- 
+  
 %row-margin {
   margin-left: -$column-padding;
   margin-right: -$column-padding;
-}
-
-// Mobile column view
-%full-width-column {
-  width: 100%;
-  margin-bottom: $margin-bottom;
-}
-
-// Clearfix row
-.row {
-  @extend %row-margin;
-  &::before,
-  &::after {
-    display: block;
-    content: ' ';
-    clear: both;
-  }
 }
 
 // Flex row
@@ -47,11 +23,6 @@ $margin-bottom: 1rem;
   flex-wrap: wrap;
 }
 
-.flex-column {
-  @extend %column-padding;
-  flex: 1;
-}
-
 .flex-small,
 .flex-large {
   @extend %column-padding;
@@ -59,37 +30,11 @@ $margin-bottom: 1rem;
   margin-bottom: $margin-bottom;
 }
 
-
-/* Mobile view */
-
-// On mobile, all columns are full width with a bottom margin
-@each $entry in $grid {
-  .small-#{floor($entry)},
-  .large-#{floor($entry)} {
-    @extend %full-width-column;
-    @extend %column-padding;
-  }
-  .column-#{floor($entry)} {
-    width: percentage($entry) * 0.01;
-    float: left;
-    @extend %column-padding;
-  }
-} 
-
-
 /* Small screen breakpoint */
 
-@include small-breakpoint {
-  // Float all columns to the left for small screens
-  @each $entry in $grid {
-    .small-#{floor($entry)} {
-      width: percentage($entry) * 0.01;
-      float: left;
-      margin-bottom: 0;
-    }
-  }
+@include small-breakpoint { 
 	.flex-small {
-		flex: 1;
+		flex: 1 1 0;
 		margin-bottom: 0;
 	}
 }
@@ -98,18 +43,8 @@ $margin-bottom: 1rem;
 /* Large screen breakpoint */
 
 @include large-breakpoint {
-  // Float columns to the left at for large screens
-  @each $entry in $grid {
-    .large-#{floor($entry)} {
-      width: percentage($entry) * 0.01;
-      float: left;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-bottom: 0;
-    }
-  }
 	.flex-large {
-		flex: 1;
+		flex: 1 1 0; 
 		margin-bottom: 0;
 	}
-}
+}  
