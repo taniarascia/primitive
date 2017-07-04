@@ -200,6 +200,7 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -422,11 +423,13 @@ th {
 /* Reset
   =============== */
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 figure {
@@ -539,6 +542,7 @@ pre {
   background: transparent;
   padding: 1rem;
   -moz-tab-size: 2;
+  -o-tab-size: 2;
   tab-size: 2;
   color: #404040;
   font-family: Menlo, monospace;
@@ -552,6 +556,7 @@ kbd {
   background-color: #f7f7f7;
   border: 1px solid #ccc;
   border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
   color: #333;
   display: inline-block;
@@ -617,8 +622,11 @@ dd {
   margin-right: -1rem; }
 
 .flex-row {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-wrap: wrap;
@@ -633,6 +641,7 @@ dd {
 /* Small screen breakpoint */
 @media (min-width: 600px) {
   .flex-small {
+    -webkit-box-flex: 1;
     -ms-flex: 1 1 0px;
     flex: 1 1 0;
     margin-bottom: 0; } }
@@ -640,6 +649,7 @@ dd {
 /* Large screen breakpoint */
 @media (min-width: 1000px) {
   .flex-large {
+    -webkit-box-flex: 1;
     -ms-flex: 1 1 0px;
     flex: 1 1 0;
     margin-bottom: 0; } }
@@ -676,10 +686,13 @@ dd {
   display: inline; }
 
 .vertical-center {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
@@ -821,7 +834,6 @@ a.full-button {
   border-radius: 4px;
   padding: .75rem;
   outline: none;
-  vertical-align: middle;
   background: transparent;
   margin-bottom: .5rem;
   font-size: 1rem;
@@ -834,6 +846,7 @@ a.full-button {
 
 [type=color]:focus, [type=color]:active, [type=date]:focus, [type=date]:active, [type=datetime]:focus, [type=datetime]:active, [type=datetime-local]:focus, [type=datetime-local]:active, [type=email]:focus, [type=email]:active, [type=month]:focus, [type=month]:active, [type=number]:focus, [type=number]:active, [type=password]:focus, [type=password]:active, [type=search]:focus, [type=search]:active, [type=tel]:focus, [type=tel]:active, [type=text]:focus, [type=text]:active, [type=url]:focus, [type=url]:active, [type=week]:focus, [type=week]:active, [type=time]:focus, [type=time]:active, select:focus, select:active, textarea:focus, textarea:active {
   border: 1px solid #0366EE;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #8cbcfe;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #8cbcfe; }
 
 textarea {
@@ -882,6 +895,7 @@ textarea.has-error:hover,
 textarea.has-error:focus,
 textarea.has-error:active {
   border: 1px solid #D33C40;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #f4cecf;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #f4cecf; }
 
 ::-webkit-input-placeholder,
