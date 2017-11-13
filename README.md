@@ -2,7 +2,7 @@
 
 ### Frontend Sass Boilerplate
 
-Primitive is a minimalist CSS framework built with Sass that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.
+Primitive is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.
 
 ## Getting Started
 
