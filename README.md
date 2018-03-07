@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/github/stars/taniarascia/primitive.svg)](https://github.com/taniarascia/primitive)
 [![License](https://img.shields.io/github/license/taniarascia/primitive.svg)](https://github.com/taniarascia/primitive)
 
-Primitive is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography, and a responsive grid system for templating.
+Primitive is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography.
 
 ## Getting Started
 
