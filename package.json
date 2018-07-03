@@ -1,8 +1,9 @@
 {
   "name": "primitive",
-  "version": "1.2.1",
-  "description": "A Sass boilerplate for front-end web developers.",
-  "main": "gulpfile.js",
+  "author": "Tania Rascia",
+  "version": "1.3.0",
+  "description": "A Sass boilerplate for front end web developers.",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taniarascia/primitive.git"
@@ -12,20 +13,20 @@
     "setup",
     "boilerplate",
     "framework",
-    "ui"
+    "ui",
+    "css framework"
   ],
-  "author": "Tania Rascia",
+  "dependencies": {
+    "node-sass": "*"
+  },
+  "scripts": {
+    "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
+    "sass": "node-sass -w -r ./src/scss/ -o ./dist/css/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/taniarascia/primitive/issues"
   },
   "homepage": "https://taniarascia.github.io/primitive",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
-  }
+  "private": true
 }

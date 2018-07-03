@@ -3,49 +3,47 @@
 
 $column-padding: 1rem;
 $margin-bottom: 1rem;
-// The rows have a negative margin  which are offset by the padding on the columns.
 
+// The rows have a negative margin  which are offset by the padding on the columns.
 %column-padding {
-  padding-left: $column-padding;
-  padding-right: $column-padding;
+    padding-left: $column-padding;
+    padding-right: $column-padding;
 }
 
 %row-margin {
-  margin-left: -$column-padding;
-  margin-right: -$column-padding;
+    margin-left: -$column-padding;
+    margin-right: -$column-padding;
 }
 
 // Flex row
 .flex-row {
-  @extend %row-margin;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    @extend %row-margin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flex-small,
 .flex-large {
-  @extend %column-padding;
-  flex-basis: 100%;
-  margin-bottom: $margin-bottom;
+    @extend %column-padding;
+    flex-basis: 100%;
+    margin-bottom: $margin-bottom;
 }
-
 
 /* Small screen breakpoint */
 
 @include small-breakpoint {
-  .flex-small {
-    flex: 1 1 0;
-    margin-bottom: 0;
-  }
+    .flex-small {
+        flex: 1 1 0;
+        margin-bottom: 0;
+    }
 }
-
 
 /* Large screen breakpoint */
 
 @include large-breakpoint {
-  .flex-large {
-    flex: 1 1 0;
-    margin-bottom: 0;
-  }
+    .flex-large {
+        flex: 1 1 0;
+        margin-bottom: 0;
+    }
 }
