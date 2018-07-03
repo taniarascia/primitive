@@ -21,7 +21,7 @@
   },
   "scripts": {
     "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
-    "sass": "node-sass -w -r ./src/scss/ -o ./dist/css/"
+    "sass": "node-sass ./src/scss/ -o ./dist/css/  -w -r --source-map-embed --source-map-contents"
   },
   "license": "MIT",
   "bugs": {
