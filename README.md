@@ -17,7 +17,7 @@ All documentation can be found at [https://taniarascia.github.io/primitive](http
 
 > 7/3/18
 
-- [ ] Add Sass maps
+- [x] Add source maps
 - [ ] Add minification
 - [ ] Change documentation page to remove Gulp
 
