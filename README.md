@@ -1,6 +1,6 @@
 # Primitive
 
-Primitive is a minimalist Sass boilerplate that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography.
+Primitive is a minimalist Sass boilerplate and CSS framework that provides helpful, browser-consistent styling for buttons, forms, tables, lists, and typography.
 
 ## Getting Started
 
@@ -23,4 +23,6 @@ All documentation can be found at [https://taniarascia.github.io/primitive](http
 
 ## License
 
-The code is open source and available under the [MIT License](LICENSE.md). Built and maintained by [Tania Rascia](https://www.taniarascia.com)
+The code is open source and available under the [MIT License](LICENSE.md). 
+
+Built and maintained by [Tania Rascia](https://www.taniarascia.com)
