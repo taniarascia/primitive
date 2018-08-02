@@ -178,7 +178,7 @@ aside li a {
 	display: block;
 	color: #fff;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 11px;
 	border: 1px solid transparent;
 	border-radius: 4px;
 }
@@ -421,8 +421,21 @@ pre[class*="language-"] {
 pre code,
 pre {
 	color: #cdcdcd;
+	 -ms-overflow-style: none;  // IE 10+
+         overflow: -moz-scrollbars-none;  // Firefox
 }
 
+pre code,
+pre {::-webkit-scrollbar { 
+    display: none;  // Safari and Chrome
+}
+
+blockquote {
+	border: 2px solid #333;
+	font-family: 'Press Start 2P';
+	font-size: 18px;
+}
+	
 .button,
 [type=button],
 [type=reset],
