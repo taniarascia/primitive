@@ -1,7 +1,7 @@
 {
   "name": "primitive",
   "author": "Tania Rascia",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "A Sass boilerplate for front end web developers.",
   "main": "index.js",
   "repository": {
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
-    "sass": "node-sass ./src/scss/ -o ./dist/css/  -w -r --source-map-embed --source-map-contents"
+    "sass": "node-sass ./src/scss/ -o ./dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/css/main.min.css -w --output-style compressed"
   },
   "license": "MIT",
   "bugs": {

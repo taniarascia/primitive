@@ -15,14 +15,15 @@ All documentation can be found at [https://taniarascia.github.io/primitive](http
 
 ## Todo:
 
-> 7/3/18
+_9/8/18_
 
 - [x] Add source maps
-- [ ] Add minification
-- [ ] Change documentation page to remove Gulp
+- [x] Add minification
+- [ ] Add autoprefixing
+- [x] Change documentation page to remove Gulp
 
 ## License
 
-The code is open source and available under the [MIT License](LICENSE.md). 
+The code is open source and available under the [MIT License](LICENSE.md).
 
 Built and maintained by [Tania Rascia](https://www.taniarascia.com)

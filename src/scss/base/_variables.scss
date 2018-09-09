@@ -14,6 +14,7 @@ $large: 1200px;
 /* Breakpoints */
 
 $mobile: $x-small;
+$tablet: $small;
 $desktop: $medium;
 
 /* Colors */
@@ -95,7 +96,7 @@ $button-text-transform: none;
 $accent-button-background: $secondary-color;
 $accent-button-color: #ffffff;
 $accent-button-color-hover: #ffffff;
-
+ 
 // Muted Buttons
 $muted-border: 1px solid $accent-color;
 $muted-border-hover: 1px solid darken($accent-color, 30%);
@@ -113,10 +114,10 @@ $forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [ty
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
 $input-background: transparent;
 $placeholder: darken($accent-color, 20%);
-$form-border: 1px solid #cdcdcd;
-$form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid $link-color;
-
+$form-border: 1px solid $border-color;
+$form-border-hover: 1px solid darken($border-color, 10%);
+$form-border-focus: 1px solid $link-color; 
+ 
 /* Tables */
 
 $stripes: #f8f8f8;
@@ -128,4 +129,4 @@ $code-color: $font-color;
 $code-size: 14px;
 $code-family: Menlo, monospace;
 $code-background: transparent;
-$code-borders: $borders;
+$code-borders: $borders;   
