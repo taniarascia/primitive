@@ -17,7 +17,7 @@
     "css framework"
   ],
   "dependencies": {
-    "node-sass": "*"
+    "node-sass": "^4.9.3"
   },
   "scripts": {
     "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
