@@ -1,8 +1,21 @@
+/* Colors
+=============*/
+
+$main: rgba(4, 140, 168, 1);
+$secondary: rgba(22, 219, 147, 1);
+$accent: rgba(211, 24, 105, 1);
+
+$white: rgb(255, 255, 255);
+$dark: #444;
+
+
+
+
 /* Layout
   =============== */
 
   body {
-    background: #303030;
+    background: $accent;
     margin-top: 1px;
   }
 
@@ -49,7 +62,7 @@
     width: 100%;
     position: fixed;
     z-index: 2;
-    background: #B4B2B3;
+    background: linear-gradient(to right, $main, $secondary);
   }
 
   aside ul {
