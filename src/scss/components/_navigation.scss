@@ -1,2 +1,21 @@
-/* Navigation
-  =============== */
+.toggle-nav {
+	float: right;
+	padding-right: 1rem;
+}
+
+.toggle-nav::after {
+	content: "\f0c9";
+	font-family: 'FontAwesome';
+	font-size: 2rem;
+	color: #404040;
+}
+
+.toggle-nav.active::after {
+	content: "\f00d";
+	font-family: 'FontAwesome';
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+}
