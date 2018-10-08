@@ -77,7 +77,6 @@ $dark: #444;
     background: linear-gradient(to right, $main, $secondary);
     padding: 10px;
     box-shadow: 5px 10px;
-
   }
 
   aside h2 {
@@ -87,7 +86,7 @@ $dark: #444;
   }
 
   aside h2 a {
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: 'Great Vibes', cursive;
     color: $logo;
   }
