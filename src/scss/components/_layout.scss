@@ -1,9 +1,10 @@
 /* Colors
 =============*/
 
-$main: rgba(4, 140, 168, 1);
-$secondary: rgba(22, 219, 147, 1);
-$accent: rgba(211, 24, 105, 1);
+$main: rgba(200, 120, 47, 1);
+$secondary: rgba(225, 133, 120, 1);
+$accent: rgba(117, 127, 192, 1);
+$logo: rgba(102, 32, 52, 1);
 
 $white: rgb(255, 255, 255);
 $dark: #444;
@@ -34,7 +35,7 @@ $dark: #444;
   .main-content {
     max-width: 960px;
     background: white;
-    margin: 0 auto;
+    margin: -50px auto;
   }
 
   .flex-container {
@@ -63,6 +64,21 @@ $dark: #444;
     position: fixed;
     z-index: 2;
     background: linear-gradient(to right, $main, $secondary);
+    padding: 10px;
+    box-shadow: 5px 10px;
+
+  }
+
+  aside h2 {
+    padding: 0 1rem;
+    margin-bottom: 0 !important;
+    margin-top: .8rem !important;
+  }
+
+  aside h2 a {
+    text-decoration: none;
+    font-family: 'Great Vibes', cursive;
+    color: $logo;
   }
 
   aside ul {
