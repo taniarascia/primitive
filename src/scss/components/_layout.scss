@@ -15,6 +15,17 @@ $dark: #444;
 /* Layout
   =============== */
 
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: $accent;
+  }
+
   body {
     background: $accent;
     margin-top: 1px;
@@ -27,7 +38,7 @@ $dark: #444;
 
   header {
     margin-top: 60px;
-    background: #2A55F1 url('../images/home-bg.jpg') no-repeat left center / cover;
+    background: #2A55F1 url('../images/home-bg.jpg') no-repeat bottom center / cover;
     padding: 60px 0;
     min-height: 250px;
   }
@@ -48,7 +59,7 @@ $dark: #444;
     padding: 1rem;
   }
 
-  .content p {
+  .articolo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333333;
     font-size: 13px;
@@ -99,6 +110,14 @@ $dark: #444;
     text-decoration: none;
   }
 
+  aside li a:hover,
+  aside li a:active,
+  aside li a:focus {
+	background: $accent;
+	color: #000;
+	text-decoration: none;
+  }
+
   aside li a.active:hover {
     background: #f0f0f0;
     color: red;
@@ -112,12 +131,27 @@ $dark: #444;
 
   .footer {
     padding: 2rem 0;
-  }
-
-  .copyright p {
     font-size: x-small;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  address {
+    font-size: 0.9rem;
+  }
+
+  .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
   /* Desktop Styles */
 
