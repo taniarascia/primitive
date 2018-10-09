@@ -33,7 +33,13 @@ $dark: #444;
 
   h1 {
     font-size: large;
-    text-decoration: underline darkgreen;
+    border: solid 1px $accent;
+    padding: 0.5rem;
+    color: $accent;
+  }
+
+  h2 {
+    font-size: 11px;
   }
 
   header {
@@ -113,8 +119,8 @@ $dark: #444;
   aside li a:active,
   aside li a:focus {
 	background: $accent;
-	color: #000;
-	text-decoration: none;
+	color: $dark;
+  text-decoration: none;
   }
 
   aside li a.active:hover {
@@ -150,6 +156,12 @@ $dark: #444;
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.social a {
+  font-size: 1.2rem;
+  color: blue;
+  text-decoration: none;
 }
 
   /* Desktop Styles */
@@ -194,8 +206,10 @@ $dark: #444;
 	}
 }
 
-.logos {
-	max-width: 150px;
+.logo {
+  max-width: 10rem;
+  fill: blue;
+  
 }
 
 @media screen and (min-width: 800px) {
@@ -206,4 +220,12 @@ $dark: #444;
 
 .templates a img:hover {
 	opacity: .8;
+}
+
+table .rosso {
+  color: $error;
+}
+
+table .verde {
+  color: green;
 }
