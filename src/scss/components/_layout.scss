@@ -140,6 +140,11 @@ $dark: #444;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
+  .pulsante {
+    bottom: 0;
+    position: fixed;
+  }
+
   address {
     font-size: 0.9rem;
   }
@@ -158,10 +163,20 @@ $dark: #444;
     position:absolute;
 }
 
+.social ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+}
+
+.social li {
+  display: inline;
+}
+
 .social a {
-  font-size: 1.2rem;
-  color: blue;
-  text-decoration: none;
+  font-size: 0.6rem;
+  color: $dark;
+  text-decoration: underline;
 }
 
   /* Desktop Styles */
