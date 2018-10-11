@@ -42,6 +42,7 @@ $dark: #444;
     font-size: 11px;
   }
 
+
   header {
     margin-top: 60px;
     background: #2A55F1 url('../images/home-bg.jpg') no-repeat bottom center / cover;
@@ -74,15 +75,19 @@ $dark: #444;
   }
 
   aside {
+    display: block;
     padding: 0.5rem;
+    cursor: pointer;
     flex: 0;
     top: 0;
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     background: linear-gradient(to right, $main, $secondary);
     padding: 10px;
     box-shadow: 5px 10px;
+    overflow: hidden;
+    transition: all ease-in-out 250ms;
   }
 
   aside h2 {
@@ -107,11 +112,16 @@ $dark: #444;
     display: none;
   }
 
+  aside li.social {
+    color:$logo;
+    padding: 0 1rem 0;
+  }
+
   aside li a {
-    padding: .25rem .5rem;
+    padding: .25rem 1.5rem;
     margin: 0 .5rem;
     display: block;
-    color: #404040;
+    color: #333333;
     text-decoration: none;
   }
 
@@ -163,6 +173,10 @@ $dark: #444;
     position:absolute;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 65c8471ef59553a4730f9910155daf4aa191cc8e
   /* Desktop Styles */
 
 @media screen and (min-width: 800px) {
@@ -180,6 +194,7 @@ $dark: #444;
     border-bottom: 0;
     padding-top: 1.5rem;
     position: static;
+    height: 100%;
   }
 
 	aside h1 {
