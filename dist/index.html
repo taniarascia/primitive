@@ -5,8 +5,25 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
         
+        <title>Titolo testata</title>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+        <script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+            },
+            "button": {
+            "background": "#4b81e8"
+            }
+        },
+        "position": "bottom-left"
+        })});
+        </script>
         <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -40,6 +57,8 @@
                             <li><a href="#">Nuovo su Misura</a></li>
                             <li><a href="#">Recupero e Restauro</a></li>
                             <li><a href="contatti.html">Contatti</a></li>
+                            <li class="social">Social</li>
+                            <li><a class="social" href="#">Facebook <i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </nav>
                     
@@ -64,12 +83,6 @@
                         <div class="small-container">
                             <hr>
                             <p class="padding-top copyright">©2018 Lo Scorpione di Ilaria Petrocchi - Mobili e Oggettistica di Antiquariato e Modernariato - Piazza XX Settembre, 8/10 - 51016 Montecatini Terme - Pistoia - Cell.: 335-8259900 - email: ilaria@antichitaloscorpione.it</p>
-                            <div class="social">
-                                <ul>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                </ul>
-                            </div>
                     </footer>
                 </main> <!-- /sezione main-->
             </div> <!-- /contentitore flex-->

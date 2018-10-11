@@ -163,22 +163,6 @@ $dark: #444;
     position:absolute;
 }
 
-.social ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 5px;
-}
-
-.social li {
-  display: inline;
-}
-
-.social a {
-  font-size: 0.6rem;
-  color: $dark;
-  text-decoration: underline;
-}
-
   /* Desktop Styles */
 
 @media screen and (min-width: 800px) {
@@ -204,7 +188,18 @@ $dark: #444;
 	}
 	aside nav {
 		display: block !important;
-	}
+  }
+  
+  aside li.social{
+    color: $dark;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+  }
+
+  aside a.social {
+    color: blue;
+  }
+
 	.toggle-nav {
 		display: none;
 	}
@@ -224,7 +219,10 @@ $dark: #444;
 .logo {
   max-width: 10rem;
   fill: blue;
-  
+}
+
+figure {
+  padding: 0.8rem;
 }
 
 @media screen and (min-width: 800px) {
