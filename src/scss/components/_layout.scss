@@ -75,15 +75,18 @@ $dark: #444;
   }
 
   aside {
+    display: block;
     padding: 0.5rem;
+    cursor: pointer;
     flex: 0;
     top: 0;
     width: 100%;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     background: linear-gradient(to right, $main, $secondary);
     padding: 10px;
     box-shadow: 5px 10px;
+    transition: all ease-in-out 250ms;
   }
 
   aside h2 {
