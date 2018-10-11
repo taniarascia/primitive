@@ -81,13 +81,12 @@ $dark: #444;
     flex: 0;
     top: 0;
     width: 100%;
-    max-height: none;
-    height: 100vh;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     background: linear-gradient(to right, $main, $secondary);
     padding: 10px;
     box-shadow: 5px 10px;
+    overflow: hidden;
     transition: all ease-in-out 250ms;
   }
 
