@@ -1,7 +1,7 @@
 {
-  "name": "primitive",
+  "name": "primitive-ui",
   "author": "Tania Rascia",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A Sass boilerplate for front end web developers.",
   "main": "index.js",
   "repository": {
@@ -17,7 +17,7 @@
     "css framework"
   ],
   "dependencies": {
-    "node-sass": "*"
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
@@ -28,5 +28,5 @@
     "url": "https://github.com/taniarascia/primitive/issues"
   },
   "homepage": "https://taniarascia.github.io/primitive",
-  "private": true
+  "private": false
 }
