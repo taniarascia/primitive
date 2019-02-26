@@ -2,7 +2,7 @@
   "name": "primitive-ui",
   "author": "Tania Rascia",
   "version": "1.5.0",
-  "description": "A Sass boilerplate for front end web developers.",
+  "description": "A minimalist Sass boilerplate that provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.",
   "main": "index.js",
   "repository": {
     "type": "git",
