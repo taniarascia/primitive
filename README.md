@@ -12,7 +12,7 @@ Many websites have been built with Primitive, such as [taniarascia.com](https://
 
 ## Getting Started
 
-## CSS quick start (easy)
+### CSS quick start (easy)
 
 > **Note:** I need to get this up on a CDN.
 
