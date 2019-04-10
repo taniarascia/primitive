@@ -14,8 +14,6 @@ Many websites have been built with Primitive, such as [taniarascia.com](https://
 
 ### CSS quick start (easy)
 
-> **Note:** I need to get this up on a CDN.
-
 - [Download the stylesheet](https://taniarascia.github.io/primitive/css/main.css).
 - Save the stylesheet and link to it in the head of your project.
 
@@ -24,7 +22,8 @@ Many websites have been built with Primitive, such as [taniarascia.com](https://
 The beauty of Primitive is the ease with which you can create unique designs in a beautiful, simple system. Simply clone the repo:
 
 ```bash
-git clone git@github.com:taniarascia/primitive.git
+git clone https://github.com/taniarascia/primitive.git
+cd primitive
 ```
 
 And run a Sass watch on the project.
