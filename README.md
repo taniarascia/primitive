@@ -14,13 +14,15 @@ Many websites have been built with Primitive, such as [taniarascia.com](https://
 
 ### CSS quick start (easy)
 
-- [Download the stylesheet](https://taniarascia.github.io/primitive/css/main.css) or get the [CDN url](https://unpkg.com/primitive-ui/dist/css/main.css).
+- [Download the stylesheet](https://taniarascia.github.io/primitive/css/main.css) or use the CDN URL: [https://unpkg.com/primitive-ui/dist/css/main.css](https://unpkg.com/primitive-ui/dist/css/main.css).
 
 - Save the stylesheet and link to it in the head of your project.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css">
 ```
+
+It's all set to go and your HTML elements will be given sensible default styling.
 
 ### Sass integration (recommended)
 
