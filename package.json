@@ -1,12 +1,20 @@
 {
   "name": "primitive-ui",
   "author": "Tania Rascia",
+  "homepage": "https://taniarascia.github.io/primitive",
   "version": "1.5.0",
   "description": "A minimalist Sass boilerplate that provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taniarascia/primitive.git"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
+    "sass": "node-sass ./src/scss/ -o ./dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/css/main.min.css -w --output-style compressed"
   },
   "keywords": [
     "sass",
@@ -16,17 +24,9 @@
     "ui",
     "css framework"
   ],
-  "dependencies": {
-    "node-sass": "^4.11.0"
-  },
-  "scripts": {
-    "sass-docs": "node-sass -w -r ./src/scss/ -o ./docs/css/",
-    "sass": "node-sass ./src/scss/ -o ./dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded | node-sass ./src/scss/main.scss ./dist/css/main.min.css -w --output-style compressed"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/taniarascia/primitive/issues"
   },
-  "homepage": "https://taniarascia.github.io/primitive",
   "private": false
 }
