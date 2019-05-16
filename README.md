@@ -1,14 +1,6 @@
 # Primitive UI [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A minimalist Sass boilerplate that provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.
-
-## Motivation
-
-Primitive was originally built by [Tania Rascia](https://www.taniarascia.com) to understand how a responsive CSS framework works from the inside-out, and how to use Sass, the CSS preprocessor. 
-
-Primitive makes it incredibly simple to set the foundation for a sustainable styling system. You get the freedom to design your site however you want, with a solid, easy-to-understand underlying framework.
-
-Many websites have been built with Primitive, such as [taniarascia.com](https://www.taniarascia.com), [Laconia](https://laconia.site), [Cafe Ba-Ba-Reeba!](http://cafebabareeba.com/), [Shaw's Crab House](http://shawscrabhouse.com), [Tokio Pub](http://tokiopub.com/), [Krispy Kreme Pacific Northwest](http://krispykremepacificnw.com/), and more.
+A minimalist front-end design toolkit built with Sass for developing responsive, browser-consistent web apps. Primitive also provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.
 
 ## Getting Started
 
@@ -46,12 +38,13 @@ You can view `dist/test.html` or `templates/template.html` to see some example e
 
 All documentation can be found at [https://taniarascia.github.io/primitive](https://taniarascia.github.io/primitive).
 
-## Todos
+## Motivation
 
-- [ ] Clean up comments
-- [ ] Add simple flex grid back in
-- [ ] Look into autoprefixing
-- [ ] Improve documentation
+Primitive was originally built by [Tania Rascia](https://www.taniarascia.com) to understand how a responsive CSS framework works from scratch, and how to use Sass, the CSS preprocessor. 
+
+Primitive makes it incredibly simple to set the foundation for a sustainable styling system. You get the freedom to design your site however you want, with a solid, easy-to-understand underlying framework.
+
+Many websites have been built with Primitive, such as [taniarascia.com](https://www.taniarascia.com), [Laconia](https://laconia.site), [Cafe Ba-Ba-Reeba!](http://cafebabareeba.com/), [Shaw's Crab House](http://shawscrabhouse.com), [Tokio Pub](http://tokiopub.com/), [Krispy Kreme Pacific Northwest](http://krispykremepacificnw.com/), and more.
 
 ## Acknowledgements
 

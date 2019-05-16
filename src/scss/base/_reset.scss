@@ -1,18 +1,15 @@
-/* Reset
-  =============== */
-
 // Reset box sizing to border box
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 // Remove figure margin
 figure {
-    margin: 0;
+  margin: 0;
 }

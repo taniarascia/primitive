@@ -1,127 +1,128 @@
-/* Helpers
-  =============== */
+/**
+ * Helpers
+ */
 
 // Classic clearfix 
 .clearfix::before,
 .clearfix::after {
-    content: " ";
-    display: block;
+  content: " ";
+  display: block;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 // Text alignment
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 // Display
 .block {
-    display: block;
+  display: block;
 }
 
 .inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 // Vertical center
 .vertical-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // Responsive images
 .responsive-image {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 // Display State
 .show {
-    display: block !important;
+  display: block !important;
 }
 
 .hide {
-    display: none !important;
+  display: none !important;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 // Floats
 .float-left {
-    float: left;
+  float: left;
 }
 
 .float-right {
-    float: right;
+  float: right;
 }
 
 // Padding
 .no-padding-top {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .no-padding-bottom {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .padding-top {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .padding-bottom {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 // Margins
 .no-margin-top {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .no-margin-bottom {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .margin-top {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .margin-bottom {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 // Backgrounds
 .alternate-background {
-    background: $alternate-background;
-    color: $alternate-color;
+  background: $alternate-background;
+  color: $alternate-color;
 }
 
 // Screen reader text for accessibility
 .screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }

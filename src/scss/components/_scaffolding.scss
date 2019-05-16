@@ -1,19 +1,20 @@
-/* Scaffolding
-  =============== */
+/**
+ * Layout
+ */
 
 // HTML base
 html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
-    font-size: $font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+  font-size: $font-size;
 }
 
 // Body base
 body {
-    color: $font-color;
-    background: $background;
-    font-size: $body-font-size;
+  color: $font-color;
+  background: $background;
+  font-size: $body-font-size;
 }
 
 p,
@@ -21,16 +22,16 @@ ol,
 ul,
 dl,
 table {
-    margin: 0 0 $margins 0;
+  margin: 0 0 $margins 0;
 }
 
 // Remove extra margin for nested lists
 ul li ul {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 ol li ol {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 // Headings
@@ -39,193 +40,204 @@ h2,
 h3,
 h4,
 h5 {
-    margin: $margins 0;
-    font-weight: $heading-font-weight;
-    font-family: $heading-font-family;
-    line-height: $heading-line-height;
-    color: $heading-font-color;
-    &:not(:first-child) {
-        margin: 1.5rem 0;
-    }
+  margin: $margins 0;
+  font-weight: $heading-font-weight;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
+
+  &:not(:first-child) {
+    margin: 1.5rem 0;
+  }
 }
 
 // Increased margin on additional headings
 h1:not(:first-child),
 h2:not(:first-child),
 h3:not(:first-child) {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 // Heading individual styles
 h1 {
-    font-size: $h1-mobile;
+  font-size: $h1-mobile;
 }
 
 h2 {
-    font-size: $h2-mobile;
+  font-size: $h2-mobile;
 }
 
 h3 {
-    font-size: $h3-mobile;
+  font-size: $h3-mobile;
 }
 
 h4 {
-    font-size: $h4-mobile;
+  font-size: $h4-mobile;
 }
 
 h5 {
-    font-size: $h5-mobile;
+  font-size: $h5-mobile;
 }
 
 @include small-breakpoint {
-    // Increased margin on additional headings
-    h1:not(:first-child),
-    h2:not(:first-child),
-    h3:not(:first-child) {
-        margin-top: 2.5rem;
-    } // Heading desktop individual styles
-    h1 {
-        font-size: $h1;
-    }
-    h2 {
-        font-size: $h2;
-    }
-    h3 {
-        font-size: $h3;
-    }
-    h4 {
-        font-size: $h4;
-    }
-    h5 {
-        font-size: $h5;
-    }
+
+  // Increased margin on additional headings
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  // Heading desktop individual styles
+  h1 {
+    font-size: $h1;
+  }
+
+  h2 {
+    font-size: $h2;
+  }
+
+  h3 {
+    font-size: $h3;
+  }
+
+  h4 {
+    font-size: $h4;
+  }
+
+  h5 {
+    font-size: $h5;
+  }
 }
 
 // Link styling
 a {
-    color: $link-color;
-    text-decoration: none;
-    &:hover,
-    &:active,
-    &:focus {
-        color: $link-hover-color;
-        text-decoration: underline;
-    }
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
 }
 
 // Highlight
 mark {
-    background: $highlight;
-    padding: 0 0.2rem;
+  background: $highlight;
+  padding: 0 0.2rem;
 }
 
 // Blockquote
 blockquote {
-    margin: 0 0 $margins 0;
-    border-left: $bq-border;
-    padding: 0 1.5rem;
-    font-size: 1.5rem;
-    cite {
-        display: block;
-        margin-top: $margins;
-        font-size: 1rem;
-        text-align: right;
-    }
+  margin: 0 0 $margins 0;
+  border-left: $bq-border;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+
+  cite {
+    display: block;
+    margin-top: $margins;
+    font-size: 1rem;
+    text-align: right;
+  }
 }
 
 // Code block styling
 pre {
-    border: 0;
-    border-radius: $border-radius;
-    background: $code-background;
-    padding: 1rem;
-    tab-size: 2;
-    color: $code-color;
+  border: 0;
+  border-radius: $border-radius;
+  background: $code-background;
+  padding: 1rem;
+  tab-size: 2;
+  color: $code-color;
+  font-family: $code-family;
+  font-size: $code-size;
+  margin: 0 0 $margins 0;
+
+  code {
     font-family: $code-family;
-    font-size: $code-size;
-    margin: 0 0 $margins 0;
-    code {
-        font-family: $code-family;
-        line-height: 1.2;
-    }
+    line-height: 1.2;
+  }
 }
 
 // Keyboard input
 kbd {
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    color: #333;
-    display: inline-block;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.4;
-    margin: 0 .1em;
-    padding: .1em .6em;
-    text-shadow: 0 1px 0 #fff;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  color: #333;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 .1em;
+  padding: .1em .6em;
+  text-shadow: 0 1px 0 #fff;
 }
 
 // Inline code styling
 :not(pre)>code {
-    color: $code-color;
-    background: $code-background;
-    font-family: $code-family;
-    font-size: $code-size;
-    padding: 0 0.2rem;
-    border: $borders;
-    border-radius: $border-radius;
+  color: $code-color;
+  background: $code-background;
+  font-family: $code-family;
+  font-size: $code-size;
+  padding: 0 0.2rem;
+  border: $borders;
+  border-radius: $border-radius;
 }
 
 // Line break
 hr {
-    height: 0;
-    border: 0;
-    border-top: $borders;
+  height: 0;
+  border: 0;
+  border-top: $borders;
 }
 
 // Definition list
 dt {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 dd {
-    margin-bottom: .5rem;
+  margin-bottom: .5rem;
 }
 
 // Full container 
 .full-container {
-    max-width: 100%;
-    padding: 0 1rem;
+  max-width: 100%;
+  padding: 0 1rem;
 }
 
 // Container
 .container {
-    max-width: $large;
-    padding: 0 $padding;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: $large;
+  padding: 0 $padding;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Small container
 .small-container {
-    @extend .container;
-    max-width: $small;
+  @extend .container;
+  max-width: $small;
 }
 
 // Medium container
 .medium-container {
-    @extend .container;
-    max-width: $medium;
+  @extend .container;
+  max-width: $medium;
 }
 
 // Content
 .content-section {
-    padding: $content-padding-mobile;
+  padding: $content-padding-mobile;
 }
 
 @include small-breakpoint {
-    .content-section {
-        padding: $content-padding;
-    }
+  .content-section {
+    padding: $content-padding;
+  }
 }

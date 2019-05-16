@@ -1,18 +1,15 @@
-/* Mixins
-  =============== */
-
 // Media query for mobile first layout 
 @mixin small-breakpoint {
   @media (min-width: #{$mobile}) {
     @content;
-  }
-}
+  } 
+}  
 
 // Break on tablet
 @mixin medium-breakpoint {
   @media (min-width: #{$tablet}) {
     @content;
-  }
+  } 
 }
 
 // Break on desktop
