@@ -1,6 +1,6 @@
 {
   "name": "primitive-ui",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "author": "Tania Rascia <tania@taniarascia.com>",
   "description": "A minimalist front-end design toolkit built with Sass for developing responsive, browser-consistent web apps.",
   "homepage": "https://taniarascia.github.io/primitive",
