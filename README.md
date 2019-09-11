@@ -3,6 +3,8 @@
 
 A minimalist front-end design toolkit built with Sass for developing responsive, browser-consistent web apps. Primitive also provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.
 
+### [View documentation](https://taniarascia.github.io/primitive)
+
 ## Installation
 
 ### CSS quick start (easy)
@@ -34,10 +36,6 @@ npm run sass
 Now you can begin modifying variables in `variables.scss`. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized. 
 
 You can view `dist/test.html` or `templates/template.html` to see some example elements as you make changes.
-
-## Usage
-
-All documentation can be found at [https://taniarascia.github.io/primitive](https://taniarascia.github.io/primitive).
 
 ## Motivation
 
