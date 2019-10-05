@@ -386,12 +386,13 @@
 
 						<article>
 							<h3>Form Validation</h3>
-							<p>An input field with a
-								<code>has-error</code> class.</p>
-							<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code></pre>
+							<p>To express that action was successful, you can use <code>is-success</code> class. If user's input has some errors, <code>has-error</code> class may be good for you.</p>
+							<pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;name&quot; placeholder=&quot;Name&quot; class=&quot;has-error&quot;&gt;</code><br><code class="language-html">&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;Email&quot; class=&quot;is-success&quot;&gt;</code></pre>
 							<form>
 								<label for="name-error">Name</label>
 								<input type="text" id="name-error" placeholder="Name" class="has-error">
+								<label for="name-success">Email</label>
+								<input type="email" id="name-success" placeholder="Email" class="is-success">
 							</form>
 						</article>
 
