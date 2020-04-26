@@ -26,17 +26,17 @@ $desktop                  : $medium                                    !default;
 //==============================================================================
 
 $background               : white !default;
-$primary-color            : #0366EE                                    !default;
-$secondary-color          : #29de7d                                    !default;
-$accent-color             : #cdcdcd                                    !default;
-$alternate-background     : #fafafa                                    !default;
-$alternate-color          : #404040                                    !default;
+$primary-color            : #0366EE                                  !default;
+$secondary-color          : #29de7d                                  !default;
+$accent-color             : #cdcdcd                                  !default;
+$alternate-background     : #fafafa                                  !default;
+$alternate-color          : #404040                                  !default;
 $link-color               : $primary-color                             !default;
 $link-hover-color         : darken($link-color, 15%)                   !default;
-$highlight                : #ffeea8                                    !default;
-$error                    : #D33C40                                    !default;
-$success                  : #29de7d                                    !default;
-$bq-border                : 16px solid #f0f0f0                         !default;
+$highlight                : #ffeea8                                  !default;
+$error                    : #D33C40                                  !default;
+$success                  : #29de7d                                  !default;
+$bq-border                : 16px solid #f0f0f0                       !default;
 
 //==============================================================================
 // Typography
@@ -48,7 +48,7 @@ $body-font-size           : 1rem                                       !default;
 $font-style               : normal                                     !default;
 $font-variant             : normal                                     !default;
 $font-weight              : normal                                     !default;
-$font-color               : #404040                                    !default;
+$font-color               : #404040                                  !default;
 $font-family              : -apple-system, 
                             BlinkMacSystemFont, 
                             Helvetica Neue, 
@@ -58,8 +58,8 @@ $font-family              : -apple-system,
 $line-height              : 1.6                                        !default;
 
 // Headings
-$heading-font-color       : #404040 !default;
-$heading-font-weight      : 600 !default;
+$heading-font-color       : #404040                                  !default;
+$heading-font-weight      : 600                                        !default;
 $heading-font-family      : -apple-system, 
                             BlinkMacSystemFont, 
                             Helvetica Neue, 
@@ -68,28 +68,26 @@ $heading-font-family      : -apple-system,
                             sans-serif                                 !default;
 $heading-line-height      : 1.2 !default;
 
-// Mobile heading font size
-$h1-mobile                : 1.75rem !default;
-$h2-mobile                : 1.5rem !default;
-$h3-mobile                : 1.25rem !default;
-$h4-mobile                : 1.1rem !default;
-$h5-mobile                : 1rem !default;
+$h1-mobile                : 1.75rem                                    !default;
+$h2-mobile                : 1.5rem                                     !default;
+$h3-mobile                : 1.25rem                                    !default;
+$h4-mobile                : 1.1rem                                     !default;
+$h5-mobile                : 1rem                                       !default;
 
-// Heading font size
-$h1                       : 2.25rem !default;
-$h2                       : 2rem !default;
-$h3                       : 1.75rem !default;
-$h4                       : 1.5rem !default;
-$h5                       : 1.25rem !default;
+$h1                       : 2.25rem                                    !default;
+$h2                       : 2rem                                       !default;
+$h3                       : 1.75rem                                    !default;
+$h4                       : 1.5rem                                     !default;
+$h5                       : 1.25rem                                    !default;
 
 //==============================================================================
 // Spacing
 //==============================================================================
 
-$padding                  : 1rem                                        !default;
-$margins                  : 1.5rem                                      !default;
-$content-padding          : 60px 0                                      !default;
-$content-padding-mobile   : 30px 0                                      !default;
+$padding                  : 1rem                                       !default;
+$margins                  : 1.5rem                                     !default;
+$content-padding          : 60px 0                                     !default;
+$content-padding-mobile   : 30px 0                                     !default;
 
 //==============================================================================
 // Borders
@@ -97,7 +95,7 @@ $content-padding-mobile   : 30px 0                                      !default
 
 $border-width             : 1px                                        !default;
 $border-style             : solid                                      !default;
-$border-color             : #dedede                                    !default;
+$border-color             : #dedede                                  !default;
 $border-radius            : 4px                                        !default;
 $borders                  : $border-width $border-style $border-color  !default;
 
@@ -107,7 +105,7 @@ $borders                  : $border-width $border-style $border-color  !default;
 
 $button-background        : $primary-color                             !default;
 $button-background-hover  : darken($button-background, 10%)            !default;
-$button-color             : #ffffff                                    !default;
+$button-color             : #ffffff                                  !default;
 $button-font-weight       : 600                                        !default;
 $button-font-family       : -apple-system, 
                             BlinkMacSystemFont, 
@@ -124,8 +122,8 @@ $button-text-transform    : none                                       !default;
 
 // Accent buttons
 $accent-button-background : $secondary-color                           !default;
-$accent-button-color      : #ffffff                                    !default;
-$accent-button-color-hover: #ffffff                                    !default;
+$accent-button-color      : #ffffff                                  !default;
+$accent-button-color-hover: #ffffff                                  !default;
 
 // Muted Buttons
 $muted-border             : 1px solid $accent-color                    !default;
@@ -142,8 +140,8 @@ $round-buttons            : 40px                                       !default;
 // Forms
 //==============================================================================
 
-$forms                    : ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
-$buttons                  : ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$forms                    : ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email],        [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea') !default;
+$buttons                  : ('.button, a.button, button, [type=submit], [type=reset], [type=button]') !default; 
 $input-background         : transparent                                !default;
 $placeholder              : darken($accent-color, 20%)                 !default;
 $form-border              : 1px solid $border-color                    !default;
@@ -154,8 +152,8 @@ $form-border-focus        : 1px solid $link-color                      !default;
 // Tables
 //==============================================================================
 
-$stripes                  : #f8f8f8                                    !default;
-$caption                  : #ababab                                    !default;
+$stripes                  : #f8f8f8                                  !default;
+$caption                  : #ababab                                  !default;
 
 //==============================================================================
 // Code
