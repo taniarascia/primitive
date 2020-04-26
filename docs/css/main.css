@@ -4,7 +4,7 @@
  * A minimalist front-end design toolkit built with Sass for developing 
  * responsive, browser-consistent web apps.
  *
- * Author: Tania Rascia <tania@taniarascia.com>
+ * Author: Tania Rascia <hello@taniarascia.com>
  * Source: https://github.com/taniarascia/primitive
  * Documentation: https://taniarascia.github.io/primitive
  */
@@ -330,7 +330,7 @@ figure {
   margin: 0; }
 
 /**
- * Layout
+ * Scaffolding
  */
 html {
   -webkit-font-smoothing: antialiased;
@@ -455,8 +455,8 @@ kbd {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.4;
-  margin: 0 .1em;
-  padding: .1em .6em;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
   text-shadow: 0 1px 0 #fff; }
 
 :not(pre) > code {
@@ -477,7 +477,7 @@ dt {
   font-weight: 600; }
 
 dd {
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 
 .full-container {
   max-width: 100%;
@@ -777,6 +777,18 @@ textarea.has-error:focus,
 textarea.has-error:active {
   border: 1px solid #D33C40;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #f4cecf; }
+
+input.is-success, input.is-success:hover, input.is-success:focus, input.is-success:active,
+select.is-success,
+select.is-success:hover,
+select.is-success:focus,
+select.is-success:active,
+textarea.is-success,
+textarea.is-success:hover,
+textarea.is-success:focus,
+textarea.is-success:active {
+  border: 1px solid #29de7d;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px #97efc0; }
 
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
