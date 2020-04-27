@@ -19,6 +19,14 @@ A minimalist front-end design toolkit built with Sass for developing responsive 
 
 It's all set to go and your HTML elements will be given sensible default styling.
 
+### Gulp usage
+You can use gulp and customize it as well if you want
+
+- Build CSS: `yarn gulp css`
+- Watch modifications and recompile: `yarn gulp watch`
+
+(If you don't use `yarn`, replace with `npx`)
+
 ### Sass integration (recommended)
 
 The beauty of Primitive is the ease with which you can create unique designs in a beautiful, simple system.
