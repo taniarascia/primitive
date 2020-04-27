@@ -38,7 +38,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "node-sass": "^4.14.0",
-    "postcss-cli": "^7.1.0"
+    "postcss-cli": "^7.1.1"
   },
   "dependencies": {}
 }
