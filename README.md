@@ -36,7 +36,7 @@ npm run sass:build
 
 Now you can begin modifying variables in `variables.scss`. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized.
 
-You can view `dist/test.html` or `templates/template.html` to see some example elements as you make changes.
+You can view `dist/test.html` or `docs/template.html` to see some example elements as you make changes.
 
 ## Acknowledgements
 

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$('#eighties').click(function () {
-		$('link[href="css/example.css"]').attr('href', 'css/eighties.css');
+		$('link[href="css/example.css"]').attr('href', 'css/eighties.css?version=2');
 	});
 	$('#boring').click(function () {
 		$('link[href="css/eighties.css"]').attr('href', 'css/example.css');

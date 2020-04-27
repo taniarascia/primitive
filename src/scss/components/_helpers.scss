@@ -69,15 +69,6 @@
   visibility: hidden;
 }
 
-// Floats
-.float-left {
-  float: left;
-}
-
-.float-right {
-  float: right;
-}
-
 // Padding
 .no-padding-top {
   padding-top: 0;
@@ -116,6 +107,18 @@
 .alternate-background {
   background: $alternate-background;
   color: $alternate-color;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }
 
 // Screen reader text for accessibility

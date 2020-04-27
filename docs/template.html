@@ -7,8 +7,8 @@
 
     <title>Primitive Template</title>
 
-    <link rel="stylesheet" href="../../css/main.min.css" />
-    <link rel="icon" href="../../images/favicon.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/favicon.png" />
 
     <style>
       nav {
@@ -19,18 +19,20 @@
       nav a {
         padding: 10px;
         line-height: 80px;
-        color: white;
-        font-size: 0.8rem;
+        color: #ccc;
+        font-size: 1rem;
       }
 
-      nav a:hover {
+      nav a:hover,
+      nav a:active,
+      nav a:focus {
+        color: white;
         text-decoration: none;
       }
 
       @media screen and (min-width: 600px) {
         nav a {
           padding: 20px;
-          font-size: 0.9rem;
         }
       }
 
@@ -46,11 +48,11 @@
 
   <body>
     <nav>
-      <div class="container">
-        <div class="inline-block float-left">
+      <div class="container flex-row space-between">
+        <div>
           <a href="#!" class="brand">Brand</a>
         </div>
-        <div class="inline-block float-right">
+        <div>
           <a href="#!">Support</a>
           <a href="#!">Learn</a>
           <a href="#!">Blog</a>
