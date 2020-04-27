@@ -24,8 +24,14 @@ It's all set to go and your HTML elements will be given sensible default styling
 The beauty of Primitive is the ease with which you can create unique designs in a beautiful, simple system.
 
 ```bash
+# Clone the repo
 git clone https://github.com/taniarascia/primitive.git
-npm run sass
+
+# Watch for file changes
+npm run sass:watch
+
+# Build a minified production build
+npm run sass:build
 ```
 
 Now you can begin modifying variables in `variables.scss`. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized.
