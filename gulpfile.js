@@ -6,6 +6,7 @@ const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
     srcCSS: './src/scss/**/*',
@@ -22,6 +23,8 @@ function css() {
 
     return src(paths.srcCSSMain)
         .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write())
         .pipe(dest(paths.distCSS))
 
         .pipe(postcss(plugins))
