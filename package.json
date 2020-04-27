@@ -15,7 +15,7 @@
   },
   "scripts": {
     "sass:watch": "node-sass src/scss/ -o dist/css/ -w -r --source-map-embed --source-map-contents --output-style expanded",
-    "sass:build": "node-sass src/scss/main.scss dist/css/main.min.css --output-style compressed && npm run prefix",
+    "sass:build": "node-sass src/scss/ -o dist/css/ -r --source-map-embed --source-map-contents --output-style expanded && node-sass src/scss/main.scss dist/css/main.min.css --output-style compressed && npm run prefix",
     "sass:build:docs": "node-sass src/scss/main.scss docs/css/main.css --source-map-embed --source-map-contents --output-style expanded",
     "prefix": "postcss dist/css/main.min.css -r --use=autoprefixer --no-map"
   },
