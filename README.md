@@ -38,10 +38,6 @@ Now you can begin modifying variables in `variables.scss`. This file will define
 
 You can view `dist/test.html` or `templates/template.html` to see some example elements as you make changes.
 
-## Motivation
-
-Primitive was originally built by [Tania Rascia](https://www.taniarascia.com) to understand how a responsive CSS framework works from scratch. Primitive makes it incredibly simple to set the foundation for a sustainable styling system. You get the freedom to design your site however you want, with a solid, easy-to-understand underlying framework.
-
 ## Acknowledgements
 
 - Dave Gamache for building [Skeleton CSS](http://getskeleton.com/), the original inspiration for building Primitive and understanding responsive CSS.
