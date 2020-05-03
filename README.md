@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![primitive-ui on NPM](https://img.shields.io/npm/v/primitive-ui.svg?color=green&label=primitive-ui)](https://www.npmjs.com/package/primitive-ui)
 
-A minimalist front-end design toolkit built with Sass for developing responsive web apps. Primitive also provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.
+A front-end design toolkit built with Sass for developing responsive web apps. Primitive also provides helpful, browser-consistent styling for default HTML elements - buttons, forms, tables, lists, and typography.
 
 ### [View documentation](https://taniarascia.github.io/primitive)
 
@@ -37,6 +37,13 @@ npm run sass:build
 Now you can begin modifying variables in `variables.scss`. This file will define your colors, typography, sizes, breakpoints, buttons, borders, and more. Define all your variables here to keep your project organized.
 
 You can view `dist/test.html` or `docs/template.html` to see some example elements as you make changes.
+
+### Gulp usage
+
+If you use would prefer to use Gulp for compiling, the option is available.
+
+- Watch modifications and recompile: `yarn gulp-watch` / `npm run gulp-watch`
+- Build CSS: `yarn gulp-css` / `npm run gulp-css`
 
 ## Acknowledgements
 
