@@ -1,3 +1,6 @@
+@use "../base/mixins";
+@use "../base/variables";
+
 /**
  * Tables
  */
@@ -12,16 +15,16 @@ table {
 
 // Extra border underneath header
 thead th {
-  border-bottom: 2px solid $border-color;
+  border-bottom: 2px solid variables.$border-color;
 }
 
 // Extra border above footer
 tfoot th {
-  border-top: 2px solid $border-color;
+  border-top: 2px solid variables.$border-color;
 }
 
 td {
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid variables.$border-color;
 }
 
 th,
@@ -31,13 +34,13 @@ td {
 }
 
 caption {
-  padding: $padding 0;
+  padding: variables.$padding 0;
   caption-side: bottom;
-  color: $caption;
+  color: variables.$caption;
 }
 
 .striped-table tbody tr:nth-child(odd) {
-  background-color: $stripes;
+  background-color: variables.$stripes;
 }
 
 // Container for responsive tables
@@ -45,7 +48,7 @@ caption {
   overflow-x: auto;
 }
 
-@include small-breakpoint {
+@include mixins.small-breakpoint {
   .contain-table {
     width: 100%;
   }

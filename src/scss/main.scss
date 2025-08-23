@@ -9,29 +9,31 @@
  * Documentation: https://taniarascia.github.io/primitive
  */
 
+@use "sass:color";
+
 //==============================================================================
 // Configuration
 //==============================================================================
 
-@import 'base/variables';
-@import 'base/mixins';
+@use 'base/variables';
+@use 'base/mixins';
 
 //==============================================================================
 // Reset
 //==============================================================================
 
-@import 'base/normalize';
-@import 'base/reset';
+@use 'base/normalize';
+@use 'base/reset';
 
 //==============================================================================
 // Components
 //==============================================================================
 
-@import 'components/scaffolding';
-@import 'components/grid';
-@import 'components/helpers';
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/tables';
-@import 'components/navigation';
-@import 'components/layout';
+@use 'components/scaffolding';
+@use 'components/grid';
+@use 'components/helpers';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/tables';
+@use 'components/navigation';
+@use 'components/layout';

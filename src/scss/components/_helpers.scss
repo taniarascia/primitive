@@ -1,3 +1,5 @@
+@use "../base/variables";
+
 /**
  * Helpers
  */
@@ -105,8 +107,8 @@
 
 // Backgrounds
 .alternate-background {
-  background: $alternate-background;
-  color: $alternate-color;
+  background: variables.$alternate-background;
+  color: variables.$alternate-color;
 }
 
 .space-between {
