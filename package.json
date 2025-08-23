@@ -15,7 +15,7 @@
   },
   "scripts": {
     "sass:watch": "sass src/scss:dist/css --watch --embed-source-map --embed-sources --style=expanded",
-    "sass:build": "sass src/scss:dist/css --embed-source-map --embed-sources -style=expanded && sass src/scss/main.scss dist/css/main.min.css --style=compressed && npm run prefix",
+    "sass:build": "sass src/scss:dist/css --embed-source-map --embed-sources --style=expanded && sass src/scss/main.scss dist/css/main.min.css --style=compressed && npm run prefix",
     "sass:build:docs": "sass src/scss/main.scss:docs/css/main.css --embed-source-map --embed-sources --style=expanded",
     "prefix": "postcss dist/css/main.min.css -r --use=autoprefixer --no-map",
     "gulp-css": "gulp css",
