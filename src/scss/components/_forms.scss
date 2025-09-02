@@ -29,7 +29,7 @@
 // Input fields on focus
 %forms-focus {
   border: variables.$form-border-focus;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px color.adjust(variables.$link-color, $lightness: 30%);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px light-dark(color.adjust(variables.$link-color--light, $lightness: 30%), color.adjust(variables.$link-color--dark, $lightness: 30%));
 }
 
 // Variable containing all input fields
@@ -126,6 +126,9 @@ textarea {
       @extend .is-success;
     }
   }
+  &:placeholder {
+    color: light-dark(variables.$placeholder--light, variables.$placeholder--dark);    
+  }
 }
 
 // Placeholder Text
@@ -133,5 +136,5 @@ textarea {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: variables.$placeholder;
+  color: light-dark(variables.$placeholder--light, variables.$placeholder--dark);
 }

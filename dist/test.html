@@ -15,7 +15,7 @@
         <h1>HTML5 Element Test Page</h1>
         <p>Common HTML5 elements for CSS testing purposes.</p>
 
-        <h1>Formatting</h1>
+        <h2>Formatting</h2>
 
         <p>
           This sentence is <b>bold</b>. If you like semantics, you might go with
@@ -41,7 +41,7 @@
           </p>
         </address>
 
-        <h2>Blockquote</h2>
+        <h3>Blockquote</h3>
 
         <blockquote>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda
@@ -50,7 +50,7 @@
           <cite>- Blockquote Citation</cite>
         </blockquote>
 
-        <h2>Preformatted Text</h2>
+        <h3>Preformatted Text</h3>
         <pre>
 class Voila {
 public:
@@ -58,46 +58,52 @@ public:
   static const string VOILA = "Voila";
 }</pre
         >
-        <h2>Horizontal Line</h2>
+        <h3>Horizontal Line</h3>
 
         <hr />
 
-        <h1>Headings</h1>
+        <section>
+          <h2>Headings</h2>
+          <!-- 
+            Technically we shouldn't re-use an h1, but we need to for illustrative purposes here. So this has been enclosed in a section to at least define it separately.
+            
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#avoid_using_multiple_h1_elements_on_one_page 
+          -->
+          <h1>First Heading h1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima,
+            magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa
+            sunt accusantium. Ipsa error aliquid et! Animi.
+          </p>
+          <h2>Second Heading h2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias ullam quasi
+            est a nemo, accusamus voluptatum autem. Eius explicabo est assumenda voluptatem id, hic
+            maxime mollitia facere debitis quos.
+          </p>
+          <h3>Third Heading h3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti, repudiandae rerum
+            nam laborum eligendi aperiam. Autem id, ad necessitatibus accusantium, facilis, quae ullam
+            est, voluptates debitis fugiat quos inventore!
+          </p>
+          <h4>Fourth Heading h4</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum eum eligendi
+            voluptatum quasi nisi doloremque ipsam unde, laboriosam nihil voluptatem consequatur quam
+            non similique vero ratione animi sit veritatis.
+          </p>
+          <h5>Fifth Heading h5</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
+            eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
+            maiores expedita commodi perferendis non blanditiis.
+          </p>
+        </section>
 
-        <h1>First Heading h1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima,
-          magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa
-          sunt accusantium. Ipsa error aliquid et! Animi.
-        </p>
-        <h2>Second Heading h2</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias ullam quasi
-          est a nemo, accusamus voluptatum autem. Eius explicabo est assumenda voluptatem id, hic
-          maxime mollitia facere debitis quos.
-        </p>
-        <h3>Third Heading h3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti, repudiandae rerum
-          nam laborum eligendi aperiam. Autem id, ad necessitatibus accusantium, facilis, quae ullam
-          est, voluptates debitis fugiat quos inventore!
-        </p>
-        <h4>Fourth Heading h4</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum eum eligendi
-          voluptatum quasi nisi doloremque ipsam unde, laboriosam nihil voluptatem consequatur quam
-          non similique vero ratione animi sit veritatis.
-        </p>
-        <h5>Fifth Heading h5</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
-          eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
-          maiores expedita commodi perferendis non blanditiis.
-        </p>
+        <h2>Lists</h2>
 
-        <h1>Lists</h1>
-
-        <h2>Unordered list</h2>
+        <h3>Unordered list</h3>
 
         <ul>
           <li>
@@ -110,7 +116,7 @@ public:
           <li>List item three</li>
         </ul>
 
-        <h2>Ordered list</h2>
+        <h3>Ordered list</h3>
 
         <ol>
           <li>
@@ -130,9 +136,10 @@ public:
           <dd>Second definition description</dd>
         </dl>
 
-        <h1>Tables</h1>
+        <h2>Tables</h2>
 
         <table>
+          <caption>Regular table</caption>
           <thead>
             <tr>
               <th>Head 1</th>
@@ -166,7 +173,42 @@ public:
           </tbody>
         </table>
 
-        <h1>Forms</h1>
+        <table class="striped-table">
+          <caption>Striped table</caption>
+          <thead>
+            <tr>
+              <th>Head 1</th>
+              <th>Head 2</th>
+              <th>Head 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Footer 1</th>
+              <th>Footer 2</th>
+              <th>Footer 3</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+          </tbody>
+        </table>        
+
+        <h2>Forms</h2>
 
         <form>
           <label for="text">Text Input</label>
@@ -211,7 +253,7 @@ public:
           <button>Button element</button>
         </form>
 
-        <h2>Fieldset and Legend</h2>
+        <h3>Fieldset and Legend</h3>
 
         <form>
           <fieldset>
@@ -221,6 +263,19 @@ public:
             <input type="submit" value="Submit" />
           </fieldset>
         </form>
+
+        <h3>Color mode</h3>
+
+        <p class="light-only" style="background-color: white; text-align: center; color: black;">Your system preference is for light mode. </p>
+        <p class="dark-only" style="background-color: black; text-align: center; color: white;">Your system preference is for dark mode</p>
+        
+        <p>To change your color mode preference:
+          <ul>
+            <li>Windows: Settings > Personalization > Colors</li>
+            <li>MacOS: System Preferences > General > Appearance</li>
+            <li>Linux: Settings > Appearance / Personalization (this varies by distro)</li>
+          </ul>
+        </p>
 
         <footer>
           <p>

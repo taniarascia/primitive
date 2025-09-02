@@ -47,7 +47,7 @@ h5 {
   font-weight: variables.$heading-font-weight;
   font-family: variables.$heading-font-family;
   line-height: variables.$heading-line-height;
-  color: variables.$heading-font-color;
+  color: light-dark(variables.$heading-font-color--light, variables.$heading-font-color--dark);
 
   &:not(:first-child) {
     margin: 1.5rem 0;
@@ -114,13 +114,13 @@ h5 {
 
 // Link styling
 a {
-  color: variables.$link-color;
+  color: light-dark(variables.$link-color--light, variables.$link-color--dark);
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    color: variables.$link-hover-color;
+    color: light-dark(variables.$link-hover-color--light, variables.$link-color--dark);
     text-decoration: underline;
   }
 }
@@ -166,11 +166,11 @@ pre {
 
 // Keyboard input
 kbd {
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
+  background-color: variables.$very-light-gray;
+  border: 1px solid variables.$light-gray;
   border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-  color: #333;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px variables.$white inset;
+  color: variables.$very-dark-gray;
   display: inline-block;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
