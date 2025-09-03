@@ -40,8 +40,8 @@ caption {
 }
 
 .striped-table tbody tr:nth-child(odd) {
-  background-color: light-dark(variables.$stripes--light, variables.$stripes--dark);
-  color: light-dark(variables.$very-dark-gray, variables.$very-light-gray);
+  background-color: variables.$stripes-background;
+  color: variables.$stripes-color;
 }
 
 // Container for responsive tables

@@ -52,12 +52,19 @@
 
         <h3>Preformatted Text</h3>
         <pre>
+          H anging
+          T he
+          M ail
+          L etter
+        </pre>
+        <pre>
+          <code>
 class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
-}</pre
-        >
+}
+</code></pre>
         <h3>Horizontal Line</h3>
 
         <hr />
@@ -248,6 +255,8 @@ public:
           <label for="textarea">Textarea</label>
           <textarea id="textarea" rows="5" cols="30" placeholder="Message"></textarea>
           <input type="button" value="Button" />
+          <input type="button" class="accent-button" value="Accent Button" />
+          <input type="button" class="muted-button" value="Muted Button" />
           <input type="submit" value="Submit" />
           <input type="reset" value="Reset" />
           <button>Button element</button>
@@ -276,15 +285,101 @@ public:
             <li>Linux: Settings > Appearance / Personalization (this varies by distro)</li>
           </ul>
         </p>
-
-        <footer>
-          <p>
-            Made to test
-            <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive</a> by
-            <a href="https://www.taniarascia.com">Tania Rascia</a>.
-          </p>
-        </footer>
       </div>
+      <h2>Containers</h2>
+
+      <section class="full-container alternate-background">
+        <h3>Full container</h3>
+        <ul>
+          <li>.full-container</li>
+          <li>.alternate-background</li>
+        </ul>      
+      </section>
+
+      <section class="large-container">
+        <h3>Large container</h3>
+        <div class="vertical-center">
+          <ul>
+            <li>.large-container</li>
+            <li>.vertical-center</li>
+          </ul>
+        </div>
+        <div class="flex-row">
+          <p class="flex-small half alternate-background">
+            .flex-small.half
+          </p>
+          <p class="flex-small half">
+            .flex-small.half
+          </p>
+        </div>
+        <div class="flex-row">
+          <p class="flex-small one-fourth alternate-background">
+            .flex-small.one-fourth
+          </p>
+          <p class="flex-small three-fourths">
+            .flex-small.three-fourths
+          </p>
+        </div>   
+        <div class="flex-row">
+          <p class="flex-small one-third alternate-background">
+            .flex-small.one-third
+          </p>
+          <p class="flex-small two-thirds">
+            .flex-small.two-thirds
+          </p>
+        </div>   
+      </section>
+
+      <section class="medium-container">
+        <h3>Medium container</h3>
+        <div class="flex-row">
+          <p class="text-left flex-small one-third">
+            .one-third.text-left ........... ........... ...........
+          </p>
+          <p class="text-justify flex-small one-third alternate-background">
+            .one-third.text-justify ........... ........... ...........
+          </p>
+          <p class="text-right flex-small one-third">
+            .one-third.text-right ........... ........... ...........
+          </p>
+        </div>
+      </section>
+
+      <section class="small-container">
+        <h3>Small container</h3>
+        <div class="flex-row">
+          <p class="flex-large one-fourth alternate-background">
+            .flex-large.one-fourth
+          </p>
+          <p class="flex-large three-fourths">
+            .flex-large.three-fourths
+          </p>
+        </div>
+        <div class="flex-row">
+          <p class="flex-large half alternate-background">
+            .flex-large.half
+          </p>
+          <p class="flex-large half">
+            .flex-large.half
+          </p>
+        </div>        
+        <div class="flex-row">
+          <p class="flex-large one-third alternate-background">
+            .flex-large.one-third
+          </p>
+          <p class="flex-large two-thirds">
+            .flex-large.two-thirds
+          </p>
+        </div>  
+      </section>
+
+      <footer>
+        <p>
+          Made to test
+          <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive</a> by
+          <a href="https://www.taniarascia.com">Tania Rascia</a>.
+        </p>
+      </footer>      
     </main>
   </body>
 </html>

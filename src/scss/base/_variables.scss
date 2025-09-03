@@ -42,6 +42,7 @@ $desktop: $medium !default;
 }
 
 //== Named Colors ==============================================================
+// Each of these should be a single value only.
 
 $white: white;
 $black: #200;
@@ -57,18 +58,17 @@ $pale-yellow: #ffeea8;      // rgb(255,238,168),        hsl(48.3,100%,82.9%)
 $moderate-red: #d33c40;     // rgb(82.7%,23.5%,25.1%),  hsl(358.4,63.2%,53.1%)
 
 //== Semantic Colors ==============================================================
+// These can be color pairs, if there is color variants.
 
 $background: light-dark($white, $very-dark-gray) !default;
 $font-color: light-dark($dark-gray, $white) !default;
 $primary-color: $vivid-blue !default; 
 $secondary-color: $lime-green !default;
 $accent-color: $light-gray !default;
-$alternate-background: $alabaster-white !default;
+$alternate-background: light-dark($light-gray, $alabaster-white) !default;
 $alternate-color: $dark-gray !default;
-$link-color--light: $vivid-blue !default;
-$link-color--dark: $pale-yellow !default;
-$link-hover-color--light: color.adjust($link-color--light, $lightness: -15%);
-$link-hover-color--dark: color.adjust($link-color--dark, $lightness: -15%) !default;
+$link-color: light-color($vivid-blue, $pale-yellow) !default;
+$link-hover-color: light-dark(color.adjust($vivid-blue, $lightness: -15%), color.adjust($pale-yellow, $lightness: -15%)) !default;
 $highlight: $pale-yellow !default;
 $error: $moderate-red !default;
 $success: $lime-green !default;
@@ -89,8 +89,7 @@ $font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Aria
 $line-height: 1.6 !default;
 
 // Headings
-$heading-font-color--light: $dark-gray !default;
-$heading-font-color--dark: $white !default;
+$heading-font-color: light-color($dark-gray, $white) !default;
 $heading-font-weight: 600 !default;
 $heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
   sans-serif !default;
@@ -153,8 +152,8 @@ $muted-border: 1px solid $accent-color !default;
 $muted-border-hover: 1px solid color.adjust($accent-color, $lightness: -30%) !default;
 $muted-background: transparent !default;
 $muted-background-hover: transparent !default;
-$muted-color: color.adjust($accent-color, $lightness: -50%) !default;
-$muted-color-hover: color.adjust($accent-color, $lightness: -50%) !default;
+$muted-color: light-dark(color.adjust($accent-color, $lightness: -50%), color.adjust($accent-color, $lightness: -20%)) !default;
+$muted-color-hover: light-dark(color.adjust($accent-color, $lightness: -50%), color.adjust($accent-color, $lightness: -20%)) !default;
 
 // Round Buttons
 $round-buttons: 40px !default;
@@ -168,18 +167,18 @@ $forms: (
 ) !default;
 $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]') !default;
 $input-background: transparent !default;
-$placeholder--light: color.adjust($accent-color, $lightness: -20%) !default;
-$placeholder--dark: color.adjust($accent-color, $lightness: 110%) !default;
+$placeholder: light-color(color.adjust($accent-color, $lightness: -20%), color.adjust($accent-color, $lightness: 110%)) !default;
 $form-border: 1px solid $border-color !default;
 $form-border-hover: 1px solid color.adjust($border-color, $lightness: -10%) !default;
-$form-border-focus: 1px solid $link-color--light !default;
+$form-border-focus: 1px solid $link-color !default;
+$box-shadow: light-dark(color.adjust($vivid-blue, $lightness: 30%), color.adjust($pale-yellow, $lightness: 30%));
 
 //==============================================================================
 // Tables
 //==============================================================================
 
-$stripes--light: $very-light-gray !default;
-$stripes--dark: $dark-gray !default;
+$stripes-color: light-dark($very-dark-gray, $dark-gray);
+$stripes-background: light-dark($very-light-gray, $very-light-gray);
 $caption: $gray !default;
 
 //==============================================================================
