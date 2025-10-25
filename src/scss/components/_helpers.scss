@@ -107,8 +107,20 @@
 
 // Backgrounds
 .alternate-background {
-  background: variables.$alternate-background;
-  color: variables.$alternate-color;
+  background: variables.$background-alt;
+  color: variables.$color-alt;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: variables.$heading-font-color-alt;
+  }
+
+  .striped-table tbody tr:nth-child(odd) {
+    background-color: variables.$stripes-background-alt;
+    color: variables.$stripes-color-alt;
+  }
+  caption {
+    color: variables.$caption-alt;
+  }
 }
 
 .space-between {

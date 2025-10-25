@@ -105,6 +105,23 @@ a.square-button {
   border-radius: 0;
 }
 
+// Image buttons
+[type="image"] {
+  background: none;
+  padding: 0;
+  border: none;
+  filter: brightness(110%);
+
+  &:hover {
+    border: none;
+    background: none;
+    filter: brightness(90%) contrast(120%);
+  }
+  &:active {
+    transform: translate(2px, 2px);
+  }
+}
+
 // Full width buttons (block level)
 .full-button,
 a.full-button {

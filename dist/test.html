@@ -106,6 +106,12 @@ public:
             eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
             maiores expedita commodi perferendis non blanditiis.
           </p>
+          <h6>Sixth Heading h6</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
+            eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
+            maiores expedita commodi perferendis non blanditiis.
+          </p>
         </section>
 
         <h2>Lists</h2>
@@ -146,7 +152,7 @@ public:
         <h2>Tables</h2>
 
         <table>
-          <caption>Regular table</caption>
+          <caption>^ Regular table ^</caption>
           <thead>
             <tr>
               <th>Head 1</th>
@@ -181,7 +187,7 @@ public:
         </table>
 
         <table class="striped-table">
-          <caption>Striped table</caption>
+          <caption>^ Striped table ^</caption>
           <thead>
             <tr>
               <th>Head 1</th>
@@ -232,6 +238,40 @@ public:
           <input id="search" type="search" placeholder="Search" />
           <label for="number">Number</label>
           <input id="number" type="number" placeholder="Number" />
+
+
+          <fieldset><legend>.flex-row > .split-form.flex-large.one-half</legend>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="color">Color</label>
+                <input id="color" type="color" placeholder="#ABC123" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="file">File</label>
+                <input id="file" type="file" placeholder="./test.html" />
+              </span>
+            </div>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="week">Week</label>
+                <input id="week" type="week" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="month">Month</label>
+                <input id="month" type="month" />
+              </span>
+            </div>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="date">Date</label>
+                <input id="date" type="date" placeholder="01/01/1970" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="datetime-local">Datetime Local</label>
+                <input id="datetime-local" type="datetime-local" placeholder="01/01/1970" />
+              </span>
+            </div>
+          </fieldset>
           <label for="select">Select</label>
           <select id="select">
             <option>Option One</option>
@@ -269,7 +309,7 @@ public:
             <legend>Legend</legend>
             <label for="text">Text Input</label>
             <input id="text" type="text" placeholder="Text Input" />
-            <input type="submit" value="Submit" />
+            <input alt="Image button" type="image" src="image-button.png" />
           </fieldset>
         </form>
 
@@ -293,7 +333,42 @@ public:
         <ul>
           <li>.full-container</li>
           <li>.alternate-background</li>
-        </ul>      
+        </ul>   
+
+        <table class="striped-table">
+          <caption>^ Striped table ^</caption>
+          <thead>
+            <tr>
+              <th>Head 1</th>
+              <th>Head 2</th>
+              <th>Head 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Footer 1</th>
+              <th>Footer 2</th>
+              <th>Footer 3</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+          </tbody>
+        </table>      
       </section>
 
       <section class="large-container">
@@ -337,10 +412,10 @@ public:
             .one-third.text-left ........... ........... ...........
           </p>
           <p class="text-justify flex-small one-third alternate-background">
-            .one-third.text-justify ........... ........... ...........
+            .one-third.text-justify ........... ........... .........
           </p>
           <p class="text-right flex-small one-third">
-            .one-third.text-right ........... ........... ...........
+            .one-third.text-right ........... ........... 
           </p>
         </div>
       </section>

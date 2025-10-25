@@ -56,6 +56,10 @@ fieldset {
   border-radius: variables.$border-radius;
   padding: variables.$padding;
   margin: variables.$margins 0;
+
+  div {
+    margin-bottom: variables.$margins;
+  }
 }
 
 legend {
@@ -82,6 +86,19 @@ select::-ms-expand {
   width: 100%;
 }
 
+// Make color selector show the selected color and set it to a square swatch
+[type='color'] {
+  inline-size: 2rem;
+  block-size: 2rem;
+  padding: 0;         // non-0 padding causes the swatch to shrink 
+}
+// Constrain width of field to more reasonable size
+[type='date'] {
+  max-width: 15rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem 0.5rem 0;
+}
+
 // Labels
 label {
   font-weight: 600;
@@ -92,11 +109,17 @@ label {
 
 @include mixins.small-breakpoint {
   .split-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     // Split forms have right aligned labels and margins on the column
     label {
       text-align: right;
       padding: 0 0.5rem;
-      margin-bottom: 1rem;
+    }
+    label, input {
+      display: inline-block;
+      margin: 0;
     }
   }
 }
