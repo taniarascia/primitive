@@ -1,9 +1,9 @@
 $(document).ready(function () {
 	$('#eighties').click(function () {
-		$('link[href="css/example.css"]').attr('href', 'css/eighties.css?version=2');
+		$('link[href*="css/example.css"]').attr('href', 'css/eighties.css?version=2');
 	});
 	$('#boring').click(function () {
-		$('link[href="css/eighties.css"]').attr('href', 'css/example.css');
+		$('link[href*="css/eighties.css"]').attr('href', 'css/example.css');
 	});
 	$(document).on("scroll", onScroll);
 
@@ -11,35 +11,40 @@ $(document).ready(function () {
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
-		$('a').each(function () {
-			$(this).removeClass('active');
-		})
-		$(this).addClass('active');
 
 		var target = this.hash;
 		var menu = target;
 		var $target = $(target);
 		$('html, body').stop().animate({
 			'scrollTop': $target.offset().top + 2
-		}, 300, 'swing', function () {
+		}, 300, 'swing').promise().done(function () {
+			// If we use the standard jQuery callback, it fires twice
+			// Using .promise().done() forces it to only fire once.
 			window.location.hash = target;
+			$('a').each(function () {
+				$(this).removeClass('active');
+			})
+			$(e.target).addClass('active');
 			$(document).on("scroll", onScroll);
 		});
 	});
 
 	// Active scroll
 	function onScroll(event) {
-		var scrollPos = $(document).scrollTop();
-		$('nav a').each(function () {
-			var currLink = $(this);
-			var refElement = $(currLink.attr("href"));
-			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-				$('aside nav ul li a').removeClass("active");
-				currLink.addClass("active");
-			} else {
-				currLink.removeClass("active");
-			}
-		});
+		clearTimeout($.data(this, 'scrolling'))
+		$.data(this, 'scrolling', setTimeout(function () {
+			var scrollPos = $(document).scrollTop();
+			$('nav a').each(function () {
+				var currLink = $(this);
+				var refElement = $(currLink.attr("href"));
+				if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+					$('aside nav ul li a').removeClass("active");
+					currLink.addClass("active");
+				} else {
+					currLink.removeClass("active");
+				}
+			});
+		}, 125))
 	}
 
 	// Toggle nav

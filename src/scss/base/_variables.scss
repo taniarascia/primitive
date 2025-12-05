@@ -1,9 +1,10 @@
 @use "sass:color";
-/**
- * Variables
- *
- * The majority of the configuration for the toolkit.
- */
+
+//
+// Variables
+//
+// The majority of the configuration for the toolkit.
+//
 
 //==============================================================================
 // Containers
@@ -21,25 +22,6 @@ $large: 1200px !default;
 $mobile: $x-small !default;
 $tablet: $small !default;
 $desktop: $medium !default;
-
-//==============================================================================
-// Global Colors
-//==============================================================================
-
-@media (prefers-color-scheme: light) {
-  .dark-only {
-    display: none;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .light-only {
-     display: none;
-   }
-}
-:root {
-  // Critical for being able to use the light-dark() function
-  color-scheme: light dark;
-}
 
 //== Named Colors ==============================================================
 // Each of these should be a single value only.

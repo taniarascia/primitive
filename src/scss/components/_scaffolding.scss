@@ -20,6 +20,23 @@ body {
   font-size: variables.$body-font-size;
 }
 
+// Light-Dark base-setting
+
+@media (prefers-color-scheme: light) {
+  .dark-only {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .light-only {
+     display: none;
+   }
+}
+:root {
+  // Critical for being able to use the light-dark() function
+  color-scheme: light dark;
+}
+
 p,
 ol,
 ul,
