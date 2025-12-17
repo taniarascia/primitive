@@ -15,7 +15,7 @@
         <h1>HTML5 Element Test Page</h1>
         <p>Common HTML5 elements for CSS testing purposes.</p>
 
-        <h1>Formatting</h1>
+        <h2>Formatting</h2>
 
         <p>
           This sentence is <b>bold</b>. If you like semantics, you might go with
@@ -41,7 +41,7 @@
           </p>
         </address>
 
-        <h2>Blockquote</h2>
+        <h3>Blockquote</h3>
 
         <blockquote>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda
@@ -50,54 +50,73 @@
           <cite>- Blockquote Citation</cite>
         </blockquote>
 
-        <h2>Preformatted Text</h2>
+        <h3>Preformatted Text</h3>
         <pre>
+          H anging
+          T he
+          M ail
+          L etter
+        </pre>
+        <pre>
+          <code>
 class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
-}</pre
-        >
-        <h2>Horizontal Line</h2>
+}
+</code></pre>
+        <h3>Horizontal Line</h3>
 
         <hr />
 
-        <h1>Headings</h1>
+        <section>
+          <h2>Headings</h2>
+          <!-- 
+            Technically we shouldn't re-use an h1, but we need to for illustrative purposes here. So this has been enclosed in a section to at least define it separately.
+            
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#avoid_using_multiple_h1_elements_on_one_page 
+          -->
+          <h1>First Heading h1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima,
+            magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa
+            sunt accusantium. Ipsa error aliquid et! Animi.
+          </p>
+          <h2>Second Heading h2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias ullam quasi
+            est a nemo, accusamus voluptatum autem. Eius explicabo est assumenda voluptatem id, hic
+            maxime mollitia facere debitis quos.
+          </p>
+          <h3>Third Heading h3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti, repudiandae rerum
+            nam laborum eligendi aperiam. Autem id, ad necessitatibus accusantium, facilis, quae ullam
+            est, voluptates debitis fugiat quos inventore!
+          </p>
+          <h4>Fourth Heading h4</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum eum eligendi
+            voluptatum quasi nisi doloremque ipsam unde, laboriosam nihil voluptatem consequatur quam
+            non similique vero ratione animi sit veritatis.
+          </p>
+          <h5>Fifth Heading h5</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
+            eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
+            maiores expedita commodi perferendis non blanditiis.
+          </p>
+          <h6>Sixth Heading h6</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
+            eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
+            maiores expedita commodi perferendis non blanditiis.
+          </p>
+        </section>
 
-        <h1>First Heading h1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima,
-          magni possimus commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa
-          sunt accusantium. Ipsa error aliquid et! Animi.
-        </p>
-        <h2>Second Heading h2</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias ullam quasi
-          est a nemo, accusamus voluptatum autem. Eius explicabo est assumenda voluptatem id, hic
-          maxime mollitia facere debitis quos.
-        </p>
-        <h3>Third Heading h3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti, repudiandae rerum
-          nam laborum eligendi aperiam. Autem id, ad necessitatibus accusantium, facilis, quae ullam
-          est, voluptates debitis fugiat quos inventore!
-        </p>
-        <h4>Fourth Heading h4</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum eum eligendi
-          voluptatum quasi nisi doloremque ipsam unde, laboriosam nihil voluptatem consequatur quam
-          non similique vero ratione animi sit veritatis.
-        </p>
-        <h5>Fifth Heading h5</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus
-          eos iusto nam deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi
-          maiores expedita commodi perferendis non blanditiis.
-        </p>
+        <h2>Lists</h2>
 
-        <h1>Lists</h1>
-
-        <h2>Unordered list</h2>
+        <h3>Unordered list</h3>
 
         <ul>
           <li>
@@ -110,7 +129,7 @@ public:
           <li>List item three</li>
         </ul>
 
-        <h2>Ordered list</h2>
+        <h3>Ordered list</h3>
 
         <ol>
           <li>
@@ -130,9 +149,10 @@ public:
           <dd>Second definition description</dd>
         </dl>
 
-        <h1>Tables</h1>
+        <h2>Tables</h2>
 
         <table>
+          <caption>^ Regular table ^</caption>
           <thead>
             <tr>
               <th>Head 1</th>
@@ -166,7 +186,42 @@ public:
           </tbody>
         </table>
 
-        <h1>Forms</h1>
+        <table class="striped-table">
+          <caption>^ Striped table ^</caption>
+          <thead>
+            <tr>
+              <th>Head 1</th>
+              <th>Head 2</th>
+              <th>Head 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Footer 1</th>
+              <th>Footer 2</th>
+              <th>Footer 3</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+          </tbody>
+        </table>        
+
+        <h2>Forms</h2>
 
         <form>
           <label for="text">Text Input</label>
@@ -183,6 +238,40 @@ public:
           <input id="search" type="search" placeholder="Search" />
           <label for="number">Number</label>
           <input id="number" type="number" placeholder="Number" />
+
+
+          <fieldset><legend>.flex-row > .split-form.flex-large.one-half</legend>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="color">Color</label>
+                <input id="color" type="color" placeholder="#ABC123" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="file">File</label>
+                <input id="file" type="file" placeholder="./test.html" />
+              </span>
+            </div>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="week">Week</label>
+                <input id="week" type="week" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="month">Month</label>
+                <input id="month" type="month" />
+              </span>
+            </div>
+            <div class="flex-row">
+              <span class="split-form flex-large one-half">
+                <label for="date">Date</label>
+                <input id="date" type="date" placeholder="01/01/1970" />
+              </span>
+              <span class="split-form flex-large one-half">
+                <label for="datetime-local">Datetime Local</label>
+                <input id="datetime-local" type="datetime-local" placeholder="01/01/1970" />
+              </span>
+            </div>
+          </fieldset>
           <label for="select">Select</label>
           <select id="select">
             <option>Option One</option>
@@ -206,30 +295,166 @@ public:
           <label for="textarea">Textarea</label>
           <textarea id="textarea" rows="5" cols="30" placeholder="Message"></textarea>
           <input type="button" value="Button" />
+          <input type="button" class="accent-button" value="Accent Button" />
+          <input type="button" class="muted-button" value="Muted Button" />
           <input type="submit" value="Submit" />
           <input type="reset" value="Reset" />
           <button>Button element</button>
         </form>
 
-        <h2>Fieldset and Legend</h2>
+        <h3>Fieldset and Legend</h3>
 
         <form>
           <fieldset>
             <legend>Legend</legend>
             <label for="text">Text Input</label>
             <input id="text" type="text" placeholder="Text Input" />
-            <input type="submit" value="Submit" />
+            <input alt="Image button" type="image" src="image-button.png" />
           </fieldset>
         </form>
 
-        <footer>
-          <p>
-            Made to test
-            <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive</a> by
-            <a href="https://www.taniarascia.com">Tania Rascia</a>.
-          </p>
-        </footer>
+        <h3>Color mode</h3>
+
+        <p class="light-only" style="background-color: white; text-align: center; color: black;">Your system preference is for light mode. </p>
+        <p class="dark-only" style="background-color: black; text-align: center; color: white;">Your system preference is for dark mode</p>
+        
+        <p>To change your color mode preference:
+          <ul>
+            <li>Windows: Settings > Personalization > Colors</li>
+            <li>MacOS: System Preferences > General > Appearance</li>
+            <li>Linux: Settings > Appearance / Personalization (this varies by distro)</li>
+          </ul>
+        </p>
       </div>
+      <h2>Containers</h2>
+
+      <section class="full-container alternate-background">
+        <h3>Full container</h3>
+        <ul>
+          <li>.full-container</li>
+          <li>.alternate-background</li>
+        </ul>   
+
+        <table class="striped-table">
+          <caption>^ Striped table ^</caption>
+          <thead>
+            <tr>
+              <th>Head 1</th>
+              <th>Head 2</th>
+              <th>Head 3</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Footer 1</th>
+              <th>Footer 2</th>
+              <th>Footer 3</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+            <tr>
+              <td>Description 1</td>
+              <td>Description 2</td>
+              <td>Description 3</td>
+            </tr>
+          </tbody>
+        </table>      
+      </section>
+
+      <section class="large-container">
+        <h3>Large container</h3>
+        <div class="vertical-center">
+          <ul>
+            <li>.large-container</li>
+            <li>.vertical-center</li>
+          </ul>
+        </div>
+        <div class="flex-row">
+          <p class="flex-small half alternate-background">
+            .flex-small.half
+          </p>
+          <p class="flex-small half">
+            .flex-small.half
+          </p>
+        </div>
+        <div class="flex-row">
+          <p class="flex-small one-fourth alternate-background">
+            .flex-small.one-fourth
+          </p>
+          <p class="flex-small three-fourths">
+            .flex-small.three-fourths
+          </p>
+        </div>   
+        <div class="flex-row">
+          <p class="flex-small one-third alternate-background">
+            .flex-small.one-third
+          </p>
+          <p class="flex-small two-thirds">
+            .flex-small.two-thirds
+          </p>
+        </div>   
+      </section>
+
+      <section class="medium-container">
+        <h3>Medium container</h3>
+        <div class="flex-row">
+          <p class="text-left flex-small one-third">
+            .one-third.text-left ........... ........... ...........
+          </p>
+          <p class="text-justify flex-small one-third alternate-background">
+            .one-third.text-justify ........... ........... .........
+          </p>
+          <p class="text-right flex-small one-third">
+            .one-third.text-right ........... ........... 
+          </p>
+        </div>
+      </section>
+
+      <section class="small-container">
+        <h3>Small container</h3>
+        <div class="flex-row">
+          <p class="flex-large one-fourth alternate-background">
+            .flex-large.one-fourth
+          </p>
+          <p class="flex-large three-fourths">
+            .flex-large.three-fourths
+          </p>
+        </div>
+        <div class="flex-row">
+          <p class="flex-large half alternate-background">
+            .flex-large.half
+          </p>
+          <p class="flex-large half">
+            .flex-large.half
+          </p>
+        </div>        
+        <div class="flex-row">
+          <p class="flex-large one-third alternate-background">
+            .flex-large.one-third
+          </p>
+          <p class="flex-large two-thirds">
+            .flex-large.two-thirds
+          </p>
+        </div>  
+      </section>
+
+      <footer>
+        <p>
+          Made to test
+          <a href="https://taniarascia.github.io/primitive/" target="_blank">Primitive</a> by
+          <a href="https://www.taniarascia.com">Tania Rascia</a>.
+        </p>
+      </footer>      
     </main>
   </body>
 </html>

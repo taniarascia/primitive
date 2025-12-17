@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../base/mixins";
+@use "../base/variables";
+
 /**
  * Forms
  */
@@ -5,11 +9,11 @@
 // Display for all input fields (except buttons and checkbox)
 %forms {
   display: block;
-  border: $form-border;
-  border-radius: $border-radius;
+  border: variables.$form-border;
+  border-radius: variables.$border-radius;
   padding: 0.75rem;
   outline: none;
-  background: $input-background;
+  background: variables.$input-background;
   margin-bottom: 0.5rem;
   font-size: 1rem;
   width: 100%;
@@ -19,17 +23,17 @@
 
 // Input fields on hover
 %forms-hover {
-  border: $form-border-hover;
+  border: variables.$form-border-hover;
 }
 
 // Input fields on focus
 %forms-focus {
-  border: $form-border-focus;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px lighten($link-color, 30%);
+  border: variables.$form-border-focus;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px variables.$box-shadow;
 }
 
 // Variable containing all input fields
-#{$forms} {
+#{variables.$forms} {
   @extend %forms;
 
   &:hover {
@@ -48,10 +52,14 @@ textarea {
 }
 
 fieldset {
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  padding: $padding;
-  margin: $margins 0;
+  border: 1px solid variables.$border-color;
+  border-radius: variables.$border-radius;
+  padding: variables.$padding;
+  margin: variables.$margins 0;
+
+  div {
+    margin-bottom: variables.$margins;
+  }
 }
 
 legend {
@@ -61,7 +69,7 @@ legend {
 
 // Fix issues with select
 select {
-  color: $font-color;
+  color: variables.$font-color;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJBAMAAADN8WE8AAAAJ1BMVEUAAABHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB9YSk7AAAADXRSTlPXABaehSjPsTwKw2xUcKPlSQAAADtJREFUCNdjMGBgYGAWBAKGACCLFcwSAbIcwSyhBAY2RTBLcAMDtyCENYthJZQlw3AQyhIsF4SxOiAsAFMMCKPY35E7AAAAAElFTkSuQmCC) 
@@ -78,6 +86,19 @@ select::-ms-expand {
   width: 100%;
 }
 
+// Make color selector show the selected color and set it to a square swatch
+[type='color'] {
+  inline-size: 2rem;
+  block-size: 2rem;
+  padding: 0;         // non-0 padding causes the swatch to shrink 
+}
+// Constrain width of field to more reasonable size
+[type='date'] {
+  max-width: 15rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem 0.5rem 0;
+}
+
 // Labels
 label {
   font-weight: 600;
@@ -86,13 +107,19 @@ label {
   margin: 1rem 0 0.5rem;
 }
 
-@include small-breakpoint {
+@include mixins.small-breakpoint {
   .split-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     // Split forms have right aligned labels and margins on the column
     label {
       text-align: right;
       padding: 0 0.5rem;
-      margin-bottom: 1rem;
+    }
+    label, input {
+      display: inline-block;
+      margin: 0;
     }
   }
 }
@@ -102,13 +129,13 @@ input,
 select,
 textarea {
   &.has-error {
-    border: 1px solid $error;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px lighten($error, 35%);
+    border: 1px solid variables.$error;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px color.adjust(variables.$error, $lightness: 35%);
   }
 
   &.is-success {
-    border: 1px solid $success;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px lighten($success, 25%);
+    border: 1px solid variables.$success;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 6px color.adjust(variables.$success, $lightness: 25%);
   }
 
   &:hover,
@@ -122,6 +149,9 @@ textarea {
       @extend .is-success;
     }
   }
+  &:placeholder {
+    color: variables.$placeholder;;    
+  }
 }
 
 // Placeholder Text
@@ -129,5 +159,5 @@ textarea {
 ::-moz-placeholder,
 :-moz-placeholder,
 :-ms-input-placeholder {
-  color: $placeholder;
+  color: variables.$placeholder;;
 }

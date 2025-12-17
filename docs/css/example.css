@@ -1,14 +1,33 @@
 /* Primitive */
 
+body {
+	/* Using a slightly darker dark-mode color to allow for
+	 * better contrast with Prism styles */
+	background-color: light-dark(white, #222);
+}
+
 a {
-	color: #000;
 	text-decoration: underline;
 }
 
-a:hover,
-a:active,
-a:focus {
-	color: #0366ee;
+.alternate-background {
+	background-color: light-dark(white, black);
+	color: light-dark(black, white);
+
+	h1, h2, h3, h4, h5, h6 {
+		color: light-dark(black, white);
+	}
+}
+
+/* Prism style hack to ensure dark-mode contrast on some tags
+ * Prism does not innately support light-dark, so we cannot
+ * reliably change the background to a dark color without harming contrast.
+ */
+:not(pre) > code {
+  color: light-dark(#c7254e, #f9577f);
+}
+pre {
+	background-color: light-dark(#f8f8f8, #020202);
 }
 
 
@@ -18,36 +37,34 @@ header {
 	margin-top: 60px;
 	background: #2A55F1 url('../images/grid.png') no-repeat left center / cover;
 	padding: 60px 0;
-}
 
-header h1 {
-	color: transparent;
-	font-size: 2rem;
-	text-transform: uppercase;
-	font-family: 'Press Start 2P';
-	text-shadow: 5px -5px 0 #FCB42A, 1px -1px 0 #000;
-}
+	h1 {
+		color: transparent;
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-family: 'Press Start 2P';
+		text-shadow: 5px -5px 0 #FCB42A, 1px -1px 0 #000;
+	}
 
-header p {
-	color: rgba(255, 255, 255, .9);
-}
+	p {
+		color: rgba(255, 255, 255, .9);
+	}
 
-header a {
-	color: white;
+	a {
+		color: white;
+	}
 }
 
 a.example-button {
 	background: transparent;
 	border: 1px solid white;
 	color: white;
-}
 
-a.example-button:hover,
-a.example-button:active,
-a.example-button:focus {
-	border: 1px solid white;
-	background: white;
-	color: #0366ee;
+	&:hover, &:active, &:focus {
+		border: 1px solid white;
+		background: white;
+		color: #0366ee;
+	}
 }
 
 .setup {
@@ -55,13 +72,12 @@ a.example-button:focus {
 }
 
 .installation {
-	background: white;
+	background: light-dark(white, black);
 	text-align: center;
 }
 
 @media screen and (min-width: 800px) {
 	.setup {
-		background: #fafafa;
 		margin-bottom: 60px;
 	}
 	.installation {
@@ -78,96 +94,86 @@ a.example-button:focus {
 aside {
 	padding: .5rem;
 	flex: 0;
-	background: #ffffff;
 	border-bottom: 1px solid #ddd;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 2;
-}
 
-aside h1 {
-	padding: 0 1rem;
-	font-size: 1.3rem;
-	margin-bottom: 0 !important;
-	margin-top: .8rem !important;
-	letter-spacing: -.05rem;
-}
+	h1 {
+		padding: 0 1rem;
+		font-size: 1.3rem;
+		margin-bottom: 0 !important;
+		margin-top: .8rem !important;
+		letter-spacing: -.05rem;
 
-aside h1 a {
-	text-transform: uppercase;
-	text-decoration: none !important;
-	font-family: 'Press Start 2P';
-}
+		a {
+			text-transform: uppercase;
+			text-decoration: none !important;
+			font-family: 'Press Start 2P';
+		}
+	}
 
-aside ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
 
-aside nav {
-	display: none;
-}
+	nav {
+		display: none;
+	}
 
-aside li.title {
-	color: #606060;
-	font-size: .85rem;
-	padding: 1rem 1rem 0;
-}
+	li {
+		&.title {
+			font-size: .85rem;
+			padding: 1rem 1rem 0;
+		}
 
-aside li a {
-	padding: .25rem .5rem;
-	margin: 0 .5rem;
-	display: block;
-	color: #404040;
-	text-decoration: none;
-}
+		a {
+			padding: .25rem .5rem;
+			margin: 0 .5rem;
+			display: block;
+			color: light-dark(#404040, #b0b0b0);
+			text-decoration: none;
 
-aside li a.active {
-	color: #0366ee;
-}
+			&:hover, &:active, &:focus {
+				background: #f2f2f2;
+				color: #000;
+				text-decoration: none;
+			}
 
-aside li a:hover,
-aside li a:active,
-aside li a:focus {
-	background: #f2f2f2;
-	color: #000;
-	text-decoration: none;
-}
-
-aside li a.active:hover,
-aside li a.active:active,
-aside li a.active:focus {
-	background: #f0f0f0;
-	color: #0366ee;
-	text-decoration: none;
+			&.active {
+				color: #0366ee;
+			}
+		}
+		&:hover:has(.active), &:active:has(.active), &:focus:has(.active) {
+			background: #f0f0f0;
+			color: #0366ee;
+			text-decoration: none;
+		}
+	}
 }
 
 .fa {
-	color: #343434;
 	padding-right: 1rem;
-}
-
-.active .fa {
-	color: #0366ee;
 }
 
 .toggle-nav {
 	float: right;
 	padding-right: 1rem;
-}
 
-.toggle-nav::after {
-	content: "\f0c9";
-	font-family: 'FontAwesome';
-	font-size: 2rem;
-	color: #404040;
-}
+	&::after {
+		content: "\f0c9";
+		font-family: 'FontAwesome';
+		font-size: 2rem;
+		color: #404040;
+	}
 
-.toggle-nav.active::after {
-	content: "\f00d";
-	font-family: 'FontAwesome';
+	&.active::after {
+		content: "\f00d";
+		font-family: 'FontAwesome';
+	}
 }
 
 .fixed {
@@ -219,27 +225,30 @@ article {
 	header {
 		margin: 0;
 		padding: 60px 0;
+
+		h1 {
+			font-size: 3rem;
+		}
 	}
-	header h1 {
-		font-size: 3rem;
-	}
+
 	aside {
 		display: block;
 		flex: 0 0 220px;
 		width: 220px;
 		border-bottom: 0;
-	}
-	aside {
 		margin-top: 1rem;
 		position: static;
+
+		h1 {
+			margin-top: 0;
+			font-size: 1.2rem;
+		}
+
+		nav {
+			display: block !important;
+		}
 	}
-	aside h1 {
-		margin-top: 0;
-		font-size: 1.2rem;
-	}
-	aside nav {
-		display: block !important;
-	}
+
 	.toggle-nav {
 		display: none;
 	}
@@ -274,8 +283,8 @@ article {
 	font-family: 'Press Start 2P';
 	border: 1px solid #fff;
 	background: black;
-}
 
-#eighties:hover {
-	background: #FF2155;
+	&:hover {
+		background: #FF2155;
+	}
 }

@@ -1,20 +1,22 @@
+@use "variables";
+
 // Media query for mobile first layout
 @mixin small-breakpoint {
-  @media (min-width: #{$mobile}) {
+  @media (min-width: #{variables.$mobile}) {
     @content;
   }
 }
 
 // Break on tablet
 @mixin medium-breakpoint {
-  @media (min-width: #{$tablet}) {
+  @media (min-width: #{variables.$tablet}) {
     @content;
   }
 }
 
 // Break on desktop
 @mixin large-breakpoint {
-  @media (min-width: #{$desktop}) {
+  @media (min-width: #{variables.$desktop}) {
     @content;
   }
 }

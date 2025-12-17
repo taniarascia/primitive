@@ -1,8 +1,10 @@
-/**
- * Variables
- *
- * The majority of the configuration for the toolkit.
- */
+@use "sass:color";
+
+//
+// Variables
+//
+// The majority of the configuration for the toolkit.
+//
 
 //==============================================================================
 // Containers
@@ -21,22 +23,44 @@ $mobile: $x-small !default;
 $tablet: $small !default;
 $desktop: $medium !default;
 
-//==============================================================================
-// Global Colors
-//==============================================================================
+//== Named Colors ==============================================================
+// Each of these should be a single value only.
 
-$background: white !default;
-$primary-color: #0366ee !default;
-$secondary-color: #29de7d !default;
-$accent-color: #cdcdcd !default;
-$alternate-background: #fafafa !default;
-$alternate-color: #404040 !default;
-$link-color: $primary-color !default;
-$link-hover-color: darken($link-color, 15%) !default;
-$highlight: #ffeea8 !default;
-$error: #d33c40 !default;
-$success: #29de7d !default;
-$bq-border: 16px solid #f0f0f0 !default;
+$white:           #ffffff;
+$alabaster-white: #fafafa;  // rgb(250,250,250),        hsl(0,0%,98%)
+$black:           #000000;
+$warm-black:      #220000;
+
+$very-light-gray: #f3f3f3;  // rgb(243, 243, 243)
+$light-gray:      #d2d2d2;  // rgb(210, 210, 210)
+$gray:            #ababab;  // rgb(171, 171, 171)
+$dark-gray:       #797979;  // rgb(121, 121, 121)
+$very-dark-gray:  #414141;  // rgb(65, 65, 65)
+
+$vivid-blue:      #0366ee;  // rgb(3,102,238),          hsl(214.7,97.5%,47.3%)
+$lime-green:      #29de7d;  // rgb(41,222,125),         hsl(147.8,73.3%,51.6%)
+$pale-yellow:     #ffeea8;  // rgb(255,238,168),        hsl(48.3,100%,82.9%)
+$moderate-red:    #d33c40;  // rgb(82.7%,23.5%,25.1%),  hsl(358.4,63.2%,53.1%)
+
+//== Semantic Colors ==============================================================
+// These can be color pairs, if there are color variants.
+
+$background:        light-dark($white, $very-dark-gray) !default;
+$font-color:        light-dark($dark-gray, $white) !default;
+$heading-font-color:light-dark($dark-gray, $white) !default;
+$primary-color:     $vivid-blue !default; 
+$secondary-color:   $lime-green !default;
+$accent-color:      $light-gray !default;
+$link-color:        light-dark($vivid-blue, $pale-yellow) !default;
+$link-hover-color:  light-dark(color.adjust($vivid-blue, $lightness: -15%), color.adjust($pale-yellow, $lightness: -15%)) !default;
+$highlight:         $pale-yellow !default;
+$error:             $moderate-red !default;
+$success:           $lime-green !default;
+$bq-border: 16px solid color.adjust($alabaster-white, $lightness: -15%) !default;
+
+$background-alt:          light-dark($dark-gray, $alabaster-white) !default;
+$color-alt:               light-dark($alabaster-white, $dark-gray) !default;
+$heading-font-color-alt:  light-dark($white, $very-dark-gray) !default;
 
 //==============================================================================
 // Typography
@@ -53,7 +77,6 @@ $font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Aria
 $line-height: 1.6 !default;
 
 // Headings
-$heading-font-color: #404040 !default;
 $heading-font-weight: 600 !default;
 $heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial,
   sans-serif !default;
@@ -64,12 +87,14 @@ $h2-mobile: 1.5rem !default;
 $h3-mobile: 1.25rem !default;
 $h4-mobile: 1.1rem !default;
 $h5-mobile: 1rem !default;
+$h6-mobile: 0.9rem !default;
 
 $h1: 2.25rem !default;
 $h2: 2rem !default;
 $h3: 1.75rem !default;
 $h4: 1.5rem !default;
 $h5: 1.25rem !default;
+$h6: 1rem !default;
 
 //==============================================================================
 // Spacing
@@ -86,7 +111,7 @@ $content-padding-mobile: 30px 0 !default;
 
 $border-width: 1px !default;
 $border-style: solid !default;
-$border-color: #dedede !default;
+$border-color: $light-gray !default;
 $border-radius: 4px !default;
 $borders: $border-width $border-style $border-color !default;
 
@@ -95,8 +120,8 @@ $borders: $border-width $border-style $border-color !default;
 //==============================================================================
 
 $button-background: $primary-color !default;
-$button-background-hover: darken($button-background, 10%) !default;
-$button-color: #ffffff !default;
+$button-background-hover: color.adjust($button-background, $lightness: -10%) !default;
+$button-color: $white !default;
 $button-font-weight: 600 !default;
 $button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif !default;
 $button-font-size: 1rem !default;
@@ -108,16 +133,16 @@ $button-text-transform: none !default;
 
 // Accent buttons
 $accent-button-background: $secondary-color !default;
-$accent-button-color: #ffffff !default;
-$accent-button-color-hover: #ffffff !default;
+$accent-button-color: $white !default;
+$accent-button-color-hover: $white !default;
 
 // Muted Buttons
 $muted-border: 1px solid $accent-color !default;
-$muted-border-hover: 1px solid darken($accent-color, 30%) !default;
+$muted-border-hover: 1px solid color.adjust($accent-color, $lightness: -30%) !default;
 $muted-background: transparent !default;
 $muted-background-hover: transparent !default;
-$muted-color: darken($accent-color, 50%) !default;
-$muted-color-hover: darken($accent-color, 50%) !default;
+$muted-color: light-dark(color.adjust($accent-color, $lightness: -50%), color.adjust($accent-color, $lightness: -20%)) !default;
+$muted-color-hover: light-dark(color.adjust($accent-color, $lightness: -50%), color.adjust($accent-color, $lightness: -20%)) !default;
 
 // Round Buttons
 $round-buttons: 40px !default;
@@ -129,19 +154,26 @@ $round-buttons: 40px !default;
 $forms: (
   '[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email],        [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea'
 ) !default;
-$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]') !default;
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button], [type=image]') !default;
 $input-background: transparent !default;
-$placeholder: darken($accent-color, 20%) !default;
+$placeholder: light-dark(color.adjust($accent-color, $lightness: -20%), color.adjust($accent-color, $lightness: 110%)) !default;
 $form-border: 1px solid $border-color !default;
-$form-border-hover: 1px solid darken($border-color, 10%) !default;
+$form-border-hover: 1px solid color.adjust($border-color, $lightness: -10%) !default;
 $form-border-focus: 1px solid $link-color !default;
+$box-shadow: light-dark(color.adjust($vivid-blue, $lightness: 30%), color.adjust($pale-yellow, $lightness: 30%));
 
 //==============================================================================
 // Tables
 //==============================================================================
 
-$stripes: #f8f8f8 !default;
-$caption: #ababab !default;
+$stripes-color: light-dark($very-dark-gray, $very-dark-gray);
+$stripes-background: light-dark($very-light-gray, $gray);
+
+$stripes-color-alt: light-dark($very-light-gray, $very-dark-gray);
+$stripes-background-alt: light-dark($very-dark-gray, $light-gray);
+
+$caption: light-dark($dark-gray, $gray) !default;
+$caption-alt: light-dark($dark-gray, $dark-gray) !default;
 
 //==============================================================================
 // Code

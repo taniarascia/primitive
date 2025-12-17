@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../base/variables";
+
 /**
  * Buttons
  */
@@ -6,14 +9,14 @@
 %buttons {
   -webkit-appearance: none;
   display: inline-block;
-  border: $button-border-width $button-border-style $button-border-color;
-  border-radius: $button-border-radius;
-  background: $button-background;
-  color: $button-color;
-  font-weight: $button-font-weight;
-  font-family: $button-font-family;
-  font-size: $button-font-size;
-  text-transform: $button-text-transform;
+  border: variables.$button-border-width variables.$button-border-style variables.$button-border-color;
+  border-radius: variables.$button-border-radius;
+  background: variables.$button-background;
+  color: variables.$button-color;
+  font-weight: variables.$button-font-weight;
+  font-family: variables.$button-font-family;
+  font-size: variables.$button-font-size;
+  text-transform: variables.$button-text-transform;
   padding: 0.75rem 1.25rem;
   margin: 0 0 0.5rem 0;
   vertical-align: middle;
@@ -25,22 +28,22 @@
 
 // Buttons on hover
 %buttons-hover {
-  border: $button-border-width $button-border-style darken($button-border-color, 10%);
-  background: $button-background-hover;
-  color: $button-color;
+  border: variables.$button-border-width variables.$button-border-style color.adjust(variables.$button-border-color, $lightness: -10%);
+  background: variables.$button-background-hover;
+  color: variables.$button-color;
   text-decoration: none;
 }
 
 // Buttons on focus
 %buttons-focus {
-  border: $button-border-width $button-border-style darken($button-border-color, 10%);
-  background: darken($button-background, 10%);
-  color: $button-color;
+  border: variables.$button-border-width variables.$button-border-style color.adjust(variables.$button-border-color, $lightness: -10%);
+  background: color.adjust(variables.$button-background, $lightness: -10%);
+  color: variables.$button-color;
   text-decoration: none;
 }
 
 // Apply styles to .button class, button element, and button-based inputs
-#{$buttons} {
+#{variables.$buttons} {
   @extend %buttons;
 
   &::-moz-focus-inner {
@@ -61,45 +64,62 @@
 // Secondary button color
 .accent-button,
 a.accent-button {
-  color: $accent-button-color;
-  border: 1px solid $accent-button-background;
-  background: $accent-button-background;
+  color: variables.$accent-button-color;
+  border: 1px solid variables.$accent-button-background;
+  background: variables.$accent-button-background;
 
   &:hover,
   &:focus,
   &:active {
-    color: $accent-button-color-hover;
-    border: 1px solid darken($accent-button-background, 10%);
-    background: darken($accent-button-background, 10%);
+    color: variables.$accent-button-color-hover;
+    border: 1px solid color.adjust(variables.$accent-button-background, $lightness: -10%);
+    background: color.adjust(variables.$accent-button-background, $lightness: -10%);
   }
 }
 
 // Muted buttons
 .muted-button,
 a.muted-button {
-  background: $muted-background;
-  border: $muted-border;
-  color: $muted-color;
+  background: variables.$muted-background;
+  border: variables.$muted-border;
+  color: variables.$muted-color;
 
   &:hover,
   &:focus,
   &:active {
-    color: $muted-color-hover;
-    border: $muted-border-hover;
-    background: $muted-background-hover;
+    color: variables.$muted-color-hover;
+    border: variables.$muted-border-hover;
+    background: variables.$muted-background-hover;
   }
 }
 
 // Round buttons
 .round-button,
 a.round-button {
-  border-radius: $round-buttons;
+  border-radius: variables.$round-buttons;
 }
 
 // Square buttons
 .square-button,
 a.square-button {
   border-radius: 0;
+}
+
+// Image buttons
+[type="image"] {
+  background: none;
+  padding: 0;
+  border: none;
+  filter: brightness(110%);
+
+  &:hover {
+    border: none;
+    background: none;
+    filter: brightness(90%) contrast(120%);
+  }
+  &:active {
+    transform: translate(2px, 2px);
+  }
 }
 
 // Full width buttons (block level)

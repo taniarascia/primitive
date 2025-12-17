@@ -1,3 +1,5 @@
+@use "../base/mixins";
+
 /**
  * Grid
  */
@@ -33,7 +35,7 @@ $margin-bottom: 1rem;
 
 /* Small screen breakpoint */
 
-@include small-breakpoint {
+@include mixins.small-breakpoint {
   .flex-small {
     flex: 1;
     margin-bottom: 0;
@@ -57,7 +59,7 @@ $margin-bottom: 1rem;
 
 /* Large screen breakpoint */
 
-@include large-breakpoint {
+@include mixins.large-breakpoint {
   .flex-large {
     flex: 1;
     margin-bottom: 0;
